@@ -1,0 +1,1973 @@
+[
+  {
+    "name": "Top Bar",
+    "tag": "NAV",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 60,
+      "top": 0,
+      "right": 1425,
+      "bottom": 60,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "18px 72px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "32px 16px",
+      "width": "1425px",
+      "maxWidth": "1920px"
+    },
+    "innerHTML": "<div class=\"framer-6g46rr\" data-framer-name=\"Logo Container\"><!--$--><a class=\"framer-fnklbm framer-im8sr3\" data-framer-name=\"Link\" href=\"./\" data-framer-page-link-current=\"true\"><div class=\"framer-1aoy4gl-container\"><div class=\"framer-lLhzA framer-1wu3eu7 framer-v-1wu3eu7\" data-framer-name=\"Logo\" style=\"opacity: 1;\"><div class=\"framer-jl3cou\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;\"><p class=\"framer-text\" style=\"--font-selector:RlI7SW50ZXJEaXNwbGF5LUJvbGQ=;--framer-font-family:&quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif;--framer-font-size:20px;--framer-font-weight:700;--framer-letter-spacing:-0.03em;--framer-line-height:80%;--framer-text-color:var(--extracted-r6o4lv, var(--token-33c8dbd0-eb94-4e90-8099-e"
+  },
+  {
+    "name": "Hero",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "top": 0,
+      "right": 1425,
+      "bottom": 900,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "60px 0px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"ssr-variant hidden-8ys24z\"><div class=\"framer-16bmq7j-container\" style=\"will-change: transform; opacity: 0.3; transform: none;\"><!--$--><video src=\"https://framerusercontent.com/assets/FI7KKNq5etrzYN4Ag1Id3nm5c.mp4\" loop=\"\" preload=\"auto\" poster=\"https://framerusercontent.com/images/EoBMupP4sDoc2Zgcjt3OXKz2mg.jpg?width=2912&amp;height=1632\" muted=\"\" playsinline=\"\" style=\"cursor:auto;width:100%;height:100%;border-radius:0px;display:block;object-fit:cover;background-color:rgba(0, 0, 0, 0);object-position:50% 50%\" autoplay=\"\"></video><!--/$--></div></div><div class=\"framer-t2t20\" data-framer-name=\"Inside Container\"><div class=\"ssr-variant hidden-6l2d88 hidden-8ys24z\"><div class=\"framer-dh1tz5\" data-framer-name=\"Fit Text\" style=\"will-change: transform; opacity: 1; transform: translateX(-50%);\"><div class=\"framer-bbbe6u\" data-framer-appear-id=\"bbbe6u\" data-framer-name=\"Top\" style=\"opacity: 1; transform: none; will-change: transform;\"><svg class=\"framer-1rl1s2\" data-framer-compon"
+  },
+  {
+    "name": "Cost / See Pricing",
+    "tag": "DIV",
+    "rect": {
+      "x": 520.328125,
+      "y": 766.25,
+      "width": 204,
+      "height": 21.75,
+      "top": 766.25,
+      "right": 724.328125,
+      "bottom": 788,
+      "left": 520.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "204px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1gsav85\" data-framer-name=\"Plan cost\" style=\"opacity: 1;\"><div class=\"framer-11ir1qf\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-12xvzyc\" data-styles-preset=\"p2DD8RZ18\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Plans start at </p></div><div class=\"framer-s69sdt\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-12xvzyc\" data-styles-preset=\"p2DD8RZ18\">$7,500 / m</p></div></div><div class=\"framer-vim5wp\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-te"
+  },
+  {
+    "name": "Approach ",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 978.125,
+      "width": 1425,
+      "height": 1219.03125,
+      "top": 978.125,
+      "right": 1425,
+      "bottom": 2197.15625,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-19lhrsr\" data-framer-name=\"Inside Container\"><div class=\"framer-18ret28\" data-framer-name=\"Heading\"><div class=\"framer-66iilc\" data-framer-component-type=\"RichTextContainer\" style=\"will-change: transform; opacity: 1; transform: none;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[Our Approach]</p></div><div class=\"framer-53seoq\" data-framer-component-type=\"RichTextContainer\" style=\"transform:none\"><h2 class=\"framer-text framer-styles-preset-1v15im0\" data-styles-preset=\"MAEN_7pJo\" style=\"--framer-text-alignment:left\"><span style=\"--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))\" class=\"framer-text\"><span style=\"display: inline-block; will-change: transform;\"></span> <span style=\"display: inline-block; will-change: transform;\"></span> <span style=\"display: inline-block; will-change: transform;\"></span> <span style=\"display: inline-block; will-change: transform;\"></span> <span style=\"display: "
+  },
+  {
+    "name": "Quote Icon",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 1594.15625,
+      "width": 17,
+      "height": 14,
+      "top": 1594.15625,
+      "right": 521.328125,
+      "bottom": 1608.15625,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "17px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"svgContainer\" style=\"width:100%;height:100%;aspect-ratio:inherit\"><svg style=\"width:100%;height:100%;\" preserveAspectRatio=\"none\" width=\"100%\" height=\"100%\"><use href=\"#svg-495978065_382\"></use></svg></div>"
+  },
+  {
+    "name": "Projects",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 2197.15625,
+      "width": 1425,
+      "height": 1961.15625,
+      "top": 2197.15625,
+      "right": 1425,
+      "bottom": 4158.3125,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgb(5, 5, 5)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "48px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1dtktfu\" data-framer-name=\"Inside Container\"><div class=\"framer-1wz6fod\" data-framer-name=\"Header / section\"><div class=\"ssr-variant\"><div class=\"framer-1u51cxd-container\"><div class=\"framer-6k3aQ framer-6kXZT framer-1kmgu10 framer-v-1kmgu10\" data-framer-name=\"Default\" style=\"will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-1pirca9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[01]</p></div><div class=\"framer-iktwh9\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-prese"
+  },
+  {
+    "name": "Projects",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 2603.15625,
+      "width": 1281,
+      "height": 1427.15625,
+      "top": 2603.15625,
+      "right": 1353,
+      "bottom": 4030.3125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><div class=\"ssr-variant hidden-6l2d88 hidden-8ys24z\"><div class=\"framer-1oyig2t\" data-framer-name=\"More Projects\" style=\"grid-template-columns:repeat(3, 1fr)\"><div style=\"display:flex;flex-direction:column;row-gap:16px;width:100%\"><!--$--><div class=\"framer-ai3ata-container\" style=\"will-change: transform; opacity: 1; transform: none;\"><!--$--><a class=\"framer-2kYyx framer-GXkMy framer-yDSBC framer-rPbTs framer-1p135ve framer-v-1p135ve framer-17f1mt2\" data-border=\"true\" data-framer-name=\"Project Thumbnail\" href=\"./projects/quantum\" style=\"--border-bottom-width: 1px; --border-color: var(--token-b507413b-2318-4ebd-ad1e-5cac9d4936ba, rgb(54, 54, 54)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; width: 100%; opacity: 1;\"><div class=\"framer-hzxdle\" data-framer-name=\"Thumbnail / Logo\" style=\"opacity: 1;\"><div class=\"framer-175dvmu\" data-framer-name=\"Project Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracte"
+  },
+  {
+    "name": "More Projects",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 2603.15625,
+      "width": 1281,
+      "height": 1332.15625,
+      "top": 2603.15625,
+      "right": 1353,
+      "bottom": 3935.3125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "416.328px 416.328px 416.344px",
+      "gap": "16px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div style=\"display:flex;flex-direction:column;row-gap:16px;width:100%\"><!--$--><div class=\"framer-ai3ata-container\" style=\"will-change: transform; opacity: 1; transform: none;\"><!--$--><a class=\"framer-2kYyx framer-GXkMy framer-yDSBC framer-rPbTs framer-1p135ve framer-v-1p135ve framer-17f1mt2\" data-border=\"true\" data-framer-name=\"Project Thumbnail\" href=\"./projects/quantum\" style=\"--border-bottom-width: 1px; --border-color: var(--token-b507413b-2318-4ebd-ad1e-5cac9d4936ba, rgb(54, 54, 54)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; width: 100%; opacity: 1;\"><div class=\"framer-hzxdle\" data-framer-name=\"Thumbnail / Logo\" style=\"opacity: 1;\"><div class=\"framer-175dvmu\" data-framer-name=\"Project Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacit"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 88,
+      "y": 3085.234375,
+      "width": 384.328125,
+      "height": 15.6875,
+      "top": 3085.234375,
+      "right": 472.328125,
+      "bottom": 3100.921875,
+      "left": 88
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Strategy &amp; Product Design</p></div>"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 88,
+      "y": 3754.921875,
+      "width": 384.328125,
+      "height": 15.6875,
+      "top": 3754.921875,
+      "right": 472.328125,
+      "bottom": 3770.609375,
+      "left": 88
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Identity &amp; Product Design</p></div>"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 520.328125,
+      "y": 3221.546875,
+      "width": 384.328125,
+      "height": 15.6875,
+      "top": 3221.546875,
+      "right": 904.65625,
+      "bottom": 3237.234375,
+      "left": 520.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Identity &amp; Product Design</p></div>"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 520.328125,
+      "y": 3895.625,
+      "width": 384.328125,
+      "height": 15.6875,
+      "top": 3895.625,
+      "right": 904.65625,
+      "bottom": 3911.3125,
+      "left": 520.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Strategy &amp; Web Design</p></div>"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 952.65625,
+      "y": 3099.171875,
+      "width": 384.34375,
+      "height": 15.6875,
+      "top": 3099.171875,
+      "right": 1337,
+      "bottom": 3114.859375,
+      "left": 952.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.344px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Identity &amp; Product Design</p></div>"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 952.65625,
+      "y": 3532.859375,
+      "width": 384.34375,
+      "height": 15.6875,
+      "top": 3532.859375,
+      "right": 1337,
+      "bottom": 3548.546875,
+      "left": 952.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "384.344px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-ncq1xp\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-glesky\" data-styles-preset=\"biDaLFoo2\" style=\"--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Digital Transformation &amp; Design System</p></div>"
+  },
+  {
+    "name": "Why Choose Us",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 4158.3125,
+      "width": 1425,
+      "height": 1380.8125,
+      "top": 4158.3125,
+      "right": 1425,
+      "bottom": 5539.125,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "128px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1hgoont\" data-framer-name=\"Inside Container\"><div class=\"framer-e50cub\" data-framer-name=\"Header / section\"><div class=\"ssr-variant\"><div class=\"framer-138bwh-container\"><div class=\"framer-6k3aQ framer-6kXZT framer-1kmgu10 framer-v-1kmgu10\" data-framer-name=\"Default\" style=\"will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-1pirca9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[02]</p></div><div class=\"framer-iktwh9\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset="
+  },
+  {
+    "name": "200+ Projects",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 4917.125,
+      "width": 416.328125,
+      "height": 217,
+      "top": 4917.125,
+      "right": 920.65625,
+      "bottom": 5134.125,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "32px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px 16px",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"ssr-variant\"><div class=\"framer-1pr0fwh-container\" data-framer-name=\"Stat\" name=\"Stat\"><div name=\"Stat\" class=\"framer-3RLsT framer-6kXZT framer-bmxe1 framer-108g6o8 framer-v-vm44o8\" data-framer-name=\"Bento\" style=\"width: 100%; border-radius: 4px; opacity: 1;\"><div class=\"framer-1bzclm2\" data-framer-name=\"Number / Description\" style=\"opacity: 1;\"><div class=\"framer-19ovof7-container\" style=\"opacity: 1;\"><!--$--><p style=\"user-select:none;margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:&quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2.4);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%;width:100%\">200 +</p><!--/$--></div><div class=\"framer-1h2fof3\" data-framer-name=\"Description\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --extracted-r6o4lv: var(--token-4d92"
+  },
+  {
+    "name": "Services",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 5539.125,
+      "width": 1425,
+      "height": 4389.3125,
+      "top": 5539.125,
+      "right": 1425,
+      "bottom": 9928.4375,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "128px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-pkv5an\" data-framer-name=\"Inside Container\"><div class=\"framer-1f34g5m\" data-framer-name=\"Header / section\"><div class=\"ssr-variant\"><div class=\"framer-1alap1f-container\"><div class=\"framer-6k3aQ framer-6kXZT framer-1kmgu10 framer-v-1kmgu10\" data-framer-name=\"Default\" style=\"will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-1pirca9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[03]</p></div><div class=\"framer-iktwh9\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset"
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6020.125,
+      "width": 1281,
+      "height": 3780.3125,
+      "top": 6020.125,
+      "right": 1353,
+      "bottom": 9800.4375,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px",
+      "gap": "0px 16px",
+      "width": "1281px",
+      "maxWidth": "1920px"
+    },
+    "innerHTML": "<div class=\"framer-167pkgb hidden-8ys24z\" data-framer-name=\"Nav Container\"><div class=\"framer-1jxqam9\" data-framer-name=\"Nav Items\"><!--$--><div class=\"ssr-variant\"><div class=\"framer-1met1ci-container\" data-framer-name=\"Service Nav 1\" name=\"Service Nav 1\"><!--$--><a name=\"Service Nav 1\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-rop8b9 framer-n2e2yw\" data-framer-name=\"Active\" href=\"./#service1\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(-"
+  },
+  {
+    "name": "Service Nav 1",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6020.125,
+      "width": 416.328125,
+      "height": 39,
+      "top": 6020.125,
+      "right": 488.328125,
+      "bottom": 6059.125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Service Nav 1\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-rop8b9 framer-n2e2yw\" data-framer-name=\"Active\" href=\"./#service1\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Brand Identity</p></div><div class=\"framer-grgb0t\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline;"
+  },
+  {
+    "name": "Service Nav 2",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6075.125,
+      "width": 416.328125,
+      "height": 39,
+      "top": 6075.125,
+      "right": 488.328125,
+      "bottom": 6114.125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Service Nav 2\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-exnl5k framer-n2e2yw\" data-framer-name=\"Inactive\" href=\"./#service2\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 1; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Digital Design</p></div><div class=\"framer-grgb0t\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underlin"
+  },
+  {
+    "name": "Service Nav 3",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6130.125,
+      "width": 416.328125,
+      "height": 39,
+      "top": 6130.125,
+      "right": 488.328125,
+      "bottom": 6169.125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Service Nav 3\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-exnl5k framer-n2e2yw\" data-framer-name=\"Inactive\" href=\"./#service3\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 1; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Product Design</p></div><div class=\"framer-grgb0t\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underlin"
+  },
+  {
+    "name": "Service Nav 4",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6185.125,
+      "width": 416.328125,
+      "height": 39,
+      "top": 6185.125,
+      "right": 488.328125,
+      "bottom": 6224.125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Service Nav 4\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-exnl5k framer-n2e2yw\" data-framer-name=\"Inactive\" href=\"./#service4\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 1; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Marketing &amp; Growth</p></div><div class=\"framer-grgb0t\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: "
+  },
+  {
+    "name": "Service Nav 5",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 6240.125,
+      "width": 416.328125,
+      "height": 39,
+      "top": 6240.125,
+      "right": 488.328125,
+      "bottom": 6279.125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Service Nav 5\" class=\"framer-9VA7j framer-hCiLS framer-exnl5k framer-v-exnl5k framer-n2e2yw\" data-framer-name=\"Inactive\" href=\"./#service5\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1pqc8zv\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1b4vl56\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 1; transform: none; transform-origin: 50% 50% 0px; will-change: transform;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">Development</p></div><div class=\"framer-grgb0t\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; "
+  },
+  {
+    "name": "Services",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6020.125,
+      "width": 848.671875,
+      "height": 3780.3125,
+      "top": 6020.125,
+      "right": 1353,
+      "bottom": 9800.4375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"ssr-variant hidden-6l2d88 hidden-8ys24z\"><div class=\"framer-15sl5q4-container\" data-framer-name=\"Service Card 1\" id=\"service1\" name=\"Service Card 1\"><div name=\"Service Card 1\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/uC3DPDrBdJCZlHMQcaazSdNDaHM.jpg?width=904&amp;height=1200&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-nam"
+  },
+  {
+    "name": "Service Card 1",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6020.125,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 6020.125,
+      "right": 1353,
+      "bottom": 6776.1875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Service Card 1\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/uC3DPDrBdJCZlHMQcaazSdNDaHM.jpg?width=904&amp;height=1200&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-nam"
+  },
+  {
+    "name": "Service Card",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6020.125,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 6020.125,
+      "right": 1353,
+      "bottom": 6776.1875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/uC3DPDrBdJCZlHMQcaazSdNDaHM.jpg?width=904&amp;height=1200&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-co"
+  },
+  {
+    "name": "Heading / Service Tags",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6497.5,
+      "width": 848.671875,
+      "height": 278.6875,
+      "top": 6497.5,
+      "right": 1353,
+      "bottom": 6776.1875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "64px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "48px 64px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[01]</p></div><div class=\"framer-1ftnwxg\" data-framer-name=\"Service\" data-framer-component-type=\"RichTextContainer\" style=\"transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Brand Identity</p></div></div><div class=\"framer-1s5ahd8\" data-framer-name=\"Descri"
+  },
+  {
+    "name": "Service Number",
+    "tag": "DIV",
+    "rect": {
+      "x": 528.328125,
+      "y": 6561.5,
+      "width": 38.5,
+      "height": 33.75,
+      "top": 6561.5,
+      "right": 566.828125,
+      "bottom": 6595.25,
+      "left": 528.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "38.5px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[01]</p>"
+  },
+  {
+    "name": "Service",
+    "tag": "DIV",
+    "rect": {
+      "x": 574.828125,
+      "y": 6561.5,
+      "width": 321.828125,
+      "height": 33.75,
+      "top": 6561.5,
+      "right": 896.65625,
+      "bottom": 6595.25,
+      "left": 574.828125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "321.828px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Brand Identity</p>"
+  },
+  {
+    "name": "Service Card 2",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6776.1875,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 6776.1875,
+      "right": 1353,
+      "bottom": 7532.25,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Service Card 2\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/Rkl08UGfkYj0XdxZZ8h4d04KowA.jpeg?width=1345&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-n"
+  },
+  {
+    "name": "Service Card",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 6776.1875,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 6776.1875,
+      "right": 1353,
+      "bottom": 7532.25,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/Rkl08UGfkYj0XdxZZ8h4d04KowA.jpeg?width=1345&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-"
+  },
+  {
+    "name": "Heading / Service Tags",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 7253.5625,
+      "width": 848.671875,
+      "height": 278.6875,
+      "top": 7253.5625,
+      "right": 1353,
+      "bottom": 7532.25,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "64px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "48px 64px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[02]</p></div><div class=\"framer-1ftnwxg\" data-framer-name=\"Service\" data-framer-component-type=\"RichTextContainer\" style=\"transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Digital Design</p></div></div><div class=\"framer-1s5ahd8\" data-framer-name=\"Descri"
+  },
+  {
+    "name": "Service Number",
+    "tag": "DIV",
+    "rect": {
+      "x": 528.328125,
+      "y": 7317.5625,
+      "width": 43.640625,
+      "height": 33.75,
+      "top": 7317.5625,
+      "right": 571.96875,
+      "bottom": 7351.3125,
+      "left": 528.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "43.6406px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[02]</p>"
+  },
+  {
+    "name": "Service",
+    "tag": "DIV",
+    "rect": {
+      "x": 579.96875,
+      "y": 7317.5625,
+      "width": 316.6875,
+      "height": 33.75,
+      "top": 7317.5625,
+      "right": 896.65625,
+      "bottom": 7351.3125,
+      "left": 579.96875
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "316.688px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Digital Design</p>"
+  },
+  {
+    "name": "Service Card 3",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 7532.25,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 7532.25,
+      "right": 1353,
+      "bottom": 8288.3125,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Service Card 3\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/nUz9PQlnVFREjBvNToIeGovBXI.jpeg?width=1808&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-na"
+  },
+  {
+    "name": "Service Card",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 7532.25,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 7532.25,
+      "right": 1353,
+      "bottom": 8288.3125,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/nUz9PQlnVFREjBvNToIeGovBXI.jpeg?width=1808&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-c"
+  },
+  {
+    "name": "Heading / Service Tags",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 8009.625,
+      "width": 848.671875,
+      "height": 278.6875,
+      "top": 8009.625,
+      "right": 1353,
+      "bottom": 8288.3125,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "64px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "48px 64px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[03]</p></div><div class=\"framer-1ftnwxg\" data-framer-name=\"Service\" data-framer-component-type=\"RichTextContainer\" style=\"transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Product Design</p></div></div><div class=\"framer-1s5ahd8\" data-framer-name=\"Descri"
+  },
+  {
+    "name": "Service Number",
+    "tag": "DIV",
+    "rect": {
+      "x": 528.328125,
+      "y": 8073.625,
+      "width": 44.3125,
+      "height": 33.75,
+      "top": 8073.625,
+      "right": 572.640625,
+      "bottom": 8107.375,
+      "left": 528.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "44.3125px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[03]</p>"
+  },
+  {
+    "name": "Service",
+    "tag": "DIV",
+    "rect": {
+      "x": 580.640625,
+      "y": 8073.625,
+      "width": 316.015625,
+      "height": 33.75,
+      "top": 8073.625,
+      "right": 896.65625,
+      "bottom": 8107.375,
+      "left": 580.640625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "316.016px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Product Design</p>"
+  },
+  {
+    "name": "Service Card 4",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 8288.3125,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 8288.3125,
+      "right": 1353,
+      "bottom": 9044.375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Service Card 4\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/sirR5Knxvy6H4B4c8ceh6eTMMpc.jpeg?width=1808&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-n"
+  },
+  {
+    "name": "Service Card",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 8288.3125,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 8288.3125,
+      "right": 1353,
+      "bottom": 9044.375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/sirR5Knxvy6H4B4c8ceh6eTMMpc.jpeg?width=1808&amp;height=2400&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-"
+  },
+  {
+    "name": "Heading / Service Tags",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 8765.6875,
+      "width": 848.671875,
+      "height": 278.6875,
+      "top": 8765.6875,
+      "right": 1353,
+      "bottom": 9044.375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "64px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "48px 64px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[04]</p></div><div class=\"framer-1ftnwxg\" data-framer-name=\"Service\" data-framer-component-type=\"RichTextContainer\" style=\"transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Marketing &amp; Growth</p></div></div><div class=\"framer-1s5ahd8\" data-framer-name"
+  },
+  {
+    "name": "Service Number",
+    "tag": "DIV",
+    "rect": {
+      "x": 528.328125,
+      "y": 8829.6875,
+      "width": 45.09375,
+      "height": 33.75,
+      "top": 8829.6875,
+      "right": 573.421875,
+      "bottom": 8863.4375,
+      "left": 528.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "45.0938px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[04]</p>"
+  },
+  {
+    "name": "Service",
+    "tag": "DIV",
+    "rect": {
+      "x": 581.421875,
+      "y": 8829.6875,
+      "width": 315.234375,
+      "height": 33.75,
+      "top": 8829.6875,
+      "right": 896.65625,
+      "bottom": 8863.4375,
+      "left": 581.421875
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "315.234px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Marketing &amp; Growth</p>"
+  },
+  {
+    "name": "Service Card 5",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 9044.375,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 9044.375,
+      "right": 1353,
+      "bottom": 9800.4375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Service Card 5\" class=\"framer-1Ffdq framer-yDSBC framer-bmxe1 framer-rPbTs framer-1uef9g6 framer-v-1uef9g6\" data-framer-name=\"Service Card\" style=\"background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/e2v2lPYF5BZiZDeiEFptTSeZC1c.jpg?width=992&amp;height=1201&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-nam"
+  },
+  {
+    "name": "Service Card",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 9044.375,
+      "width": 848.671875,
+      "height": 756.0625,
+      "top": 9044.375,
+      "right": 1353,
+      "bottom": 9800.4375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "0px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-6mlbk2-container\" data-framer-name=\"Image\" name=\"Image\" style=\"opacity: 1;\"><!--$--><div style=\"height:100%;width:100%;position:relative;overflow:hidden\"><div style=\"position: absolute; inset: -600px 0px 0px; background-image: url(&quot;https://framerusercontent.com/images/e2v2lPYF5BZiZDeiEFptTSeZC1c.jpg?width=992&amp;height=1201&quot;); background-size: cover; background-position: center center; will-change: transform; user-select: none; pointer-events: none; transform: none;\"></div></div><!--/$--></div><div class=\"framer-1nazu5c\" data-framer-name=\"Heading / Service Tags\" style=\"opacity: 1;\"><div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-co"
+  },
+  {
+    "name": "Heading / Service Tags",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 9521.75,
+      "width": 848.671875,
+      "height": 278.6875,
+      "top": 9521.75,
+      "right": 1353,
+      "bottom": 9800.4375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "64px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "48px 64px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-osf9t4\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1qbje7a\" data-framer-name=\"Number / Title\" style=\"opacity: 1;\"><div class=\"framer-1wni34p\" data-framer-name=\"Service Number\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[05]</p></div><div class=\"framer-1ftnwxg\" data-framer-name=\"Service\" data-framer-component-type=\"RichTextContainer\" style=\"transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Development</p></div></div><div class=\"framer-1s5ahd8\" data-framer-name=\"Descripti"
+  },
+  {
+    "name": "Service Number",
+    "tag": "DIV",
+    "rect": {
+      "x": 528.328125,
+      "y": 9585.75,
+      "width": 43.765625,
+      "height": 33.75,
+      "top": 9585.75,
+      "right": 572.09375,
+      "bottom": 9619.5,
+      "left": 528.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "43.7656px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))\">[05]</p>"
+  },
+  {
+    "name": "Service",
+    "tag": "DIV",
+    "rect": {
+      "x": 580.09375,
+      "y": 9585.75,
+      "width": 316.5625,
+      "height": 33.75,
+      "top": 9585.75,
+      "right": 896.65625,
+      "bottom": 9619.5,
+      "left": 580.09375
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "316.562px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Development</p>"
+  },
+  {
+    "name": "Process",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 9928.4375,
+      "width": 1425,
+      "height": 1153.8125,
+      "top": 9928.4375,
+      "right": 1425,
+      "bottom": 11082.25,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "128px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1ugce0k\" data-framer-name=\"Inside Container\"><div class=\"framer-1yp4abc\" data-framer-name=\"Header / section\"><div class=\"ssr-variant\"><div class=\"framer-cn6hjz-container\"><div class=\"framer-6k3aQ framer-6kXZT framer-1kmgu10 framer-v-1kmgu10\" data-framer-name=\"Default\" style=\"will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-1pirca9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[04]</p></div><div class=\"framer-iktwh9\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset"
+  },
+  {
+    "name": "Process accordian",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 10454.25,
+      "width": 1281,
+      "height": 500,
+      "top": 10454.25,
+      "right": 1353,
+      "bottom": 10954.25,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px",
+      "gap": "48px 16px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-134eabo\" data-framer-name=\"Paragraphs\"><div class=\"ssr-variant\"><div class=\"framer-wvaa81-container\"><div class=\"framer-JqLUT framer-yDSBC framer-bmxe1 framer-1tbb6ts framer-v-1tbb6ts\" data-framer-name=\"Default\" style=\"width: 100%; will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-rrkwod\" data-framer-name=\"Icon / heading\" style=\"opacity: 1;\"><svg class=\"framer-m8Hh1 framer-19j76gh\" role=\"presentation\" viewBox=\"0 0 24 24\" style=\"--1m6trwb: 0; --21h8s6: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --pgex8v: 2; opacity: 1;\"><use href=\"#88840897\"></use></svg><div class=\"framer-1s9eao7\" data-framer-component-type=\"RichTextContainer\" style=\"justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\" style=\"--framer-text-alignment:left\">3-5 Days</p></div></div><div"
+  },
+  {
+    "name": "Process Accordian",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 10454.25,
+      "width": 848.671875,
+      "height": 500,
+      "top": 10454.25,
+      "right": 1353,
+      "bottom": 10954.25,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div name=\"Process Accordian\" class=\"framer-3XXvb framer-ujdrb2 framer-v-ujdrb2\" data-framer-name=\"1\" data-hide-scrollbars=\"true\" style=\"width: 100%; opacity: 1;\"><div class=\"framer-1yf1e6a-container\" data-framer-name=\"Card 1\" name=\"Card 1\" style=\"opacity: 1;\"><div name=\"Card 1\" class=\"framer-DrfCm framer-Qvx73 framer-yDSBC framer-6kXZT framer-1gewr2d framer-v-1gewr2d\" data-border=\"true\" data-framer-name=\"Active\" data-highlight=\"true\" style=\"--border-bottom-width: 1px; --border-color: var(--token-46244ad7-86a7-41b8-b44b-214d95b54c13, rgb(130, 130, 130)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); width: 100%; opacity: 1;\"><div class=\"framer-1trq2i4\" data-framer-name=\"Number container\" style=\"opacity: 1;\"><div class=\"framer-1yjvgwi\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-a0htzi: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee"
+  },
+  {
+    "name": "Pricing",
+    "tag": "SECTION",
+    "rect": {
+      "x": 0,
+      "y": 11082.25,
+      "width": 1425,
+      "height": 1360.75,
+      "top": 11082.25,
+      "right": 1425,
+      "bottom": 12443,
+      "left": 0
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "128px 0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px",
+      "width": "1425px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1br84tu\" data-framer-name=\"Inside Container\"><div class=\"framer-19ozj8n\" data-framer-name=\"Heading / section info\"><div class=\"ssr-variant\"><div class=\"framer-1ju5466-container\"><div class=\"framer-6k3aQ framer-6kXZT framer-1kmgu10 framer-v-1kmgu10\" data-framer-name=\"Default\" style=\"will-change: transform; opacity: 1; transform: none;\"><div class=\"framer-1pirca9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\">[05]</p></div><div class=\"framer-iktwh9\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles"
+  },
+  {
+    "name": "Pricing Grid",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 11563.25,
+      "width": 1281,
+      "height": 751.75,
+      "top": 11563.25,
+      "right": 1353,
+      "bottom": 12315,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "416.328px 416.328px 416.344px",
+      "gap": "16px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"ssr-variant hidden-8ys24z\"><div class=\"framer-3jvtc0-container\" data-framer-name=\"Growth\" name=\"Growth\" style=\"will-change: transform; opacity: 1; transform: none;\"><div name=\"Growth\" class=\"framer-v049h framer-Qvx73 framer-bmxe1 framer-rPbTs framer-6kXZT framer-dg6hk2 framer-v-dg6hk2\" data-border=\"true\" data-framer-name=\"Default\" style=\"--border-bottom-width: 1px; --border-color: var(--token-b507413b-2318-4ebd-ad1e-5cac9d4936ba, rgb(54, 54, 54)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-1kgumwu\" data-framer-name=\"Top\" style=\"opacity: 1;\"><div class=\"framer-9ystc9\" data-framer-name=\"Heading / Price toggle\" style=\"opacity: 1;\"><div class=\"framer-1mk5wah\" data-framer-name=\"Heading &amp; Description\" style=\"opacity: 1;\"><div class=\"framer-1b49iiw\" style=\"opacity: 1;\"><div class="
+  },
+  {
+    "name": "Get Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 960.65625,
+      "y": 11860.5,
+      "width": 120.796875,
+      "height": 37.75,
+      "top": 11860.5,
+      "right": 1081.453125,
+      "bottom": 11898.25,
+      "left": 960.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "120.797px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Get Quote\" class=\"framer-MYTJc framer-bmxe1 framer-1u93jko framer-v-1u93jko framer-1hyfvzi\" data-border=\"true\" data-framer-name=\"Dark\" data-highlight=\"true\" href=\"./contact\" tabindex=\"0\" style=\"--border-bottom-width: 1px; --border-color: var(--token-b507413b-2318-4ebd-ad1e-5cac9d4936ba, rgb(54, 54, 54)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; background-color: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); opacity: 1;\"><div class=\"framer-91kh7w\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-1lv7xn9\" data-framer-name=\"Top text\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-12xvzyc\" data-styles-preset=\"p2DD8RZ18\">Get Quote</p></div><div class=\"framer-1ni5yzs\" data-framer-name=\"Bottom text\" data-framer-component-"
+  },
+  {
+    "name": "Quote Contain",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 12968.1875,
+      "width": 848.671875,
+      "height": 232,
+      "top": 12968.1875,
+      "right": 1353,
+      "bottom": 13200.1875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "16px",
+      "width": "848.672px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-o2nqvp\" data-framer-name=\"Quotes\" style=\"opacity: 1;\"><div data-framer-name=\"Quote Symbol\" class=\"framer-lf5Ua framer-17fhbj8\" style=\"opacity: 1;\"></div><div class=\"framer-1l83vms\" data-framer-name=\"Quote 1\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-alignment:left\"><span style=\"white-space:nowrap\"><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">F</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">r</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">o</span><span style=\"display"
+  },
+  {
+    "name": "Quotes",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 12968.1875,
+      "width": 720,
+      "height": 208.984375,
+      "top": 12968.1875,
+      "right": 1224.328125,
+      "bottom": 13177.171875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "32px",
+      "width": "720px",
+      "maxWidth": "720px"
+    },
+    "innerHTML": "<div data-framer-name=\"Quote Symbol\" class=\"framer-lf5Ua framer-17fhbj8\" style=\"opacity: 1;\"></div><div class=\"framer-1l83vms\" data-framer-name=\"Quote 1\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-alignment:left\"><span style=\"white-space:nowrap\"><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">F</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">r</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">o</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) sc"
+  },
+  {
+    "name": "Quote Symbol",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 12968.1875,
+      "width": 25,
+      "height": 20.984375,
+      "top": 12968.1875,
+      "right": 529.328125,
+      "bottom": 12989.171875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(184, 184, 184)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "25px",
+      "maxWidth": "none"
+    },
+    "innerHTML": ""
+  },
+  {
+    "name": "Quote 1",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 13021.171875,
+      "width": 720,
+      "height": 156,
+      "top": 13021.171875,
+      "right": 1224.328125,
+      "bottom": 13177.171875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "720px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-alignment:left\"><span style=\"white-space:nowrap\"><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">F</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">r</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">o</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">m</span></span> <span style=\"white-space:nowrap\"><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) translateY(10px) scale(1) rotate(0deg) skewX(0deg) skewY(0deg)\">d</span><span style=\"display:inline-block;opacity:0.001;transform:translateX(0px) tr"
+  },
+  {
+    "name": "Quote 2",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 13260.171875,
+      "width": 720,
+      "height": 117,
+      "top": 13260.171875,
+      "right": 1224.328125,
+      "bottom": 13377.171875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "720px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-alignment:left\">They brought so much nuance to the brand—mystery, elegance, and a really rich visual language. It’s exactly what we hoped for, and then some.</p>"
+  },
+  {
+    "name": "Quote 3",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 12768.1875,
+      "width": 720,
+      "height": 117,
+      "top": 12768.1875,
+      "right": 1224.328125,
+      "bottom": 12885.1875,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "720px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\" style=\"--framer-text-alignment:left\">We wanted a brand that felt honest and connected to nature, but still premium. What we ended up with feels like us in every way—our customers even comment on it.</p>"
+  },
+  {
+    "name": "Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 13651.59375,
+      "width": 416.328125,
+      "height": 425,
+      "top": 13651.59375,
+      "right": 488.328125,
+      "bottom": 14076.59375,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "32px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "32px",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1s7rqz4\" data-framer-name=\"Project Logo\" style=\"opacity: 1;\"><div style=\"position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0\" data-framer-background-image-wrapper=\"true\"><img decoding=\"auto\" loading=\"lazy\" width=\"155\" height=\"48\" src=\"https://framerusercontent.com/images/XEPzALl3z3cEVxdcxAZQFJpHLr0.svg?width=155&amp;height=48\" alt=\"\" style=\"display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain\"></div></div><div class=\"framer-leor6n\" data-framer-name=\"Text / Icon\" style=\"opacity: 1;\"><div data-framer-component-type=\"SVG\" parentsize=\"0\" _constraints=\"[object Object]\" rotation=\"0\" shadows=\"\" class=\"framer-1r9umsr\" aria-hidden=\"true\" style=\"image-rendering: pixelated; flex-shrink: 0; opacity: 1;\"><div class=\"svgContainer\" style=\"width:100%;height:100%;aspect-ratio:inherit\"><svg style=\"width:100%;height:100%;\" preserveAspectRatio=\"none\" width=\"100%\" height=\"100%\"><us"
+  },
+  {
+    "name": "Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 13651.59375,
+      "width": 416.328125,
+      "height": 407,
+      "top": 13651.59375,
+      "right": 920.65625,
+      "bottom": 14058.59375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "32px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "32px",
+      "width": "416.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1s7rqz4\" data-framer-name=\"Project Logo\" style=\"opacity: 1;\"><div style=\"position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0\" data-framer-background-image-wrapper=\"true\"><img decoding=\"auto\" loading=\"lazy\" width=\"201\" height=\"48\" src=\"https://framerusercontent.com/images/IVQsAsFQMvVgoU6ZYkIx9TDhZ4.svg?width=201&amp;height=48\" alt=\"\" style=\"display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain\"></div></div><div class=\"framer-leor6n\" data-framer-name=\"Text / Icon\" style=\"opacity: 1;\"><div data-framer-component-type=\"SVG\" parentsize=\"0\" _constraints=\"[object Object]\" rotation=\"0\" shadows=\"\" class=\"framer-1r9umsr\" aria-hidden=\"true\" style=\"image-rendering: pixelated; flex-shrink: 0; opacity: 1;\"><div class=\"svgContainer\" style=\"width:100%;height:100%;aspect-ratio:inherit\"><svg style=\"width:100%;height:100%;\" preserveAspectRatio=\"none\" width=\"100%\" height=\"100%\"><use"
+  },
+  {
+    "name": "Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 936.65625,
+      "y": 13651.59375,
+      "width": 416.34375,
+      "height": 425,
+      "top": 13651.59375,
+      "right": 1353,
+      "bottom": 14076.59375,
+      "left": 936.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "32px 24px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "32px",
+      "width": "416.344px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1s7rqz4\" data-framer-name=\"Project Logo\" style=\"opacity: 1;\"><div style=\"position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0\" data-framer-background-image-wrapper=\"true\"><img decoding=\"auto\" loading=\"lazy\" width=\"186\" height=\"48\" src=\"https://framerusercontent.com/images/hRY01kjo62NpYPeF7biDgbGxkrg.svg?width=186&amp;height=48\" alt=\"\" style=\"display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:contain\"></div></div><div class=\"framer-leor6n\" data-framer-name=\"Text / Icon\" style=\"opacity: 1;\"><div data-framer-component-type=\"SVG\" parentsize=\"0\" _constraints=\"[object Object]\" rotation=\"0\" shadows=\"\" class=\"framer-1r9umsr\" aria-hidden=\"true\" style=\"image-rendering: pixelated; flex-shrink: 0; opacity: 1;\"><div class=\"svgContainer\" style=\"width:100%;height:100%;aspect-ratio:inherit\"><svg style=\"width:100%;height:100%;\" preserveAspectRatio=\"none\" width=\"100%\" height=\"100%\"><us"
+  },
+  {
+    "name": "FAQ",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 14785.59375,
+      "width": 1281,
+      "height": 761,
+      "top": 14785.59375,
+      "right": 1353,
+      "bottom": 15546.59375,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px 128.109px",
+      "gap": "48px 16px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-xcapef\" data-framer-name=\"Left\" style=\"opacity: 1;\"><div class=\"framer-17ht4p0\" data-framer-name=\"Text / team member\" style=\"opacity: 1;\"><div class=\"framer-vpmfx9\" data-framer-name=\"Text\" style=\"will-change:transform;opacity:0;transform:none\"><div class=\"framer-1e5bva2\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\">Have a question?</p></div><div class=\"framer-yrse68\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-1pvr9s\" data-styles-preset=\"aPqv2C1EJ\" dir=\"auto\" style=\"--framer-text-color:var(--extracted-r6o4lv"
+  },
+  {
+    "name": "FAQ container",
+    "tag": "DIV",
+    "rect": {
+      "x": 504.328125,
+      "y": 14885.59375,
+      "width": 640,
+      "height": 761,
+      "top": 14885.59375,
+      "right": 1144.328125,
+      "bottom": 15646.59375,
+      "left": 504.328125
+    },
+    "styles": {
+      "background": "rgb(0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "12px",
+      "width": "640px",
+      "maxWidth": "640px"
+    },
+    "innerHTML": "<div class=\"framer-lke8f-container\" data-framer-name=\"Accordian\" name=\"Accordian\" style=\"opacity: 1;\"><!--$--><style>\n    .force-styles-:R2qlauppaelp: {opacity: 1}\n    .force-styles-:R2qlauppaelp:-item-0 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-1 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-2 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-3 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-4 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-5 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-6 {transform: translateZ(0)}\n.force-styles-:R2qlauppaelp:-item-7 {transform: translateZ(0)}\n    </style><div class=\"force-styles-:R2qlauppaelp:\"><div style=\"width:100%\"><div class=\"force-styles-:R2qlauppaelp:-item-0\" style=\"margin-bottom: 0px; border-top-width: ; border-top-style: ; border-color: var(--token-b507413b-2318-4ebd-ad1e-5cac9d4936ba, rgb(54, 54, 54)); border-right-width: ; border-right-style: ; border-bot"
+  },
+  {
+    "name": "Articles container",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 16200.40625,
+      "width": 1281,
+      "height": 650.125,
+      "top": 16200.40625,
+      "right": 1353,
+      "bottom": 16850.53125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-14ksucu\" data-framer-name=\"Articles\" style=\"opacity: 1;\"><!--$--><!--$--><div class=\"framer-98lhaa-container\" style=\"opacity: 1;\"><!--$--><a class=\"framer-HovBW framer-O9ROT framer-Qvx73 framer-bmxe1 framer-9osrat framer-v-9osrat framer-jgwxul\" data-framer-name=\"Default\" href=\"./articles/beyond-minimalism-what-s-next-in-web-design\" style=\"height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-mytcxe\" data-framer-name=\"Title / Date\" style=\"opacity: 1;\"><div class=\"framer-1o21teg\" data-framer-name=\"Container\" style=\"opacity:1\"><div class=\"framer-5s1xe1\" data-framer-name=\"Category / Date\" style=\"opacity: 1;\"><div class=\"framer-1p1u1k6\" data-framer-name=\"Category\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-455vy9\" data-styles-preset=\"xYEC_wF3E\">Trends</p></div><div class=\"framer-4pcv1z\" data-framer-n"
+  },
+  {
+    "name": "Articles",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 16200.40625,
+      "width": 1281,
+      "height": 555.125,
+      "top": 16200.40625,
+      "right": 1353,
+      "bottom": 16755.53125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "grid",
+      "flexDirection": "row",
+      "gridTemplateColumns": "416.328px 416.328px 416.344px",
+      "gap": "16px",
+      "width": "1281px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><!--$--><div class=\"framer-98lhaa-container\" style=\"opacity: 1;\"><!--$--><a class=\"framer-HovBW framer-O9ROT framer-Qvx73 framer-bmxe1 framer-9osrat framer-v-9osrat framer-jgwxul\" data-framer-name=\"Default\" href=\"./articles/beyond-minimalism-what-s-next-in-web-design\" style=\"height: 100%; width: 100%; opacity: 1;\"><div class=\"framer-mytcxe\" data-framer-name=\"Title / Date\" style=\"opacity: 1;\"><div class=\"framer-1o21teg\" data-framer-name=\"Container\" style=\"opacity:1\"><div class=\"framer-5s1xe1\" data-framer-name=\"Category / Date\" style=\"opacity: 1;\"><div class=\"framer-1p1u1k6\" data-framer-name=\"Category\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-455vy9\" data-styles-preset=\"xYEC_wF3E\">Trends</p></div><div class=\"framer-4pcv1z\" data-framer-name=\"Date\" data-framer-component-type=\"RichTextContainer\" style=\"--extracted"
+  },
+  {
+    "name": "All Articles",
+    "tag": "DIV",
+    "rect": {
+      "x": 1199.234375,
+      "y": 16819.53125,
+      "width": 153.765625,
+      "height": 31,
+      "top": 16819.53125,
+      "right": 1353,
+      "bottom": 16850.53125,
+      "left": 1199.234375
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "8px",
+      "width": "153.766px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-1t9hlg1-container\" style=\"opacity: 1;\"><div class=\"framer-zstlc framer-hCiLS framer-171z04c framer-v-eh8sph\" data-framer-name=\"Medium\" style=\"opacity: 1;\"><div class=\"framer-14elm82-container\" data-framer-name=\"article count\" name=\"article count\" style=\"opacity: 1;\"><!--$--><div style=\"color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;white-space:nowrap;font-family:&quot;Inter&quot;, &quot;Inter Placeholder&quot;, sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:150%\">[<!-- -->10<!-- -->]</div><!--/$--></div></div></div><!--$--><div class=\"framer-os6mq-container\" style=\"opacity: 1;\"><!--$--><a class=\"framer-gi4JO framer-bmxe1 framer-GXkMy framer-7nicnc framer-v-hqtx1s framer-211ff1\" data-framer-name=\"Large\" data-highlight=\"true\" href=\"./articles\" tabindex=\"0\" style=\"opacity: 1;\"><div class=\"framer-famyun\" data-framer-name=\"Text / I"
+  },
+  {
+    "name": "Email / Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 17194.28125,
+      "width": 704.546875,
+      "height": 281.25,
+      "top": 17194.28125,
+      "right": 776.546875,
+      "bottom": 17475.53125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "64px",
+      "width": "704.547px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"ssr-variant\"><div class=\"framer-opr67x-container\" data-framer-name=\"Email - double click to edit, changes applied globally\" name=\"Email - double click to edit, changes applied globally\"><div name=\"Email - double click to edit, changes applied globally\" class=\"framer-g8jYy framer-18yfxfo framer-v-18yfxfo\" data-framer-name=\"Default\" style=\"width: 100%; opacity: 1;\"><!--$--><div class=\"framer-1ntjfjb-container\" style=\"will-change:transform;opacity:0;transform:none\"><div class=\"framer-49MC1 framer-hCiLS framer-yDSBC framer-110q6cl framer-v-110q6cl\" data-framer-name=\"Link\" data-highlight=\"true\" id=\"XyLoNVrts-110q6cl\" style=\"opacity: 1;\"><div class=\"framer-1v3cb63\" data-framer-name=\"Text / Icon\" style=\"opacity: 1;\"><div class=\"framer-d8aot9\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\""
+  },
+  {
+    "name": "Quote",
+    "tag": "DIV",
+    "rect": {
+      "x": 72,
+      "y": 17304.28125,
+      "width": 704.546875,
+      "height": 171.25,
+      "top": 17304.28125,
+      "right": 776.546875,
+      "bottom": 17475.53125,
+      "left": 72
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "flexDirection": "column",
+      "gridTemplateColumns": "none",
+      "gap": "32px",
+      "width": "704.547px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<div class=\"framer-db6as0\" data-framer-name=\"Text\"><div class=\"framer-lf5Ua framer-14ix1d6\" style=\"will-change:transform;opacity:0;transform:none\"></div><div class=\"framer-1k1f5xs\" data-framer-component-type=\"RichTextContainer\" style=\"transform:none\"><p class=\"framer-text framer-styles-preset-1qbm3ow\" data-styles-preset=\"Ukwjyb6F5\"><span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span style=\"white-space:nowrap\"></span> <span styl"
+  },
+  {
+    "name": "Articles",
+    "tag": "DIV",
+    "rect": {
+      "x": 956.65625,
+      "y": 17323.28125,
+      "width": 151.328125,
+      "height": 39,
+      "top": 17323.28125,
+      "right": 1107.984375,
+      "bottom": 17362.28125,
+      "left": 956.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "151.328px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Articles\" class=\"framer-PN74v framer-hCiLS framer-bmxe1 framer-nklba9 framer-v-nklba9 framer-146boua\" data-framer-name=\"Main nav\" data-highlight=\"true\" href=\"./articles\" tabindex=\"0\" style=\"opacity: 1;\"><div class=\"framer-1w5iwuk\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-97ra98\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\">Articles</p></div><div class=\"framer-bhm2rs\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\">Articles</p></div></div><div class=\"framer-53ne2z-container\" style=\"opacity: 1;\"><div class=\"framer-zstlc framer-hCiLS fram"
+  },
+  {
+    "name": "Pricing",
+    "tag": "DIV",
+    "rect": {
+      "x": 956.65625,
+      "y": 17366.28125,
+      "width": 86.015625,
+      "height": 39,
+      "top": 17366.28125,
+      "right": 1042.671875,
+      "bottom": 17405.28125,
+      "left": 956.65625
+    },
+    "styles": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "flexDirection": "row",
+      "gridTemplateColumns": "none",
+      "gap": "normal",
+      "width": "86.0156px",
+      "maxWidth": "none"
+    },
+    "innerHTML": "<!--$--><a name=\"Pricing\" class=\"framer-PN74v framer-hCiLS framer-bmxe1 framer-nklba9 framer-v-nklba9 framer-146boua\" data-framer-name=\"Main nav\" data-highlight=\"true\" href=\"./#pricing\" tabindex=\"0\" style=\"opacity: 1;\"><div class=\"framer-1w5iwuk\" data-framer-name=\"Text\" style=\"opacity: 1;\"><div class=\"framer-97ra98\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\">Pricing</p></div><div class=\"framer-bhm2rs\" data-framer-component-type=\"RichTextContainer\" style=\"--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);\"><p class=\"framer-text framer-styles-preset-14q70s4\" data-styles-preset=\"F5hQ_nluV\">Pricing</p></div></div></a><!--/$-->"
+  }
+]
