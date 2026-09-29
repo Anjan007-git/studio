@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, Star } from "./icons";
+import { ThreeBackground } from "./ThreeBackground";
+import { Marquee } from "./Marquee";
+import { MagneticButton } from "./MagneticButton";
 
 const clientLogos = [
   { name: "Clandestine", src: "/images/IVQsAsFQMvVgoU6ZYkIx9TDhZ4.svg" },
@@ -17,9 +20,34 @@ const clientLogos = [
 ];
 
 export function Hero() {
+  const [arrived, setArrived] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    // Check if preloader dispatches arrival or fallback after 1.8s
+    const onArrival = () => setArrived(true);
+    window.addEventListener("mugen-arrival-start", onArrival);
+    const fallbackTimer = setTimeout(() => setArrived(true), 1800);
+
+    const onScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mugen-arrival-start", onArrival);
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(fallbackTimer);
+    };
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-between pt-24 sm:pt-28 pb-12 overflow-hidden bg-[#141414]">
-      {/* Background Looping Video from Framer CDN */}
+    <section className="relative min-h-screen flex flex-col justify-between pt-24 sm:pt-28 pb-10 overflow-hidden bg-[#141414]">
+      {/* 3D Atmospheric Background Canvas */}
+      <ThreeBackground />
+
+      {/* Looping Ambient Video Layer from Framer CDN */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <video
           src="/videos/hero.mp4"
@@ -28,17 +56,27 @@ export function Hero() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-30 grayscale contrast-125"
+          className="w-full h-full object-cover opacity-25 grayscale contrast-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/30 via-transparent to-[#141414]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/40 via-transparent to-[#141414]" />
       </div>
 
-      {/* Main Hero Container */}
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 flex-1 flex flex-col justify-between">
-        {/* Massive 2-Line Typography */}
-        <div className="relative pt-4 sm:pt-8 select-none">
-          {/* Line 1: MUGEN */}
-          <div className="w-full">
+      {/* Main Hero Content */}
+      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 flex-1 flex flex-col justify-between relative z-10">
+        {/* Massive 2-Line Editorial Typography with Scroll Parallax */}
+        <div
+          className="relative pt-4 sm:pt-8 select-none will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          style={{
+            transform: `translate3d(0, ${scrollY * 0.16}px, 0)`,
+            opacity: Math.max(0, 1 - scrollY / 850),
+          }}
+        >
+          {/* Line 1: MUGEN with Clip-Path Reveal */}
+          <div
+            className={`w-full overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+            }`}
+          >
             <h1 className="text-[16.5vw] md:text-[15.5vw] font-bold text-white tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0">
               MUGEN
             </h1>
@@ -47,13 +85,21 @@ export function Hero() {
           {/* Line 2: Since 2016 badge + STUDIO */}
           <div className="relative flex items-baseline justify-between w-full">
             {/* Left: Since badge positioned under 'M' */}
-            <div className="absolute left-1 top-2 sm:top-4 md:top-6 flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-neutral-400 font-normal">
+            <div
+              className={`absolute left-1 top-2 sm:top-4 md:top-6 flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
+                arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
               <span>©</span>
               <span>Since — 2016</span>
             </div>
 
             {/* Line 2 Word: STUDIO */}
-            <div className="w-full text-right sm:text-left sm:pl-[24vw] md:pl-[28vw]">
+            <div
+              className={`w-full text-right sm:text-left sm:pl-[24vw] md:pl-[28vw] overflow-hidden transition-all duration-1000 delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+              }`}
+            >
               <span className="text-[16.5vw] md:text-[15.5vw] font-bold text-[#888888] tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0 block">
                 STUDIO
               </span>
@@ -61,10 +107,14 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Central Content Area with Floating Card & Manifesto */}
+        {/* Central Content Area with Floating Card, Rating & Editorial Manifesto */}
         <div className="relative mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
           {/* Bottom Left: Happy Clients & Rating */}
-          <div className="lg:col-span-4 order-2 lg:order-1 flex items-center gap-4">
+          <div
+            className={`lg:col-span-4 order-2 lg:order-1 flex items-center gap-4 transition-all duration-1000 delay-300 ${
+              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
             {/* Overlapping Avatar Stack */}
             <div className="flex items-center -space-x-2.5">
               <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
@@ -121,17 +171,24 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Center: Floating Meeting Card (Sarah Park) */}
-          <div className="lg:col-span-4 order-1 lg:order-2 flex justify-center -mt-16 sm:-mt-24 lg:-mt-36 z-20">
-            <div className="w-full max-w-[320px] rounded-2xl bg-[#141414] border border-white/10 shadow-2xl p-3 flex flex-col gap-3 backdrop-blur-md">
+          {/* Center: Floating Meeting Card (Sarah Park) with Parallax */}
+          <div
+            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center -mt-16 sm:-mt-24 lg:-mt-36 z-20 transition-all duration-1000 delay-200 ${
+              arrived ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            }`}
+            style={{
+              transform: `translate3d(0, ${scrollY * -0.06}px, 0)`,
+            }}
+          >
+            <div className="w-full max-w-[320px] rounded-3xl bg-[#141414]/90 border border-white/10 shadow-2xl p-3.5 flex flex-col gap-3.5 backdrop-blur-xl group hover:border-white/20 transition-all duration-500">
               {/* Photo Container */}
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-neutral-900">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900">
                 <Image
                   src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
                   alt="Sarah Park - Project Manager"
                   fill
                   priority
-                  className="object-cover object-top"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
 
                 {/* Availability Badge Overlay */}
@@ -171,22 +228,28 @@ export function Hero() {
                   </Link>
                 </div>
 
-                {/* White CTA Button */}
-                <Link
-                  href="/contact"
-                  className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-medium text-xs flex items-center justify-between shadow-sm"
-                >
-                  <span>Book a 15-Min Call</span>
-                  <Calendar className="w-4 h-4 text-black" />
-                </Link>
+                {/* White CTA Button with Magnetic Pull */}
+                <MagneticButton className="w-full">
+                  <Link
+                    href="/contact"
+                    className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-medium text-xs flex items-center justify-between shadow-sm cursor-pointer"
+                  >
+                    <span>Book a 15-Min Call</span>
+                    <Calendar className="w-4 h-4 text-black" />
+                  </Link>
+                </MagneticButton>
               </div>
             </div>
           </div>
 
           {/* Bottom Right: Editorial Manifesto */}
-          <div className="lg:col-span-4 order-3 flex justify-end">
+          <div
+            className={`lg:col-span-4 order-3 flex justify-end transition-all duration-1000 delay-350 ${
+              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
             <p className="max-w-md text-base sm:text-lg md:text-xl leading-snug tracking-tight text-right lg:text-left">
-              <strong className="text-white font-semibold block sm:inline">
+              <strong className="text-white font-bold block sm:inline">
                 We&apos;ve reimagined how great design happens.{" "}
               </strong>
               <span className="text-[#888888] font-normal">
@@ -198,9 +261,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Client Logos Strip */}
+        {/* Continuous Seamless Infinite Client Marquee */}
         <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="flex flex-wrap items-center justify-between gap-6 sm:gap-8 opacity-65 hover:opacity-100 transition-opacity">
+          <Marquee speed={35} className="opacity-70 hover:opacity-100 transition-opacity">
             {clientLogos.map((client, idx) => (
               <div
                 key={idx}
@@ -217,7 +280,7 @@ export function Hero() {
                 </div>
               </div>
             ))}
-          </div>
+          </Marquee>
         </div>
       </div>
     </section>

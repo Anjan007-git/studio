@@ -20,11 +20,12 @@ export function CustomCursor() {
       return;
     }
 
-    setEnabled(true);
-
     const onMouseMove = (e: MouseEvent) => {
       posRef.current.targetX = e.clientX;
       posRef.current.targetY = e.clientY;
+
+      // Enable cursor on first mouse interaction
+      setEnabled(true);
 
       // Detect hover target
       const target = e.target as HTMLElement | null;

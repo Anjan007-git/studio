@@ -1,59 +1,106 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Privacy Policy — Mugen Design Studio",
-  description: "Privacy policy and data collection terms for Mugen Studio clients and visitors.",
+  description: "Privacy policy explaining how Mugen Studio collects, protects, and handles personal and project information.",
 };
 
-export default function PrivacyPage() {
+const privacySections = [
+  {
+    title: "1. Information You Provide",
+    content: "When you engage our services, we collect personal information including your name, contact details, email address, phone number, billing address, payment details, and company information. Throughout our working relationship, we also collect project-related information including brand assets, design guidelines, project briefs, creative feedback, and all client-supplied materials."
+  },
+  {
+    title: "2. Information Automatically Collected",
+    content: "When you visit our website, we automatically collect device information including your IP address, browser type, operating system, pages visited, time spent on pages, referring URLs, and timestamps. This information helps us optimize user experience and monitor site performance."
+  },
+  {
+    title: "3. Cookies and Tracking Technologies",
+    content: "We use essential cookies for website functionality, analytics cookies to measure performance and traffic patterns, and preference cookies to remember your choices. You can manage or disable cookie preferences directly through your browser settings."
+  },
+  {
+    title: "4. How We Use Your Information",
+    content: "We use your information primarily to deliver contracted design and development services, manage subscription accounts, process payments, communicate project milestones, and provide ongoing client support. We also analyze aggregated usage trends to refine our capabilities and services."
+  },
+  {
+    title: "5. Data Storage and Security",
+    content: "Your data is stored using secure cloud infrastructure with industry-standard TLS encryption in transit and AES-256 encryption at rest. We implement access control policies restricting data access solely to authorized personnel with a legitimate business need."
+  },
+  {
+    title: "6. Data Retention Policies",
+    content: "We retain active client data for the duration of the contractual engagement. Archived project files are retained for 10 years for reference and legal compliance. You have the right to request deletion of your project and personal data at any time, subject to legal and statutory recordkeeping requirements."
+  },
+  {
+    title: "7. Information Sharing with Third Parties",
+    content: "We do not sell, rent, or trade your personal data. We share information only with trusted third-party service providers (such as cloud hosting, payment processors, and communication platforms) bound by strict confidentiality and data protection agreements."
+  },
+  {
+    title: "8. European Users (GDPR Compliance)",
+    content: "If you reside within the European Economic Area, you hold statutory rights under the General Data Protection Regulation (GDPR), including the right to access, rectify, port, or erase your personal data, and to restrict or object to specific processing activities."
+  },
+  {
+    title: "9. California Privacy Rights (CCPA/CPRA)",
+    content: "California residents have the right under the California Consumer Privacy Act to request disclosures regarding personal information collected, request deletion of personal information, and opt out of any sale or sharing of personal data without discrimination."
+  },
+  {
+    title: "10. Children's Privacy",
+    content: "Our services are directed exclusively to businesses and professionals. We do not knowingly collect personal information from individuals under the age of 16. If we discover inadvertent collection of minor data, we will take immediate steps to delete it."
+  },
+  {
+    title: "11. Policy Modifications and Notifications",
+    content: "We may update this Privacy Policy periodically to reflect technological, operational, or legal developments. Active clients will receive 30 days prior written notice of material revisions via email."
+  }
+];
+
+export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
       <Navbar />
 
-      <main className="pt-32 sm:pt-40 pb-24 sm:pb-32">
+      <main className="pt-28 sm:pt-36 pb-24 sm:pb-32">
         <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
-          <div className="mb-12">
+          {/* Header */}
+          <div className="mb-14 sm:mb-20">
             <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
-              [Privacy]
+              [Privacy & Transparency]
             </span>
-            <h1 className="text-4xl sm:text-5xl font-medium tracking-tight text-white mb-4">
-              Privacy Policy
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-4">
+              Privacy policy.
             </h1>
-            <p className="text-xs font-mono text-neutral-500">
-              Last updated: January 2025
+            <p className="text-xs font-mono text-neutral-400">
+              Last updated: February 17, 2026
             </p>
           </div>
 
-          <div className="space-y-10 text-sm text-neutral-300 leading-relaxed font-normal">
-            <section className="space-y-3">
-              <h2 className="text-xl font-medium text-white">1. Information We Collect</h2>
-              <p>
-                We collect personal information that you provide to us directly through contact forms, email inquiries, or project intake questionnaires. This may include your name, email address, company name, phone number, and project details.
-              </p>
-            </section>
+          {/* Overview */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14">
+            <h2 className="text-xl font-bold text-white mb-4">Introduction</h2>
+            <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light mb-6">
+              This Privacy Policy explains how Mugen Studio collects, uses, processes, and safeguards personal information and project data across our design services and digital platforms. We are committed to transparency and honoring your privacy rights under global regulations.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-neutral-400">
+              <div>• GDPR & CCPA Compliance</div>
+              <div>• TLS & AES-256 Encryption</div>
+              <div>• Zero Data Reselling</div>
+              <div>• 10-Year Safe Archival</div>
+            </div>
+          </div>
 
-            <section className="space-y-3">
-              <h2 className="text-xl font-medium text-white">2. How We Use Information</h2>
-              <p>
-                We use the information collected exclusively to deliver creative design services, evaluate project inquiries, communicate updates regarding sprints and milestones, and manage retainer agreements. We never sell, rent, or trade client information to third parties.
-              </p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-medium text-white">3. Data Security & Storage</h2>
-              <p>
-                We implement industry-standard technical and organizational security measures to protect your materials and design assets against unauthorized access, loss, or disclosure. All design files and client deliverables are stored on encrypted cloud infrastructure.
-              </p>
-            </section>
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-medium text-white">4. Your Rights</h2>
-              <p>
-                You have the right to request access to the personal data we hold about you, request corrections, or request deletion of your information from our records upon termination of our working relationship. Contact us anytime at contact@mugen.design.
-              </p>
-            </section>
+          {/* Sections List */}
+          <div className="space-y-12">
+            {privacySections.map((sec, idx) => (
+              <section key={idx} className="pb-10 border-b border-white/10 space-y-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  {sec.title}
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+                  {sec.content}
+                </p>
+              </section>
+            ))}
           </div>
         </div>
       </main>

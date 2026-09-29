@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Clock, Zap } from "./icons";
+import { MotionReveal } from "./MotionReveal";
 
 const steps = [
   {
@@ -38,75 +39,84 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="py-24 border-t border-white/[0.08] relative">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10">
+    <section id="process" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header and Speed Badges */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 bg-white/[0.05] border border-white/[0.08] px-3 py-1 rounded-full">
-                [04] Process
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-medium tracking-tight text-white mb-6">
-              A proven process that delivers results, not surprises.
-            </h2>
-            <p className="text-base text-neutral-400 leading-relaxed">
-              We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
-            </p>
-          </div>
-
-          {/* Turnaround highlight pills */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                <Zap className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-xs font-semibold text-white block">
-                  3–5 Days Kick-off
-                </span>
-                <span className="text-[11px] text-neutral-400 font-mono block">
-                  Straight to work after signing
+        <MotionReveal variant="fade-up">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
+            <div className="max-w-2xl">
+              <div className="mb-4">
+                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+                  [04] Process
                 </span>
               </div>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+                A proven process that delivers results, not surprises.
+              </h2>
+              <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+                We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
+              </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                <Clock className="w-4 h-4" />
+            {/* Turnaround highlight pills */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="p-4 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center gap-3 shadow-md">
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                  <Zap className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-semibold text-white block">
+                    3–5 Days Kick-off
+                  </span>
+                  <span className="text-[11px] text-neutral-400 font-mono block">
+                    Straight to work after signing
+                  </span>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-semibold text-white block">
-                  48-Hour Turnaround
-                </span>
-                <span className="text-[11px] text-neutral-400 font-mono block">
-                  On most standard sprint requests
-                </span>
+
+              <div className="p-4 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center gap-3 shadow-md">
+                <div className="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-semibold text-white block">
+                    48-Hour Turnaround
+                  </span>
+                  <span className="text-[11px] text-neutral-400 font-mono block">
+                    On most standard sprint requests
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </MotionReveal>
 
         {/* 5-Step Process Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((item) => (
-            <div
+          {steps.map((item, idx) => (
+            <MotionReveal
               key={item.step}
-              className="p-6 sm:p-7 rounded-3xl bg-[#0c0c0c] border border-white/[0.08] flex flex-col justify-between hover:border-white/[0.2] transition-colors relative"
+              variant="fade-up"
+              delay={idx * 80}
+              className="h-full"
             >
-              <div>
-                <span className="text-sm font-mono text-neutral-500 block mb-6">
-                  /{item.step}
-                </span>
-                <h3 className="text-lg font-medium text-white mb-3">
-                  {item.title}
-                </h3>
+              <div
+                data-cursor="hover"
+                className="p-6 sm:p-7 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/30 transition-all duration-500 relative h-full shadow-xl group"
+              >
+                <div>
+                  <span className="text-sm font-mono text-neutral-500 block mb-6 group-hover:text-white transition-colors">
+                    /{item.step}
+                  </span>
+                  <h3 className="text-lg font-bold text-white mb-3">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-neutral-400 leading-relaxed font-light pt-6 border-t border-white/5 mt-6">
+                  {item.description}
+                </p>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed border-t border-white/[0.06] pt-4 mt-6">
-                {item.description}
-              </p>
-            </div>
+            </MotionReveal>
           ))}
         </div>
       </div>

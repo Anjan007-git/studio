@@ -24,10 +24,20 @@ import {
   Monitor,
   Rocket,
   Plus,
-  Minus
+  Minus,
+  ArrowLeft,
+  ExternalLink,
+  Search,
+  Menu,
+  X
 } from "lucide-react";
 
 export {
+  ArrowLeft,
+  ExternalLink,
+  Search,
+  Menu,
+  X,
   ArrowUpRight,
   ArrowRight,
   Check,

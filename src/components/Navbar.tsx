@@ -162,7 +162,7 @@ export function Navbar() {
             </Link>
 
             <Link
-              href="/#pricing"
+              href="/pricing"
               onClick={() => setMenuOpen(false)}
               className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
             >

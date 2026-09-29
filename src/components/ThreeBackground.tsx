@@ -116,7 +116,7 @@ export function ThreeBackground() {
 
     // Animation Loop
     let animationFrameId: number;
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
     const positionAttribute = planeGeo.attributes.position;
     const count = positionAttribute.count;

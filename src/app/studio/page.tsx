@@ -104,6 +104,7 @@ const studioArticles = [
     author: "Emma Wright",
     role: "Senior Designer",
     image: "/images/uhZaPfIrCFAy4Kx7PfKvzv8r8q8.jpg",
+    slug: "beyond-minimalism-what-s-next-in-web-design",
   },
   {
     category: "Strategy",
@@ -115,6 +116,7 @@ const studioArticles = [
     author: "Alex West",
     role: "Creative Director",
     image: "/images/EoBMupP4sDoc2Zgcjt3OXKz2mg.jpg",
+    slug: "building-brands-that-scale",
   },
   {
     category: "Design",
@@ -126,6 +128,7 @@ const studioArticles = [
     author: "Sarah Park",
     role: "Project Manager",
     image: "/images/AkfwmbbK7reh203E7bgE8GE6w.png",
+    slug: "designing-for-human-connection",
   },
   {
     category: "Process",
@@ -137,6 +140,7 @@ const studioArticles = [
     author: "David Torres",
     role: "Developer",
     image: "/images/sirR5Knxvy6H4B4c8ceh6eTMMpc.jpeg",
+    slug: "how-designers-and-developers-can-actually-collaborate",
   },
 ];
 
@@ -505,7 +509,7 @@ export default function StudioPage() {
               {studioArticles.map((article, idx) => (
                 <Link
                   key={idx}
-                  href="/articles"
+                  href={`/articles/${article.slug}`}
                   className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 flex flex-col justify-between group hover:border-white/20 transition-all"
                 >
                   <div>

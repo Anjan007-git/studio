@@ -26,13 +26,13 @@ export function MotionReveal({
     const el = ref.current;
     if (!el) return;
 
-    // Respect reduced motion
+    // Respect reduced motion asynchronously
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
     if (prefersReducedMotion) {
-      setIsVisible(true);
-      return;
+      const raf = requestAnimationFrame(() => setIsVisible(true));
+      return () => cancelAnimationFrame(raf);
     }
 
     const observer = new IntersectionObserver(

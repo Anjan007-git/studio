@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "./icons";
+import { MotionReveal } from "./MotionReveal";
 
 const testimonials = [
   {
@@ -52,68 +53,78 @@ export function Testimonials() {
     <section className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
-              [06] Testimonials
-            </span>
+        <MotionReveal variant="fade-up">
+          <div className="max-w-3xl mb-16 sm:mb-20">
+            <div className="mb-4">
+              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+                [06] Testimonials
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+              Results speak louder than promises.
+            </h2>
+            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+              Hear directly from founders, leaders, and product executives who rely on Mugen for their highest-stakes creative endeavors.
+            </p>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white mb-6">
-            Results speak louder than promises.
-          </h2>
-          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed">
-            Hear directly from founders, leaders, and product executives who rely on Mugen for their highest-stakes creative endeavors.
-          </p>
-        </div>
+        </MotionReveal>
 
         {/* 4 Testimonial Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {testimonials.map((item, idx) => (
-            <div
+            <MotionReveal
               key={idx}
-              className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all"
+              variant="fade-up"
+              delay={idx * 100}
+              className="h-full"
             >
-              <div>
-                <div className="flex items-center gap-1 text-white mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
-                  ))}
-                </div>
-                <p className="text-sm text-neutral-300 leading-relaxed mb-8">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-              </div>
-
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
-                    <Image
-                      src={item.avatar}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
+              <div
+                data-cursor="hover"
+                className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/30 transition-all duration-500 shadow-xl h-full group"
+              >
+                <div>
+                  <div className="flex items-center gap-1 text-white mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">
-                      {item.name}
-                    </h4>
-                    <span className="text-[11px] font-mono text-neutral-400 block">
-                      {item.role}, {item.company}
+                  <p className="text-sm text-neutral-300 leading-relaxed font-light mb-8">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div>
+                  {/* Metric Highlight */}
+                  <div className="pt-4 pb-4 border-t border-white/5 mb-4">
+                    <span className="text-xl sm:text-2xl font-bold text-white tracking-tight block">
+                      {item.metric}
+                    </span>
+                    <span className="text-[11px] font-mono text-neutral-500">
+                      {item.metricLabel}
                     </span>
                   </div>
-                </div>
 
-                <div className="text-right font-mono">
-                  <span className="text-sm font-semibold text-white block">
-                    {item.metric}
-                  </span>
-                  <span className="text-[10px] text-neutral-500 block">
-                    {item.metricLabel}
-                  </span>
+                  <div className="pt-4 border-t border-white/10 flex items-center gap-3">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
+                      <Image
+                        src={item.avatar}
+                        alt={item.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        {item.name}
+                      </h4>
+                      <p className="text-xs font-mono text-neutral-400">
+                        {item.role}, {item.company}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </MotionReveal>
           ))}
         </div>
       </div>
