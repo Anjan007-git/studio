@@ -27,15 +27,15 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Article Not Found — Mugen Studio",
+      title: "Article Not Found — TRIFECTA TRENDS",
     };
   }
 
   return {
-    title: `${article.title} — Mugen Design Studio`,
+    title: `${article.title} — TRIFECTA TRENDS`,
     description: article.description,
     openGraph: {
-      title: `${article.title} — Mugen Design Studio`,
+      title: `${article.title} — TRIFECTA TRENDS`,
       description: article.description,
       images: [article.coverImage],
     },

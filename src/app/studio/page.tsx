@@ -12,28 +12,28 @@ const team = [
   {
     name: "Alex West",
     role: "Founder & Creative Director",
-    email: "alex@mugen.design",
-    bio: "With over 15 years in digital design, Alex founded MUGEN° to create a studio where craft comes first. He believes great design happens through process, not heroics.",
+    email: "alex@trifectatrends.com",
+    bio: "With over 15 years in digital design, Alex founded TRIFECTA TRENDS to create a studio where craft comes first. He believes great design happens through process, not heroics.",
     image: "/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg",
   },
   {
     name: "Sarah Park",
     role: "Project Manager",
-    email: "sarah@mugen.design",
+    email: "sarah@trifectatrends.com",
     bio: "Sarah keeps projects flowing and clients happy. With a background in design ops, she's mastered the art of making complex timelines feel effortless.",
     image: "/images/ulbEv91MwUwTk34ixqmyIluLPJY.png",
   },
   {
     name: "David Torres",
     role: "Developer",
-    email: "david@mugen.design",
+    email: "david@trifectatrends.com",
     bio: "David bridges design and development, turning ambitious concepts into seamless experiences. His background in architecture informs his approach to building digital products.",
     image: "/images/siKQvG204y5XTlJmEnImPRJ2lc.png",
   },
   {
     name: "Emma Wright",
     role: "Senior Designer",
-    email: "emma@mugen.design",
+    email: "emma@trifectatrends.com",
     bio: "Brings 8+ years of brand and digital expertise from agencies in Seoul and Toronto. She's passionate about typography and building design systems that actually work.",
     image: "/images/2szvKnNjJBBkPsk6yCETyIDktns.png",
   },
@@ -179,7 +179,7 @@ export default function StudioPage() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-bold tracking-[-0.035em] text-white max-w-6xl leading-[1.08] mb-12">
-              Mugen is a full service design team based in Toronto, Canada. We&apos;re a small team doing what we love: creating great design for businesses that need to move fast.
+              TRIFECTA TRENDS is a full service design team based in Toronto, Canada. We&apos;re a small team doing what we love: creating great design for businesses that need to move fast.
             </h1>
           </div>
         </section>
@@ -469,7 +469,7 @@ export default function StudioPage() {
                   <div>
                     <div className="flex items-center justify-between text-xs font-mono text-neutral-500 mb-8">
                       <span className="text-neutral-500">/{item.num}</span>
-                      <span className="text-white font-medium">MUGEN®</span>
+                      <span className="text-white font-medium">TRIFECTA TRENDS®</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">
                       {item.title}

@@ -19,7 +19,7 @@ export function Footer() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("contact@mugen.design");
+    navigator.clipboard.writeText("contact@trifectatrends.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -34,7 +34,7 @@ export function Footer() {
               href="/"
               className="inline-flex items-start gap-0.5 text-2xl font-bold tracking-tight text-white uppercase hover:opacity-80 transition-opacity"
             >
-              <span>MUGEN</span>
+              <span>TRIFECTA TRENDS</span>
               <span className="text-xs font-normal">©</span>
             </Link>
             <p className="text-sm text-neutral-400 max-w-sm leading-relaxed">
@@ -83,7 +83,7 @@ export function Footer() {
                 onClick={copyEmail}
                 className="text-white hover:text-neutral-300 font-mono text-xs flex items-center gap-2 cursor-pointer"
               >
-                <span>contact@mugen.design</span>
+                <span>contact@trifectatrends.com</span>
                 <span className="text-[10px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded">
                   {copied ? "email copied" : "click to copy"}
                 </span>
@@ -224,15 +224,15 @@ export function Footer() {
 
         {/* Bottom Giant Brand Wordmark */}
         <div className="pt-16 pb-8 select-none">
-          <span className="text-[18vw] font-bold text-white/[0.04] leading-none tracking-tight block text-center uppercase">
-            MUGEN
+          <span className="text-[12vw] sm:text-[13vw] font-bold text-white/[0.04] leading-none tracking-tight block text-center uppercase">
+            TRIFECTA TRENDS
           </span>
         </div>
 
         {/* Bottom copyright row */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 font-mono text-[11px]">
           <div>
-            <span>Based in Toronto (CA). © 2016 — 2026 MUGEN STUDIO.</span>
+            <span>Based in Toronto (CA). © 2016 — 2026 TRIFECTA TRENDS.</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-neutral-400 transition-colors">

@@ -4,8 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Mugen Design Studio",
-  description: "Terms and conditions governing design services, retainers, and client engagements with Mugen Studio.",
+  title: "Terms of Service — TRIFECTA TRENDS",
+  description: "Terms and conditions governing design services, retainers, and client engagements with TRIFECTA TRENDS.",
 };
 
 const termsSections = [
@@ -103,7 +103,7 @@ export default function TermsOfServicePage() {
           <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14">
             <h2 className="text-xl font-bold text-white mb-4">Overview</h2>
             <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light mb-6">
-              These Terms of Service govern the engagement and provision of design, brand strategy, and product engineering services by Mugen Studio. Please review these terms carefully prior to commencing work or signing a project statement of work.
+              These Terms of Service govern the engagement and provision of design, brand strategy, and product engineering services by TRIFECTA TRENDS. Please review these terms carefully prior to commencing work or signing a project statement of work.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-neutral-300">
               <div>• Service Terms & Scope</div>

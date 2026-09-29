@@ -11,7 +11,7 @@ export function Approach() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("alex@mugen.design");
+    navigator.clipboard.writeText("alex@trifectatrends.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -65,10 +65,10 @@ export function Approach() {
                       onClick={handleCopyEmail}
                       className="text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer"
                     >
-                      {copied ? "email copied" : "alex@mugen.design"}
+                      {copied ? "email copied" : "alex@trifectatrends.com"}
                     </button>
                     <a
-                      href="mailto:alex@mugen.design"
+                      href="mailto:alex@trifectatrends.com"
                       aria-label="Email Alex West"
                       className="text-neutral-400 hover:text-white transition-colors"
                     >
@@ -88,7 +88,7 @@ export function Approach() {
 
                   {/* Founder Bio */}
                   <p className="text-xs text-neutral-400 leading-relaxed font-light mb-5">
-                    With over 15 years in digital design, Alex founded MUGEN° to create a studio where craft comes first. He believes great design happens through process, not heroics.
+                    With over 15 years in digital design, Alex founded TRIFECTA TRENDS to create a studio where craft comes first. He believes great design happens through process, not heroics.
                   </p>
                 </div>
 
@@ -100,7 +100,7 @@ export function Approach() {
                       Founder &amp; Creative Director
                     </p>
                   </div>
-                  <span className="text-xs font-mono text-neutral-500">MUGEN©</span>
+                  <span className="text-xs font-mono text-neutral-500">TRIFECTA TRENDS©</span>
                 </div>
               </div>
             </MotionReveal>
@@ -128,7 +128,7 @@ export function Approach() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-neutral-400 leading-relaxed font-light">
                 <div>
                   <p>
-                    So I built Mugen differently. No endless meetings, no office
+                    So I built TRIFECTA TRENDS differently. No endless meetings, no office
                     politics, no pitches that promise everything. Just talented
                     designers doing what they do best.
                   </p>
@@ -140,7 +140,7 @@ export function Approach() {
                     clients pay us for. To care as much as they do.
                   </p>
                   <p className="text-neutral-200 font-medium font-sans">
-                    That&apos;s the Mugen way. Simple, but not easy.
+                    That&apos;s the TRIFECTA TRENDS way. Simple, but not easy.
                   </p>
                 </div>
               </div>

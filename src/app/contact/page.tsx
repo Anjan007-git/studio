@@ -14,7 +14,7 @@ export default function ContactPage() {
   const budgetOptions = ["$10K - $25K", "$25K - $50K", "$50K - $100K", "$100K +"];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("contact@mugen.design");
+    navigator.clipboard.writeText("contact@trifectatrends.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </span>
                   <div className="flex items-center justify-between">
                     <span className="text-lg sm:text-xl font-mono text-white">
-                      contact@mugen.design
+                      contact@trifectatrends.com
                     </span>
                     <button
                       onClick={handleCopyEmail}

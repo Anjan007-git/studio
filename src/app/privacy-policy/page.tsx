@@ -4,8 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Mugen Design Studio",
-  description: "Privacy policy explaining how Mugen Studio collects, protects, and handles personal and project information.",
+  title: "Privacy Policy — TRIFECTA TRENDS",
+  description: "Privacy policy explaining how TRIFECTA TRENDS collects, protects, and handles personal and project information.",
 };
 
 const privacySections = [
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
           <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14">
             <h2 className="text-xl font-bold text-white mb-4">Introduction</h2>
             <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light mb-6">
-              This Privacy Policy explains how Mugen Studio collects, uses, processes, and safeguards personal information and project data across our design services and digital platforms. We are committed to transparency and honoring your privacy rights under global regulations.
+              This Privacy Policy explains how TRIFECTA TRENDS collects, uses, processes, and safeguards personal information and project data across our design services and digital platforms. We are committed to transparency and honoring your privacy rights under global regulations.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-neutral-400">
               <div>• GDPR & CCPA Compliance</div>

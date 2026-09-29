@@ -7,7 +7,7 @@ import { MagneticButton } from "./MagneticButton";
 
 export function CtaSection() {
   const [copied, setCopied] = useState(false);
-  const email = "contact@mugen.design";
+  const email = "contact@trifectatrends.com";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);

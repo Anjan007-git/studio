@@ -26,7 +26,7 @@ export function Hero() {
   useEffect(() => {
     // Check if preloader dispatches arrival or fallback after 1.8s
     const onArrival = () => setArrived(true);
-    window.addEventListener("mugen-arrival-start", onArrival);
+    window.addEventListener("trifecta-arrival-start", onArrival);
     const fallbackTimer = setTimeout(() => setArrived(true), 1800);
 
     const onScroll = () => {
@@ -36,7 +36,7 @@ export function Hero() {
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("mugen-arrival-start", onArrival);
+      window.removeEventListener("trifecta-arrival-start", onArrival);
       window.removeEventListener("scroll", onScroll);
       clearTimeout(fallbackTimer);
     };
@@ -71,20 +71,20 @@ export function Hero() {
             opacity: Math.max(0, 1 - scrollY / 850),
           }}
         >
-          {/* Line 1: MUGEN with Clip-Path Reveal */}
+          {/* Line 1: TRIFECTA with Clip-Path Reveal */}
           <div
             className={`w-full overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
             }`}
           >
-            <h1 className="text-[16.5vw] md:text-[15.5vw] font-bold text-white tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0">
-              MUGEN
+            <h1 className="text-[12.5vw] md:text-[12vw] font-bold text-white tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0">
+              TRIFECTA
             </h1>
           </div>
 
-          {/* Line 2: Since 2016 badge + STUDIO */}
+          {/* Line 2: Since 2016 badge + TRENDS */}
           <div className="relative flex items-baseline justify-between w-full">
-            {/* Left: Since badge positioned under 'M' */}
+            {/* Left: Since badge positioned under 'T' */}
             <div
               className={`absolute left-1 top-2 sm:top-4 md:top-6 flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
                 arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -94,14 +94,14 @@ export function Hero() {
               <span>Since — 2016</span>
             </div>
 
-            {/* Line 2 Word: STUDIO */}
+            {/* Line 2 Word: TRENDS */}
             <div
               className={`w-full text-right sm:text-left sm:pl-[24vw] md:pl-[28vw] overflow-hidden transition-all duration-1000 delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
               }`}
             >
-              <span className="text-[16.5vw] md:text-[15.5vw] font-bold text-[#888888] tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0 block">
-                STUDIO
+              <span className="text-[12.5vw] md:text-[12vw] font-bold text-[#888888] tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0 block">
+                TRENDS
               </span>
             </div>
           </div>

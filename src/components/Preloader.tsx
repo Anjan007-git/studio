@@ -16,13 +16,13 @@ export function Preloader() {
     const t2 = setTimeout(() => {
       setPhase("receding");
       // Notify hero and nav to begin their entrance sequence
-      window.dispatchEvent(new CustomEvent("mugen-arrival-start"));
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
     }, 2200);
 
     // 3.2s: Sequence finished, unmount preloader overlay
     const t3 = setTimeout(() => {
       setPhase("done");
-      window.dispatchEvent(new CustomEvent("mugen-arrival-complete"));
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
     }, 3200);
 
     return () => {
@@ -52,8 +52,8 @@ export function Preloader() {
         }`}
       >
         <div className="flex items-start justify-center gap-1.5 mb-3">
-          <span className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white uppercase select-none font-sans">
-            MUGEN
+          <span className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase select-none font-sans">
+            TRIFECTA TRENDS
           </span>
           <span className="text-sm sm:text-base font-normal text-white/80 mt-1 select-none font-mono">
             ©

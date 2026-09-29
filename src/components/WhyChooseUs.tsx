@@ -109,7 +109,7 @@ export function WhyChooseUs() {
                 {/* Top row: Brand & Rating */}
                 <div className="flex items-center justify-between mb-4 z-10">
                   <span className="text-xs font-bold uppercase tracking-wider text-white">
-                    MUGEN®
+                    TRIFECTA TRENDS®
                   </span>
                   <div className="flex items-center gap-1.5 text-xs text-white">
                     <div className="flex">

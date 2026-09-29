@@ -39,24 +39,24 @@ export function Navbar() {
 
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("contact@mugen.design");
+    navigator.clipboard.writeText("contact@trifectatrends.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <>
-      {/* Top Bar matching Mugen exclusion topbar */}
+      {/* Top Bar matching exclusion topbar */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-exclusion text-white pointer-events-auto">
         <div className="w-full px-6 sm:px-10 md:px-14 py-5 flex items-center justify-between">
           {/* Left: Brand Logo */}
           <Link
             href="/"
             className="flex items-start gap-0.5 group focus:outline-none"
-            aria-label="Mugen Home"
+            aria-label="TRIFECTA TRENDS Home"
           >
-            <span className="text-xl sm:text-2xl font-bold tracking-tight uppercase select-none">
-              MUGEN
+            <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight uppercase select-none">
+              TRIFECTA TRENDS
             </span>
             <span className="text-[11px] font-normal leading-none select-none">
               ®
@@ -215,7 +215,7 @@ export function Navbar() {
               onClick={copyEmail}
               className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2 group font-mono"
             >
-              <span>contact@mugen.design</span>
+              <span>contact@trifectatrends.com</span>
               <span className="text-[10px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded group-hover:bg-white/[0.15]">
                 {copied ? "email copied" : "click to copy"}
               </span>

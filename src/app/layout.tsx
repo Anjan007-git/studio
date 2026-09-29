@@ -21,7 +21,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mugenstudio.framer.website"),
-  title: "Mugen Design Studio — Built Different",
+  title: "TRIFECTA TRENDS — Built Different",
   description:
     "Premium design studio template. Dark mode portfolio with retainer pricing, case studies CMS & conversion-focused layout.",
   icons: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     apple: "/images/zhH4tM4hVUqlx0saiMz3PvxnLs.png",
   },
   openGraph: {
-    title: "Mugen Design Studio Framer Template",
+    title: "TRIFECTA TRENDS Framer Template",
     description:
       "Premium design studio Framer template. Dark mode portfolio with retainer pricing, case studies CMS & conversion-focused layout.",
     images: ["/images/AkfwmbbK7reh203E7bgE8GE6w.png"],

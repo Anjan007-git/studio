@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project Not Found — Mugen Studio",
+      title: "Project Not Found — TRIFECTA TRENDS",
     };
   }
 
@@ -35,7 +35,7 @@ export async function generateMetadata({
     title: `${project.title} — ${project.fullTitle}`,
     description: project.description,
     openGraph: {
-      title: `${project.title} — Mugen Design Studio`,
+      title: `${project.title} — TRIFECTA TRENDS`,
       description: project.description,
       images: [project.coverImage],
     },

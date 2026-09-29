@@ -64,7 +64,7 @@ export function Testimonials() {
               Results speak louder than promises.
             </h2>
             <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
-              Hear directly from founders, leaders, and product executives who rely on Mugen for their highest-stakes creative endeavors.
+              Hear directly from founders, leaders, and product executives who rely on TRIFECTA TRENDS for their highest-stakes creative endeavors.
             </p>
           </div>
         </MotionReveal>

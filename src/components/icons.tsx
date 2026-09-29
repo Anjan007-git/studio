@@ -65,10 +65,10 @@ export {
   Minus
 };
 
-export function MugenLogo({ className = "h-5 w-auto" }: { className?: string }) {
+export function TrifectaLogo({ className = "h-5 w-auto" }: { className?: string }) {
   return (
     <span className={`font-mono font-bold tracking-tighter text-white inline-flex items-center gap-0.5 text-base sm:text-lg ${className}`}>
-      MUGEN<span className="text-neutral-500 text-xs">°</span>
+      TRIFECTA TRENDS<span className="text-neutral-500 text-xs">°</span>
     </span>
   );
 }
