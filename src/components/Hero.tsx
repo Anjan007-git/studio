@@ -32,10 +32,10 @@ export function Hero() {
   }, []);
 
   useEffect(() => {
-    // Check if preloader dispatches arrival or fallback after 1.8s
+    // Check if arrival sequence dispatches arrival or safety fallback after 5.5s
     const onArrival = () => setArrived(true);
     window.addEventListener("trifecta-arrival-start", onArrival);
-    const fallbackTimer = setTimeout(() => setArrived(true), 1800);
+    const fallbackTimer = setTimeout(() => setArrived(true), 5500);
 
     const onScroll = () => {
       setScrollY(window.scrollY);

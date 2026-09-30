@@ -1,4 +1,4 @@
-import { Preloader } from "@/components/Preloader";
+import { HomeArrival } from "@/components/HomeArrival";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Approach } from "@/components/Approach";
@@ -16,7 +16,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#141414] text-[#ffffff] selection:bg-white selection:text-black">
-      <Preloader />
+      <HomeArrival />
       <Navbar />
       <main>
         <Hero />
