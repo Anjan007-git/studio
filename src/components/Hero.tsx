@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, Star } from "./icons";
-import { ThreeBackground } from "./ThreeBackground";
 import { Marquee } from "./Marquee";
 import { MagneticButton } from "./MagneticButton";
 
@@ -22,6 +21,15 @@ const clientLogos = [
 export function Hero() {
   const [arrived, setArrived] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.defaultMuted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   useEffect(() => {
     // Check if preloader dispatches arrival or fallback after 1.8s
@@ -44,21 +52,28 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-between pt-24 sm:pt-28 pb-10 overflow-hidden bg-[#141414]">
-      {/* 3D Atmospheric Background Canvas */}
-      <ThreeBackground />
-
-      {/* Looping Ambient Video Layer from Framer CDN */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      {/* Cinematic Full-Bleed Video Background */}
+      <div
+        className={`absolute inset-0 z-0 overflow-hidden pointer-events-none select-none transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          arrived ? "opacity-100" : "opacity-0"
+        }`}
+        aria-hidden="true"
+      >
         <video
+          ref={videoRef}
           src="/videos/hero.mp4"
-          poster="/images/EoBMupP4sDoc2Zgcjt3OXKz2mg.jpg"
+          poster="/images/hero-poster.jpg"
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-25 grayscale contrast-125"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover object-[center_25%] sm:object-[center_35%] md:object-[center_40%] pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#141414]/40 via-transparent to-[#141414]" />
+        {/* Subtle dark overlay preserving metallic details while guaranteeing high text legibility */}
+        <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+        {/* Seamless bottom fade into page background, providing excellent contrast for mobile manifesto */}
+        <div className="absolute inset-x-0 bottom-0 h-80 sm:h-56 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}
