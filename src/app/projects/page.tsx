@@ -72,7 +72,7 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Filter Pills */}
-                <div className="flex flex-wrap items-center gap-1.5 bg-white/[0.04] p-1 rounded-full border border-white/10">
+                <div className="flex flex-wrap items-center gap-1.5 bg-white/[0.04] p-1 rounded-2xl sm:rounded-full border border-white/10">
                   {categories.map((cat) => (
                     <button
                       key={cat}

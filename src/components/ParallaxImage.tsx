@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image, { ImageProps } from "next/image";
 
 interface ParallaxImageProps extends Omit<ImageProps, "className"> {
@@ -17,11 +17,12 @@ export function ParallaxImage({
   ...props
 }: ParallaxImageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [offsetY, setOffsetY] = useState(0);
+  const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = containerRef.current;
-    if (!el) return;
+    const inner = innerRef.current;
+    if (!el || !inner) return;
 
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -30,8 +31,8 @@ export function ParallaxImage({
 
     let rafId: number;
 
-    const onScroll = () => {
-      if (!el) return;
+    const updateParallax = () => {
+      if (!el || !inner) return;
       const rect = el.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
@@ -40,12 +41,12 @@ export function ParallaxImage({
         const center = rect.top + rect.height / 2;
         const screenCenter = windowHeight / 2;
         const diff = (center - screenCenter) * speed;
-        setOffsetY(diff);
+        inner.style.transform = `translate3d(0, ${diff.toFixed(2)}px, 0)`;
       }
     };
 
     const loop = () => {
-      onScroll();
+      updateParallax();
       rafId = requestAnimationFrame(loop);
     };
 
@@ -60,9 +61,9 @@ export function ParallaxImage({
       className={`relative overflow-hidden ${containerClassName}`}
     >
       <div
+        ref={innerRef}
         className="w-full h-full will-change-transform scale-[1.12]"
         style={{
-          transform: `translate3d(0, ${offsetY}px, 0)`,
           transition: "transform 0.1s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >

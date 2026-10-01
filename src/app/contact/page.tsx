@@ -55,13 +55,13 @@ export default function ContactPage() {
                   <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block">
                     [Mail to]
                   </span>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg sm:text-xl font-mono text-white">
+                  <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
+                    <span className="text-xs sm:text-base md:text-xl font-mono text-white break-all sm:break-normal">
                       contact@trifectatrends.com
                     </span>
                     <button
                       onClick={handleCopyEmail}
-                      className="text-xs font-mono text-neutral-400 hover:text-white px-3 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] transition-all cursor-pointer"
+                      className="text-xs font-mono text-neutral-400 hover:text-white px-3 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] transition-all cursor-pointer shrink-0"
                     >
                       {copied ? "copied!" : "copy"}
                     </button>

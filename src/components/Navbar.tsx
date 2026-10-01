@@ -25,18 +25,20 @@ export function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
-  // Prevent background scrolling when menu is open
+  // Prevent background scrolling when menu is open and stop Lenis smoothly
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
+      window.__lenis?.stop();
     } else {
       document.body.style.overflow = "unset";
+      window.__lenis?.start();
     }
     return () => {
       document.body.style.overflow = "unset";
+      window.__lenis?.start();
     };
   }, [menuOpen]);
-
 
   const copyEmail = () => {
     navigator.clipboard.writeText("contact@trifectatrends.com");
@@ -48,17 +50,18 @@ export function Navbar() {
     <>
       {/* Top Bar matching exclusion topbar */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-exclusion text-white pointer-events-auto">
-        <div className="w-full px-6 sm:px-10 md:px-14 py-5 flex items-center justify-between">
+        <div className="w-full px-5 sm:px-10 md:px-14 py-4 sm:py-5 pt-[max(1rem,env(safe-area-inset-top))] flex items-center justify-between">
           {/* Left: Brand Logo */}
           <Link
             href="/"
+            onClick={() => setMenuOpen(false)}
             className="flex items-start gap-0.5 group focus:outline-none"
             aria-label="TRIFECTA TRENDS Home"
           >
-            <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight uppercase select-none">
+            <span className="text-base sm:text-xl md:text-2xl font-bold tracking-tight uppercase select-none">
               TRIFECTA TRENDS
             </span>
-            <span className="text-[11px] font-normal leading-none select-none">
+            <span className="text-[10px] sm:text-[11px] font-normal leading-none select-none">
               ®
             </span>
           </Link>
@@ -71,11 +74,11 @@ export function Navbar() {
             </span>
           </div>
 
-          {/* Right: Our Work link & Hamburger */}
-          <div className="flex items-center gap-6 sm:gap-8">
+          {/* Right: Our Work link (tablet/desktop) & Minimal Mobile Hamburger */}
+          <div className="flex items-center gap-4 sm:gap-8">
             <Link
               href="/projects"
-              className="text-xs sm:text-sm font-medium tracking-tight text-white hover:opacity-75 transition-opacity"
+              className="hidden sm:inline-flex text-xs sm:text-sm font-medium tracking-tight text-white hover:opacity-75 transition-opacity"
             >
               Our Work <span className="text-[11px] text-neutral-300 font-mono">[12]</span>
             </Link>
@@ -107,7 +110,7 @@ export function Navbar() {
 
       {/* Fullscreen Overlay Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#0e0e0e]/95 backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between p-6 sm:p-12 md:p-16 ${
+        className={`fixed inset-0 z-40 bg-[#0e0e0e]/98 backdrop-blur-3xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between p-6 sm:p-12 md:p-16 pt-[max(5.5rem,calc(env(safe-area-inset-top)+4.5rem))] pb-[max(2rem,calc(env(safe-area-inset-bottom)+1.5rem))] ${
           menuOpen
             ? "opacity-100 pointer-events-auto visible"
             : "opacity-0 pointer-events-none invisible"

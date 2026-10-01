@@ -9,6 +9,7 @@ interface MotionRevealProps {
   duration?: number; // ms
   threshold?: number;
   className?: string;
+  once?: boolean;
 }
 
 export function MotionReveal({
@@ -16,8 +17,9 @@ export function MotionReveal({
   variant = "fade-up",
   delay = 0,
   duration = 800,
-  threshold = 0.15,
+  threshold = 0.1,
   className = "",
+  once = false,
 }: MotionRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -39,18 +41,22 @@ export function MotionReveal({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(el);
+          if (once) {
+            observer.unobserve(el);
+          }
+        } else if (!once) {
+          setIsVisible(false);
         }
       },
       {
         threshold,
-        rootMargin: "0px 0px -50px 0px",
+        rootMargin: "0px 0px -40px 0px",
       }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, once]);
 
   const getStyles = (): React.CSSProperties => {
     const baseTransition = `all ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`;

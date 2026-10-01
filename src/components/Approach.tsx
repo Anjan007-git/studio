@@ -30,8 +30,8 @@ export function Approach() {
 
         {/* Massive Two-Tone Manifesto Headline */}
         <MotionReveal variant="clip-up" duration={900}>
-          <div className="max-w-6xl mb-20 sm:mb-24">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-[-0.03em] leading-[1.18]">
+          <div className="max-w-6xl mb-16 sm:mb-24">
+            <h2 className="text-[clamp(1.75rem,5.8vw,3.25rem)] font-bold tracking-[-0.03em] leading-[1.16]">
               <span className="text-[#888888]">
                 Traditional agencies perfected the art of the pitch.{" "}
               </span>
@@ -52,8 +52,8 @@ export function Approach() {
         {/* 2-Column Layout: Alex West Card & Detailed Story */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Dedicated Alex West Portrait Card */}
-          <div className="lg:col-span-4 flex justify-start">
-            <MotionReveal variant="fade-up" delay={150} className="w-full max-w-[340px]">
+          <div className="lg:col-span-4 flex justify-center lg:justify-start">
+            <MotionReveal variant="fade-up" delay={150} className="w-full max-w-[340px] mx-auto lg:mx-0">
               <div
                 data-cursor="hover"
                 className="w-full rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500"

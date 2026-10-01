@@ -51,7 +51,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between pt-24 sm:pt-28 pb-10 overflow-hidden bg-[#141414]">
+    <section className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 overflow-hidden bg-[#141414]">
       {/* Cinematic Full-Bleed Video Background */}
       <div
         className={`absolute inset-0 z-0 overflow-hidden pointer-events-none select-none transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
@@ -68,19 +68,19 @@ export function Hero() {
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover object-[center_25%] sm:object-[center_35%] md:object-[center_40%] pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-[center_35%] md:object-[center_40%] pointer-events-none"
         />
         {/* Subtle dark overlay preserving metallic details while guaranteeing high text legibility */}
-        <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
         {/* Seamless bottom fade into page background, providing excellent contrast for mobile manifesto */}
         <div className="absolute inset-x-0 bottom-0 h-80 sm:h-56 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 flex-1 flex flex-col justify-between relative z-10">
+      <div className="w-full max-w-[1560px] mx-auto px-5 sm:px-10 md:px-14 flex-1 flex flex-col justify-between relative z-10">
         {/* Massive 2-Line Editorial Typography with Scroll Parallax */}
         <div
-          className="relative pt-4 sm:pt-8 select-none will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          className="relative pt-2 sm:pt-6 md:pt-8 select-none will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
           style={{
             transform: `translate3d(0, ${scrollY * 0.16}px, 0)`,
             opacity: Math.max(0, 1 - scrollY / 850),
@@ -92,7 +92,7 @@ export function Hero() {
               arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
             }`}
           >
-            <h1 className="text-[12.5vw] md:text-[12vw] font-bold text-white tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0">
+            <h1 className="text-[clamp(2.85rem,13vw,8.5rem)] font-bold text-white tracking-[-0.04em] leading-[0.84] uppercase m-0 p-0">
               TRIFECTA
             </h1>
           </div>
@@ -101,7 +101,7 @@ export function Hero() {
           <div className="relative flex items-baseline justify-between w-full">
             {/* Left: Since badge positioned under 'T' */}
             <div
-              className={`absolute left-1 top-2 sm:top-4 md:top-6 flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
+              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
                 arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -115,7 +115,7 @@ export function Hero() {
                 arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
               }`}
             >
-              <span className="text-[12.5vw] md:text-[12vw] font-bold text-[#888888] tracking-[-0.04em] leading-[0.82] uppercase m-0 p-0 block">
+              <span className="text-[clamp(2.85rem,13vw,8.5rem)] font-bold text-[#888888] tracking-[-0.04em] leading-[0.84] uppercase m-0 p-0 block">
                 TRENDS
               </span>
             </div>
@@ -123,72 +123,10 @@ export function Hero() {
         </div>
 
         {/* Central Content Area with Floating Card, Rating & Editorial Manifesto */}
-        <div className="relative mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-          {/* Bottom Left: Happy Clients & Rating */}
+        <div className="relative mt-6 sm:mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Sarah Park) */}
           <div
-            className={`lg:col-span-4 order-2 lg:order-1 flex items-center gap-4 transition-all duration-1000 delay-300 ${
-              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            {/* Overlapping Avatar Stack */}
-            <div className="flex items-center -space-x-2.5">
-              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
-                <Image
-                  src="/images/2szvKnNjJBBkPsk6yCETyIDktns.png"
-                  alt="Client avatar"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
-                <Image
-                  src="/images/siKQvG204y5XTlJmEnImPRJ2lc.png"
-                  alt="Client avatar"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
-                <Image
-                  src="/images/IxG8JQTe4YCB0OBh5yXZR2y0lk.png"
-                  alt="Client avatar"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
-                <Image
-                  src="/images/ADzzP2ffltBL8xXs0bcwap1FtlM.png"
-                  alt="Client avatar"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* "You?" dark circle */}
-              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#1c1c1c] flex items-center justify-center text-[10px] font-semibold text-white">
-                You?
-              </div>
-            </div>
-
-            {/* Stars & Rating Text */}
-            <div className="flex flex-col text-xs">
-              <div className="flex items-center gap-1.5">
-                <div className="flex text-white">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
-                  ))}
-                </div>
-                <span className="font-semibold text-white">4.9 / 5</span>
-              </div>
-              <span className="text-neutral-400 font-normal mt-0.5">
-                100+ Happy clients
-              </span>
-            </div>
-          </div>
-
-          {/* Center: Floating Meeting Card (Sarah Park) with Parallax */}
-          <div
-            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center -mt-16 sm:-mt-24 lg:-mt-36 z-20 transition-all duration-1000 delay-200 ${
+            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 transition-all duration-1000 delay-200 ${
               arrived ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
             style={{
@@ -257,13 +195,13 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Bottom Right: Editorial Manifesto */}
+          {/* Order 2 on mobile, Order 3 on desktop: Editorial Manifesto */}
           <div
-            className={`lg:col-span-4 order-3 flex justify-end transition-all duration-1000 delay-350 ${
+            className={`lg:col-span-4 order-2 lg:order-3 flex justify-start lg:justify-end transition-all duration-1000 delay-350 ${
               arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <p className="max-w-md text-base sm:text-lg md:text-xl leading-snug tracking-tight text-right lg:text-left">
+            <p className="max-w-md text-base sm:text-lg md:text-xl leading-snug tracking-tight text-left">
               <strong className="text-white font-bold block sm:inline">
                 We&apos;ve reimagined how great design happens.{" "}
               </strong>
@@ -274,10 +212,72 @@ export function Hero() {
               </span>
             </p>
           </div>
+
+          {/* Order 3 on mobile, Order 1 on desktop: Happy Clients & Rating */}
+          <div
+            className={`lg:col-span-4 order-3 lg:order-1 flex items-center gap-4 transition-all duration-1000 delay-300 ${
+              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
+            {/* Overlapping Avatar Stack */}
+            <div className="flex items-center -space-x-2.5">
+              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
+                <Image
+                  src="/images/2szvKnNjJBBkPsk6yCETyIDktns.png"
+                  alt="Client avatar"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
+                <Image
+                  src="/images/siKQvG204y5XTlJmEnImPRJ2lc.png"
+                  alt="Client avatar"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
+                <Image
+                  src="/images/IxG8JQTe4YCB0OBh5yXZR2y0lk.png"
+                  alt="Client avatar"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-black bg-neutral-800">
+                <Image
+                  src="/images/ADzzP2ffltBL8xXs0bcwap1FtlM.png"
+                  alt="Client avatar"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* "You?" dark circle */}
+              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#1c1c1c] flex items-center justify-center text-[10px] font-semibold text-white">
+                You?
+              </div>
+            </div>
+
+            {/* Stars & Rating Text */}
+            <div className="flex flex-col text-xs">
+              <div className="flex items-center gap-1.5">
+                <div className="flex text-white">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
+                  ))}
+                </div>
+                <span className="font-semibold text-white">4.9 / 5</span>
+              </div>
+              <span className="text-neutral-400 font-normal mt-0.5">
+                100+ Happy clients
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Continuous Seamless Infinite Client Marquee */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10">
           <Marquee speed={35} className="opacity-70 hover:opacity-100 transition-opacity">
             {clientLogos.map((client, idx) => (
               <div

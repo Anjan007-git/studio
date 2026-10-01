@@ -224,7 +224,7 @@ export function Footer() {
 
         {/* Bottom Giant Brand Wordmark */}
         <div className="pt-16 pb-8 select-none">
-          <span className="text-[12vw] sm:text-[13vw] font-bold text-white/[0.04] leading-none tracking-tight block text-center uppercase">
+          <span className="text-[12vw] sm:text-[13vw] font-bold text-white/[0.12] sm:text-white/[0.15] leading-none tracking-tight block text-center uppercase">
             TRIFECTA TRENDS
           </span>
         </div>

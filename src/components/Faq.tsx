@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, ChevronUp } from "./icons";
+import { ChevronDown } from "./icons";
 import { MotionReveal } from "./MotionReveal";
 import { MagneticButton } from "./MagneticButton";
 
@@ -112,20 +112,26 @@ export function Faq() {
                       <span className="text-base sm:text-lg font-bold text-white tracking-tight">
                         {faq.q}
                       </span>
-                      <span className="text-neutral-400 shrink-0">
-                        {isOpen ? (
-                          <ChevronUp className="w-4 h-4 text-white" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
+                      <span
+                        className={`text-neutral-400 shrink-0 transform transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-white" : ""
+                        }`}
+                      >
+                        <ChevronDown className="w-4 h-4" />
                       </span>
                     </button>
 
-                    {isOpen && (
-                      <div className="px-6 sm:px-7 pb-6 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed border-t border-white/5 pt-4">
-                        {faq.a}
+                    <div
+                      className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="px-6 sm:px-7 pb-6 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed border-t border-white/5 pt-4">
+                          {faq.a}
+                        </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 </MotionReveal>
               );
