@@ -2,9 +2,19 @@
 
 import React, { useEffect } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -17,16 +27,20 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      touchMultiplier: 1.2,
+      touchMultiplier: 1.1,
     });
 
-    let rafId: number;
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
+    window.__lenis = lenis;
 
-    rafId = requestAnimationFrame(raf);
+    // Connect Lenis to ScrollTrigger
+    lenis.on("scroll", ScrollTrigger.update);
+
+    const updateLenis = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+
+    gsap.ticker.add(updateLenis);
+    gsap.ticker.lagSmoothing(0);
 
     lenis.on(
       "scroll",
@@ -44,8 +58,9 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     );
 
     return () => {
-      cancelAnimationFrame(rafId);
+      gsap.ticker.remove(updateLenis);
       lenis.destroy();
+      delete window.__lenis;
     };
   }, []);
 

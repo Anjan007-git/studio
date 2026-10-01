@@ -101,7 +101,7 @@ export function HomeArrival() {
       }
 
       // =====================================================================
-      // MASTER GSAP TIMELINE — EXACT MUGEN-STYLE ARRIVAL FOR TRIFECTA TRENDS
+      // MASTER GSAP TIMELINE — EDITORIAL ARRIVAL FOR TRIFECTA TRENDS
       // =====================================================================
       const masterTl = gsap.timeline({
         onComplete: () => {

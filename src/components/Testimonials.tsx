@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Star } from "./icons";
 import { MotionReveal } from "./MotionReveal";
+import { Marquee } from "./Marquee";
 
 const testimonials = [
   {
@@ -48,24 +49,59 @@ const testimonials = [
   },
 ];
 
+const clientLogos = [
+  { name: "GlobalBank", src: "/images/c6N9oEQ13bXzmoFxh74nyZoX8.svg" },
+  { name: "45 Degrees", src: "/images/MMLdIlzrdoGIlBjQHNOfvGYfVA.svg" },
+  { name: "AlphaWave", src: "/images/hRY01kjo62NpYPeF7biDgbGxkrg.svg" },
+  { name: "Biosynthesis", src: "/images/UdK1cxPGNHNVwGOT8o3e87PbzGE.svg" },
+  { name: "Boltshift", src: "/images/ECQjZvQ7bvbDvNXHmwn9ofmwP8.svg" },
+  { name: "Clandestine", src: "/images/IVQsAsFQMvVgoU6ZYkIx9TDhZ4.svg" },
+  { name: "Codecraft", src: "/images/XeOUaC43OnA1DfZRH6vXJAYEGpE.svg" },
+  { name: "ommLabs", src: "/images/4SXU5NecY5nX7I0EIxv06SjxME.svg" },
+];
+
 export function Testimonials() {
   return (
-    <section className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-        {/* Section Header */}
+    <section className="border-t border-white/10 relative bg-[#141414]">
+      {/* Full-bleed client logo marquee matching reference video frame 58-59 */}
+      <div className="py-7 border-b border-white/10 overflow-hidden">
+        <Marquee speed={32} className="opacity-70 hover:opacity-100 transition-opacity">
+          {clientLogos.map((client, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 mx-6 sm:mx-10"
+            >
+              <div className="relative h-6 w-24 sm:w-28 flex items-center justify-center">
+                <Image
+                  src={client.src}
+                  alt={client.name}
+                  width={110}
+                  height={24}
+                  className="max-h-5 w-auto object-contain brightness-200"
+                />
+              </div>
+            </div>
+          ))}
+        </Marquee>
+      </div>
+
+      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 py-24 sm:py-32">
+        {/* Section Header matching frame 59 layout */}
         <MotionReveal variant="fade-up">
-          <div className="max-w-3xl mb-16 sm:mb-20">
-            <div className="mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 mb-16 sm:mb-20">
+            <div className="lg:col-span-3">
               <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
                 [06] Testimonials
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
-              Results speak louder than promises.
-            </h2>
-            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
-              Hear directly from founders, leaders, and product executives who rely on TRIFECTA TRENDS for their highest-stakes creative endeavors.
-            </p>
+            <div className="lg:col-span-9 max-w-4xl">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
+                Trusted by the most innovative teams.
+              </h2>
+              <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+                Results speak louder than promises. Hear directly from founders, leaders, and product executives who rely on TRIFECTA TRENDS.
+              </p>
+            </div>
           </div>
         </MotionReveal>
 

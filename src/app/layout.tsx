@@ -20,18 +20,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mugenstudio.framer.website"),
+  metadataBase: new URL("https://trifectatrends.com"),
   title: "TRIFECTA TRENDS — Built Different",
   description:
-    "Premium design studio template. Dark mode portfolio with retainer pricing, case studies CMS & conversion-focused layout.",
+    "A full-service design studio in Toronto, Canada. We craft distinctive digital experiences, brand identities, and high-converting products.",
   icons: {
     icon: "/images/CFmoqu0qxF0u5YZ6ADWu3UG3c.png",
     apple: "/images/zhH4tM4hVUqlx0saiMz3PvxnLs.png",
   },
   openGraph: {
-    title: "TRIFECTA TRENDS Framer Template",
+    title: "TRIFECTA TRENDS — Design Studio",
     description:
-      "Premium design studio Framer template. Dark mode portfolio with retainer pricing, case studies CMS & conversion-focused layout.",
+      "A full-service design studio in Toronto, Canada. We craft distinctive digital experiences, brand identities, and high-converting products.",
     images: ["/images/AkfwmbbK7reh203E7bgE8GE6w.png"],
   },
 };
@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#141414] text-[#ffffff] font-sans selection:bg-white selection:text-black">
