@@ -1,263 +1,399 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import gsap from "gsap";
 
-interface LetterConfig {
-  char: string;
-  dx: number;
-  dy: number;
-  delay: number;
-}
-
-const TRIFECTA_LETTERS: LetterConfig[] = [
-  { char: "T", dx: -20, dy: -22, delay: 0 },
-  { char: "R", dx: -10, dy: 24, delay: 80 },
-  { char: "I", dx: 14, dy: -18, delay: 160 },
-  { char: "F", dx: -22, dy: 16, delay: 240 },
-  { char: "E", dx: 12, dy: 24, delay: 120 },
-  { char: "C", dx: -16, dy: -18, delay: 280 },
-  { char: "T", dx: 22, dy: 12, delay: 200 },
-  { char: "A", dx: 18, dy: -24, delay: 320 },
-];
-
-const TRENDS_LETTERS: LetterConfig[] = [
-  { char: "T", dx: -20, dy: 20, delay: 140 },
-  { char: "R", dx: 12, dy: -24, delay: 260 },
-  { char: "E", dx: -16, dy: -14, delay: 100 },
-  { char: "N", dx: 22, dy: 18, delay: 220 },
-  { char: "D", dx: -10, dy: 24, delay: 300 },
-  { char: "S", dx: 24, dy: -18, delay: 180 },
-];
-
-type ArrivalPhase =
-  | "black"
-  | "fragmented"
-  | "assembling"
-  | "locked"
-  | "hold"
-  | "revealing"
-  | "done";
+const TRIFECTA_CHARS = ["T", "R", "I", "F", "E", "C", "T", "A"];
+const TRENDS_CHARS = ["T", "R", "E", "N", "D", "S"];
 
 export function HomeArrival() {
-  const [phase, setPhase] = useState<ArrivalPhase>("black");
-  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
+  const [phase, setPhase] = useState<"active" | "done">("active");
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const solidBlackRef = useRef<HTMLDivElement>(null);
+  const leftShutterRef = useRef<HTMLDivElement>(null);
+  const rightShutterRef = useRef<HTMLDivElement>(null);
+  const lockupRef = useRef<HTMLDivElement>(null);
+  const line1Ref = useRef<HTMLDivElement>(null);
+  const line2Ref = useRef<HTMLDivElement>(null);
+  const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const badgeRef = useRef<HTMLSpanElement>(null);
+  const taglineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Check mobile screen size to scale travel distance on small viewports
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile, { passive: true });
-
-    // Lock page scrolling during arrival sequence
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    // Respect reduced motion accessibility setting
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) {
-      // In reduced-motion mode, immediately show the clean centered brand lockup
-      const tLock = setTimeout(() => {
-        setPhase("locked");
-      }, 100);
-
-      const tStart = setTimeout(() => {
-        setPhase("revealing");
-        window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
-      }, 1400);
-
-      const tDone = setTimeout(() => {
-        setPhase("done");
-        document.body.style.overflow = previousOverflow || "";
-        window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
-      }, 2100);
-
-      return () => {
-        window.removeEventListener("resize", checkMobile);
-        document.body.style.overflow = previousOverflow || "";
-        clearTimeout(tLock);
-        clearTimeout(tStart);
-        clearTimeout(tDone);
-      };
+    // Only run on homepage route '/'
+    if (pathname !== "/") {
+      return;
     }
 
-    // Phase 1 -> 2: 0.0s - 0.70s Empty hold black screen
-    // Phase 3: 0.70s - 1.50s Fragmented letters begin appearing
-    const t1 = setTimeout(() => {
-      setPhase("fragmented");
-    }, 700);
+    // Temporarily lock page scrolling during arrival sequence
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
-    // Phase 4: 1.50s - 2.20s Letters resolve toward center lockup
-    const t2 = setTimeout(() => {
-      setPhase("assembling");
-    }, 1500);
+    const unlockScroll = () => {
+      document.body.style.overflow = previousBodyOverflow || "";
+      document.documentElement.style.overflow = previousHtmlOverflow || "";
+    };
 
-    // Phase 5: 2.20s - 3.70s Clean centered brand lockup + tagline fade
-    const t3 = setTimeout(() => {
-      setPhase("locked");
-    }, 2200);
+    // Check for reduced motion preference
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Phase 6: 3.70s - 4.00s Short cinematic anticipation hold
-    const t4 = setTimeout(() => {
-      setPhase("hold");
-    }, 3700);
+    const ctx = gsap.context(() => {
+      if (prefersReducedMotion) {
+        // Accessibility fallback: direct brand fade without letter stagger
+        const tlReduced = gsap.timeline({
+          onComplete: () => {
+            unlockScroll();
+            setPhase("done");
+            window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
+          },
+        });
 
-    // Phase 7: 4.00s - 4.80s Transition into homepage & reveal
-    const t5 = setTimeout(() => {
-      setPhase("revealing");
-      window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
-    }, 4000);
+        tlReduced.set(letterRefs.current, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          filter: "none",
+        });
+        tlReduced.set(
+          [line1Ref.current, line2Ref.current, badgeRef.current, taglineRef.current],
+          {
+            opacity: 1,
+            filter: "none",
+            letterSpacing: "-0.035em",
+          }
+        );
 
-    // Phase 8: 4.80s+ Normal website interaction & unmount overlay
-    const t6 = setTimeout(() => {
-      setPhase("done");
-      document.body.style.overflow = previousOverflow || "";
-      window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
-    }, 4800);
+        tlReduced.fromTo(
+          lockupRef.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.45, ease: "power2.out" },
+          0.2
+        );
+
+        tlReduced.call(
+          () => {
+            window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
+          },
+          undefined,
+          0.8
+        );
+
+        tlReduced.to(
+          lockupRef.current,
+          { opacity: 0, duration: 0.35, ease: "power2.inOut" },
+          1.5
+        );
+        tlReduced.to(
+          containerRef.current,
+          { opacity: 0, duration: 0.4, ease: "power2.out" },
+          1.8
+        );
+
+        return;
+      }
+
+      // =====================================================================
+      // MASTER GSAP TIMELINE — EXACT MUGEN-STYLE ARRIVAL FOR TRIFECTA TRENDS
+      // =====================================================================
+      const masterTl = gsap.timeline({
+        onComplete: () => {
+          unlockScroll();
+          setPhase("done");
+          window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
+        },
+      });
+
+      // Prepare hero underneath while covered by pure black
+      masterTl.call(
+        () => {
+          window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
+        },
+        undefined,
+        0.8
+      );
+
+      // PHASE 3 — LETTER-BY-LETTER PROGRESSIVE BUILD
+      // Line 1: TRIFECTA (8 letters)
+      // Line 2: TRENDS (6 letters)
+      const TRIFECTA_COUNT = 8;
+      const TRENDS_COUNT = 6;
+      const START_TIME = 0.75;
+      const STAGGER_STEP = 0.115; // smooth editorial pacing
+
+      // Animate each letter of TRIFECTA
+      for (let i = 0; i < TRIFECTA_COUNT; i++) {
+        const letterEl = letterRefs.current[i];
+        if (!letterEl) continue;
+        const letterTime = START_TIME + i * STAGGER_STEP;
+
+        masterTl.to(
+          letterEl,
+          {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.38,
+            ease: "power2.out",
+          },
+          letterTime
+        );
+      }
+
+      // Short breath between lines (~0.12s)
+      const LINE2_START = START_TIME + TRIFECTA_COUNT * STAGGER_STEP + 0.12;
+
+      // Animate each letter of TRENDS
+      for (let i = 0; i < TRENDS_COUNT; i++) {
+        const letterEl = letterRefs.current[TRIFECTA_COUNT + i];
+        if (!letterEl) continue;
+        const letterTime = LINE2_START + i * STAGGER_STEP;
+
+        masterTl.to(
+          letterEl,
+          {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.38,
+            ease: "power2.out",
+          },
+          letterTime
+        );
+      }
+
+      // PHASE 4 — COMPLETE BRAND RESOLVES
+      // Settle typography spacing smoothly into crisp final kerning
+      const RESOLVE_TIME = LINE2_START + TRENDS_COUNT * STAGGER_STEP + 0.05;
+
+      masterTl.to(
+        [line1Ref.current, line2Ref.current],
+        {
+          letterSpacing: "-0.035em",
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        RESOLVE_TIME
+      );
+
+      // Copyright badge appears
+      masterTl.to(
+        badgeRef.current,
+        {
+          opacity: 0.85,
+          scale: 1,
+          y: 0,
+          duration: 0.35,
+          ease: "power2.out",
+        },
+        RESOLVE_TIME + 0.1
+      );
+
+      // Tagline reveals smoothly underneath
+      masterTl.to(
+        taglineRef.current,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        RESOLVE_TIME + 0.25
+      );
+
+      // PHASE 5, 6, 7 — CENTERED BRAND LOCKUP SHORT HOLD
+      // Holds minimal, luxurious, and quiet against pure black negative space
+      const HOLD_END = RESOLVE_TIME + 1.5;
+
+      // PHASE 8 — TRANSITION BACK TO BLACK
+      // Centered lockup smoothly recedes into pure black
+      masterTl.to(
+        lockupRef.current,
+        {
+          opacity: 0,
+          scale: 0.98,
+          duration: 0.32,
+          ease: "power2.inOut",
+        },
+        HOLD_END
+      );
+
+      // Fade out solid black backing to expose the parting shutters
+      masterTl.to(
+        solidBlackRef.current,
+        {
+          opacity: 0,
+          duration: 0.08,
+        },
+        HOLD_END + 0.28
+      );
+
+      // Brief pure dark transition hold (~0.18s)
+      const REVEAL_START = HOLD_END + 0.42;
+
+      // Allow pointer events to fall through to website as reveal starts
+      masterTl.call(
+        () => {
+          if (containerRef.current) {
+            containerRef.current.style.pointerEvents = "none";
+          }
+        },
+        undefined,
+        REVEAL_START
+      );
+
+      // PHASE 9 — CENTER-OUT HOMEPAGE REVEAL
+      // The screen opens outward from the center like a cinematic shutter.
+      // Left shutter slides left (-100%), Right shutter slides right (+100%).
+      masterTl.to(
+        leftShutterRef.current,
+        {
+          xPercent: -100,
+          duration: 0.65,
+          ease: "power4.out",
+        },
+        REVEAL_START
+      );
+
+      masterTl.to(
+        rightShutterRef.current,
+        {
+          xPercent: 100,
+          duration: 0.65,
+          ease: "power4.out",
+        },
+        REVEAL_START
+      );
+    }, containerRef);
 
     return () => {
-      window.removeEventListener("resize", checkMobile);
-      document.body.style.overflow = previousOverflow || "";
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-      clearTimeout(t4);
-      clearTimeout(t5);
-      clearTimeout(t6);
+      ctx.revert();
+      unlockScroll();
     };
-  }, []);
+  }, [pathname]);
 
-  if (phase === "done") return null;
-
-  // Responsive offset multiplier
-  const offsetMultiplier = isMobile ? 0.5 : 1.0;
-
-  // Calculate letter transform and opacity per animation phase
-  const getLetterStyle = (item: LetterConfig): React.CSSProperties => {
-    const targetDx = item.dx * offsetMultiplier;
-    const targetDy = item.dy * offsetMultiplier;
-
-    if (phase === "black") {
-      return {
-        transform: `translate3d(${targetDx}px, ${targetDy}px, 0)`,
-        opacity: 0,
-        filter: "blur(4px)",
-        color: "#ffffff",
-        transition: "none",
-      };
-    }
-
-    if (phase === "fragmented") {
-      return {
-        transform: `translate3d(${targetDx}px, ${targetDy}px, 0)`,
-        opacity: 1,
-        filter: "blur(0px)",
-        color: "#ffffff",
-        transition: `opacity 450ms cubic-bezier(0.16, 1, 0.3, 1) ${item.delay}ms, filter 450ms ease-out ${item.delay}ms`,
-      };
-    }
-
-    // "assembling", "locked", "hold", "revealing"
-    return {
-      transform: "translate3d(0, 0, 0)",
-      opacity: 1,
-      filter: "blur(0px)",
-      color: "#ffffff",
-      transition: "transform 700ms cubic-bezier(0.16, 1, 0.3, 1), opacity 400ms ease",
-    };
-  };
+  if (phase === "done" || pathname !== "/") {
+    return null;
+  }
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] text-white pointer-events-none select-none transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        phase === "revealing"
-          ? "opacity-0 scale-[1.03] pointer-events-none"
-          : "opacity-100 scale-100"
-      }`}
-      style={{ backgroundColor: "#050505", color: "#ffffff" }}
-      aria-hidden={phase === "revealing"}
+      ref={containerRef}
+      id="home-arrival-overlay"
+      className="fixed inset-0 z-[99999] pointer-events-auto select-none overflow-hidden"
+      style={{ backgroundColor: "transparent" }}
+      aria-hidden="true"
     >
-      {/* Centered Brand Lockup */}
+      {/* Solid Black Backing: Guarantees 100% pure black during Phases 1–7 with zero seam leaks */}
       <div
-        className={`flex flex-col items-center justify-center text-center px-4 sm:px-6 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          phase === "revealing"
-            ? "opacity-0 scale-110 blur-xs -translate-y-2"
-            : "opacity-100 scale-100 blur-0 translate-y-0"
-        }`}
-      >
-        {/* Main Brand Line: TRIFECTA TRENDS with Fragmented Assembly */}
-        <div className="flex items-start justify-center gap-2 sm:gap-2.5">
-          <div className="flex items-center tracking-[-0.03em] font-sans font-bold text-white uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none select-none">
-            {/* Word 1: TRIFECTA */}
-            <span className="flex items-center">
-              {TRIFECTA_LETTERS.map((item, index) => (
-                <span
-                  key={`t-${index}`}
-                  style={getLetterStyle(item)}
-                  className="inline-block will-change-transform"
-                >
-                  {item.char}
-                </span>
-              ))}
-            </span>
+        ref={solidBlackRef}
+        className="absolute inset-0 bg-[#000000] z-0 pointer-events-none"
+      />
 
-            {/* Word Space */}
-            <span className="inline-block w-2 sm:w-3 md:w-3.5" />
+      {/* Left Shutter: covers left 50.5% of viewport, opens outward to left (-100%) */}
+      <div
+        ref={leftShutterRef}
+        className="absolute top-0 left-0 bottom-0 w-[50.5%] bg-[#000000] z-[1] pointer-events-none will-change-transform"
+        style={{ transformOrigin: "left center" }}
+      />
 
-            {/* Word 2: TRENDS */}
-            <span className="flex items-center">
-              {TRENDS_LETTERS.map((item, index) => (
-                <span
-                  key={`tr-${index}`}
-                  style={getLetterStyle(item)}
-                  className="inline-block will-change-transform"
-                >
-                  {item.char}
-                </span>
-              ))}
+      {/* Right Shutter: covers right 50.5% of viewport, opens outward to right (+100%) */}
+      <div
+        ref={rightShutterRef}
+        className="absolute top-0 right-0 bottom-0 w-[50.5%] bg-[#000000] z-[1] pointer-events-none will-change-transform"
+        style={{ transformOrigin: "right center" }}
+      />
+
+      {/* Centered Brand Lockup Layer: positioned in front of shutters during assembly and hold */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center pointer-events-none">
+        <div
+          ref={lockupRef}
+          className="flex flex-col items-center justify-center text-center px-4 sm:px-6 select-none will-change-transform"
+        >
+          {/* Brand Line 1: TRIFECTA */}
+          <div
+            ref={line1Ref}
+            className="flex items-center justify-center font-sans font-bold text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.92] select-none"
+            style={{ letterSpacing: "0.06em" }}
+          >
+            {TRIFECTA_CHARS.map((char, index) => (
+              <span
+                key={`t-${index}`}
+                ref={(el) => {
+                  letterRefs.current[index] = el;
+                }}
+                className="inline-block will-change-transform"
+                style={{
+                  opacity: 0,
+                  transform: "translate3d(14px, 4px, 0) scale(0.95)",
+                  filter: "blur(2px)",
+                }}
+              >
+                {char}
+              </span>
+            ))}
+          </div>
+
+          {/* Brand Line 2: TRENDS © */}
+          <div
+            ref={line2Ref}
+            className="flex items-center justify-center font-sans font-bold text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.92] select-none mt-1 sm:mt-2"
+            style={{ letterSpacing: "0.06em" }}
+          >
+            {TRENDS_CHARS.map((char, index) => (
+              <span
+                key={`tr-${index}`}
+                ref={(el) => {
+                  letterRefs.current[TRIFECTA_CHARS.length + index] = el;
+                }}
+                className="inline-block will-change-transform"
+                style={{
+                  opacity: 0,
+                  transform: "translate3d(14px, 4px, 0) scale(0.95)",
+                  filter: "blur(2px)",
+                }}
+              >
+                {char}
+              </span>
+            ))}
+
+            {/* Subtle Copyright badge */}
+            <span
+              ref={badgeRef}
+              className="inline-block text-xs sm:text-sm md:text-base font-normal text-white/80 font-mono ml-1.5 sm:ml-2 select-none will-change-transform"
+              style={{
+                opacity: 0,
+                transform: "translate3d(0, -6px, 0) scale(0.85)",
+              }}
+            >
+              ©
             </span>
           </div>
 
-          {/* Copyright badge resolving alongside brand */}
-          <span
+          {/* Supporting Tagline (Existing Website Brand Copy) */}
+          <div
+            ref={taglineRef}
+            className="mt-3.5 sm:mt-5 select-none will-change-transform overflow-hidden"
             style={{
-              opacity: phase === "black" ? 0 : 1,
-              color: "rgba(255, 255, 255, 0.85)",
-              transform:
-                phase === "black" || phase === "fragmented"
-                  ? `translate3d(${12 * offsetMultiplier}px, ${-12 * offsetMultiplier}px, 0)`
-                  : "translate3d(0, 0, 0)",
-              transition:
-                phase === "black"
-                  ? "none"
-                  : phase === "fragmented"
-                  ? "opacity 400ms ease 300ms"
-                  : "all 700ms cubic-bezier(0.16, 1, 0.3, 1)",
+              opacity: 0,
+              transform: "translate3d(0, 8px, 0)",
             }}
-            className="text-xs sm:text-sm font-normal text-white/80 font-mono mt-0.5 select-none will-change-transform"
           >
-            ©
-          </span>
-        </div>
-
-        {/* Supporting Tagline (Existing Website Copy) */}
-        <div
-          className={`overflow-hidden transition-all duration-700 ease-out mt-3 sm:mt-4 ${
-            phase === "locked" || phase === "hold" || phase === "revealing"
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-3"
-          }`}
-        >
-          <p
-            style={{ color: "#a3a3a3" }}
-            className="text-[10px] sm:text-xs text-neutral-400 font-light tracking-[0.2em] sm:tracking-[0.25em] uppercase font-mono select-none"
-          >
-            A design studio, built different.
-          </p>
+            <p className="text-[10px] sm:text-xs text-neutral-400 font-light tracking-[0.22em] sm:tracking-[0.25em] uppercase font-mono select-none">
+              A design studio, built different.
+            </p>
+          </div>
         </div>
       </div>
     </div>
