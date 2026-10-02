@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check } from "./icons";
+import {
+  ArrowRight,
+  Check,
+  ArrowUpRight,
+  XIcon,
+  InstagramIcon,
+  DribbbleIcon,
+  LinkedInIcon,
+} from "./icons";
 import { RibbonGlow } from "./RibbonGlow";
 
 export function Footer() {
@@ -26,8 +34,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#070709] border-t border-white/10 pt-20 pb-16 text-neutral-400 text-xs">
-      {/* Layer 0: Ribbon Glow WebGL Background */}
+    <footer className="relative overflow-hidden bg-[#070709] border-t border-white/10 pt-20 pb-16 text-neutral-400">
+      {/* Layer 0: Ribbon Glow WebGL Background (Preserved Exactly) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <RibbonGlow
           background="#070709"
@@ -46,19 +54,20 @@ export function Footer() {
         aria-hidden="true"
       />
 
-      {/* Layer 2: Footer Content */}
+      {/* Layer 2: Footer Foreground Content */}
       <div className="relative z-[2] w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+        {/* Upper Information Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-white/10">
           {/* Brand & Newsletter Column */}
           <div className="lg:col-span-5 space-y-6">
             <Link
               href="/"
-              className="inline-flex items-start gap-0.5 text-2xl font-bold tracking-tight text-white uppercase hover:opacity-80 transition-opacity"
+              className="inline-flex items-start gap-0.5 text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase hover:opacity-80 transition-opacity"
             >
               <span>TRIFECTA TRENDS</span>
               <span className="text-xs font-normal">©</span>
             </Link>
-            <p className="text-sm text-neutral-400 max-w-sm leading-relaxed">
+            <p className="text-sm sm:text-[15px] text-neutral-300 max-w-sm leading-relaxed">
               Your next project deserves world-class design. Stop settling for mediocre and start working with designers who care as much as you do.
             </p>
 
@@ -74,11 +83,11 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@company.com"
                   required
-                  className="flex-1 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 font-mono"
+                  className="flex-1 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 font-mono"
                 />
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-medium transition-all shrink-0 flex items-center gap-1.5 cursor-pointer"
+                  className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs sm:text-sm font-medium transition-all shrink-0 flex items-center gap-1.5 cursor-pointer"
                 >
                   {subscribed ? (
                     <>
@@ -88,7 +97,7 @@ export function Footer() {
                   ) : (
                     <>
                       <span>Join</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </>
                   )}
                 </button>
@@ -102,10 +111,10 @@ export function Footer() {
               </span>
               <button
                 onClick={copyEmail}
-                className="text-white hover:text-neutral-300 font-mono text-xs flex items-center gap-2 cursor-pointer"
+                className="text-white hover:text-neutral-300 font-mono text-sm sm:text-[15px] flex items-center gap-2 cursor-pointer"
               >
                 <span>contact@trifectatrends.com</span>
-                <span className="text-[10px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded">
+                <span className="text-[11px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded">
                   {copied ? "email copied" : "click to copy"}
                 </span>
               </button>
@@ -114,45 +123,45 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs uppercase tracking-wider text-white">
+            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
               Studio
             </h4>
-            <ul className="space-y-2.5 font-normal">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
+                <Link href="/" className="text-neutral-300 hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/studio" className="hover:text-white transition-colors">
+                <Link href="/studio" className="text-neutral-300 hover:text-white transition-colors">
                   Studio
                 </Link>
               </li>
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-white transition-colors flex items-center justify-between"
+                  className="text-neutral-300 hover:text-white transition-colors flex items-center justify-between"
                 >
                   <span>Work</span>
-                  <span className="text-[10px] font-mono text-neutral-500">[12]</span>
+                  <span className="text-xs font-mono text-neutral-500">[12]</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/articles"
-                  className="hover:text-white transition-colors flex items-center justify-between"
+                  className="text-neutral-300 hover:text-white transition-colors flex items-center justify-between"
                 >
                   <span>Articles</span>
-                  <span className="text-[10px] font-mono text-neutral-500">[10]</span>
+                  <span className="text-xs font-mono text-neutral-500">[10]</span>
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-white transition-colors">
+                <Link href="/pricing" className="text-neutral-300 hover:text-white transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link href="/contact" className="text-neutral-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -161,32 +170,32 @@ export function Footer() {
 
           {/* Capabilities */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs uppercase tracking-wider text-white">
+            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
               Capabilities
             </h4>
-            <ul className="space-y-2.5 font-normal">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
               <li>
-                <Link href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
                   Brand Identity & Systems
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
                   Web Design & Digital Platforms
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
                   Product Design & UI/UX
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
                   Marketing & Growth Creative
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
                   Engineering & Framer Code
                 </Link>
               </li>
@@ -195,16 +204,16 @@ export function Footer() {
 
           {/* Connect Column */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs uppercase tracking-wider text-white">
+            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
               Connect
             </h4>
-            <ul className="space-y-2.5 font-normal">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
               <li>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   Twitter / X
                 </a>
@@ -214,7 +223,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   LinkedIn
                 </a>
@@ -224,7 +233,7 @@ export function Footer() {
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   Dribbble
                 </a>
@@ -234,7 +243,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="text-neutral-300 hover:text-white transition-colors"
                 >
                   Instagram
                 </a>
@@ -243,28 +252,97 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Giant Brand Wordmark */}
-        <div className="pt-16 pb-8 select-none">
-          <span className="text-[12vw] sm:text-[13vw] font-bold text-white/[0.12] sm:text-white/[0.15] leading-none tracking-tight block text-center uppercase">
-            TRIFECTA TRENDS
-          </span>
+        {/* Reference-Styled Utility Row: Terms & Privacy on Left, Social Icons on Right */}
+        <div className="pt-12 sm:pt-16 pb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-4">
+          {/* Left: Terms of Service & Privacy Policy */}
+          <div className="flex items-center gap-8 sm:gap-10 md:gap-14">
+            <Link
+              href="/terms"
+              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-medium text-white hover:text-white/80 transition-all duration-300"
+            >
+              <span className="underline underline-offset-4 decoration-white/40 group-hover:decoration-white transition-colors">
+                Terms of Service
+              </span>
+              <ArrowUpRight className="w-4 h-4 text-white/70 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </Link>
+
+            <Link
+              href="/privacy"
+              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-medium text-white hover:text-white/80 transition-all duration-300"
+            >
+              <span className="underline underline-offset-4 decoration-white/40 group-hover:decoration-white transition-colors">
+                Privacy Policy
+              </span>
+              <ArrowUpRight className="w-4 h-4 text-white/70 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </Link>
+          </div>
+
+          {/* Right: Four Social Icons (X, Instagram, Dribbble, LinkedIn) */}
+          <div className="flex items-center gap-5 sm:gap-6 text-white/80">
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="p-1 -m-1 hover:text-white transition-all duration-300 hover:scale-110"
+            >
+              <XIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-1 -m-1 hover:text-white transition-all duration-300 hover:scale-110"
+            >
+              <InstagramIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            </a>
+            <a
+              href="https://dribbble.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dribbble"
+              className="p-1 -m-1 hover:text-white transition-all duration-300 hover:scale-110"
+            >
+              <DribbbleIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="p-1 -m-1 hover:text-white transition-all duration-300 hover:scale-110"
+            >
+              <LinkedInIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            </a>
+          </div>
+        </div>
+
+        {/* Giant Editorial Wordmark: TRIFECTA (White) & TRENDS (Soft Gray) */}
+        <div className="pt-8 sm:pt-12 pb-12 sm:pb-16 select-none overflow-hidden">
+          <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-extrabold uppercase text-[13.5vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] max-w-full">
+            <span className="text-white block whitespace-nowrap">
+              TRIFECTA
+            </span>
+            <span className="text-[#c2c2c2] block whitespace-nowrap pl-[6vw] sm:pl-[12vw] md:pl-[18vw] lg:pl-[22vw]">
+              TRENDS
+            </span>
+          </div>
         </div>
 
         {/* Bottom copyright row */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 font-mono text-[11px]">
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 font-mono text-[11px] sm:text-xs">
           <div>
             <span>Creative Technology Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-neutral-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-neutral-400 transition-colors">
-              Terms of Service
-            </Link>
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Available for Q2/Q3 2026 Partnerships</span>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
+export default Footer;
