@@ -72,10 +72,10 @@ export default function ContactPage() {
                 <div className="p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 space-y-6">
                   <div>
                     <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-1">
-                      Address
+                      Studio Hubs
                     </span>
                     <p className="text-sm text-neutral-300">
-                      2300 Yonge St. Toronto, ON M4P 1E4
+                      New York • San Francisco • Global Remote
                     </p>
                   </div>
 

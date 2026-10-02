@@ -219,7 +219,7 @@ export function Pricing() {
             </div>
           </div>
 
-          {/* Card 3: Custom Project with nested Sarah Park advisor card */}
+          {/* Card 3: Custom Project with nested Studio Advisory card */}
           <div className="p-7 sm:p-8 rounded-3xl bg-[#161616] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300 shadow-xl">
             <div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Custom Project</h3>
@@ -250,20 +250,20 @@ export function Pricing() {
                 </Link>
               </div>
 
-              {/* Nested Sarah Park Card (Desktop Frame 38) */}
+              {/* Nested Advisory Card (Desktop Frame 38) */}
               <div className="p-4 rounded-2xl bg-neutral-900 border border-white/10 flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden bg-neutral-800 shrink-0">
                     <Image
                       src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                      alt="Sarah Park"
+                      alt="Studio Advisory"
                       fill
                       className="object-cover object-top"
                     />
                   </div>
                   <div>
-                    <h4 className="text-xs font-semibold text-white">Sarah Park</h4>
-                    <p className="text-[11px] text-neutral-400">Project Manager</p>
+                    <h4 className="text-xs font-semibold text-white">Studio Advisory</h4>
+                    <p className="text-[11px] text-neutral-400">Design Partnerships</p>
                   </div>
                 </div>
 

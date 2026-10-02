@@ -132,14 +132,14 @@ export function Hero() {
 
           {/* Line 2: Since 2016 badge + TRENDS */}
           <div className="relative flex items-baseline justify-between w-full">
-            {/* Left: Since badge positioned under 'T' */}
+            {/* Left: Studio Discipline Badge positioned under 'T' */}
             <div
-              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
+              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1.5 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
                 arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
               <span>©</span>
-              <span>Since — 2016</span>
+              <span>Creative Technology</span>
             </div>
 
             {/* Line 2 Word: TRENDS */}
@@ -157,7 +157,7 @@ export function Hero() {
 
         {/* Central Content Area with Floating Card, Rating & Editorial Manifesto */}
         <div className="relative mt-6 sm:mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-          {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Sarah Park) */}
+          {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Studio Advisory) */}
           <div
             ref={cardRef}
             className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 will-change-transform transition-all duration-1000 delay-200 ${
@@ -169,7 +169,7 @@ export function Hero() {
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900">
                 <Image
                   src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                  alt="Sarah Park - Project Manager"
+                  alt="TRIFECTA TRENDS — Design Advisory"
                   fill
                   priority
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -186,7 +186,7 @@ export function Hero() {
                   </div>
                   <span className="font-medium">2 slots open</span>
                   <span className="text-neutral-400 font-mono text-[10px]">
-                    March&apos;26
+                    This Month
                   </span>
                 </div>
               </div>
@@ -195,9 +195,9 @@ export function Hero() {
               <div className="px-1 pt-1 flex flex-col gap-3">
                 <div>
                   <h3 className="text-sm font-semibold text-white">
-                    Sarah Park
+                    Design Advisory
                   </h3>
-                  <p className="text-xs text-neutral-400">Project manager</p>
+                  <p className="text-xs text-neutral-400">Creative Direction &amp; Systems</p>
                 </div>
 
                 <div className="border-t border-white/10 pt-2.5 flex items-center justify-between text-xs">

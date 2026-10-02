@@ -52,21 +52,21 @@ export function Faq() {
               We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective clients.
             </p>
 
-            {/* PM Support Box */}
+            {/* Studio Advisory Support Box */}
             <div className="p-7 rounded-3xl bg-[#1c1c1c] border border-white/10 shadow-xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
                   <Image
                     src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                    alt="Sarah Park"
+                    alt="Client Advisory"
                     fill
                     className="object-cover object-top"
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Sarah Park</h4>
+                  <h4 className="text-sm font-semibold text-white">Client Advisory</h4>
                   <span className="text-[11px] font-mono text-neutral-400">
-                    Project manager
+                    Direct Studio Strategy
                   </span>
                 </div>
               </div>

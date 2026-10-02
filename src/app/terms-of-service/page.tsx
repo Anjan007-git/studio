@@ -75,7 +75,7 @@ const termsSections = [
   },
   {
     title: "17. Dispute Resolution & General Terms",
-    content: "In the event of a dispute, direct negotiation between parties is the first step. If negotiation fails, both parties agree to attempt mediation before pursuing other remedies. As a final resort, disputes will be settled through binding arbitration. This agreement is governed by the laws of Ontario, Canada, and each party bears their own legal costs unless otherwise determined in arbitration."
+    content: "In the event of a dispute, direct negotiation between parties is the first step. If negotiation fails, both parties agree to attempt mediation before pursuing other remedies. As a final resort, disputes will be settled through binding arbitration. This agreement is governed by the commercial laws of the State of Delaware, United States, and each party bears their own legal costs unless otherwise determined in arbitration."
   }
 ];
 

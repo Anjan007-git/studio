@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                   </span>
                 </h1>
                 <p className="text-sm font-mono text-neutral-400">
-                  © 2016 — 2025 Selected client archive
+                  Selected client archive • 2024 — 2026
                 </p>
               </div>
 

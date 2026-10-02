@@ -13,7 +13,7 @@ export function Approach() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("alex@trifectatrends.com");
+    navigator.clipboard.writeText("contact@trifectatrends.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -92,9 +92,9 @@ export function Approach() {
           </h2>
         </div>
 
-        {/* 2-Column Layout: Alex West Card & Detailed Story */}
+        {/* 2-Column Layout: Studio Philosophy Card & Detailed Story */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Dedicated Alex West Portrait Card */}
+          {/* Left Column: Dedicated Studio Philosophy Portrait Card */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
             <div className="w-full max-w-[340px] mx-auto lg:mx-0">
               <div className="w-full rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500">
@@ -105,11 +105,11 @@ export function Approach() {
                       onClick={handleCopyEmail}
                       className="text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer"
                     >
-                      {copied ? "email copied" : "alex@trifectatrends.com"}
+                      {copied ? "email copied" : "contact@trifectatrends.com"}
                     </button>
                     <a
-                      href="mailto:alex@trifectatrends.com"
-                      aria-label="Email Alex West"
+                      href="mailto:contact@trifectatrends.com"
+                      aria-label="Email TRIFECTA TRENDS"
                       className="text-neutral-400 hover:text-white transition-colors"
                     >
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -120,27 +120,27 @@ export function Approach() {
                   <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-5">
                     <Image
                       src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
-                      alt="Alex West - Founder & Creative Director"
+                      alt="TRIFECTA TRENDS — Studio Philosophy"
                       fill
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                   </div>
 
-                  {/* Founder Bio */}
+                  {/* Philosophy Statement */}
                   <p className="text-xs text-neutral-400 leading-relaxed font-light mb-5">
-                    With over 15 years in digital design, Alex founded TRIFECTA TRENDS to create a studio where craft comes first. He believes great design happens through process, not heroics.
+                    We believe high-impact digital experiences come from focused craftsmanship, rigorous design systems, and direct collaboration. No pitch theater. No layers of account management.
                   </p>
                 </div>
 
-                {/* Founder Meta */}
+                {/* Studio Meta */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <div>
-                    <h3 className="text-base font-bold text-white">Alex West</h3>
+                    <h3 className="text-base font-bold text-white">Studio Philosophy</h3>
                     <p className="text-xs font-mono text-neutral-500 mt-0.5">
-                      Founder &amp; Creative Director
+                      Craft &amp; Execution
                     </p>
                   </div>
-                  <span className="text-xs font-mono text-neutral-500">TRIFECTA TRENDS©</span>
+                  <span className="text-xs font-mono text-neutral-500">TRIFECTA TRENDS®</span>
                 </div>
               </div>
             </div>
@@ -154,10 +154,10 @@ export function Approach() {
                 “
               </span>
               <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-light leading-relaxed tracking-tight">
-                After 15 years in traditional agencies, I saw the same problems
-                repeatedly. Talented designers spending more time in meetings than
-                creating. Clients paying for process instead of progress. Great
-                ideas dying in revision purgatory.
+                Traditional agencies engineered a process centered on pitch theater,
+                bloated hierarchies, and endless status calls. We built TRIFECTA TRENDS
+                around a simpler, sharper mandate: senior practitioners building
+                exceptional digital experiences directly with ambitious teams.
               </p>
             </div>
 
@@ -165,19 +165,19 @@ export function Approach() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-neutral-400 leading-relaxed font-light">
               <div>
                 <p>
-                  So I built TRIFECTA TRENDS differently. No endless meetings, no office
-                  politics, no pitches that promise everything. Just talented
-                  designers doing what they do best.
+                  No bureaucratic layers, no junior handoffs, no bloated overhead.
+                  Just disciplined creative direction, rapid prototyping, and
+                  high-velocity shipping that moves your business forward.
                 </p>
               </div>
               <div className="space-y-4">
                 <p>
-                  We create design that actually solves problems. We&apos;re
-                  obsessive about the details because that&apos;s what our
-                  clients pay us for. To care as much as they do.
+                  We approach digital design as a long-term strategic advantage.
+                  Every typography choice, micro-interaction, and layout hierarchy
+                  is engineered to convert, captivate, and endure.
                 </p>
                 <p className="text-neutral-200 font-medium font-sans">
-                  That&apos;s the TRIFECTA TRENDS way. Simple, but not easy.
+                  That&apos;s the TRIFECTA TRENDS standard: refined, deliberate, and built different.
                 </p>
               </div>
             </div>

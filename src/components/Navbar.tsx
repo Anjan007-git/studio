@@ -5,7 +5,7 @@ import Link from "next/link";
 import { XIcon, InstagramIcon, DribbbleIcon, LinkedInIcon, X } from "./icons";
 
 export function Navbar() {
-  const [torontoTime, setTorontoTime] = useState("");
+  const [studioTime, setStudioTime] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -13,12 +13,12 @@ export function Navbar() {
     const updateTime = () => {
       const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
-        timeZone: "America/Toronto",
+        timeZone: "America/New_York",
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
       };
-      setTorontoTime(new Intl.DateTimeFormat("en-US", options).format(now));
+      setStudioTime(new Intl.DateTimeFormat("en-US", options).format(now));
     };
 
     updateTime();
@@ -67,11 +67,12 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Center: Live Toronto Time */}
+          {/* Center: Live Studio Time */}
           <div className="hidden md:flex items-center gap-2 text-xs font-normal tracking-wide text-neutral-200 select-none">
-            <span>Toronto (CA)</span>
-            <span className="tabular-nums font-mono">
-              {torontoTime || "03:39 PM"}
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>New York (EST)</span>
+            <span className="tabular-nums font-mono text-white">
+              {studioTime || "03:39 PM"}
             </span>
           </div>
 
@@ -190,7 +191,7 @@ export function Navbar() {
           </nav>
         </div>
 
-        {/* Mid Section: Let's Talk + Email + Live Toronto Time + Socials */}
+        {/* Mid Section: Let's Talk + Email + Live Studio Time + Socials */}
         <div className="w-full px-6 sm:px-10 md:px-14 py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6">
           <div>
             <span className="text-xs text-neutral-400 block mb-2">Let&apos;s Talk</span>
@@ -206,8 +207,10 @@ export function Navbar() {
             </div>
           </div>
 
-          <div className="text-xs sm:text-sm text-neutral-400 font-normal">
-            <span>Toronto (CA)</span> <span className="tabular-nums font-mono ml-2 text-white">{torontoTime || "03:39 PM"}</span>
+          <div className="text-xs sm:text-sm text-neutral-400 font-normal flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span>New York (EST)</span>
+            <span className="tabular-nums font-mono text-white">{studioTime || "03:39 PM"}</span>
           </div>
 
           <div className="pt-2">

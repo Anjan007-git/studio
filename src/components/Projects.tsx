@@ -66,7 +66,7 @@ export function Projects() {
             Case studies
           </h2>
           <p className="text-xs font-mono text-neutral-500">
-            © 2016 — 2025
+            Selected Client Work • 2024 — 2026
           </p>
         </div>
 

@@ -232,7 +232,7 @@ export function Footer() {
         {/* Bottom copyright row */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 font-mono text-[11px]">
           <div>
-            <span>Based in Toronto (CA). © 2016 — 2026 TRIFECTA TRENDS.</span>
+            <span>Creative Technology Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-neutral-400 transition-colors">

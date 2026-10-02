@@ -36,12 +36,12 @@ export function WhyChooseUs() {
             <MotionReveal variant="fade-up" delay={100} className="h-full">
               <div className="h-full rounded-3xl bg-[#1c1c1c] border border-white/10 p-8 flex flex-col justify-between relative overflow-hidden group hover:border-white/30 transition-all duration-500 shadow-xl">
                 <div className="flex items-center justify-between mb-8">
-                  {/* Year Timeline */}
+                  {/* Milestones Timeline */}
                   <div className="flex items-center gap-3 text-[11px] font-mono text-neutral-500">
-                    <span>2016</span>
-                    <span>2018</span>
-                    <span>2022</span>
-                    <span className="text-white font-medium">2026</span>
+                    <span>Audit</span>
+                    <span>Design</span>
+                    <span>Build</span>
+                    <span className="text-white font-medium">Launch</span>
                   </div>
                   <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:bg-white/10 transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
@@ -99,7 +99,7 @@ export function WhyChooseUs() {
             </MotionReveal>
           </div>
 
-          {/* Card 4: Person Image Card - Sarah Park */}
+          {/* Card 4: Dedicated Creative Partner Card */}
           <div className="lg:col-span-4">
             <MotionReveal variant="fade-up" delay={300} className="h-full">
               <div
@@ -120,11 +120,11 @@ export function WhyChooseUs() {
                   </div>
                 </div>
 
-                {/* Sarah Park Photo with Zoom */}
+                {/* Team Partner Photo with Zoom */}
                 <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden my-4 bg-neutral-900">
                   <Image
                     src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                    alt="Sarah Park smiling"
+                    alt="TRIFECTA TRENDS — Design Partner"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                   />

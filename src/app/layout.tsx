@@ -31,15 +31,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://trifectatrends.com"),
   title: "TRIFECTA TRENDS — Built Different",
   description:
-    "A full-service design studio in Toronto, Canada. We craft distinctive digital experiences, brand identities, and high-converting products.",
+    "A full-service creative technology and digital product design studio. We craft distinctive digital experiences, brand architectures, and high-converting platforms.",
   icons: {
     icon: "/images/CFmoqu0qxF0u5YZ6ADWu3UG3c.png",
     apple: "/images/zhH4tM4hVUqlx0saiMz3PvxnLs.png",
   },
   openGraph: {
-    title: "TRIFECTA TRENDS — Design Studio",
+    title: "TRIFECTA TRENDS — Creative Technology & Design Studio",
     description:
-      "A full-service design studio in Toronto, Canada. We craft distinctive digital experiences, brand identities, and high-converting products.",
+      "A full-service creative technology and digital product design studio. We craft distinctive digital experiences, brand architectures, and high-converting platforms.",
     images: ["/images/AkfwmbbK7reh203E7bgE8GE6w.png"],
   },
 };

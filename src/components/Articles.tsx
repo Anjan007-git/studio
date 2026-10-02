@@ -14,8 +14,8 @@ const articles = [
     image: "/images/uhZaPfIrCFAy4Kx7PfKvzv8r8q8.jpg",
     excerpt:
       "After a decade of stark minimalism, web design is evolving. Discover the emerging trends in typography, color, and depth that define the next era of digital experiences.",
-    author: "Emma Wright",
-    role: "Senior Designer",
+    author: "Design Systems",
+    role: "Studio Lead",
     slug: "beyond-minimalism-what-s-next-in-web-design",
   },
   {
@@ -26,8 +26,8 @@ const articles = [
     image: "/images/EoBMupP4sDoc2Zgcjt3OXKz2mg.jpg",
     excerpt:
       "The brand that gets you to $1M will strangle you at $100M. Learn how to build flexible brand systems that grow with your business, not against it.",
-    author: "Alex West",
-    role: "Creative Director",
+    author: "Creative Direction",
+    role: "Studio Principal",
     slug: "building-brands-that-scale",
   },
   {
@@ -38,8 +38,8 @@ const articles = [
     image: "/images/AkfwmbbK7reh203E7bgE8GE6w.png",
     excerpt:
       "Learn how emotional design drives 30% higher retention. Explore micro-interactions, animation, and psychology that transform functional interfaces into beloved products.",
-    author: "Sarah Park",
-    role: "Project Manager",
+    author: "Design Strategy",
+    role: "Partner",
     slug: "designing-for-human-connection",
   },
 ];

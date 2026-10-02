@@ -10,31 +10,31 @@ import { ArrowUpRight, Star } from "@/components/icons";
 
 const team = [
   {
-    name: "Alex West",
-    role: "Founder & Creative Director",
-    email: "alex@trifectatrends.com",
-    bio: "With over 15 years in digital design, Alex founded TRIFECTA TRENDS to create a studio where craft comes first. He believes great design happens through process, not heroics.",
+    name: "Creative Direction & Brand",
+    role: "Studio Principal",
+    email: "direction@trifectatrends.com",
+    bio: "Guiding brand architecture, visual design systems, and creative philosophy across every touchpoint to ensure enduring market distinction.",
     image: "/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg",
   },
   {
-    name: "Sarah Park",
-    role: "Project Manager",
-    email: "sarah@trifectatrends.com",
-    bio: "Sarah keeps projects flowing and clients happy. With a background in design ops, she's mastered the art of making complex timelines feel effortless.",
+    name: "Design Strategy & Advisory",
+    role: "Partner",
+    email: "advisory@trifectatrends.com",
+    bio: "Orchestrating design operations, founder alignment, and high-velocity sprints to keep complex engagements moving with effortless momentum.",
     image: "/images/ulbEv91MwUwTk34ixqmyIluLPJY.png",
   },
   {
-    name: "David Torres",
-    role: "Developer",
-    email: "david@trifectatrends.com",
-    bio: "David bridges design and development, turning ambitious concepts into seamless experiences. His background in architecture informs his approach to building digital products.",
+    name: "Interactive Engineering",
+    role: "Technical Lead",
+    email: "engineering@trifectatrends.com",
+    bio: "Bridging spatial layout, 60fps motion architecture, and modern full-stack development into seamless, high-performance digital products.",
     image: "/images/siKQvG204y5XTlJmEnImPRJ2lc.png",
   },
   {
-    name: "Emma Wright",
-    role: "Senior Designer",
-    email: "emma@trifectatrends.com",
-    bio: "Brings 8+ years of brand and digital expertise from agencies in Seoul and Toronto. She's passionate about typography and building design systems that actually work.",
+    name: "Product & Interface Systems",
+    role: "Design Lead",
+    email: "systems@trifectatrends.com",
+    bio: "Obsessed with editorial typography, ergonomic interactions, and robust design token libraries that scale gracefully with business growth.",
     image: "/images/2szvKnNjJBBkPsk6yCETyIDktns.png",
   },
 ];
@@ -101,8 +101,8 @@ const studioArticles = [
     title: "Beyond minimalism: what's next in web design.",
     summary:
       "After a decade of stark minimalism, web design is evolving. Discover the emerging trends in typography, color, and depth that define the next era of digital experiences.",
-    author: "Emma Wright",
-    role: "Senior Designer",
+    author: "Design Systems",
+    role: "Studio Lead",
     image: "/images/uhZaPfIrCFAy4Kx7PfKvzv8r8q8.jpg",
     slug: "beyond-minimalism-what-s-next-in-web-design",
   },
@@ -113,8 +113,8 @@ const studioArticles = [
     title: "Building brands that scale.",
     summary:
       "The brand that gets you to $1M will strangle you at $100M. Learn how to build flexible brand systems that grow with your business, not against it.",
-    author: "Alex West",
-    role: "Creative Director",
+    author: "Creative Direction",
+    role: "Studio Principal",
     image: "/images/EoBMupP4sDoc2Zgcjt3OXKz2mg.jpg",
     slug: "building-brands-that-scale",
   },
@@ -125,8 +125,8 @@ const studioArticles = [
     title: "Designing for human connection.",
     summary:
       "Learn how emotional design drives 30% higher retention. Explore micro-interactions, animation, and psychology that transform functional interfaces into beloved products.",
-    author: "Sarah Park",
-    role: "Project Manager",
+    author: "Design Strategy",
+    role: "Partner",
     image: "/images/AkfwmbbK7reh203E7bgE8GE6w.png",
     slug: "designing-for-human-connection",
   },
@@ -137,8 +137,8 @@ const studioArticles = [
     title: "How designers and developers can actually collaborate.",
     summary:
       "Discover proven strategies to bridge the designer-developer gap. Learn how top teams eliminate handoff friction and ship better products faster through true collaboration.",
-    author: "David Torres",
-    role: "Developer",
+    author: "Interactive Engineering",
+    role: "Technical Lead",
     image: "/images/sirR5Knxvy6H4B4c8ceh6eTMMpc.jpeg",
     slug: "how-designers-and-developers-can-actually-collaborate",
   },
@@ -179,7 +179,7 @@ export default function StudioPage() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-bold tracking-[-0.035em] text-white max-w-6xl leading-[1.08] mb-12">
-              TRIFECTA TRENDS is a full service design team based in Toronto, Canada. We&apos;re a small team doing what we love: creating great design for businesses that need to move fast.
+              TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms.
             </h1>
           </div>
         </section>
@@ -195,10 +195,10 @@ export default function StudioPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
               <p className="text-lg sm:text-2xl text-neutral-300 font-light leading-relaxed">
-                Founded in 2016, we&apos;ve grown carefully and intentionally. We&apos;ve turned down venture capital, avoided the hire-fast mentality, and said no to projects that didn&apos;t align with our values. This deliberate approach has allowed us to build lasting relationships with clients who value craft as much as we do.
+                Built deliberately from day one, we&apos;ve grown carefully and intentionally. We&apos;ve avoided the hire-fast agency mentality and said no to engagements that didn&apos;t align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft.
               </p>
               <p className="text-lg sm:text-2xl text-neutral-400 font-light leading-relaxed">
-                We&apos;re four people who genuinely enjoy working together. Alex leads creative direction, Sarah handles strategy, David owns development, and Emma manages operations. No egos, no drama—just a shared commitment to doing work we&apos;re proud of. When you work with us, you work directly with us.
+                We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership.
               </p>
             </div>
 
@@ -206,14 +206,14 @@ export default function StudioPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
                 <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
-                  Location
+                  Presence
                 </span>
                 <div className="mt-8">
                   <p className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                    Toronto, CA
+                    Global Studio
                   </p>
                   <p className="text-xs text-neutral-400 mt-2">
-                    Founded in Toronto, Canada.
+                    Hubs in New York, San Francisco &amp; Global Remote.
                   </p>
                 </div>
               </div>
@@ -224,10 +224,10 @@ export default function StudioPage() {
                 </span>
                 <div className="mt-8">
                   <p className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
-                    15+
+                    10+
                   </p>
                   <p className="text-xs text-neutral-400 mt-2">
-                    Years combined experience
+                    Years combined expertise
                   </p>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default function StudioPage() {
                   Environment
                 </span>
                 <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
-                  Good work happens in good spaces. Our studio in Toronto&apos;s west end is designed for focus, not impressions. Natural light, open workspace, and all the coffee we can drink. No ping pong tables or nap pods—just an environment where great design can happen without distractions.
+                  Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction.
                 </p>
               </div>
               <div>
@@ -350,10 +350,10 @@ export default function StudioPage() {
                 [People]
               </span>
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
-                Meet the team.
+                Disciplines &amp; Leadership.
               </h2>
               <p className="text-lg sm:text-2xl text-neutral-400 font-light max-w-4xl leading-relaxed">
-                We&apos;re four people who happen to be really good at what we do. More importantly, we actually enjoy working together. No politics. No drama. Just a shared commitment to doing work we&apos;re proud of.
+                A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters.
               </p>
             </div>
 
@@ -451,9 +451,9 @@ export default function StudioPage() {
                 Our approach.
               </h2>
               <div className="flex items-center gap-3 text-xs font-mono text-neutral-400 mb-4">
-                <span>2016 — 2025</span>
+                <span>Core Framework</span>
                 <span>•</span>
-                <span>4 Core Pillars</span>
+                <span>4 Strategic Pillars</span>
               </div>
               <p className="text-base sm:text-xl text-neutral-400 font-light">
                 We&apos;ve helped over 100 clients achieve their goals and increase revenue.
