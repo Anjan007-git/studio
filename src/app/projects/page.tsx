@@ -112,8 +112,6 @@ export default function ProjectsPage() {
                   <Link
                     key={study.slug}
                     href={`/projects/${study.slug}`}
-                    data-cursor="project"
-                    data-cursor-label="View ↗"
                     className="group rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 flex flex-col justify-between"
                   >
                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">

@@ -103,7 +103,6 @@ export function WhyChooseUs() {
           <div className="lg:col-span-4">
             <MotionReveal variant="fade-up" delay={300} className="h-full">
               <div
-                data-cursor="hover"
                 className="h-full rounded-3xl bg-[#1c1c1c] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/30 transition-all duration-500 shadow-xl"
               >
                 {/* Top row: Brand & Rating */}

@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-import { Clock, Zap } from "./icons";
-import { MotionReveal } from "./MotionReveal";
+import React, { useState } from "react";
+import { Clock, Calendar } from "./icons";
 
 const steps = [
   {
@@ -38,86 +37,134 @@ const steps = [
 ];
 
 export function Process() {
+  const [activeStep, setActiveStep] = useState(0);
+
   return (
     <section id="process" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-        {/* Header and Speed Badges */}
-        <MotionReveal variant="fade-up">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
-            <div className="max-w-2xl">
-              <div className="mb-4">
-                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
-                  [04] Process
-                </span>
+        {/* Header */}
+        <div className="max-w-3xl mb-16 sm:mb-20">
+          <div className="mb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              [04] Process
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+            A proven process that delivers results, not surprises.
+          </h2>
+          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+            We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
+          </p>
+        </div>
+
+        {/* 2-Column: Left Stats + Right Horizontal Expanding Accordion */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Stats Column (matching Desktop Frame 32) */}
+          <div className="lg:col-span-4 flex flex-col justify-center space-y-12">
+            <div>
+              <div className="w-6 h-6 mb-3 text-neutral-300">
+                <Calendar className="w-6 h-6 stroke-[1.5]" />
               </div>
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
-                A proven process that delivers results, not surprises.
-              </h2>
-              <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
-                We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                3-5 Days
+              </h3>
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light max-w-xs">
+                To kick off after signing. No lengthy onboarding, just straight to work.
               </p>
             </div>
 
-            {/* Turnaround highlight pills */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="p-4 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center gap-3 shadow-md">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
-                  <Zap className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-white block">
-                    3–5 Days Kick-off
-                  </span>
-                  <span className="text-[11px] text-neutral-400 font-mono block">
-                    Straight to work after signing
-                  </span>
-                </div>
+            <div>
+              <div className="w-6 h-6 mb-3 text-neutral-300">
+                <Clock className="w-6 h-6 stroke-[1.5]" />
               </div>
-
-              <div className="p-4 rounded-2xl bg-[#1c1c1c] border border-white/10 flex items-center gap-3 shadow-md">
-                <div className="w-8 h-8 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-white block">
-                    48-Hour Turnaround
-                  </span>
-                  <span className="text-[11px] text-neutral-400 font-mono block">
-                    On most standard sprint requests
-                  </span>
-                </div>
-              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                48 Hour
+              </h3>
+              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light max-w-xs">
+                turnaround on most requests. Complex projects broken into manageable sprints.
+              </p>
             </div>
           </div>
-        </MotionReveal>
 
-        {/* 5-Step Process Timeline */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((item, idx) => (
-            <MotionReveal
-              key={item.step}
-              variant="fade-up"
-              delay={idx * 80}
-              className="h-full"
-            >
-              <div
-                data-cursor="hover"
-                className="p-6 sm:p-7 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/30 transition-all duration-500 relative h-full shadow-xl group"
-              >
-                <div>
-                  <span className="text-sm font-mono text-neutral-500 block mb-6 group-hover:text-white transition-colors">
-                    /{item.step}
-                  </span>
-                  <h3 className="text-lg font-bold text-white mb-3">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-xs text-neutral-400 leading-relaxed font-light pt-6 border-t border-white/5 mt-6">
-                  {item.description}
-                </p>
-              </div>
-            </MotionReveal>
-          ))}
+          {/* Right Column: Desktop Horizontal Expanding Accordion / Mobile Stack */}
+          <div className="lg:col-span-8">
+            {/* Desktop Horizontal Accordion */}
+            <div className="hidden lg:flex gap-3 h-[480px]">
+              {steps.map((item, idx) => {
+                const isActive = activeStep === idx;
+                return (
+                  <div
+                    key={item.step}
+                    onClick={() => setActiveStep(idx)}
+                    onMouseEnter={() => setActiveStep(idx)}
+                    className={`cursor-pointer rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden flex flex-col justify-between p-6 sm:p-7 select-none ${
+                      isActive
+                        ? "flex-[3.5] bg-[#1a1a1a] border border-white/20 shadow-2xl"
+                        : "flex-1 bg-[#161616] border border-white/5 hover:border-white/10"
+                    }`}
+                  >
+                    {/* Top Number */}
+                    <div className="flex items-center justify-between">
+                      <span
+                        className={`text-2xl font-bold transition-colors ${
+                          isActive ? "text-white" : "text-neutral-500"
+                        }`}
+                      >
+                        {item.step}
+                      </span>
+                    </div>
+
+                    {/* Bottom Details (Shown fully when active) */}
+                    {isActive ? (
+                      <div className="transition-opacity duration-300 opacity-100">
+                        <h4 className="text-2xl font-bold text-white mb-3">
+                          {item.title}
+                        </h4>
+                        <p className="text-sm text-neutral-400 leading-relaxed font-light">
+                          {item.description}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="opacity-0 h-0 overflow-hidden" />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Mobile Stacked Accordion */}
+            <div className="flex lg:hidden flex-col space-y-4">
+              {steps.map((item, idx) => {
+                const isActive = activeStep === idx;
+                return (
+                  <div
+                    key={item.step}
+                    onClick={() => setActiveStep(isActive ? -1 : idx)}
+                    className="rounded-2xl bg-[#1a1a1a] border border-white/10 p-5 cursor-pointer transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <span className="text-base font-mono text-neutral-400">
+                          {item.step}
+                        </span>
+                        <h4 className="text-lg font-bold text-white">
+                          {item.title}
+                        </h4>
+                      </div>
+                      <span className="text-sm text-neutral-400">
+                        {isActive ? "−" : "+"}
+                      </span>
+                    </div>
+                    {isActive && (
+                      <p className="text-xs text-neutral-400 leading-relaxed font-light pt-4 mt-3 border-t border-white/5">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

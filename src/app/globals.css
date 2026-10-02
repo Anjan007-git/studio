@@ -126,16 +126,18 @@
     background-color: #141414;
     color: #ffffff;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
+    scroll-behavior: auto;
   }
   body {
     background-color: #141414;
     color: #ffffff;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
+    min-height: 100vh;
   }
   ::selection {
     background-color: #ffffff;
     color: #000000;
   }
-}
+}

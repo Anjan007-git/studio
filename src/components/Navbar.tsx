@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { XIcon, InstagramIcon, DribbbleIcon, LinkedInIcon, X } from "./icons";
 
 export function Navbar() {
   const [torontoTime, setTorontoTime] = useState("");
@@ -50,7 +51,7 @@ export function Navbar() {
     <>
       {/* Top Bar matching exclusion topbar */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-exclusion text-white pointer-events-auto">
-        <div className="w-full px-5 sm:px-10 md:px-14 py-4 sm:py-5 pt-[max(1rem,env(safe-area-inset-top))] flex items-center justify-between">
+        <div className="w-full px-5 sm:px-10 md:px-14 py-4 sm:py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between">
           {/* Left: Brand Logo */}
           <Link
             href="/"
@@ -70,17 +71,17 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-2 text-xs font-normal tracking-wide text-neutral-200 select-none">
             <span>Toronto (CA)</span>
             <span className="tabular-nums font-mono">
-              {torontoTime || "10:06 PM"}
+              {torontoTime || "03:39 PM"}
             </span>
           </div>
 
-          {/* Right: Our Work link (tablet/desktop) & Minimal Mobile Hamburger */}
+          {/* Right: Our Work link (tablet/desktop) & Minimal Hamburger */}
           <div className="flex items-center gap-4 sm:gap-8">
             <Link
               href="/projects"
               className="hidden sm:inline-flex text-xs sm:text-sm font-medium tracking-tight text-white hover:opacity-75 transition-opacity"
             >
-              Our Work <span className="text-[11px] text-neutral-300 font-mono">[12]</span>
+              Our Work <span className="text-[11px] text-neutral-300 font-mono ml-1">[12]</span>
             </Link>
 
             {/* Hamburger Button (animated 2 bars) */}
@@ -100,7 +101,7 @@ export function Navbar() {
                 className={`h-[1.5px] bg-white transition-all duration-300 ${
                   menuOpen
                     ? "w-6 -rotate-45 -translate-y-[3px]"
-                    : "w-4 group-hover:w-6"
+                    : "w-6 group-hover:w-4"
                 }`}
               />
             </button>
@@ -108,156 +109,170 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Fullscreen Overlay Menu */}
+      {/* Fullscreen Overlay Menu - Exactly matching Mobile Reference Frame 6 */}
       <div
-        className={`fixed inset-0 z-40 bg-[#0e0e0e]/98 backdrop-blur-3xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-between p-6 sm:p-12 md:p-16 pt-[max(5.5rem,calc(env(safe-area-inset-top)+4.5rem))] pb-[max(2rem,calc(env(safe-area-inset-bottom)+1.5rem))] ${
+        className={`fixed inset-0 z-50 bg-[#0c0c0c] text-white transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-y-auto overscroll-contain flex flex-col justify-between ${
           menuOpen
             ? "opacity-100 pointer-events-auto visible"
             : "opacity-0 pointer-events-none invisible"
         }`}
       >
-        {/* Top Spacer to align below Navbar */}
-        <div className="h-16" />
+        {/* Mobile Menu Header */}
+        <div className="w-full px-6 sm:px-10 md:px-14 py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between border-b border-white/[0.08]">
+          <span className="text-sm font-normal text-neutral-400 select-none">
+            Menu
+          </span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="p-1 text-white hover:text-neutral-400 transition-colors cursor-pointer"
+            aria-label="Close menu"
+          >
+            <X className="w-6 h-6 stroke-[1.5]" />
+          </button>
+        </div>
 
-        {/* Navigation Links Grid */}
-        <div className="max-w-5xl mx-auto w-full py-8 flex flex-col justify-center flex-1">
-          <nav className="flex flex-col space-y-4 sm:space-y-6">
+        {/* Navigation Section */}
+        <div className="w-full px-6 sm:px-10 md:px-14 py-8 sm:py-12 flex-1 flex flex-col justify-center max-w-4xl">
+          <nav className="flex flex-col space-y-3 sm:space-y-4">
             <Link
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
+              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
             >
-              <span className="group-hover:translate-x-3 transition-transform duration-300">
-                Home
-              </span>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                01
-              </span>
+              Home
             </Link>
 
             <Link
               href="/studio"
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
+              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
             >
-              <span className="group-hover:translate-x-3 transition-transform duration-300">
-                Studio
-              </span>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                02
-              </span>
+              Studio
             </Link>
 
             <Link
               href="/projects"
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
+              className="inline-flex items-baseline gap-2 text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
             >
-              <div className="flex items-center gap-3 group-hover:translate-x-3 transition-transform duration-300">
-                <span>Work</span>
-                <span className="text-lg sm:text-2xl font-mono text-neutral-500">
-                  [12]
-                </span>
-              </div>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                03
-              </span>
-            </Link>
-
-            <Link
-              href="/pricing"
-              onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
-            >
-              <span className="group-hover:translate-x-3 transition-transform duration-300">
-                Pricing
-              </span>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                04
+              <span>Work</span>
+              <span className="text-lg sm:text-2xl font-normal text-neutral-500 font-mono">
+                [12]
               </span>
             </Link>
 
             <Link
               href="/articles"
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
+              className="inline-flex items-baseline gap-2 text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
             >
-              <div className="flex items-center gap-3 group-hover:translate-x-3 transition-transform duration-300">
-                <span>Articles</span>
-                <span className="text-lg sm:text-2xl font-mono text-neutral-500">
-                  [10]
-                </span>
-              </div>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                05
+              <span>Articles</span>
+              <span className="text-lg sm:text-2xl font-normal text-neutral-500 font-mono">
+                [10]
               </span>
+            </Link>
+
+            <Link
+              href="/pricing"
+              onClick={() => setMenuOpen(false)}
+              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
+            >
+              Pricing
             </Link>
 
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="group flex items-baseline justify-between text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-neutral-400 hover:text-white transition-colors"
+              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
             >
-              <span className="group-hover:translate-x-3 transition-transform duration-300">
-                Contact
-              </span>
-              <span className="text-xs font-mono text-neutral-600 group-hover:text-neutral-400">
-                06
-              </span>
+              Contact
             </Link>
           </nav>
         </div>
 
-        {/* Bottom Bar: Email copy & Socials */}
-        <div className="max-w-5xl mx-auto w-full pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-xs text-neutral-400">
+        {/* Mid Section: Let's Talk + Email + Live Toronto Time + Socials */}
+        <div className="w-full px-6 sm:px-10 md:px-14 py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6">
           <div>
-            <span className="text-neutral-500 font-mono block mb-1">
-              [Mail to]
-            </span>
-            <button
-              onClick={copyEmail}
-              className="text-white hover:text-neutral-300 transition-colors flex items-center gap-2 group font-mono"
-            >
-              <span>contact@trifectatrends.com</span>
-              <span className="text-[10px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded group-hover:bg-white/[0.15]">
-                {copied ? "email copied" : "click to copy"}
-              </span>
-            </button>
+            <span className="text-xs text-neutral-400 block mb-2">Let&apos;s Talk</span>
+            <div className="inline-block border-b border-neutral-700 pb-1">
+              <button
+                onClick={copyEmail}
+                className="text-lg sm:text-2xl font-bold text-white hover:text-neutral-300 transition-colors flex items-center gap-2 text-left"
+                title="Click to copy email"
+              >
+                <span>contact@trifectatrends.com</span>
+                <span className="text-neutral-400 font-normal">{copied ? "✓ copied" : "+"}</span>
+              </button>
+            </div>
           </div>
 
-          <div className="flex items-center gap-6 font-mono text-xs">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+          <div className="text-xs sm:text-sm text-neutral-400 font-normal">
+            <span>Toronto (CA)</span> <span className="tabular-nums font-mono ml-2 text-white">{torontoTime || "03:39 PM"}</span>
+          </div>
+
+          <div className="pt-2">
+            <span className="text-xs text-neutral-400 block mb-3">Socials</span>
+            <div className="flex items-center gap-5 text-white">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+                className="text-neutral-300 hover:text-white transition-colors"
+              >
+                <XIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-neutral-300 hover:text-white transition-colors"
+              >
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://dribbble.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+                className="text-neutral-300 hover:text-white transition-colors"
+              >
+                <DribbbleIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-neutral-300 hover:text-white transition-colors"
+              >
+                <LinkedInIcon className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Legal Footer */}
+        <div className="w-full px-6 sm:px-10 md:px-14 py-6 border-t border-white/[0.08] pb-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-neutral-400">
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-white transition-colors inline-flex items-center gap-1"
             >
-              Twitter / X
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
+              Privacy Policy <span className="text-[10px]">↗</span>
+            </Link>
+            <Link
+              href="/terms"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-white transition-colors inline-flex items-center gap-1"
             >
-              LinkedIn
-            </a>
-            <a
-              href="https://dribbble.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Dribbble
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Instagram
-            </a>
+              Terms of Service <span className="text-[10px]">↗</span>
+            </Link>
+          </div>
+          <div className="text-[11px] text-neutral-500">
+            © 2026 TRIFECTA TRENDS® All rights reserved.
           </div>
         </div>
       </div>

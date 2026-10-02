@@ -3,9 +3,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Calendar, Star } from "./icons";
 import { Marquee } from "./Marquee";
-import { MagneticButton } from "./MagneticButton";
 
 const clientLogos = [
   { name: "Clandestine", src: "/images/IVQsAsFQMvVgoU6ZYkIx9TDhZ4.svg" },
@@ -20,7 +21,9 @@ const clientLogos = [
 
 export function Hero() {
   const [arrived, setArrived] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headlineRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -37,21 +40,54 @@ export function Hero() {
     window.addEventListener("trifecta-arrival-start", onArrival);
     const fallbackTimer = setTimeout(() => setArrived(true), 5500);
 
-    const onScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-
     return () => {
       window.removeEventListener("trifecta-arrival-start", onArrival);
-      window.removeEventListener("scroll", onScroll);
       clearTimeout(fallbackTimer);
     };
   }, []);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const ctx = gsap.context(() => {
+      if (headlineRef.current) {
+        gsap.to(headlineRef.current, {
+          y: 120,
+          opacity: 0.1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.5,
+          },
+        });
+      }
+
+      if (cardRef.current) {
+        gsap.to(cardRef.current, {
+          y: -40,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.5,
+          },
+        });
+      }
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 overflow-hidden bg-[#141414]">
+    <section
+      ref={sectionRef}
+      className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 overflow-hidden bg-[#141414]"
+    >
       {/* Cinematic Full-Bleed Video Background */}
       <div
         className={`absolute inset-0 z-0 overflow-hidden pointer-events-none select-none transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
@@ -72,7 +108,7 @@ export function Hero() {
         />
         {/* Subtle dark overlay preserving metallic details while guaranteeing high text legibility */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-        {/* Seamless bottom fade into page background, providing excellent contrast for mobile manifesto */}
+        {/* Seamless bottom fade into page background */}
         <div className="absolute inset-x-0 bottom-0 h-80 sm:h-56 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-transparent pointer-events-none" />
       </div>
 
@@ -80,11 +116,8 @@ export function Hero() {
       <div className="w-full max-w-[1560px] mx-auto px-5 sm:px-10 md:px-14 flex-1 flex flex-col justify-between relative z-10">
         {/* Massive 2-Line Editorial Typography with Scroll Parallax */}
         <div
-          className="relative pt-2 sm:pt-6 md:pt-8 select-none will-change-transform transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
-          style={{
-            transform: `translate3d(0, ${scrollY * 0.16}px, 0)`,
-            opacity: Math.max(0, 1 - scrollY / 850),
-          }}
+          ref={headlineRef}
+          className="relative pt-2 sm:pt-6 md:pt-8 select-none will-change-transform"
         >
           {/* Line 1: TRIFECTA with Clip-Path Reveal */}
           <div
@@ -126,12 +159,10 @@ export function Hero() {
         <div className="relative mt-6 sm:mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
           {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Sarah Park) */}
           <div
-            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 transition-all duration-1000 delay-200 ${
+            ref={cardRef}
+            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 will-change-transform transition-all duration-1000 delay-200 ${
               arrived ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
-            style={{
-              transform: `translate3d(0, ${scrollY * -0.06}px, 0)`,
-            }}
           >
             <div className="w-full max-w-[320px] rounded-3xl bg-[#141414]/90 border border-white/10 shadow-2xl p-3.5 flex flex-col gap-3.5 backdrop-blur-xl group hover:border-white/20 transition-all duration-500">
               {/* Photo Container */}
@@ -181,16 +212,14 @@ export function Hero() {
                   </Link>
                 </div>
 
-                {/* White CTA Button with Magnetic Pull */}
-                <MagneticButton className="w-full">
-                  <Link
-                    href="/contact"
-                    className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-medium text-xs flex items-center justify-between shadow-sm cursor-pointer"
-                  >
-                    <span>Book a 15-Min Call</span>
-                    <Calendar className="w-4 h-4 text-black" />
-                  </Link>
-                </MagneticButton>
+                {/* White CTA Button */}
+                <Link
+                  href="/contact"
+                  className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-medium text-xs flex items-center justify-between shadow-sm cursor-pointer group"
+                >
+                  <span>Book a 15-Min Call</span>
+                  <Calendar className="w-4 h-4 text-black group-hover:scale-105 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>

@@ -1,14 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
-import { MotionReveal } from "./MotionReveal";
-import { MagneticButton } from "./MagneticButton";
 
 export function Approach() {
   const [copied, setCopied] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headlineRef = useRef<HTMLHeadingElement>(null);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("alex@trifectatrends.com");
@@ -16,48 +18,86 @@ export function Approach() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const el = sectionRef.current;
+    const headline = headlineRef.current;
+    if (!el || !headline) return;
+
+    const lines = headline.querySelectorAll(".reveal-line");
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        lines,
+        { yPercent: 100, opacity: 0.15 },
+        {
+          yPercent: 0,
+          opacity: 1,
+          stagger: 0.12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: headline,
+            start: "top 85%",
+            end: "top 45%",
+            scrub: 0.8,
+          },
+        }
+      );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="approach" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+    <section
+      ref={sectionRef}
+      id="approach"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]"
+    >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Tag */}
-        <MotionReveal variant="fade-up">
-          <div className="mb-10">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
-              [Our Approach]
-            </span>
-          </div>
-        </MotionReveal>
+        <div className="mb-10">
+          <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            [Our Approach]
+          </span>
+        </div>
 
-        {/* Massive Two-Tone Manifesto Headline */}
-        <MotionReveal variant="clip-up" duration={900}>
-          <div className="max-w-6xl mb-16 sm:mb-24">
-            <h2 className="text-[clamp(1.75rem,5.8vw,3.25rem)] font-bold tracking-[-0.03em] leading-[1.16]">
-              <span className="text-[#888888]">
-                Traditional agencies perfected the art of the pitch.{" "}
+        {/* Massive Two-Tone Manifesto Headline with Continuous Scroll Mask Reveal */}
+        <div className="max-w-6xl mb-16 sm:mb-24">
+          <h2
+            ref={headlineRef}
+            className="text-[clamp(1.75rem,5.8vw,3.25rem)] font-bold tracking-[-0.03em] leading-[1.18] select-none"
+          >
+            <span className="block overflow-hidden py-0.5">
+              <span className="reveal-line inline-block will-change-transform">
+                <span className="text-[#888888]">
+                  Traditional agencies perfected the art of the pitch.{" "}
+                </span>
+                <strong className="text-white font-bold">
+                  We perfected the art of the work.
+                </strong>
               </span>
-              <strong className="text-white font-bold">
-                We perfected the art of the work.{" "}
-              </strong>
-              <span className="text-[#888888]">When you need </span>
-              <strong className="text-white font-bold">
-                design that moves at the speed of your ambition
-              </strong>
-              <span className="text-[#888888]">
-                , you need a different kind of studio.
+            </span>
+
+            <span className="block overflow-hidden py-0.5">
+              <span className="reveal-line inline-block will-change-transform">
+                <span className="text-[#888888]">When you need </span>
+                <strong className="text-white font-bold">
+                  design that moves at the speed of your ambition
+                </strong>
+                <span className="text-[#888888]">
+                  , you need a different kind of studio.
+                </span>
               </span>
-            </h2>
-          </div>
-        </MotionReveal>
+            </span>
+          </h2>
+        </div>
 
         {/* 2-Column Layout: Alex West Card & Detailed Story */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Dedicated Alex West Portrait Card */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
-            <MotionReveal variant="fade-up" delay={150} className="w-full max-w-[340px] mx-auto lg:mx-0">
-              <div
-                data-cursor="hover"
-                className="w-full rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500"
-              >
+            <div className="w-full max-w-[340px] mx-auto lg:mx-0">
+              <div className="w-full rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500">
                 <div>
                   {/* Email Tag */}
                   <div className="flex items-center justify-between mb-4">
@@ -103,63 +143,55 @@ export function Approach() {
                   <span className="text-xs font-mono text-neutral-500">TRIFECTA TRENDS©</span>
                 </div>
               </div>
-            </MotionReveal>
+            </div>
           </div>
 
           {/* Right Column: Quotes & Two Sub-Columns */}
           <div className="lg:col-span-8 flex flex-col justify-between space-y-10">
             {/* Big Opening Quote */}
-            <MotionReveal variant="fade-up" delay={200}>
-              <div>
-                <span className="text-6xl sm:text-7xl text-neutral-500 font-serif leading-none block mb-2">
-                  “
-                </span>
-                <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-light leading-relaxed tracking-tight">
-                  After 15 years in traditional agencies, I saw the same problems
-                  repeatedly. Talented designers spending more time in meetings than
-                  creating. Clients paying for process instead of progress. Great
-                  ideas dying in revision purgatory.
-                </p>
-              </div>
-            </MotionReveal>
+            <div>
+              <span className="text-6xl sm:text-7xl text-neutral-500 font-serif leading-none block mb-2">
+                “
+              </span>
+              <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-light leading-relaxed tracking-tight">
+                After 15 years in traditional agencies, I saw the same problems
+                repeatedly. Talented designers spending more time in meetings than
+                creating. Clients paying for process instead of progress. Great
+                ideas dying in revision purgatory.
+              </p>
+            </div>
 
             {/* Two Sub-Columns for Philosophy Details */}
-            <MotionReveal variant="fade-up" delay={300}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-neutral-400 leading-relaxed font-light">
-                <div>
-                  <p>
-                    So I built TRIFECTA TRENDS differently. No endless meetings, no office
-                    politics, no pitches that promise everything. Just talented
-                    designers doing what they do best.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <p>
-                    We create design that actually solves problems. We&apos;re
-                    obsessive about the details because that&apos;s what our
-                    clients pay us for. To care as much as they do.
-                  </p>
-                  <p className="text-neutral-200 font-medium font-sans">
-                    That&apos;s the TRIFECTA TRENDS way. Simple, but not easy.
-                  </p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-neutral-400 leading-relaxed font-light">
+              <div>
+                <p>
+                  So I built TRIFECTA TRENDS differently. No endless meetings, no office
+                  politics, no pitches that promise everything. Just talented
+                  designers doing what they do best.
+                </p>
               </div>
-            </MotionReveal>
+              <div className="space-y-4">
+                <p>
+                  We create design that actually solves problems. We&apos;re
+                  obsessive about the details because that&apos;s what our
+                  clients pay us for. To care as much as they do.
+                </p>
+                <p className="text-neutral-200 font-medium font-sans">
+                  That&apos;s the TRIFECTA TRENDS way. Simple, but not easy.
+                </p>
+              </div>
+            </div>
 
-            {/* Link to /studio with Magnetic Pull */}
-            <MotionReveal variant="fade-up" delay={350}>
-              <div className="pt-4">
-                <MagneticButton>
-                  <Link
-                    href="/studio"
-                    className="inline-flex items-center gap-2 text-sm text-white font-medium hover:text-neutral-300 transition-colors group cursor-pointer"
-                  >
-                    <span>The studio</span>
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Link>
-                </MagneticButton>
-              </div>
-            </MotionReveal>
+            {/* Link to /studio */}
+            <div className="pt-4">
+              <Link
+                href="/studio"
+                className="inline-flex items-center gap-2 text-sm text-white font-medium hover:text-neutral-300 transition-colors group cursor-pointer"
+              >
+                <span>The studio</span>
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

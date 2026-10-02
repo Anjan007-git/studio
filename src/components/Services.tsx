@@ -90,22 +90,29 @@ export function Services() {
   const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-      services.forEach((service, index) => {
-        const el = document.getElementById(service.id);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveTab(index);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = services.findIndex((s) => s.id === entry.target.id);
+            if (index !== -1) {
+              setActiveTab(index);
+            }
           }
-        }
-      });
-    };
+        });
+      },
+      {
+        rootMargin: "-20% 0px -50% 0px",
+        threshold: 0.1,
+      }
+    );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    services.forEach((service) => {
+      const el = document.getElementById(service.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToService = (index: number) => {
@@ -137,77 +144,67 @@ export function Services() {
           </p>
         </div>
 
-        {/* 2-Column Layout: Left Sticky Nav + Right Scrolling Showcase Cards */}
+        {/* 2-Column Layout: Left Sticky Nav + Right Scrolling Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Sticky Menu */}
+          {/* Left Sticky Menu (matching desktop frame 24 exactly) */}
           <div className="lg:col-span-4 sticky top-28 hidden lg:block">
-            <nav className="flex flex-col space-y-4 text-xl sm:text-2xl font-bold tracking-tight">
+            <nav className="flex flex-col space-y-5 text-2xl sm:text-3xl font-medium tracking-tight">
               {services.map((service, idx) => (
                 <button
                   key={service.id}
                   onClick={() => scrollToService(idx)}
-                  className={`text-left transition-all duration-300 cursor-pointer flex items-center gap-3 ${
+                  className={`text-left transition-all duration-300 cursor-pointer ${
                     activeTab === idx
-                      ? "text-white translate-x-2"
+                      ? "text-white font-semibold"
                       : "text-neutral-500 hover:text-neutral-300"
                   }`}
                 >
-                  <span
-                    className={`text-xs font-mono transition-opacity duration-300 ${
-                      activeTab === idx ? "opacity-100 text-white" : "opacity-0"
-                    }`}
-                  >
-                    /{service.num.replace("[", "").replace("]", "")}
-                  </span>
-                  <span>{service.title}</span>
+                  {service.title}
                 </button>
               ))}
             </nav>
           </div>
 
-          {/* Right Scrolling Cards */}
+          {/* Right Scrolling Content */}
           <div className="lg:col-span-8 flex flex-col space-y-16 sm:space-y-24">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-28 flex flex-col space-y-8 rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 sm:p-7 overflow-hidden group hover:border-white/20 transition-all duration-300 shadow-xl"
+                className="scroll-mt-28 flex flex-col space-y-6 overflow-hidden"
               >
                 {/* Large Photographic Artwork */}
-                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-neutral-900">
+                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
 
-                {/* Service Details */}
-                <div className="px-1 sm:px-2 pb-2">
-                  <div className="flex items-baseline gap-3 mb-3">
-                    <span className="text-xs font-mono text-neutral-400">
-                      {service.num}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                      {service.title}
+                {/* Service Details in 2 columns (matching desktop frame 24) */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
+                  {/* Left Column: Title & Description */}
+                  <div className="md:col-span-6">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
+                      {service.num} {service.title}
                     </h3>
+                    <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+                      {service.description}
+                    </p>
                   </div>
 
-                  <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-light mb-8 max-w-2xl">
-                    {service.description}
-                  </p>
-
-                  {/* Categories Row */}
-                  <div className="pt-6 border-t border-white/10">
-                    <span className="text-xs font-mono text-neutral-500 block mb-3 uppercase tracking-wider">
+                  {/* Right Column: Categories */}
+                  <div className="md:col-span-6">
+                    <span className="text-xs text-neutral-400 block mb-3 font-normal">
                       Categories
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {service.categories.map((cat, cIdx) => (
                         <span
                           key={cIdx}
-                          className="text-xs font-mono px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-neutral-300 hover:text-white hover:border-white/20 transition-colors"
+                          className="text-xs px-3 py-1.5 rounded-lg bg-neutral-900 border border-white/10 text-white font-normal"
                         >
                           {cat}
                         </span>

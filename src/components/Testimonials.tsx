@@ -115,7 +115,6 @@ export function Testimonials() {
               className="h-full"
             >
               <div
-                data-cursor="hover"
                 className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/30 transition-all duration-500 shadow-xl h-full group"
               >
                 <div>

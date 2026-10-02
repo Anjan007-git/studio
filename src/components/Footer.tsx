@@ -235,10 +235,10 @@ export function Footer() {
             <span>Based in Toronto (CA). © 2016 — 2026 TRIFECTA TRENDS.</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="hover:text-neutral-400 transition-colors">
+            <Link href="/privacy" className="hover:text-neutral-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="hover:text-neutral-400 transition-colors">
+            <Link href="/terms" className="hover:text-neutral-400 transition-colors">
               Terms of Service
             </Link>
           </div>
