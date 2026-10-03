@@ -40,7 +40,10 @@ export function Process() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="process" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+    <section
+      id="process"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+    >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
@@ -59,10 +62,10 @@ export function Process() {
 
         {/* 2-Column: Left Stats + Right Horizontal Expanding Accordion */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-          {/* Left Stats Column (matching Desktop Frame 32) */}
+          {/* Left Stats Column */}
           <div className="lg:col-span-4 flex flex-col justify-center space-y-12">
             <div>
-              <div className="w-6 h-6 mb-3 text-neutral-300">
+              <div className="w-7 h-7 mb-4 text-white/80">
                 <Calendar className="w-6 h-6 stroke-[1.5]" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
@@ -73,8 +76,8 @@ export function Process() {
               </p>
             </div>
 
-            <div>
-              <div className="w-6 h-6 mb-3 text-neutral-300">
+            <div className="pt-8 border-t border-white/5">
+              <div className="w-7 h-7 mb-4 text-white/80">
                 <Clock className="w-6 h-6 stroke-[1.5]" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
@@ -106,7 +109,7 @@ export function Process() {
                     {/* Top Number */}
                     <div className="flex items-center justify-between">
                       <span
-                        className={`text-2xl font-bold transition-colors ${
+                        className={`text-2xl font-bold transition-colors font-mono ${
                           isActive ? "text-white" : "text-neutral-500"
                         }`}
                       >
@@ -114,9 +117,9 @@ export function Process() {
                       </span>
                     </div>
 
-                    {/* Bottom Details (Shown fully when active) */}
+                    {/* Bottom Details (Shown with clean transition when active) */}
                     {isActive ? (
-                      <div className="transition-opacity duration-300 opacity-100">
+                      <div className="transition-all duration-300 opacity-100 transform translate-y-0">
                         <h4 className="text-2xl font-bold text-white mb-3">
                           {item.title}
                         </h4>
@@ -125,7 +128,7 @@ export function Process() {
                         </p>
                       </div>
                     ) : (
-                      <div className="opacity-0 h-0 overflow-hidden" />
+                      <div className="opacity-0 h-0 overflow-hidden transform translate-y-4" />
                     )}
                   </div>
                 );
@@ -151,7 +154,7 @@ export function Process() {
                           {item.title}
                         </h4>
                       </div>
-                      <span className="text-sm text-neutral-400">
+                      <span className="text-base text-neutral-400 font-mono">
                         {isActive ? "−" : "+"}
                       </span>
                     </div>

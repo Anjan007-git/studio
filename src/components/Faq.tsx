@@ -3,27 +3,32 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "./icons";
 
 const faqs = [
   {
     q: "How do retainers actually work?",
-    a: "Think of it as having a dedicated senior designer on your team for a flat monthly rate. You get a set number of hours each month to use however you need—whether that's one big project or lots of small sprint requests. We sync regularly and work through your priorities systematically via Slack and Figma.",
+    a: "Think of it as having a dedicated senior design partner on your team for a flat monthly rate. You get a set allocation of hours each month to use however you need—whether that's one major platform sprint or rapid daily requests. We sync directly via Slack and Figma with zero agency bureaucracy.",
   },
   {
-    q: "What if I don't use all my hours?",
-    a: "Unused hours roll over to the next month (up to 25% of your plan). This gives you flexibility during slower periods without losing value. Hours expire after 90 days to keep projects moving forward with momentum.",
+    q: "What if I don't use all my hours in a month?",
+    a: "Unused hours roll over to the next month (up to 25% of your plan allowance). This provides peace of mind during quieter development or holiday periods. Rollover hours remain valid for 90 days to keep projects moving with active momentum.",
   },
   {
-    q: "How fast can you start?",
-    a: "For retainers, we can typically kick off within 3–5 business days. Project work usually begins within 1–2 weeks depending on our current pipeline capacity. Rush delivery is available when deadlines demand it.",
+    q: "How fast can you kick off?",
+    a: "For monthly retainers, we typically kick off within 3–5 business days after contract signing. Dedicated custom projects usually start within 1–2 weeks based on pipeline availability. Rush scoping is available when urgent launch deadlines demand it.",
   },
   {
-    q: "Who will be working on my account?",
-    a: "Every account is led by a senior designer with 10+ years of hands-on agency and tech experience. For larger retainers and projects, we bring in specialists (motion, 3D, code), but your lead designer remains your direct, consistent point of contact.",
+    q: "Who actually works on my account?",
+    a: "Every engagement is directly led by a senior design principal with 10+ years of hands-on agency and tech experience. We do not pass work off to junior trainees. For deep specialized needs (WebGL, custom 3D, complex code), we bring in our vetted senior specialists.",
   },
   {
-    q: "Can I switch between retainers and projects?",
-    a: "Absolutely. Many clients start on a project to launch a core version, then transition into a monthly retainer to maintain velocity. Retainer clients also receive a 15–20% discount on dedicated custom project engagements.",
+    q: "Can we switch between retainers and fixed projects?",
+    a: "Yes. Many partners begin with a fixed-scope project to launch their core brand or product MVP, then seamlessly transition to a monthly retainer to maintain continuous shipping velocity. Retainer partners also enjoy a 15–20% discount on dedicated custom sprints.",
+  },
+  {
+    q: "How do revisions and feedback work?",
+    a: "We work in short, highly transparent cycles with continuous Figma visibility. Feedback is incorporated continuously rather than through artificial 'rounds' of review. We refine until the outcome genuinely exceeds expectations.",
   },
 ];
 
@@ -35,11 +40,14 @@ export function Faq() {
   };
 
   return (
-    <section id="faq" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+    <section
+      id="faq"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+    >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Left Column: Heading & Contact info */}
-          <div className="lg:col-span-5">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column: Heading & Advisory box */}
+          <div className="lg:col-span-5 sticky top-32">
             <div className="mb-4">
               <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
                 [07] Answers
@@ -49,18 +57,18 @@ export function Faq() {
               Everything else you&apos;re wondering.
             </h2>
             <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light mb-8">
-              We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective clients.
+              We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective partners.
             </p>
 
             {/* Studio Advisory Support Box */}
             <div className="p-7 rounded-3xl bg-[#1c1c1c] border border-white/10 shadow-xl">
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3.5 mb-3">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
                   <Image
-                    src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                    alt="Client Advisory"
+                    src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
+                    alt="Creative Direction Advisory"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover"
                   />
                 </div>
                 <div>
@@ -70,14 +78,15 @@ export function Faq() {
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed font-light mb-5">
-                Have a unique question about your timeline or tech stack? Reach out directly. We&apos;re always happy to talk through details.
+              <p className="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+                Have a unique question about your timeline, stack, or budget? Reach out directly. We&apos;re always happy to talk through details.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex text-xs font-mono text-white hover:text-neutral-300 underline underline-offset-4 cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-mono text-white hover:text-neutral-300 group cursor-pointer"
               >
-                Book a quick question call →
+                <span>Ask a question</span>
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
           </div>
@@ -98,15 +107,17 @@ export function Faq() {
                 >
                   <button
                     onClick={() => toggle(idx)}
-                    className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 cursor-pointer"
+                    className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
                     aria-expanded={isOpen}
                   >
                     <span className="text-base sm:text-lg font-bold text-white tracking-tight">
                       {faq.q}
                     </span>
                     <span
-                      className={`text-neutral-400 shrink-0 transform transition-transform duration-300 text-xl font-light leading-none select-none ${
-                        isOpen ? "rotate-45 text-white" : ""
+                      className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 shrink-0 transform transition-all duration-300 text-lg font-light leading-none select-none ${
+                        isOpen
+                          ? "rotate-45 text-white bg-white/10 border-white/20"
+                          : "bg-white/5"
                       }`}
                     >
                       +

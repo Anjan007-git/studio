@@ -4,7 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export const viewport: Viewport = {
-  themeColor: "#141414",
+  themeColor: "#0a0a0a",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -55,10 +55,12 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#141414] text-[#ffffff] font-sans selection:bg-white selection:text-black">
+      <body className="min-h-full flex flex-col bg-[var(--page-bg)] text-[var(--text-primary)] font-sans selection:bg-white selection:text-black">
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        {/* Subtle bottom depth treatment — MUGEN-style scroll depth indicator */}
+        <div className="bottom-depth" aria-hidden="true" />
       </body>
     </html>
   );

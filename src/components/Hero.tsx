@@ -25,6 +25,9 @@ export function Hero() {
   const headlineRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const manifestoRef = useRef<HTMLDivElement>(null);
+  const socialProofRef = useRef<HTMLDivElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -46,16 +49,32 @@ export function Hero() {
     };
   }, []);
 
+  // MUGEN-style scroll-linked parallax and fade
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const el = sectionRef.current;
     if (!el) return;
 
     const ctx = gsap.context(() => {
+      // Headline parallax — moves up and fades as user scrolls
       if (headlineRef.current) {
         gsap.to(headlineRef.current, {
-          y: 120,
-          opacity: 0.1,
+          y: 150,
+          opacity: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.3,
+          },
+        });
+      }
+
+      // Card parallax — moves at a different rate
+      if (cardRef.current) {
+        gsap.to(cardRef.current, {
+          y: -60,
           ease: "none",
           scrollTrigger: {
             trigger: el,
@@ -66,15 +85,47 @@ export function Hero() {
         });
       }
 
-      if (cardRef.current) {
-        gsap.to(cardRef.current, {
-          y: -40,
+      // Manifesto parallax
+      if (manifestoRef.current) {
+        gsap.to(manifestoRef.current, {
+          y: 50,
+          opacity: 0.3,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "top top",
             end: "bottom top",
-            scrub: 0.5,
+            scrub: 0.4,
+          },
+        });
+      }
+
+      // Social proof parallax
+      if (socialProofRef.current) {
+        gsap.to(socialProofRef.current, {
+          y: 30,
+          opacity: 0.2,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.4,
+          },
+        });
+      }
+
+      // Marquee scale and fade
+      if (marqueeRef.current) {
+        gsap.to(marqueeRef.current, {
+          y: 40,
+          opacity: 0.1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "60% top",
+            end: "bottom top",
+            scrub: 0.3,
           },
         });
       }
@@ -86,11 +137,11 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 overflow-hidden bg-[#141414]"
+      className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-10 overflow-hidden bg-[var(--page-bg)]"
     >
       {/* Cinematic Full-Bleed Video Background */}
       <div
-        className={`absolute inset-0 z-0 overflow-hidden pointer-events-none select-none transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`absolute inset-0 z-0 overflow-hidden pointer-events-none select-none transition-opacity duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
           arrived ? "opacity-100" : "opacity-0"
         }`}
         aria-hidden="true"
@@ -109,32 +160,34 @@ export function Hero() {
         {/* Subtle dark overlay preserving metallic details while guaranteeing high text legibility */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
         {/* Seamless bottom fade into page background */}
-        <div className="absolute inset-x-0 bottom-0 h-80 sm:h-56 bg-gradient-to-t from-[#141414] via-[#141414]/70 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-80 sm:h-56 bg-gradient-to-t from-[var(--page-bg)] via-[var(--page-bg)]/70 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}
-      <div className="w-full max-w-[1560px] mx-auto px-5 sm:px-10 md:px-14 flex-1 flex flex-col justify-between relative z-10">
+      <div className="w-full max-w-[var(--content-max)] mx-auto px-[var(--section-px)] flex-1 flex flex-col justify-between relative z-10">
         {/* Massive 2-Line Editorial Typography with Scroll Parallax */}
         <div
           ref={headlineRef}
           className="relative pt-2 sm:pt-6 md:pt-8 select-none will-change-transform"
         >
-          {/* Line 1: TRIFECTA with Clip-Path Reveal */}
-          <div
-            className={`w-full overflow-hidden transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-            }`}
-          >
-            <h1 className="text-[clamp(2.85rem,13vw,8.5rem)] font-bold text-white tracking-[-0.04em] leading-[0.84] uppercase m-0 p-0">
-              TRIFECTA
-            </h1>
+          {/* Line 1: TRIFECTA — masked reveal */}
+          <div className="reveal-mask">
+            <div
+              className={`transition-all duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                arrived ? "translate-y-0 opacity-100" : "translate-y-[110%] opacity-0"
+              }`}
+            >
+              <h1 className="text-display text-white uppercase m-0 p-0">
+                TRIFECTA
+              </h1>
+            </div>
           </div>
 
-          {/* Line 2: Since 2016 badge + TRENDS */}
+          {/* Line 2: Since badge + TRENDS */}
           <div className="relative flex items-baseline justify-between w-full">
             {/* Left: Studio Discipline Badge positioned under 'T' */}
             <div
-              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1.5 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-200 ${
+              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1.5 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-300 ${
                 arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -142,15 +195,17 @@ export function Hero() {
               <span>Creative Technology</span>
             </div>
 
-            {/* Line 2 Word: TRENDS */}
-            <div
-              className={`w-full text-right sm:text-left sm:pl-[24vw] md:pl-[28vw] overflow-hidden transition-all duration-1000 delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                arrived ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-              }`}
-            >
-              <span className="text-[clamp(2.85rem,13vw,8.5rem)] font-bold text-[#888888] tracking-[-0.04em] leading-[0.84] uppercase m-0 p-0 block">
-                TRENDS
-              </span>
+            {/* Line 2 Word: TRENDS — masked reveal */}
+            <div className="w-full text-right sm:text-left sm:pl-[24vw] md:pl-[28vw] reveal-mask">
+              <div
+                className={`transition-all duration-[1100ms] delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  arrived ? "translate-y-0 opacity-100" : "translate-y-[110%] opacity-0"
+                }`}
+              >
+                <span className="text-display text-[var(--text-secondary)] uppercase m-0 p-0 block">
+                  TRENDS
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -160,11 +215,11 @@ export function Hero() {
           {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Studio Advisory) */}
           <div
             ref={cardRef}
-            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 will-change-transform transition-all duration-1000 delay-200 ${
+            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 will-change-transform transition-all duration-[1100ms] delay-200 ${
               arrived ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
           >
-            <div className="w-full max-w-[320px] rounded-3xl bg-[#141414]/90 border border-white/10 shadow-2xl p-3.5 flex flex-col gap-3.5 backdrop-blur-xl group hover:border-white/20 transition-all duration-500">
+            <div className="w-full max-w-[320px] rounded-3xl bg-[var(--page-bg)]/90 border border-white/10 shadow-2xl p-3.5 flex flex-col gap-3.5 backdrop-blur-xl group hover:border-white/20 transition-all duration-500">
               {/* Photo Container */}
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900">
                 <Image
@@ -172,7 +227,7 @@ export function Hero() {
                   alt="TRIFECTA TRENDS — Design Advisory"
                   fill
                   priority
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />
 
                 {/* Availability Badge Overlay */}
@@ -226,15 +281,16 @@ export function Hero() {
 
           {/* Order 2 on mobile, Order 3 on desktop: Editorial Manifesto */}
           <div
-            className={`lg:col-span-4 order-2 lg:order-3 flex justify-start lg:justify-end transition-all duration-1000 delay-350 ${
+            ref={manifestoRef}
+            className={`lg:col-span-4 order-2 lg:order-3 flex justify-start lg:justify-end will-change-transform transition-all duration-[1100ms] delay-[350ms] ${
               arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <p className="max-w-md text-base sm:text-lg md:text-xl leading-snug tracking-tight text-left">
+            <p className="max-w-md text-[var(--text-body-lg)] leading-snug tracking-tight text-left">
               <strong className="text-white font-bold block sm:inline">
                 We&apos;ve reimagined how great design happens.{" "}
               </strong>
-              <span className="text-[#888888] font-normal">
+              <span className="text-[var(--text-secondary)] font-light">
                 No pitches. No proposals. No project management theater. Just
                 exceptional work from senior designers who become an extension of
                 your team.
@@ -244,7 +300,8 @@ export function Hero() {
 
           {/* Order 3 on mobile, Order 1 on desktop: Happy Clients & Rating */}
           <div
-            className={`lg:col-span-4 order-3 lg:order-1 flex items-center gap-4 transition-all duration-1000 delay-300 ${
+            ref={socialProofRef}
+            className={`lg:col-span-4 order-3 lg:order-1 flex items-center gap-4 will-change-transform transition-all duration-[1100ms] delay-[400ms] ${
               arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -306,7 +363,10 @@ export function Hero() {
         </div>
 
         {/* Continuous Seamless Infinite Client Marquee */}
-        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10">
+        <div
+          ref={marqueeRef}
+          className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-white/[0.08] will-change-transform"
+        >
           <Marquee speed={35} className="opacity-70 hover:opacity-100 transition-opacity">
             {clientLogos.map((client, idx) => (
               <div

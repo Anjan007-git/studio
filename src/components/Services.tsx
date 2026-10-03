@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const services = [
@@ -88,6 +88,7 @@ const services = [
 
 export function Services() {
   const [activeTab, setActiveTab] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -102,7 +103,7 @@ export function Services() {
         });
       },
       {
-        rootMargin: "-20% 0px -50% 0px",
+        rootMargin: "-25% 0px -45% 0px",
         threshold: 0.1,
       }
     );
@@ -119,12 +120,17 @@ export function Services() {
     setActiveTab(index);
     const el = document.getElementById(services[index].id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const yOffset = -120;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
   return (
-    <section id="services" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+    <section
+      id="services"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+    >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
@@ -144,22 +150,49 @@ export function Services() {
           </p>
         </div>
 
+        {/* Mobile Horizontal Category Bar */}
+        <div className="lg:hidden mb-8 overflow-x-auto scrollbar-none pb-2 -mx-6 px-6">
+          <div className="flex gap-2 min-w-max">
+            {services.map((service, idx) => (
+              <button
+                key={service.id}
+                onClick={() => scrollToService(idx)}
+                className={`px-4 py-2 rounded-full text-xs font-mono transition-all ${
+                  activeTab === idx
+                    ? "bg-white text-black font-semibold shadow-md"
+                    : "bg-[#1c1c1c] text-neutral-400 border border-white/10 hover:text-white"
+                }`}
+              >
+                {service.title}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* 2-Column Layout: Left Sticky Nav + Right Scrolling Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Sticky Menu (matching desktop frame 24 exactly) */}
-          <div className="lg:col-span-4 sticky top-28 hidden lg:block">
-            <nav className="flex flex-col space-y-5 text-2xl sm:text-3xl font-medium tracking-tight">
+        <div
+          ref={containerRef}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+        >
+          {/* Left Sticky Menu (matching desktop MUGEN frame exactly) */}
+          <div className="lg:col-span-4 sticky top-32 hidden lg:block">
+            <nav className="flex flex-col space-y-6 text-2xl sm:text-3xl font-medium tracking-tight">
               {services.map((service, idx) => (
                 <button
                   key={service.id}
                   onClick={() => scrollToService(idx)}
-                  className={`text-left transition-all duration-300 cursor-pointer ${
+                  className={`text-left transition-all duration-300 cursor-pointer flex items-center gap-3 ${
                     activeTab === idx
-                      ? "text-white font-semibold"
+                      ? "text-white font-semibold translate-x-1"
                       : "text-neutral-500 hover:text-neutral-300"
                   }`}
                 >
-                  {service.title}
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                      activeTab === idx ? "bg-white scale-125" : "bg-transparent opacity-0"
+                    }`}
+                  />
+                  <span>{service.title}</span>
                 </button>
               ))}
             </nav>
@@ -171,19 +204,19 @@ export function Services() {
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-28 flex flex-col space-y-6 overflow-hidden"
+                className="scroll-mt-28 flex flex-col space-y-6"
               >
-                {/* Large Photographic Artwork */}
-                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10">
+                {/* Large Photographic Artwork with Subtle Zoom */}
+                <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 group">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
 
-                {/* Service Details in 2 columns (matching desktop frame 24) */}
+                {/* Service Details in 2 columns */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
                   {/* Left Column: Title & Description */}
                   <div className="md:col-span-6">
@@ -204,7 +237,7 @@ export function Services() {
                       {service.categories.map((cat, cIdx) => (
                         <span
                           key={cIdx}
-                          className="text-xs px-3 py-1.5 rounded-lg bg-neutral-900 border border-white/10 text-white font-normal"
+                          className="text-xs px-3 py-1.5 rounded-lg bg-[#1c1c1c] border border-white/10 text-neutral-300 hover:border-white/20 hover:text-white transition-colors select-none font-light"
                         >
                           {cat}
                         </span>

@@ -1,13 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 import { XIcon, InstagramIcon, DribbbleIcon, LinkedInIcon, X } from "./icons";
 
 export function Navbar() {
   const [studioTime, setStudioTime] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuItemsRef = useRef<HTMLAnchorElement[]>([]);
+  const menuMetaRef = useRef<HTMLDivElement>(null);
+  const menuFooterRef = useRef<HTMLDivElement>(null);
+  const tlRef = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
     const updateTime = () => {
@@ -26,20 +33,122 @@ export function Navbar() {
     return () => clearInterval(interval);
   }, []);
 
-  // Prevent background scrolling when menu is open and stop Lenis smoothly
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-      window.__lenis?.stop();
-    } else {
-      document.body.style.overflow = "unset";
-      window.__lenis?.start();
+  // GSAP-powered mobile menu choreography
+  const openMenu = useCallback(() => {
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    setMenuOpen(true);
+    document.body.style.overflow = "hidden";
+    window.__lenis?.stop();
+
+    // Kill any previous timeline
+    tlRef.current?.kill();
+
+    const tl = gsap.timeline();
+    tlRef.current = tl;
+
+    // Panel slides in
+    tl.fromTo(
+      menu,
+      { clipPath: "inset(0 0 100% 0)" },
+      {
+        clipPath: "inset(0 0 0% 0)",
+        duration: 0.5,
+        ease: "power3.inOut",
+      }
+    );
+
+    // Menu items stagger in
+    tl.fromTo(
+      menuItemsRef.current.filter(Boolean),
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.06,
+        duration: 0.5,
+        ease: "power3.out",
+      },
+      "-=0.2"
+    );
+
+    // Meta section
+    if (menuMetaRef.current) {
+      tl.fromTo(
+        menuMetaRef.current,
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+        "-=0.3"
+      );
     }
+
+    // Footer
+    if (menuFooterRef.current) {
+      tl.fromTo(
+        menuFooterRef.current,
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+        "-=0.2"
+      );
+    }
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    tlRef.current?.kill();
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setMenuOpen(false);
+        document.body.style.overflow = "unset";
+        window.__lenis?.start();
+      },
+    });
+    tlRef.current = tl;
+
+    // Reverse: items fade out
+    tl.to(menuItemsRef.current.filter(Boolean), {
+      y: -20,
+      opacity: 0,
+      stagger: 0.03,
+      duration: 0.25,
+      ease: "power2.in",
+    });
+
+    // Panel slides out
+    tl.to(
+      menu,
+      {
+        clipPath: "inset(0 0 100% 0)",
+        duration: 0.4,
+        ease: "power3.inOut",
+      },
+      "-=0.1"
+    );
+  }, []);
+
+  useEffect(() => {
     return () => {
       document.body.style.overflow = "unset";
       window.__lenis?.start();
+      tlRef.current?.kill();
     };
-  }, [menuOpen]);
+  }, []);
+
+  const handleToggle = () => {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  const handleNavClick = () => {
+    closeMenu();
+  };
 
   const copyEmail = () => {
     navigator.clipboard.writeText("contact@trifectatrends.com");
@@ -47,15 +156,24 @@ export function Navbar() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/studio", label: "Studio" },
+    { href: "/projects", label: "Work", count: "[12]" },
+    { href: "/articles", label: "Articles", count: "[10]" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <>
-      {/* Top Bar matching exclusion topbar */}
+      {/* Top Bar — mix-blend-exclusion for text visibility on any bg */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-exclusion text-white pointer-events-auto">
         <div className="w-full px-5 sm:px-10 md:px-14 py-4 sm:py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between">
           {/* Left: Brand Logo */}
           <Link
             href="/"
-            onClick={() => setMenuOpen(false)}
+            onClick={handleNavClick}
             className="flex items-start gap-0.5 group focus:outline-none"
             aria-label="TRIFECTA TRENDS Home"
           >
@@ -87,7 +205,7 @@ export function Navbar() {
 
             {/* Hamburger Button (animated 2 bars) */}
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
+              onClick={handleToggle}
               className="relative w-8 h-8 flex flex-col justify-center items-end gap-1.5 focus:outline-none group cursor-pointer"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
@@ -110,13 +228,15 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Fullscreen Overlay Menu - Exactly matching Mobile Reference Frame 6 */}
+      {/* Fullscreen Overlay Menu — GSAP-powered choreography */}
       <div
-        className={`fixed inset-0 z-50 bg-[#0c0c0c] text-white transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-y-auto overscroll-contain flex flex-col justify-between ${
+        ref={menuRef}
+        className={`fixed inset-0 z-50 bg-[#0a0a0a] text-white overflow-y-auto overscroll-contain flex flex-col justify-between ${
           menuOpen
-            ? "opacity-100 pointer-events-auto visible"
-            : "opacity-0 pointer-events-none invisible"
+            ? "pointer-events-auto visible"
+            : "pointer-events-none invisible"
         }`}
+        style={{ clipPath: menuOpen ? undefined : "inset(0 0 100% 0)" }}
       >
         {/* Mobile Menu Header */}
         <div className="w-full px-6 sm:px-10 md:px-14 py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between border-b border-white/[0.08]">
@@ -124,7 +244,7 @@ export function Navbar() {
             Menu
           </span>
           <button
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             className="p-1 text-white hover:text-neutral-400 transition-colors cursor-pointer"
             aria-label="Close menu"
           >
@@ -135,64 +255,32 @@ export function Navbar() {
         {/* Navigation Section */}
         <div className="w-full px-6 sm:px-10 md:px-14 py-8 sm:py-12 flex-1 flex flex-col justify-center max-w-4xl">
           <nav className="flex flex-col space-y-3 sm:space-y-4">
-            <Link
-              href="/"
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/studio"
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              Studio
-            </Link>
-
-            <Link
-              href="/projects"
-              onClick={() => setMenuOpen(false)}
-              className="inline-flex items-baseline gap-2 text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              <span>Work</span>
-              <span className="text-lg sm:text-2xl font-normal text-neutral-500 font-mono">
-                [12]
-              </span>
-            </Link>
-
-            <Link
-              href="/articles"
-              onClick={() => setMenuOpen(false)}
-              className="inline-flex items-baseline gap-2 text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              <span>Articles</span>
-              <span className="text-lg sm:text-2xl font-normal text-neutral-500 font-mono">
-                [10]
-              </span>
-            </Link>
-
-            <Link
-              href="/pricing"
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              Pricing
-            </Link>
-
-            <Link
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
-            >
-              Contact
-            </Link>
+            {navLinks.map((link, i) => (
+              <Link
+                key={link.href}
+                ref={(el) => {
+                  menuItemsRef.current[i] = el!;
+                }}
+                href={link.href}
+                onClick={handleNavClick}
+                className="inline-flex items-baseline gap-2 text-3xl sm:text-5xl font-medium tracking-tight text-white hover:text-neutral-400 transition-colors"
+              >
+                <span>{link.label}</span>
+                {link.count && (
+                  <span className="text-lg sm:text-2xl font-normal text-neutral-500 font-mono">
+                    {link.count}
+                  </span>
+                )}
+              </Link>
+            ))}
           </nav>
         </div>
 
         {/* Mid Section: Let's Talk + Email + Live Studio Time + Socials */}
-        <div className="w-full px-6 sm:px-10 md:px-14 py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6">
+        <div
+          ref={menuMetaRef}
+          className="w-full px-6 sm:px-10 md:px-14 py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6"
+        >
           <div>
             <span className="text-xs text-neutral-400 block mb-2">Let&apos;s Talk</span>
             <div className="inline-block border-b border-neutral-700 pb-1">
@@ -257,18 +345,21 @@ export function Navbar() {
         </div>
 
         {/* Bottom Legal Footer */}
-        <div className="w-full px-6 sm:px-10 md:px-14 py-6 border-t border-white/[0.08] pb-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-neutral-400">
+        <div
+          ref={menuFooterRef}
+          className="w-full px-6 sm:px-10 md:px-14 py-6 border-t border-white/[0.08] pb-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-neutral-400"
+        >
           <div className="flex items-center gap-6">
             <Link
               href="/privacy"
-              onClick={() => setMenuOpen(false)}
+              onClick={handleNavClick}
               className="hover:text-white transition-colors inline-flex items-center gap-1"
             >
               Privacy Policy <span className="text-[10px]">↗</span>
             </Link>
             <Link
               href="/terms"
-              onClick={() => setMenuOpen(false)}
+              onClick={handleNavClick}
               className="hover:text-white transition-colors inline-flex items-center gap-1"
             >
               Terms of Service <span className="text-[10px]">↗</span>

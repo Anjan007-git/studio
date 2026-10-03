@@ -15,7 +15,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#141414] text-[#ffffff] selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-[var(--text-primary)] selection:bg-white selection:text-black page-frame">
       <HomeArrival />
       <Navbar />
       <main>

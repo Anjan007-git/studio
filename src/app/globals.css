@@ -81,6 +81,37 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* MUGEN-inspired design tokens */
+  --page-bg: #0a0a0a;
+  --page-bg-alt: #111111;
+  --surface-1: #141414;
+  --surface-2: #1a1a1a;
+  --surface-3: #1c1c1c;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --text-muted: #666666;
+  --text-dim: #444444;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.20);
+  --rail-color: rgba(255, 255, 255, 0.06);
+
+  /* Fluid typography scale */
+  --text-display: clamp(3rem, 10vw, 9rem);
+  --text-hero: clamp(2.5rem, 8vw, 7rem);
+  --text-h1: clamp(2rem, 5.5vw, 4rem);
+  --text-h2: clamp(1.75rem, 4.5vw, 3.25rem);
+  --text-h3: clamp(1.25rem, 2.5vw, 2rem);
+  --text-body-lg: clamp(1rem, 1.2vw, 1.25rem);
+  --text-body: clamp(0.875rem, 1vw, 1rem);
+  --text-small: clamp(0.75rem, 0.85vw, 0.875rem);
+  --text-micro: clamp(0.625rem, 0.7vw, 0.75rem);
+
+  /* Spacing scale */
+  --section-py: clamp(5rem, 10vw, 10rem);
+  --section-px: clamp(1.25rem, 3.5vw, 3.5rem);
+  --content-max: 1560px;
 }
 
 .dark {
@@ -123,15 +154,17 @@
   }
   html {
     @apply font-sans;
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
     max-width: 100%;
     overflow-x: clip;
     scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: #141414;
-    color: #ffffff;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
     max-width: 100%;
     overflow-x: clip;
     min-height: 100vh;
@@ -140,4 +173,221 @@
     background-color: #ffffff;
     color: #000000;
   }
-}
+}
+
+/* ================================================================== */
+/*  MOBILE PAGE FRAME — MUGEN-STYLE EDITORIAL RAILS                   */
+/* ================================================================== */
+
+/* Vertical side rails — thin architectural lines framing content */
+.page-frame {
+  position: relative;
+}
+
+.page-frame::before,
+.page-frame::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--rail-color);
+  z-index: 40;
+  pointer-events: none;
+}
+
+.page-frame::before {
+  left: var(--section-px);
+}
+
+.page-frame::after {
+  right: var(--section-px);
+}
+
+/* Only show rails on mobile/tablet */
+@media (min-width: 1024px) {
+  .page-frame::before,
+  .page-frame::after {
+    display: none;
+  }
+}
+
+/* ================================================================== */
+/*  SECTION DIVIDER SYSTEM                                            */
+/* ================================================================== */
+
+.section-divider {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Horizontal section separator with controlled padding */
+.section-separator {
+  position: relative;
+}
+
+.section-separator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--section-px);
+  right: var(--section-px);
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+/* ================================================================== */
+/*  BOTTOM DEPTH / BLUR TREATMENT                                     */
+/* ================================================================== */
+
+.bottom-depth {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.6) 0%,
+    rgba(10, 10, 10, 0.3) 40%,
+    transparent 100%
+  );
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  pointer-events: none;
+  z-index: 30;
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .bottom-depth {
+    height: 80px;
+  }
+}
+
+/* ================================================================== */
+/*  SPLIT TEXT ANIMATION STYLES                                       */
+/* ================================================================== */
+
+.split-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.1em;
+}
+
+.split-word {
+  display: inline-block;
+  will-change: transform;
+}
+
+.split-char {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Overflow wrapper for masked text reveals */
+.reveal-mask {
+  overflow: hidden;
+  display: block;
+}
+
+.reveal-mask > * {
+  display: block;
+  will-change: transform;
+}
+
+/* ================================================================== */
+/*  FLUID TYPOGRAPHY UTILITIES                                        */
+/* ================================================================== */
+
+.text-display {
+  font-size: var(--text-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+}
+
+.text-hero {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.text-heading-1 {
+  font-size: var(--text-h1);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.text-heading-2 {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.text-heading-3 {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* ================================================================== */
+/*  SECTION LABEL (MUGEN BRACKET STYLE)                               */
+/* ================================================================== */
+
+.section-label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* ================================================================== */
+/*  REDUCED MOTION                                                    */
+/* ================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .split-word,
+  .split-char,
+  .reveal-mask > * {
+    will-change: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .bottom-depth {
+    display: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ================================================================== */
+/*  SCROLLBAR STYLING                                                 */
+/* ================================================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--page-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}

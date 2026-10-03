@@ -15,9 +15,12 @@ export function CtaSection() {
   };
 
   return (
-    <section id="cta" className="py-24 sm:py-32 border-t border-white/10 relative overflow-hidden bg-[#141414]">
+    <section
+      id="cta"
+      className="py-24 sm:py-32 border-t border-white/10 relative overflow-hidden bg-[#141414]"
+    >
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-neutral-800/15 to-neutral-700/15 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-neutral-700/15 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-gradient-to-b from-[#1c1c1c] to-[#111111] border border-white/15 text-center relative shadow-2xl">
@@ -59,11 +62,11 @@ export function CtaSection() {
             {/* Book Call Button */}
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer"
+              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer group"
             >
               <Calendar className="w-4 h-4" />
               <span>Book a 15-Min Call</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
 

@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
 
 const articles = [
@@ -45,8 +47,44 @@ const articles = [
 ];
 
 export function Articles() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const ctx = gsap.context(() => {
+      const cards = gridRef.current?.querySelectorAll(".article-card");
+      if (cards) {
+        gsap.fromTo(
+          cards,
+          { y: 35, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: "top 80%",
+            },
+          }
+        );
+      }
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="articles" className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414]">
+    <section
+      ref={sectionRef}
+      id="articles"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+    >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
@@ -69,31 +107,31 @@ export function Articles() {
               href="/articles"
               className="inline-flex items-center gap-2 text-xs font-mono text-neutral-300 hover:text-white px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] transition-all cursor-pointer group"
             >
-              <span>All Articles [10]</span>
+              <span>[10] All Articles</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
         </div>
 
         {/* 3 Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((art, idx) => (
             <Link
               key={idx}
               href={`/articles/${art.slug}`}
-              className="group flex flex-col rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
+              className="article-card group flex flex-col rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
             >
               <div>
                 {/* Image Thumbnail with zoom */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 border-b border-white/5">
                   <Image
                     src={art.image}
                     alt={art.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-white border border-white/10">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white border border-white/10">
                       {art.tag}
                     </span>
                   </div>
@@ -109,7 +147,7 @@ export function Articles() {
                   <h3 className="text-xl font-bold text-white group-hover:text-neutral-300 transition-colors mb-3 leading-snug">
                     {art.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 font-light leading-relaxed">
+                  <p className="text-xs text-neutral-400 font-light leading-relaxed line-clamp-3">
                     {art.excerpt}
                   </p>
                 </div>
