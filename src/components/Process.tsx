@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Clock, Calendar } from "./icons";
+import SmoothScrollSlider from "./SmoothScrollSlider";
 
 const steps = [
   {
@@ -38,12 +39,54 @@ const steps = [
 
 export function Process() {
   const [activeStep, setActiveStep] = useState(0);
+  const outerRef = useRef<HTMLDivElement>(null);
+  const [sliderOffset, setSliderOffset] = useState(0);
+
+  // How many pixels the slider should travel at 100% scroll progress
+  // slideWidth=340, spacing=2 → step = 340 + 2*20 = 380; 10 slides
+  const SLIDE_STEP = 380;
+  const MAX_OFFSET = SLIDE_STEP * 10; // full loop of all 10 images
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const outer = outerRef.current;
+      if (!outer) return;
+      const rect = outer.getBoundingClientRect();
+      // scrolled = how many px we've moved into the outer container
+      const scrolled = -rect.top;
+      const scrollable = outer.offsetHeight - window.innerHeight;
+      const progress = Math.max(0, Math.min(1, scrolled / scrollable));
+      setSliderOffset(progress * MAX_OFFSET);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [MAX_OFFSET]);
 
   return (
-    <section
-      id="process"
-      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
-    >
+    // Outer: tall container that creates the scroll budget
+    <div ref={outerRef} style={{ height: "250vh", position: "relative" }}>
+      {/* Inner: pinned while user scrolls through outer */}
+      <section
+        id="process"
+        className="sticky top-0 py-24 sm:py-32 border-t border-white/10 bg-[#141414] overflow-hidden"
+        style={{ height: "100vh", overflowY: "hidden" }}
+      >
+      {/* Originkit Smooth Scroll Slider — driven by page scroll */}
+      <div className="w-full h-[480px] mb-16 sm:mb-20">
+        <SmoothScrollSlider
+          slideWidth={340}
+          slideHeight={420}
+          spacing={2}
+          smoothness={8}
+          dim={7}
+          sensitivity={5}
+          radius={20}
+          background="#141414"
+          loop
+          scrollOffset={sliderOffset}
+        />
+      </div>
+
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
@@ -170,6 +213,7 @@ export function Process() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </div>
   );
 }
