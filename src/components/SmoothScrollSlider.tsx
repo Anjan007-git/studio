@@ -1,7 +1,7 @@
 // Smooth Scroll Slider — Originkit (adapted for Next.js App Router)
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import type { CSSProperties } from "react"
 
 type ImageValue = string | { src?: string } | null | undefined
@@ -25,8 +25,12 @@ export interface SmoothScrollSliderProps {
   background?: string
   sensitivity?: number
   loop?: boolean
-  /** When set, externally overrides the scroll target (for page-scroll-driven mode) */
-  scrollOffset?: number
+  /**
+   * Pass a ref to the outer scroll-budget container.
+   * When provided the slider is driven by page scroll (no re-renders)
+   * and the internal wheel/pointer handlers are disabled.
+   */
+  scrollSectionRef?: React.RefObject<HTMLDivElement | null>
   style?: CSSProperties
 }
 
@@ -106,7 +110,7 @@ export default function SmoothScrollSlider({
   background = "#000000",
   sensitivity = 5,
   loop = true,
-  scrollOffset,
+  scrollSectionRef,
   style,
 }: SmoothScrollSliderProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -115,12 +119,38 @@ export default function SmoothScrollSlider({
   const current = useRef(0)
   const [width, setWidth] = useState(0)
 
-  // External scroll-driven control: override target when prop changes
+  // ─── Scroll-driven mode ───────────────────────────────────────────────────
+  // When scrollSectionRef is provided, drive target.current directly from
+  // page scroll progress with zero React re-renders.
   useEffect(() => {
-    if (scrollOffset !== undefined) {
-      target.current = scrollOffset
+    if (!scrollSectionRef) return
+
+    const SLIDE_STEP = slideWidth + clamp(spacing, 0, 10) * 20
+    const MAX_OFFSET = SLIDE_STEP * 10
+
+    const update = () => {
+      const outer = scrollSectionRef.current
+      if (!outer) return
+      const rect = outer.getBoundingClientRect()
+      const scrollable = outer.offsetHeight - window.innerHeight
+      if (scrollable <= 0) return
+      const scrolled = -rect.top
+      const progress = Math.max(0, Math.min(1, scrolled / scrollable))
+      // Write directly to the ref — no setState, no re-render
+      target.current = progress * MAX_OFFSET
     }
-  }, [scrollOffset])
+
+    // Prefer Lenis custom event so it stays in sync with the smooth scroll timeline
+    const onLenis = () => update()
+    const onScroll = () => update()
+
+    window.addEventListener("lenis-scroll", onLenis, { passive: true })
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => {
+      window.removeEventListener("lenis-scroll", onLenis)
+      window.removeEventListener("scroll", onScroll)
+    }
+  }, [scrollSectionRef, slideWidth, spacing])
 
   const source = useMemo<Slide[]>(() => {
     const resolved: Slide[] = []
@@ -257,7 +287,12 @@ export default function SmoothScrollSlider({
     return () => cancelAnimationFrame(raf)
   }, [])
 
+  // ─── Wheel handler (disabled in scroll-driven mode) ───────────────────────
   useEffect(() => {
+    // In scroll-driven mode the page scroll already drives the slider.
+    // Don't add a passive:false wheel listener — it would fight Lenis.
+    if (scrollSectionRef) return
+
     const node = containerRef.current
     if (!node) return
     const onWheel = (event: WheelEvent) => {
@@ -268,9 +303,12 @@ export default function SmoothScrollSlider({
     }
     node.addEventListener("wheel", onWheel, { passive: false })
     return () => node.removeEventListener("wheel", onWheel)
-  }, [])
+  }, [scrollSectionRef])
 
+  // ─── Pointer / drag (disabled in scroll-driven mode) ─────────────────────
   useEffect(() => {
+    if (scrollSectionRef) return
+
     const node = containerRef.current
     if (!node) return
     let pointer: number | null = null
@@ -304,8 +342,7 @@ export default function SmoothScrollSlider({
       node.removeEventListener("pointerup", onUp)
       node.removeEventListener("pointercancel", onUp)
     }
-  }, [])
-
+  }, [scrollSectionRef])
   return (
     <div
       ref={containerRef}

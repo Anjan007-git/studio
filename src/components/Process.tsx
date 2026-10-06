@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Clock, Calendar } from "./icons";
 import SmoothScrollSlider from "./SmoothScrollSlider";
 
@@ -40,27 +40,6 @@ const steps = [
 export function Process() {
   const [activeStep, setActiveStep] = useState(0);
   const outerRef = useRef<HTMLDivElement>(null);
-  const [sliderOffset, setSliderOffset] = useState(0);
-
-  // How many pixels the slider should travel at 100% scroll progress
-  // slideWidth=340, spacing=2 → step = 340 + 2*20 = 380; 10 slides
-  const SLIDE_STEP = 380;
-  const MAX_OFFSET = SLIDE_STEP * 10; // full loop of all 10 images
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const outer = outerRef.current;
-      if (!outer) return;
-      const rect = outer.getBoundingClientRect();
-      // scrolled = how many px we've moved into the outer container
-      const scrolled = -rect.top;
-      const scrollable = outer.offsetHeight - window.innerHeight;
-      const progress = Math.max(0, Math.min(1, scrolled / scrollable));
-      setSliderOffset(progress * MAX_OFFSET);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [MAX_OFFSET]);
 
   return (
     // Outer: tall container that creates the scroll budget
@@ -71,7 +50,7 @@ export function Process() {
         className="sticky top-0 py-24 sm:py-32 border-t border-white/10 bg-[#141414] overflow-hidden"
         style={{ height: "100vh", overflowY: "hidden" }}
       >
-      {/* Originkit Smooth Scroll Slider — driven by page scroll */}
+      {/* Originkit Smooth Scroll Slider — driven by page scroll, zero re-renders */}
       <div className="w-full h-[480px] mb-16 sm:mb-20">
         <SmoothScrollSlider
           slideWidth={340}
@@ -83,7 +62,7 @@ export function Process() {
           radius={20}
           background="#141414"
           loop
-          scrollOffset={sliderOffset}
+          scrollSectionRef={outerRef}
         />
       </div>
 
