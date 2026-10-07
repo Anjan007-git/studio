@@ -1,0 +1,741 @@
+[
+  {
+    "text": "A design studio, built different.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "March'26",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Project manager",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Plans start at $7,500 / m See Pricing",
+    "tag": "a"
+  },
+  {
+    "text": "Book a 15-Min Call",
+    "tag": "div",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))"
+  },
+  {
+    "text": "With over 15 years in digital design, Alex founded MUGEN° to create a studio where craft comes first. He believes great design happens through process, not heroics.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Alex West",
+    "tag": "div"
+  },
+  {
+    "text": "Founder &amp; Creative Director",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Projects",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Quantum",
+    "tag": "div"
+  },
+  {
+    "text": "2025",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Cubekit",
+    "tag": "div"
+  },
+  {
+    "text": "2024",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Ephemeral",
+    "tag": "div"
+  },
+  {
+    "text": "Warpspeed",
+    "tag": "div"
+  },
+  {
+    "text": "Magnolia",
+    "tag": "div"
+  },
+  {
+    "text": "Global Bank",
+    "tag": "div"
+  },
+  {
+    "text": "Why choose us",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Revenue generated for our clients.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Faster than other agencies.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Projects shipped worldwide, helping our clients achieve their goals.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Happy clients and counting.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Our streamlined process cuts through the typical agency theater while maintaining the craft and attention to detail your brand deserves.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Choose monthly retainers for ongoing work or project-based engagements for specific needs. Scale up or down as your business evolves.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Services",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Visual Identity",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Brand Guidelines",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Positioning",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Naming",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Brand Strategy",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Brand Packages",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Landing Pages",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "E-commerce",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Email Design",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Digital Campaigns",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Microsites",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Web Apps",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "User Experience",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Design Systems",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Prototypes",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Mobile Apps",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "SaaS Products",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Dashboards",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Social Media",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Pitch Decks",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Sales Materials",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Reports",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Infographics",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Presentations",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Webflow",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Framer",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "React",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Marketing Sites",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "CMS Integration",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Performance",
+    "tag": "div",
+    "fontFamily": "&quot",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "1em",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "Process",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "To kick off after signing. No lengthy onboarding, just straight to work.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "turnaround on most requests. Complex projects broken into manageable sprints.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Every engagement starts with understanding. We dive deep into your business, your challenges, and where you want to go. No assumptions, just questions that matter.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Before any pixels are pushed, we align on direction. Whether it's a brand identity or product redesign, we make sure we're solving the right problem.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "We work in focused cycles with regular check-ins. You'll see progress weekly, not monthly. No big reveals, no surprises—just steady momentum.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Your feedback shapes the work. We iterate based on what's working and what isn't, refining until everyone's genuinely excited about the results.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "We stick around for implementation and measure what matters. Every project teaches us something that makes the next one better.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Pricing",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Perfect for growing businesses with steady design needs.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "For ongoing requests.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Start Now",
+    "tag": "div",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))"
+  },
+  {
+    "text": "What's included.",
+    "tag": "div"
+  },
+  {
+    "text": "45 hours of dedicated design time",
+    "tag": "div"
+  },
+  {
+    "text": "Two active projects at a time",
+    "tag": "div"
+  },
+  {
+    "text": "Twice-weekly syncs",
+    "tag": "div"
+  },
+  {
+    "text": "24-hour response time",
+    "tag": "div"
+  },
+  {
+    "text": "Unused hours roll over (up to 10)",
+    "tag": "div"
+  },
+  {
+    "text": "15% discount on additional projects",
+    "tag": "div"
+  },
+  {
+    "text": "For teams that need to move fast and ship often.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "100 hours of dedicated design time",
+    "tag": "div"
+  },
+  {
+    "text": "Unlimited active projects",
+    "tag": "div"
+  },
+  {
+    "text": "Daily syncs available",
+    "tag": "div"
+  },
+  {
+    "text": "Same-day response time",
+    "tag": "div"
+  },
+  {
+    "text": "Unused hours roll over (up to 20)",
+    "tag": "div"
+  },
+  {
+    "text": "20% discount on additional projects",
+    "tag": "div"
+  },
+  {
+    "text": "Get Quote Get Quote",
+    "tag": "a"
+  },
+  {
+    "text": "July'25",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Book Call Book Call",
+    "tag": "a"
+  },
+  {
+    "text": "Testimonials",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Solaris Energy",
+    "tag": "div"
+  },
+  {
+    "text": "Clandestine",
+    "tag": "div"
+  },
+  {
+    "text": "Flora &amp; Fauna",
+    "tag": "div"
+  },
+  {
+    "text": "F r o m d a y o n e , t h e y g o t w h a t w e w e r e t r y i n g t o d o — m a k e s o l a r f e e l a c c e s s i b l e , h u m a n , a n d f o r w a r d - l o o k i n g . T h e r e b r a n d h a s c o m p l e t e l y r e s h a p e d h o w w e s h o w u p i n t h e m a r k e t .",
+    "tag": "div"
+  },
+  {
+    "text": "They brought so much nuance to the brand—mystery, elegance, and a really rich visual language. It’s exactly what we hoped for, and then some.",
+    "tag": "div"
+  },
+  {
+    "text": "We wanted a brand that felt honest and connected to nature, but still premium. What we ended up with feels like us in every way—our customers even comment on it.",
+    "tag": "div"
+  },
+  {
+    "text": "Read case study",
+    "tag": "div"
+  },
+  {
+    "text": "Training time reduction",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Annual efficiency savings",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Boltshift",
+    "tag": "div"
+  },
+  {
+    "text": "Github stars gained post-rebrand",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Developer-to-CTO approval rate",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Conversation frequency",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Avg response time",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Answers",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Everything else you're wondering.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Reach out anytime. We're happy to answer any questions before you commit to working together.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Ask a question",
+    "tag": "div"
+  },
+  {
+    "text": "What if I don't use all my hours?",
+    "tag": "div"
+  },
+  {
+    "text": "How fast can you start?",
+    "tag": "div"
+  },
+  {
+    "text": "Who will be working on my account?",
+    "tag": "div"
+  },
+  {
+    "text": "Can I switch between retainers and projects?",
+    "tag": "div"
+  },
+  {
+    "text": "What's included in \"unlimited revisions\"?",
+    "tag": "div"
+  },
+  {
+    "text": "Do you work with international clients?",
+    "tag": "div"
+  },
+  {
+    "text": "What if we need to pause or cancel?",
+    "tag": "div"
+  },
+  {
+    "text": "Articles",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "We share what we've learned building brands that matter. Deep dives into design thinking, creative process, and the intersection of business and aesthetics. No fluff, just honest perspectives from the trenches of client work.",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Feb 3, 2025",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Beyond minimalism: what's next in web design.",
+    "tag": "div"
+  },
+  {
+    "text": "MUGEN©",
+    "tag": "div"
+  },
+  {
+    "text": "Apr 16, 2025",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Building brands that scale.",
+    "tag": "div"
+  },
+  {
+    "text": "Apr 1, 2025",
+    "tag": "div",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Designing for human connection.",
+    "tag": "div"
+  },
+  {
+    "text": "All Articles",
+    "tag": "div"
+  },
+  {
+    "text": "email copied",
+    "tag": "div"
+  },
+  {
+    "text": "Home",
+    "tag": "div"
+  },
+  {
+    "text": "Studio",
+    "tag": "div"
+  },
+  {
+    "text": "Work",
+    "tag": "div"
+  },
+  {
+    "text": "Contact",
+    "tag": "div"
+  },
+  {
+    "text": "Terms of Service",
+    "tag": "div"
+  },
+  {
+    "text": "Privacy Policy",
+    "tag": "div"
+  },
+  {
+    "text": "All Access",
+    "tag": "div",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))"
+  }
+]

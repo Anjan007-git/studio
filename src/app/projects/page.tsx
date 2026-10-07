@@ -38,7 +38,7 @@ export default function ProjectsPage() {
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             {/* Header Tag */}
             <div className="mb-4">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              <span className="section-label">
                 [Our Work]
               </span>
             </div>
@@ -46,13 +46,13 @@ export default function ProjectsPage() {
             {/* Page Title & Controls */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
               <div>
-                <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-3">
+                <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-3">
                   All Case Studies{" "}
-                  <span className="font-mono text-neutral-500 text-3xl sm:text-5xl">
+                  <span className="font-display font-medium text-[#848484] text-3xl sm:text-5xl">
                     [{allProjects.length}]
                   </span>
                 </h1>
-                <p className="text-sm font-mono text-neutral-400">
+                <p className="text-sm font-sans text-[#b8b8b8] tracking-[-0.01em]">
                   Selected client archive • 2024 — 2026
                 </p>
               </div>
@@ -66,9 +66,9 @@ export default function ProjectsPage() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search projects..."
-                    className="w-full sm:w-56 pl-9 pr-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 font-mono transition-colors"
+                    className="w-full sm:w-56 pl-9 pr-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder-[#848484] focus:outline-none focus:border-white/30 font-sans transition-colors"
                   />
-                  <Search className="w-3.5 h-3.5 text-neutral-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  <Search className="w-3.5 h-3.5 text-[#848484] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>
 
                 {/* Filter Pills */}
@@ -77,10 +77,10 @@ export default function ProjectsPage() {
                     <button
                       key={cat}
                       onClick={() => setActiveCategory(cat)}
-                      className={`text-xs px-3.5 py-1.5 rounded-full transition-all cursor-pointer select-none ${
+                      className={`text-xs px-3.5 py-1.5 rounded-full transition-all cursor-pointer select-none font-display ${
                         activeCategory === cat
                           ? "bg-white text-black font-semibold shadow-sm"
-                          : "text-neutral-400 hover:text-white"
+                          : "text-[#b8b8b8] hover:text-white font-medium"
                       }`}
                     >
                       {cat}
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
             {/* 3-Column Grid of Interactive Projects */}
             {filtered.length === 0 ? (
               <div className="py-24 text-center border border-white/10 rounded-3xl bg-[#1c1c1c]">
-                <p className="text-neutral-400 text-sm font-mono mb-2">
+                <p className="text-[#b8b8b8] text-sm font-sans mb-2">
                   No projects match your filter.
                 </p>
                 <button
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
                     setActiveCategory("All");
                     setSearchQuery("");
                   }}
-                  className="text-xs font-mono text-white underline underline-offset-4 hover:text-neutral-300 cursor-pointer"
+                  className="text-xs font-display font-medium text-white underline underline-offset-4 hover:text-[#b8b8b8] cursor-pointer"
                 >
                   Clear filters
                 </button>
@@ -125,14 +125,14 @@ export default function ProjectsPage() {
 
                       {/* Top left number pill */}
                       <div className="absolute top-4 left-4">
-                        <span className="text-xs font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
+                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
                           {study.number}
                         </span>
                       </div>
 
                       {/* Top right year */}
                       <div className="absolute top-4 right-4">
-                        <span className="text-xs font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
+                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
                           {study.year}
                         </span>
                       </div>
@@ -161,14 +161,14 @@ export default function ProjectsPage() {
                     {/* Card Content Footer */}
                     <div className="p-6">
                       <div className="flex items-start justify-between gap-4 mb-2">
-                        <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-neutral-200 transition-colors">
+                        <h3 className="text-2xl font-display font-semibold text-white tracking-[-0.03em] group-hover:text-neutral-200 transition-colors">
                           {study.title}
                         </h3>
-                        <span className="text-[11px] font-mono text-neutral-400 bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/10 shrink-0">
+                        <span className="text-[11px] font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] bg-[#181818] px-2.5 py-1 rounded-full border border-[#363636] shrink-0">
                           {study.type}
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-400 leading-relaxed font-light line-clamp-2">
+                      <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-2 tracking-[-0.01em]">
                         {study.fullTitle}
                       </p>
                     </div>

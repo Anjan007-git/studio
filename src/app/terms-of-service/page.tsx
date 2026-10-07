@@ -88,24 +88,24 @@ export default function TermsOfServicePage() {
         <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
           {/* Header */}
           <div className="mb-14 sm:mb-20">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
+            <span className="section-label block mb-3">
               [Legal Document]
             </span>
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-4">
+            <h1 className="text-4xl sm:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
               Terms of service.
             </h1>
-            <p className="text-xs font-mono text-neutral-400">
+            <p className="text-xs font-sans text-[#848484]">
               Last updated: February 17, 2026
             </p>
           </div>
 
           {/* Table of Contents / Overview Card */}
           <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14">
-            <h2 className="text-xl font-bold text-white mb-4">Overview</h2>
-            <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light mb-6">
+            <h2 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">Overview</h2>
+            <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal mb-6">
               These Terms of Service govern the engagement and provision of design, brand strategy, and product engineering services by TRIFECTA TRENDS. Please review these terms carefully prior to commencing work or signing a project statement of work.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-neutral-300">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-[#b8b8b8]">
               <div>• Service Terms & Scope</div>
               <div>• Intellectual Property Rights</div>
               <div>• Retainer Commitments</div>
@@ -119,10 +119,10 @@ export default function TermsOfServicePage() {
           <div className="space-y-12">
             {termsSections.map((sec, idx) => (
               <section key={idx} className="pb-10 border-b border-white/10 space-y-4">
-                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-display font-semibold text-white tracking-[-0.03em]">
                   {sec.title}
                 </h3>
-                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-light">
+                <p className="text-sm sm:text-base text-[#b8b8b8] leading-relaxed font-sans font-normal">
                   {sec.content}
                 </p>
               </section>

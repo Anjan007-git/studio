@@ -134,15 +134,15 @@ export function Testimonials() {
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            <span className="section-label">
               [06] Testimonials
             </span>
           </div>
           <div className="lg:col-span-9 max-w-4xl">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-4">
               Trusted by the most innovative teams.
             </h2>
-            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
               Results speak louder than promises. Hear directly from founders, leaders, and product executives who rely on TRIFECTA TRENDS.
             </p>
           </div>
@@ -172,15 +172,15 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                <blockquote className="text-xl sm:text-2xl md:text-3xl text-neutral-100 font-light leading-snug tracking-tight mb-8">
+                <blockquote className="text-xl sm:text-2xl md:text-3xl text-white font-sans font-normal leading-snug tracking-[-0.03em] mb-8">
                   &ldquo;{current.quote}&rdquo;
                 </blockquote>
               </div>
 
               <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <h4 className="text-lg font-bold text-white">{current.name}</h4>
-                  <p className="text-xs font-mono text-neutral-400 mt-0.5">
+                  <h4 className="text-lg font-display font-semibold text-white tracking-[-0.03em]">{current.name}</h4>
+                  <p className="text-xs font-sans text-[#b8b8b8] mt-0.5 tracking-[-0.01em]">
                     {current.role} • {current.company}
                   </p>
                 </div>
@@ -190,14 +190,14 @@ export function Testimonials() {
                   <button
                     onClick={prevSpotlight}
                     aria-label="Previous testimonial"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer font-display"
                   >
                     ←
                   </button>
                   <button
                     onClick={nextSpotlight}
                     aria-label="Next testimonial"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer font-display"
                   >
                     →
                   </button>
@@ -210,28 +210,28 @@ export function Testimonials() {
         {/* 3 Metric Highlights Row matching MUGEN */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 pt-6">
           <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight block mb-1">
+            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               $12M+
             </span>
-            <span className="text-xs font-mono text-neutral-400">
+            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Series A funding closed by featured clients
             </span>
           </div>
 
           <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight block mb-1">
+            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               4.8x
             </span>
-            <span className="text-xs font-mono text-neutral-400">
+            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Average engagement boost after brand overhaul
             </span>
           </div>
 
           <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-bold text-white tracking-tight block mb-1">
+            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               94%
             </span>
-            <span className="text-xs font-mono text-neutral-400">
+            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Client retention and ongoing retainer extension
             </span>
           </div>
@@ -246,7 +246,7 @@ export function Testimonials() {
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <span className="text-xs font-mono uppercase tracking-wider text-neutral-400">
+                  <span className="text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8]">
                     {item.company}
                   </span>
                   <div className="flex items-center gap-1 text-white">
@@ -256,7 +256,7 @@ export function Testimonials() {
                   </div>
                 </div>
 
-                <p className="text-sm text-neutral-300 leading-relaxed font-light mb-6">
+                <p className="text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] mb-6">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
@@ -264,10 +264,10 @@ export function Testimonials() {
               <div>
                 {/* Metric */}
                 <div className="pt-4 pb-4 border-t border-white/5 mb-4 flex items-baseline justify-between">
-                  <span className="text-2xl font-bold text-white tracking-tight">
+                  <span className="text-2xl font-display font-semibold text-white tracking-[-0.04em]">
                     {item.metric}
                   </span>
-                  <span className="text-[11px] font-mono text-neutral-500">
+                  <span className="text-[11px] font-sans text-[#848484]">
                     {item.metricLabel}
                   </span>
                 </div>
@@ -284,10 +284,10 @@ export function Testimonials() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-xs font-semibold text-white">
+                      <h4 className="text-xs font-display font-semibold text-white tracking-[-0.02em]">
                         {item.author}
                       </h4>
-                      <p className="text-[10px] font-mono text-neutral-400">
+                      <p className="text-[10px] font-sans text-[#848484]">
                         {item.role}
                       </p>
                     </div>
@@ -295,7 +295,7 @@ export function Testimonials() {
 
                   <Link
                     href={item.projectHref}
-                    className="text-neutral-400 hover:text-white transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    className="text-[#848484] hover:text-white transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
                     aria-label={`View ${item.company} case study`}
                   >
                     <ArrowUpRight className="w-4 h-4" />

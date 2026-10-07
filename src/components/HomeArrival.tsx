@@ -180,7 +180,7 @@ export function HomeArrival() {
       masterTl.to(
         [line1Ref.current, line2Ref.current],
         {
-          letterSpacing: "-0.035em",
+          letterSpacing: "-0.04em",
           duration: 0.45,
           ease: "power2.out",
         },
@@ -324,8 +324,8 @@ export function HomeArrival() {
           {/* Brand Line 1: TRIFECTA */}
           <div
             ref={line1Ref}
-            className="flex items-center justify-center font-sans font-bold text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.92] select-none"
-            style={{ letterSpacing: "0.06em" }}
+            className="flex items-center justify-center font-display font-bold text-white uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.85] select-none"
+            style={{ letterSpacing: "-0.04em" }}
           >
             {TRIFECTA_CHARS.map((char, index) => (
               <span
@@ -348,8 +348,8 @@ export function HomeArrival() {
           {/* Brand Line 2: TRENDS © */}
           <div
             ref={line2Ref}
-            className="flex items-center justify-center font-sans font-bold text-white uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.92] select-none mt-1 sm:mt-2"
-            style={{ letterSpacing: "0.06em" }}
+            className="flex items-center justify-center font-display font-bold text-[#b8b8b8] uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.85] select-none mt-1 sm:mt-2"
+            style={{ letterSpacing: "-0.04em" }}
           >
             {TRENDS_CHARS.map((char, index) => (
               <span
@@ -371,7 +371,7 @@ export function HomeArrival() {
             {/* Subtle Copyright badge */}
             <span
               ref={badgeRef}
-              className="inline-block text-xs sm:text-sm md:text-base font-normal text-white/80 font-mono ml-1.5 sm:ml-2 select-none will-change-transform"
+              className="inline-block text-xs sm:text-sm md:text-base font-medium text-[#b8b8b8] font-display ml-1.5 sm:ml-2 select-none will-change-transform"
               style={{
                 opacity: 0,
                 transform: "translate3d(0, -6px, 0) scale(0.85)",
@@ -381,7 +381,7 @@ export function HomeArrival() {
             </span>
           </div>
 
-          {/* Supporting Tagline (Existing Website Brand Copy) */}
+          {/* Supporting Tagline (Mugen Studio style preset 1pvr9s) */}
           <div
             ref={taglineRef}
             className="mt-3.5 sm:mt-5 select-none will-change-transform overflow-hidden"
@@ -390,7 +390,7 @@ export function HomeArrival() {
               transform: "translate3d(0, 8px, 0)",
             }}
           >
-            <p className="text-[10px] sm:text-xs text-neutral-400 font-light tracking-[0.22em] sm:tracking-[0.25em] uppercase font-mono select-none">
+            <p className="text-xs sm:text-sm text-[#b8b8b8] font-semibold tracking-[-0.02em] font-display select-none">
               A design studio, built different.
             </p>
           </div>

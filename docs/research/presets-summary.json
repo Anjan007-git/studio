@@ -1,0 +1,111 @@
+{
+  "1v15im0": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 2.4)",
+    "fontWeight": "600",
+    "letterSpacing": "-.04em",
+    "lineHeight": "110%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "4xe5jg": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 3)",
+    "fontWeight": "600",
+    "letterSpacing": "-.04em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "1x5k5dq": {},
+  "1pvr9s": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * .875)",
+    "fontWeight": "600",
+    "letterSpacing": "-.02em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "1qbm3ow": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 1.25)",
+    "fontWeight": "600",
+    "letterSpacing": "-.03em",
+    "lineHeight": "135%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "glesky": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "letterSpacing": "-.02em",
+    "lineHeight": "112%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "455vy9": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "600",
+    "letterSpacing": "-.02em",
+    "lineHeight": "112%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "4e019n": {
+    "fontFamily": "\"Manrope\", \"Manrope Placeholder\", sans-serif",
+    "fontSize": "13px",
+    "fontWeight": "600",
+    "letterSpacing": "-.015em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "1nbpq7r": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 2)",
+    "fontWeight": "600",
+    "letterSpacing": "-.04em",
+    "lineHeight": "120%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "12xvzyc": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * .725)",
+    "fontWeight": "600",
+    "letterSpacing": "-.02em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "1xqd5um": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "14q70s4": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size,1rem) * 1.5)",
+    "fontWeight": "600",
+    "letterSpacing": "-.04em",
+    "lineHeight": "130%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  },
+  "1h45olj": {
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "12px",
+    "fontWeight": "600",
+    "letterSpacing": "-.02em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f,#fff)",
+    "transform": "none"
+  }
+}

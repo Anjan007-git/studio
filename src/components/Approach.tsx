@@ -78,7 +78,7 @@ export function Approach() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Tag */}
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+          <span className="section-label">
             [Our Approach]
           </span>
         </div>
@@ -87,14 +87,14 @@ export function Approach() {
         <div className="max-w-6xl mb-16 sm:mb-24">
           <h2
             ref={headlineRef}
-            className="text-[clamp(1.75rem,5.5vw,3.25rem)] font-bold tracking-[-0.03em] leading-[1.18] select-none"
+            className="text-heading-1 select-none"
           >
             <span className="block overflow-hidden py-1">
               <span className="reveal-text inline-block will-change-transform">
-                <span className="text-neutral-400 font-normal">
+                <span className="text-[#b8b8b8] font-medium">
                   Traditional agencies perfected the art of the pitch.{" "}
                 </span>
-                <strong className="text-white font-bold">
+                <strong className="text-white font-semibold">
                   We perfected the art of the work.
                 </strong>
               </span>
@@ -102,11 +102,11 @@ export function Approach() {
 
             <span className="block overflow-hidden py-1 mt-1 sm:mt-2">
               <span className="reveal-text inline-block will-change-transform">
-                <span className="text-neutral-400 font-normal">When you need </span>
-                <strong className="text-white font-bold">
+                <span className="text-[#b8b8b8] font-medium">When you need </span>
+                <strong className="text-white font-semibold">
                   design that moves at the speed of your ambition
                 </strong>
-                <span className="text-neutral-400 font-normal">
+                <span className="text-[#b8b8b8] font-medium">
                   , you need a different kind of studio.
                 </span>
               </span>
@@ -125,14 +125,14 @@ export function Approach() {
                   <div className="flex items-center justify-between mb-4">
                     <button
                       onClick={handleCopyEmail}
-                      className="text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer"
+                      className="text-xs font-display font-medium text-[#b8b8b8] hover:text-white transition-colors cursor-pointer tracking-[-0.02em]"
                     >
                       {copied ? "email copied" : "contact@trifectatrends.com"}
                     </button>
                     <a
                       href="mailto:contact@trifectatrends.com"
                       aria-label="Email TRIFECTA TRENDS"
-                      className="text-neutral-400 hover:text-white transition-colors"
+                      className="text-[#b8b8b8] hover:text-white transition-colors"
                     >
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
@@ -156,7 +156,7 @@ export function Approach() {
                   </div>
 
                   {/* Philosophy Statement */}
-                  <p className="text-xs text-neutral-400 leading-relaxed font-light mb-5">
+                  <p className="text-xs text-[#b8b8b8] leading-[1.55] font-sans font-normal mb-5 tracking-[-0.02em]">
                     We believe high-impact digital experiences come from focused craftsmanship, rigorous design systems, and direct collaboration. No pitch theater. No layers of account management.
                   </p>
                 </div>
@@ -164,12 +164,12 @@ export function Approach() {
                 {/* Studio Meta */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <div>
-                    <h3 className="text-base font-bold text-white">Studio Philosophy</h3>
-                    <p className="text-xs font-mono text-neutral-500 mt-0.5">
+                    <h3 className="text-base font-semibold text-white font-display tracking-[-0.03em]">Studio Philosophy</h3>
+                    <p className="text-xs font-display text-[#848484] mt-0.5 tracking-[-0.02em]">
                       Craft &amp; Execution
                     </p>
                   </div>
-                  <span className="text-xs font-mono text-neutral-500">TRIFECTA TRENDS®</span>
+                  <span className="text-xs font-display text-[#848484] tracking-[-0.02em]">TRIFECTA TRENDS®</span>
                 </div>
               </div>
             </div>
@@ -182,7 +182,7 @@ export function Approach() {
               <span className="text-6xl sm:text-7xl text-neutral-600 font-serif leading-none block mb-2 select-none">
                 “
               </span>
-              <p className="text-xl sm:text-2xl md:text-3xl text-neutral-200 font-light leading-relaxed tracking-tight">
+              <p className="text-xl sm:text-2xl md:text-3xl text-white font-normal leading-[1.3] tracking-[-0.03em] font-sans">
                 Traditional agencies engineered a process centered on pitch theater,
                 bloated hierarchies, and endless status calls. We built TRIFECTA TRENDS
                 around a simpler, sharper mandate: senior practitioners building
@@ -191,7 +191,7 @@ export function Approach() {
             </div>
 
             {/* Two Sub-Columns for Philosophy Details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-neutral-400 leading-relaxed font-light">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-[#b8b8b8] leading-[1.55] font-sans font-normal tracking-[-0.02em]">
               <div>
                 <p>
                   No bureaucratic layers, no junior handoffs, no bloated overhead.
@@ -205,7 +205,7 @@ export function Approach() {
                   Every typography choice, micro-interaction, and layout hierarchy
                   is engineered to convert, captivate, and endure.
                 </p>
-                <p className="text-neutral-200 font-medium font-sans">
+                <p className="text-white font-medium font-sans tracking-[-0.02em]">
                   That&apos;s the TRIFECTA TRENDS standard: refined, deliberate, and built different.
                 </p>
               </div>
@@ -215,7 +215,7 @@ export function Approach() {
             <div className="pt-4">
               <Link
                 href="/studio"
-                className="inline-flex items-center gap-2 text-sm text-white font-medium hover:text-neutral-300 transition-colors group cursor-pointer"
+                className="inline-flex items-center gap-2 text-sm text-white font-semibold font-display tracking-[-0.02em] hover:text-[#b8b8b8] transition-colors group cursor-pointer"
               >
                 <span>The studio</span>
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -100,14 +100,14 @@ export function Projects() {
         {/* Header */}
         <div className="mb-14 sm:mb-16">
           <div className="mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            <span className="section-label">
               [01] Projects
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-2">
+          <h2 className="text-heading-1 text-white mb-2 font-display">
             Case studies
           </h2>
-          <p className="text-xs font-mono text-neutral-500">
+          <p className="text-xs font-sans text-[#848484] tracking-[-0.02em]">
             Selected Client Work • 2024 — 2026
           </p>
         </div>
@@ -132,7 +132,7 @@ export function Projects() {
 
                   {/* Top-Left Number Badge */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-mono text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
                       {study.num}
                     </span>
                   </div>
@@ -151,7 +151,7 @@ export function Projects() {
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
                   <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90">
+                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
@@ -159,14 +159,14 @@ export function Projects() {
 
                 {/* Title & Metadata Below Image */}
                 <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-neutral-300 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
                     {study.title}
                   </h3>
-                  <span className="text-xs font-mono text-neutral-500">
+                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     {study.year}
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-400 font-light mt-1">
+                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
                   {study.category}
                 </p>
               </Link>
@@ -189,7 +189,7 @@ export function Projects() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-mono text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
                       {bottomProjects[0].num}
                     </span>
                   </div>
@@ -208,21 +208,21 @@ export function Projects() {
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
                   <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90">
+                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-neutral-300 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
                     {bottomProjects[0].title}
                   </h3>
-                  <span className="text-xs font-mono text-neutral-500">
+                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     {bottomProjects[0].year}
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-400 font-light mt-1">
+                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
                   {bottomProjects[0].category}
                 </p>
               </Link>
@@ -242,7 +242,7 @@ export function Projects() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-mono text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
                       {bottomProjects[1].num}
                     </span>
                   </div>
@@ -261,21 +261,21 @@ export function Projects() {
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
                   <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90">
+                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-neutral-300 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
                     {bottomProjects[1].title}
                   </h3>
-                  <span className="text-xs font-mono text-neutral-500">
+                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     {bottomProjects[1].year}
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-400 font-light mt-1">
+                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
                   {bottomProjects[1].category}
                 </p>
               </Link>
@@ -287,7 +287,7 @@ export function Projects() {
         <div className="flex justify-end">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white text-white hover:text-black border border-white/10 font-mono text-xs font-medium transition-all duration-300 cursor-pointer group"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white text-white hover:text-black border border-white/10 font-display text-xs font-semibold tracking-[-0.02em] transition-all duration-300 cursor-pointer group"
           >
             <span>[12] All Case Studies</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

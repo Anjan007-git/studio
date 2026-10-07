@@ -25,17 +25,17 @@ export function CtaSection() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-gradient-to-b from-[#1c1c1c] to-[#111111] border border-white/15 text-center relative shadow-2xl">
           {/* Top Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-mono text-neutral-300 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] mb-8">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>2 slots open for March&apos;26</span>
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 max-w-4xl mx-auto leading-tight">
+          <h2 className="text-heading-1 sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-6 max-w-4xl mx-auto leading-tight">
             Your next project deserves world-class design.
           </h2>
 
-          <p className="text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+          <p className="text-base sm:text-lg text-[#b8b8b8] max-w-2xl mx-auto mb-12 leading-relaxed font-sans font-normal tracking-[-0.02em]">
             Stop settling for mediocre and start working with senior designers who care as much about your product as you do.
           </p>
 
@@ -44,16 +44,16 @@ export function CtaSection() {
             {/* Copy Email Button */}
             <button
               onClick={handleCopy}
-              className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 text-xs font-mono flex items-center justify-center gap-2.5 transition-all shadow-sm cursor-pointer"
+              className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2.5 transition-all shadow-sm cursor-pointer"
             >
               {copied ? (
                 <>
                   <CheckCheck className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400 font-mono">Copied!</span>
+                  <span className="text-emerald-400 font-display">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-4 h-4 text-neutral-400" />
+                  <Copy className="w-4 h-4 text-[#848484]" />
                   <span>{email}</span>
                 </>
               )}
@@ -62,7 +62,7 @@ export function CtaSection() {
             {/* Book Call Button */}
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer group"
+              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer group"
             >
               <Calendar className="w-4 h-4" />
               <span>Book a 15-Min Call</span>
@@ -70,7 +70,7 @@ export function CtaSection() {
             </Link>
           </div>
 
-          <p className="text-[11px] font-mono text-neutral-500 mt-8">
+          <p className="text-[11px] font-sans text-[#848484] mt-8">
             Avg. response time: &lt; 2 hours during EST business hours
           </p>
         </div>

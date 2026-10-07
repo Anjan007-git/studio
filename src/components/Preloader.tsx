@@ -52,14 +52,14 @@ export function Preloader() {
         }`}
       >
         <div className="flex items-start justify-center gap-1.5 mb-3">
-          <span className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white uppercase select-none font-sans">
+          <span className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-[-0.03em] text-white uppercase select-none font-display">
             TRIFECTA TRENDS
           </span>
-          <span className="text-sm sm:text-base font-normal text-white/80 mt-1 select-none font-mono">
+          <span className="text-sm sm:text-base font-normal text-white/80 mt-1 select-none font-display">
             ©
           </span>
         </div>
-        <p className="text-xs sm:text-sm text-neutral-400 font-light tracking-widest uppercase font-mono">
+        <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal tracking-[-0.02em] font-sans">
           A design studio, built different.
         </p>
       </div>

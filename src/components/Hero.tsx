@@ -187,7 +187,7 @@ export function Hero() {
           <div className="relative flex items-baseline justify-between w-full">
             {/* Left: Studio Discipline Badge positioned under 'T' */}
             <div
-              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1.5 text-[11px] sm:text-sm md:text-base text-neutral-400 font-normal transition-all duration-1000 delay-300 ${
+              className={`absolute left-0.5 top-1.5 sm:top-4 md:top-6 flex items-center gap-1.5 text-xs sm:text-sm md:text-base text-[#b8b8b8] font-medium font-display tracking-[-0.03em] transition-all duration-1000 delay-300 ${
                 arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -202,7 +202,7 @@ export function Hero() {
                   arrived ? "translate-y-0 opacity-100" : "translate-y-[110%] opacity-0"
                 }`}
               >
-                <span className="text-display text-[var(--text-secondary)] uppercase m-0 p-0 block">
+                <span className="text-display text-[#b8b8b8] uppercase m-0 p-0 block">
                   TRENDS
                 </span>
               </div>
@@ -231,7 +231,7 @@ export function Hero() {
                 />
 
                 {/* Availability Badge Overlay */}
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-center gap-2 py-1.5 px-3 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[11px] text-white">
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-center gap-2 py-1.5 px-3 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[12px] text-white font-display">
                   <div className="flex items-center gap-0.5">
                     <span className="w-0.5 h-2.5 bg-white rounded-full" />
                     <span className="w-0.5 h-2.5 bg-white rounded-full" />
@@ -239,8 +239,8 @@ export function Hero() {
                     <span className="w-0.5 h-2.5 bg-neutral-600 rounded-full" />
                     <span className="w-0.5 h-2.5 bg-neutral-600 rounded-full" />
                   </div>
-                  <span className="font-medium">2 slots open</span>
-                  <span className="text-neutral-400 font-mono text-[10px]">
+                  <span className="font-semibold text-white tracking-[-0.02em]">2 slots open</span>
+                  <span className="text-[#b8b8b8] font-medium text-[11px] tracking-[-0.02em]">
                     This Month
                   </span>
                 </div>
@@ -249,19 +249,19 @@ export function Hero() {
               {/* Card Meta & Actions */}
               <div className="px-1 pt-1 flex flex-col gap-3">
                 <div>
-                  <h3 className="text-sm font-semibold text-white">
+                  <h3 className="text-[15px] font-semibold text-white font-display tracking-[-0.03em]">
                     Design Advisory
                   </h3>
-                  <p className="text-xs text-neutral-400">Creative Direction &amp; Systems</p>
+                  <p className="text-xs text-[#b8b8b8] font-sans tracking-[-0.02em]">Creative Direction &amp; Systems</p>
                 </div>
 
                 <div className="border-t border-white/10 pt-2.5 flex items-center justify-between text-xs">
-                  <span className="text-neutral-300">
-                    Plans start at <strong className="text-white font-medium">$7,500 / m</strong>
+                  <span className="text-[#b8b8b8] font-sans tracking-[-0.02em]">
+                    Plans start at <strong className="text-white font-semibold font-display tracking-[-0.03em]">$7,500 / m</strong>
                   </span>
                   <Link
                     href="#pricing"
-                    className="text-neutral-400 hover:text-white transition-colors"
+                    className="text-[#b8b8b8] hover:text-white transition-colors"
                   >
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
@@ -270,7 +270,7 @@ export function Hero() {
                 {/* White CTA Button */}
                 <Link
                   href="/contact"
-                  className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-medium text-xs flex items-center justify-between shadow-sm cursor-pointer group"
+                  className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-semibold text-xs tracking-[-0.02em] font-display flex items-center justify-between shadow-sm cursor-pointer group"
                 >
                   <span>Book a 15-Min Call</span>
                   <Calendar className="w-4 h-4 text-black group-hover:scale-105 transition-transform" />
@@ -286,11 +286,11 @@ export function Hero() {
               arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <p className="max-w-md text-[var(--text-body-lg)] leading-snug tracking-tight text-left">
-              <strong className="text-white font-bold block sm:inline">
+            <p className="max-w-md text-[15px] sm:text-base leading-[1.5] tracking-[-0.02em] text-left font-sans">
+              <strong className="text-white font-semibold font-display block sm:inline">
                 We&apos;ve reimagined how great design happens.{" "}
               </strong>
-              <span className="text-[var(--text-secondary)] font-light">
+              <span className="text-[#b8b8b8] font-normal">
                 No pitches. No proposals. No project management theater. Just
                 exceptional work from senior designers who become an extension of
                 your team.
@@ -340,22 +340,22 @@ export function Hero() {
                 />
               </div>
               {/* "You?" dark circle */}
-              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#1c1c1c] flex items-center justify-center text-[10px] font-semibold text-white">
+              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#1c1c1c] flex items-center justify-center text-[10px] font-semibold text-white tracking-[-0.01em] font-display">
                 You?
               </div>
             </div>
 
             {/* Stars & Rating Text */}
-            <div className="flex flex-col text-xs">
+            <div className="flex flex-col text-xs font-sans">
               <div className="flex items-center gap-1.5">
                 <div className="flex text-white">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-white text-white" />
                   ))}
                 </div>
-                <span className="font-semibold text-white">4.9 / 5</span>
+                <span className="font-semibold text-white tracking-[-0.03em] font-display text-[15px]">4.9 / 5</span>
               </div>
-              <span className="text-neutral-400 font-normal mt-0.5">
+              <span className="text-[#b8b8b8] font-normal tracking-[-0.02em] mt-0.5 text-xs">
                 100+ Happy clients
               </span>
             </div>

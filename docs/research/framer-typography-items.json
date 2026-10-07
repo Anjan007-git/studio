@@ -1,0 +1,1694 @@
+[
+  {
+    "text": "MUGEN",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "©",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "M",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: perspective(1200px); opacity: 1;"
+  },
+  {
+    "text": "©",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "A design studio, built different.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; will-change: transform; opacity: 1; transform: none;"
+  },
+  {
+    "text": "MUGEN",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "294.0532717010171px",
+    "fontWeight": "700",
+    "letterSpacing": "-0.04em",
+    "lineHeight": "80%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--font-selector:RlI7SW50ZXJEaXNwbGF5LUJvbGQ=;--framer-font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;--framer-font-size:294.0532717010171px;--framer-font-weight:700;--framer-letter-spacing:-0.04em;--framer-line-height:80%;--framer-text-alignment:left;--framer-text-color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "©",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "—",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "STUDIO",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "333.1017104459377px",
+    "fontWeight": "700",
+    "letterSpacing": "-0.04em",
+    "lineHeight": "80%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--font-selector:RlI7SW50ZXJEaXNwbGF5LUJvbGQ=;--framer-font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;--framer-font-size:333.1017104459377px;--framer-font-weight:700;--framer-letter-spacing:-0.04em;--framer-line-height:80%;--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "You?",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-2gg91v: \"wght\" 650; --extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "/ 5",
+    "color": "var(--extracted-1w3ko1f, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-1w3ko1f, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "2 slots open",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "March'26",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Sarah Park",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Project manager",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Plans start at",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "$7,500 / m",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "See Pricing",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Book a 15-Min Call",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); transform: none; opacity: 1;"
+  },
+  {
+    "text": "Book a 15-Min Call",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "W",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "N",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "When",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": ",",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "With over 15 years in digital design, Alex founded MUGEN° to create a studio where craft comes first. He believes great design happens through process, not heroics.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Alex West",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Founder &amp; Creative Director",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "So I built Mugen differently. No endless meetings, no office politics, no pitches that promise everything. Just talented designers doing what they do best.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "We create design that actually solves problems. We're obsessive about the details because that's what our clients pay us for. To care as much as they do.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "That's the Mugen way. Simple, but not easy.",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "The studio",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "The studio",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[01]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Projects",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Case",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "© 2016 - 2025",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "[01]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Quantum",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2025",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Brand Strategy &amp; Product Design",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[02]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Cubekit",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Brand Identity &amp; Product Design",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[03]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Ephemeral",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Brand Identity &amp; Product Design",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[04]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Warpspeed",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Brand Identity &amp; Product Design",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[05]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Magnolia",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Brand Strategy &amp; Web Design",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[06]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Global Bank",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Digital Transformation &amp; Design System",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[ 12 ]",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "140%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;white-space:nowrap;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:140%"
+  },
+  {
+    "text": "All Case Studies",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "All Case Studies",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[02]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Why choose us",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "We",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "Great design accelerates everything. It shortens sales cycles, increases conversions, and builds trust before you say a word. We're not just making things pretty—we're creating competitive advantages that compound over time.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2016",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2018",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2022",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2024",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2026",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "0M +",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2.4)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "user-select:none;margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2.4);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%;width:100%"
+  },
+  {
+    "text": "Revenue generated for our clients.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "0x",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2.4)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "user-select:none;margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2.4);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%;width:100%"
+  },
+  {
+    "text": "Faster than other agencies.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "0 +",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2.4)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "user-select:none;margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2.4);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%;width:100%"
+  },
+  {
+    "text": "Projects shipped worldwide, helping our clients achieve their goals.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "©",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "4.9 / 5",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "26px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "80%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--font-selector:RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk;--framer-font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;--framer-font-open-type-features:'cv01' on, 'cv09' on, 'salt' on;--framer-font-size:26px;--framer-font-weight:600;--framer-letter-spacing:-0.03em;--framer-line-height:80%;--framer-text-color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "0 +",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2.4)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "user-select:none;margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2.4);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%;width:100%"
+  },
+  {
+    "text": "Happy clients and counting.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Fast to launch. Easy to scale.",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "Speed without sacrifice",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Our streamlined process cuts through the typical agency theater while maintaining the craft and attention to detail your brand deserves.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Flexible engagement",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Choose monthly retainers for ongoing work or project-based engagements for specific needs. Scale up or down as your business evolves.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[03]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Services",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Services",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "Full-spectrum design capabilities under one roof. Whether you need a complete brand overhaul or ongoing creative support, we have the expertise to deliver. No outsourcing, no excuses, just exceptional work from our senior team.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "[01]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Complete brand systems that capture your essence and stand out in market. From strategy to execution, we build identities that resonate and scale.",
+    "color": "var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "Categories",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[02]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Websites and digital experiences that convert. We design with purpose, creating user journeys that turn visitors into customers.",
+    "color": "var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "Categories",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[03]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "UI/UX that makes complex products feel simple. We balance user needs with business goals to create experiences that just work.",
+    "color": "var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "Categories",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[04]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Strategic creative that drives results. From campaigns to pitch decks, we design materials that move your audience to action.",
+    "color": "var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "Categories",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[05]",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Clean code that brings designs to life. Fast, responsive, and pixel-perfect across all devices.",
+    "color": "var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "Categories",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[04]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Process",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "A",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "We've refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you'll know exactly where we are and where we're going.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "3-5 Days",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "To kick off after signing. No lengthy onboarding, just straight to work.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "48 Hour",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "turnaround on most requests. Complex projects broken into manageable sprints.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "01",
+    "styleStr": "--extracted-a0htzi: var(--token-994646e0-68ea-49d7-897a-104048558f6f, rgb(84, 84, 84)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: rotate(-90deg); opacity: 1;"
+  },
+  {
+    "text": "Listen &amp; Learn",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Every engagement starts with understanding. We dive deep into your business, your challenges, and where you want to go. No assumptions, just questions that matter.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "02",
+    "styleStr": "--extracted-a0htzi: var(--token-994646e0-68ea-49d7-897a-104048558f6f, rgb(84, 84, 84)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: rotate(-90deg); opacity: 1;"
+  },
+  {
+    "text": "Strategy First",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Before any pixels are pushed, we align on direction. Whether it's a brand identity or product redesign, we make sure we're solving the right problem.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "03",
+    "styleStr": "--extracted-a0htzi: var(--token-994646e0-68ea-49d7-897a-104048558f6f, rgb(84, 84, 84)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: rotate(-90deg); opacity: 1;"
+  },
+  {
+    "text": "Design in Sprints",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "We work in focused cycles with regular check-ins. You'll see progress weekly, not monthly. No big reveals, no surprises—just steady momentum.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "04",
+    "styleStr": "--extracted-a0htzi: var(--token-994646e0-68ea-49d7-897a-104048558f6f, rgb(84, 84, 84)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: rotate(-90deg); opacity: 1;"
+  },
+  {
+    "text": "Refine Until Right",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Your feedback shapes the work. We iterate based on what's working and what isn't, refining until everyone's genuinely excited about the results.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "05",
+    "styleStr": "--extracted-a0htzi: var(--token-994646e0-68ea-49d7-897a-104048558f6f, rgb(84, 84, 84)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: rotate(-90deg); opacity: 1;"
+  },
+  {
+    "text": "Launch &amp; Learn",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "We stick around for implementation and measure what matters. Every project teaches us something that makes the next one better.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[05]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Pricing",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Built",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "Choose the engagement model that works for your business. Start small and grow with confidence, or jump straight into transformative projects. No hidden fees, no surprises, just transparent pricing that makes sense.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Growth",
+    "styleStr": "--framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Perfect for growing businesses with steady design needs.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Monthly",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Quarterly",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "$",
+    "styleStr": "--framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "7,500",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));user-select:none;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:100%;display:block;visibility:hidden"
+  },
+  {
+    "text": "/ month",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "For ongoing requests.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Start Now",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Start Now",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "What's included.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "45 hours of dedicated design time",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Two active projects at a time",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Twice-weekly syncs",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "24-hour response time",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Unused hours roll over (up to 10)",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "15% discount on additional projects",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Scale",
+    "styleStr": "--framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Popular",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); transform: none; opacity: 1;"
+  },
+  {
+    "text": "For teams that need to move fast and ship often.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Monthly",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Quarterly",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "$",
+    "styleStr": "--framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "15,000",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));user-select:none;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:100%;display:block;visibility:hidden"
+  },
+  {
+    "text": "/ month",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "For ongoing requests.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Start Now",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); transform: none; opacity: 1;"
+  },
+  {
+    "text": "Start Now",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "What's included.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "100 hours of dedicated design time",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Unlimited active projects",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Daily syncs available",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Same-day response time",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Unused hours roll over (up to 20)",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "20% discount on additional projects",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Clear scope, fixed timeline, no surprises.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Starts at",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "10,000",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 2)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "margin:0;color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));user-select:none;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-feature-settings:'salt' on;font-size:calc(var(--framer-root-font-size, 1rem) * 2);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:100%;display:block;visibility:hidden"
+  },
+  {
+    "text": "Get Quote",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Get Quote",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Sarah Park",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Project Manager",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Tell us about your design needs, team size, and project volume. We'll help you choose the right plan and get you started within 3-5 days.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "2 slots open",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "July'25",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Book Call",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); transform: none; opacity: 1;"
+  },
+  {
+    "text": "Book Call",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv: var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[06]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Testimonials",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Trusted",
+    "styleStr": "--framer-text-alignment:left"
+  },
+  {
+    "text": "by",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Results speak louder than promises.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "James Ortiz",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Director of Comms",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Solaris Energy",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Renata Moreau",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Creative Director",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Clandestine",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Naomi Chen",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Co-founder",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Flora &amp; Fauna",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "F",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "They brought so much nuance to the brand—mystery, elegance, and a really rich visual language. It’s exactly what we hoped for, and then some.",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "We wanted a brand that felt honest and connected to nature, but still premium. What we ended up with feels like us in every way—our customers even comment on it.",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "$12M",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Investment funding secured",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "4.8x",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Social media engagement boost",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "94%",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Customer retention rate",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Our product was always strong under the hood, but we struggled to express that clearly. Now, the platform feels sharp, modern, and incredibly intuitive—it’s made onboarding so much smoother.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "60%",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Training time reduction",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "$2.3M",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Annual efficiency savings",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Julian Singh",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "COO",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Boltshift",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "We knew our tech was solid, but the brand didn’t reflect that. After the redesign, everything just clicked—sales calls got easier, and people finally ‘got’ what we do.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "500x",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Github stars gained post-rebrand",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "95%",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Developer-to-CTO approval rate",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Aisha Clark",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "CEO",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Warpspeed",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "We came in with a fuzzy idea and left with a brand that feels completely aligned with our mission. The team really understood our product and turned that into something emotionally resonant.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Read case study",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "4.6x",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Conversation frequency",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "0.8 sec",
+    "styleStr": "justify-content: center; --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Avg response time",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "justify-content: center; --extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Linh Tran",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "VP of Product",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Ephemeral",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[07]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Answers",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "FAQ",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Everything else you're wondering.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Have a question?",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Reach out anytime. We're happy to answer any questions before you commit to working together.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Sarah Park",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Project Manager",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Ask a question",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Ask a question",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "How do retainers actually work?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Think of it as having a dedicated designer on your team for a flat monthly rate. You get a set number of hours each month to use however you need—whether that's one big project or lots of small requests. We sync regularly and work through your priorities systematically.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "What if I don't use all my hours?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Unused hours roll over to the next month (up to 25% of your plan). This gives you flexibility during slower periods without losing value. Hours expire after 90 days to keep projects moving forward.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "How fast can you start?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "For retainers, we can typically kick off within 3-5 business days. Project work usually begins within 1-2 weeks depending on our current pipeline. Rush delivery available when needed.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "Who will be working on my account?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Every account is led by a senior designer with 10+ years of experience. For larger retainers and projects, we may bring in specialists, but your lead designer remains your consistent point of contact.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "Can I switch between retainers and projects?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Absolutely. Many clients use retainers for ongoing needs and projects for major initiatives. Retainer clients get 15-20% off project work as a bonus.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "What's included in \"unlimited revisions\"?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "For retainer work, we'll refine until you're happy. For projects, we include two formal revision rounds in our quote, with additional rounds available at an hourly rate. We've found this keeps projects focused and on schedule.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "Do you work with international clients?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Yes! About 40% of our clients are outside North America. We structure our days to overlap with different time zones and use async communication to keep projects moving smoothly.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "What if we need to pause or cancel?",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0"
+  },
+  {
+    "text": "Life happens. You can pause or cancel your retainer with 30 days notice. When you're ready to return, your same rate is guaranteed for 6 months.",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.875)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.875);font-weight:600;line-height:150%;letter-spacing:-0.03em;font-style:normal;text-align:left;margin:0;padding:0;box-sizing:border-box"
+  },
+  {
+    "text": "[08]",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Articles",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Strategies",
+    "styleStr": "--extracted-1qn201a: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "from",
+    "color": "var(--extracted-1qn201a, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))",
+    "styleStr": "--framer-text-color:var(--extracted-1qn201a, var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)))"
+  },
+  {
+    "text": "We share what we've learned building brands that matter. Deep dives into design thinking, creative process, and the intersection of business and aesthetics. No fluff, just honest perspectives from the trenches of client work.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Trends",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Feb 3, 2025",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Beyond minimalism: what's next in web design.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: perspective(1200px); opacity: 1;"
+  },
+  {
+    "text": "4 min read",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.775)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.775);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%"
+  },
+  {
+    "text": "After a decade of stark minimalism, web design is evolving. Discover the emerging trends in typography, color, and depth that define the next era of digital experiences.",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "Emma Wright",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Project Manager",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN©",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Strategy",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Apr 16, 2025",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Building brands that scale.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: perspective(1200px); opacity: 1;"
+  },
+  {
+    "text": "4 min read",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.775)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.775);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%"
+  },
+  {
+    "text": "The brand that gets you to $1M will strangle you at $100M. Learn how to build flexible brand systems that grow with your business, not against it.",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "Alex West",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Creative Director",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN©",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Trends",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Apr 1, 2025",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Designing for human connection.",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: perspective(1200px); opacity: 1;"
+  },
+  {
+    "text": "4 min read",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.775)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "100%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 0.775);font-style:normal;font-weight:600;letter-spacing:-0.03em;line-height:100%"
+  },
+  {
+    "text": "Learn how emotional design drives 30% higher retention. Explore micro-interactions, animation, and psychology that transform functional interfaces into beloved products.",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "Emma Wright",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Project Manager",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN©",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "[ 10 ]",
+    "fontFamily": "\"Inter\", \"Inter Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;white-space:nowrap;font-family:\"Inter\", \"Inter Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:150%"
+  },
+  {
+    "text": "All Articles",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "All Articles",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "©",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--extracted-r6o4lv: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Based in",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Toronto (CA)",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.725)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "font-family: \"Inter Display\", \"Inter Display Placeholder\", sans-serif; font-size: calc(var(--framer-root-font-size, 1rem) * 0.725); font-style: normal; font-weight: 600; letter-spacing: -0.03em; line-height: 150%; color: var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255)); width: max-content;"
+  },
+  {
+    "text": "09:54 PM",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 0.725)",
+    "fontWeight": "600",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "150%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "font-family: \"Inter Display\", \"Inter Display Placeholder\", sans-serif; font-size: calc(var(--framer-root-font-size, 1rem) * 0.725); font-style: normal; font-weight: 600; letter-spacing: -0.03em; line-height: 150%; color: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); width: max-content; display: flex; align-items: center; gap: 4px;"
+  },
+  {
+    "text": "Subscribe to our newsletter.",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "contact@mugen.design",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "email copied",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "S",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Alex West",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Creative Director",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--extracted-r6o4lv: var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Home",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Home",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "Studio",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Studio",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "Work",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Work",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "[ 12 ]",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1.5)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "110%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;white-space:nowrap;font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1.5);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:110%"
+  },
+  {
+    "text": "Articles",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Articles",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "[ 10 ]",
+    "fontFamily": "\"Inter\", \"Inter Placeholder\", sans-serif",
+    "fontSize": "calc(var(--framer-root-font-size, 1rem) * 1.5)",
+    "fontWeight": "500",
+    "letterSpacing": "-0.03em",
+    "lineHeight": "110%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184));user-select:none;margin:0;white-space:nowrap;font-family:\"Inter\", \"Inter Placeholder\", sans-serif;font-size:calc(var(--framer-root-font-size, 1rem) * 1.5);font-style:normal;font-weight:500;letter-spacing:-0.03em;line-height:110%"
+  },
+  {
+    "text": "Pricing",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Pricing",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "Contact",
+    "styleStr": "--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "Contact",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0; transform: perspective(1200px);"
+  },
+  {
+    "text": "Terms of Service",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Terms of Service",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Privacy Policy",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "Privacy Policy",
+    "styleStr": "--framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;"
+  },
+  {
+    "text": "MUGEN",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "42px",
+    "fontWeight": "700",
+    "letterSpacing": "-0.04em",
+    "lineHeight": "80%",
+    "color": "var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))",
+    "styleStr": "--font-selector:RlI7SW50ZXJEaXNwbGF5LUJvbGQ=;--framer-font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;--framer-font-size:42px;--framer-font-weight:700;--framer-letter-spacing:-0.04em;--framer-line-height:80%;--framer-text-alignment:left;--framer-text-color:var(--token-33c8dbd0-eb94-4e90-8099-e7a3fee4ad2f, rgb(255, 255, 255))"
+  },
+  {
+    "text": "STUDIO",
+    "fontFamily": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "fontSize": "42px",
+    "fontWeight": "700",
+    "letterSpacing": "-0.04em",
+    "lineHeight": "80%",
+    "color": "var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))",
+    "styleStr": "--font-selector:RlI7SW50ZXJEaXNwbGF5LUJvbGQ=;--framer-font-family:\"Inter Display\", \"Inter Display Placeholder\", sans-serif;--framer-font-size:42px;--framer-font-weight:700;--framer-letter-spacing:-0.04em;--framer-line-height:80%;--framer-text-alignment:left;--framer-text-color:var(--token-4d926bee-328f-497f-a3cd-ce0b138f5bc3, rgb(184, 184, 184))"
+  },
+  {
+    "text": "Unlock from $129",
+    "color": "rgb(255, 255, 255)",
+    "styleStr": "--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:1;transform:none"
+  },
+  {
+    "text": "All Access",
+    "color": "var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0))",
+    "styleStr": "--extracted-r6o4lv:var(--token-2759885a-0605-4b0d-ae5f-9a938c3766f2, rgb(0, 0, 0));--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;opacity:0;transform:none"
+  },
+  {
+    "text": "Secured By",
+    "fontFamily": "\"Manrope\", \"Manrope Placeholder\", sans-serif",
+    "fontSize": "11px",
+    "fontWeight": "700",
+    "letterSpacing": "-0.015em",
+    "lineHeight": "1em",
+    "color": "var(--extracted-r6o4lv, rgb(105, 105, 105))",
+    "styleStr": "--font-selector:RlM7TWFucm9wZS1ib2xk;--framer-font-family:\"Manrope\", \"Manrope Placeholder\", sans-serif;--framer-font-size:11px;--framer-font-weight:700;--framer-letter-spacing:-0.015em;--framer-line-height:1em;--framer-text-color:var(--extracted-r6o4lv, rgb(105, 105, 105))"
+  },
+  {
+    "text": "/",
+    "color": "var(--extracted-r6o4lv, rgb(97, 97, 97))",
+    "styleStr": "--framer-text-color:var(--extracted-r6o4lv, rgb(97, 97, 97))"
+  }
+]

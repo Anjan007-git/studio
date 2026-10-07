@@ -49,14 +49,14 @@ export function Faq() {
           {/* Left Column: Heading & Advisory box */}
           <div className="lg:col-span-5 sticky top-32">
             <div className="mb-4">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              <span className="section-label">
                 [07] Answers
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
               Everything else you&apos;re wondering.
             </h2>
-            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light mb-8">
+            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] mb-8">
               We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective partners.
             </p>
 
@@ -72,18 +72,18 @@ export function Faq() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Client Advisory</h4>
-                  <span className="text-[11px] font-mono text-neutral-400">
+                  <h4 className="text-sm font-display font-semibold text-white tracking-[-0.02em]">Client Advisory</h4>
+                  <span className="text-[11px] font-sans text-[#848484]">
                     Direct Studio Strategy
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+              <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] mb-6">
                 Have a unique question about your timeline, stack, or budget? Reach out directly. We&apos;re always happy to talk through details.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-mono text-white hover:text-neutral-300 group cursor-pointer"
+                className="inline-flex items-center gap-2 text-xs font-display font-semibold tracking-[-0.02em] text-white hover:text-[#b8b8b8] group cursor-pointer"
               >
                 <span>Ask a question</span>
                 <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -110,11 +110,11 @@ export function Faq() {
                     className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    <span className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.03em]">
                       {faq.q}
                     </span>
                     <span
-                      className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 shrink-0 transform transition-all duration-300 text-lg font-light leading-none select-none ${
+                      className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-[#b8b8b8] shrink-0 transform transition-all duration-300 text-lg font-display select-none ${
                         isOpen
                           ? "rotate-45 text-white bg-white/10 border-white/20"
                           : "bg-white/5"
@@ -130,7 +130,7 @@ export function Faq() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="px-6 sm:px-7 pb-6 text-xs sm:text-sm text-neutral-300 font-light leading-relaxed border-t border-white/5 pt-4">
+                      <div className="px-6 sm:px-7 pb-6 text-xs sm:text-sm text-[#b8b8b8] font-sans font-normal leading-relaxed border-t border-white/5 pt-4">
                         {faq.a}
                       </div>
                     </div>

@@ -70,14 +70,14 @@ export function Process() {
         {/* Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            <span className="section-label">
               [04] Process
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
             A proven process that delivers results, not surprises.
           </h2>
-          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+          <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
             We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
           </p>
         </div>
@@ -90,10 +90,10 @@ export function Process() {
               <div className="w-7 h-7 mb-4 text-white/80">
                 <Calendar className="w-6 h-6 stroke-[1.5]" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              <h3 className="text-2xl sm:text-3xl font-display font-semibold tracking-[-0.04em] text-white mb-2">
                 3-5 Days
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light max-w-xs">
+              <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] max-w-xs">
                 To kick off after signing. No lengthy onboarding, just straight to work.
               </p>
             </div>
@@ -102,10 +102,10 @@ export function Process() {
               <div className="w-7 h-7 mb-4 text-white/80">
                 <Clock className="w-6 h-6 stroke-[1.5]" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+              <h3 className="text-2xl sm:text-3xl font-display font-semibold tracking-[-0.04em] text-white mb-2">
                 48 Hour
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light max-w-xs">
+              <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] max-w-xs">
                 turnaround on most requests. Complex projects broken into manageable sprints.
               </p>
             </div>
@@ -131,8 +131,8 @@ export function Process() {
                     {/* Top Number */}
                     <div className="flex items-center justify-between">
                       <span
-                        className={`text-2xl font-bold transition-colors font-mono ${
-                          isActive ? "text-white" : "text-neutral-500"
+                        className={`text-2xl font-display font-semibold tracking-[-0.04em] transition-colors ${
+                          isActive ? "text-white" : "text-[#545454]"
                         }`}
                       >
                         {item.step}
@@ -142,10 +142,10 @@ export function Process() {
                     {/* Bottom Details (Shown with clean transition when active) */}
                     {isActive ? (
                       <div className="transition-all duration-300 opacity-100 transform translate-y-0">
-                        <h4 className="text-2xl font-bold text-white mb-3">
+                        <h4 className="text-2xl font-display font-semibold tracking-[-0.03em] text-white mb-3">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-neutral-400 leading-relaxed font-light">
+                        <p className="text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
                           {item.description}
                         </p>
                       </div>
@@ -169,19 +169,19 @@ export function Process() {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <span className="text-base font-mono text-neutral-400">
+                        <span className="text-base font-display font-semibold tracking-[-0.03em] text-[#b8b8b8]">
                           {item.step}
                         </span>
-                        <h4 className="text-lg font-bold text-white">
+                        <h4 className="text-lg font-display font-semibold tracking-[-0.03em] text-white">
                           {item.title}
                         </h4>
                       </div>
-                      <span className="text-base text-neutral-400 font-mono">
+                      <span className="text-base text-[#b8b8b8] font-mono">
                         {isActive ? "−" : "+"}
                       </span>
                     </div>
                     {isActive && (
-                      <p className="text-xs text-neutral-400 leading-relaxed font-light pt-4 mt-3 border-t border-white/5">
+                      <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] pt-4 mt-3 border-t border-white/5">
                         {item.description}
                       </p>
                     )}

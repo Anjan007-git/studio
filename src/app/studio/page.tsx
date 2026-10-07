@@ -173,12 +173,12 @@ export default function StudioPage() {
         <section className="pb-20 sm:pb-28">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-8">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              <span className="section-label">
                 [The Studio]
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-bold tracking-[-0.035em] text-white max-w-6xl leading-[1.08] mb-12">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.05] mb-12">
               TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms.
             </h1>
           </div>
@@ -188,16 +188,16 @@ export default function StudioPage() {
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-8">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block">
+              <span className="section-label block">
                 [Who we are]
               </span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
-              <p className="text-lg sm:text-2xl text-neutral-300 font-light leading-relaxed">
+              <p className="text-lg sm:text-2xl text-white font-sans font-normal leading-relaxed tracking-[-0.02em]">
                 Built deliberately from day one, we&apos;ve grown carefully and intentionally. We&apos;ve avoided the hire-fast agency mentality and said no to engagements that didn&apos;t align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft.
               </p>
-              <p className="text-lg sm:text-2xl text-neutral-400 font-light leading-relaxed">
+              <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed tracking-[-0.02em]">
                 We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership.
               </p>
             </div>
@@ -205,69 +205,69 @@ export default function StudioPage() {
             {/* Stat Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
                   Presence
                 </span>
                 <div className="mt-8">
-                  <p className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                  <p className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]">
                     Global Studio
                   </p>
-                  <p className="text-xs text-neutral-400 mt-2">
+                  <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
                     Hubs in New York, San Francisco &amp; Global Remote.
                   </p>
                 </div>
               </div>
 
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
                   Experience
                 </span>
                 <div className="mt-8">
-                  <p className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+                  <p className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
                     10+
                   </p>
-                  <p className="text-xs text-neutral-400 mt-2">
+                  <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
                     Years combined expertise
                   </p>
                 </div>
               </div>
 
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
                   Reputation
                 </span>
                 <div className="mt-8">
                   <div className="flex items-center gap-1.5 mb-1">
-                    <span className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+                    <span className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
                       4.9
                     </span>
-                    <span className="text-xl text-neutral-500">/ 5</span>
+                    <span className="text-xl text-[#848484] font-display font-medium">/ 5</span>
                   </div>
                   <div className="flex items-center gap-1 text-amber-400 mb-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <p className="text-xs text-neutral-400">
+                  <p className="text-xs text-[#b8b8b8] font-sans tracking-[-0.01em]">
                     Average client rating
                   </p>
                 </div>
               </div>
 
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between group hover:border-white/30 transition-all">
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
                   Careers
                 </span>
                 <div className="mt-8">
-                  <h4 className="text-xl font-bold text-white mb-2">
+                  <h4 className="text-xl font-display font-semibold text-white mb-2 tracking-[-0.03em]">
                     Join the team
                   </h4>
-                  <p className="text-xs text-neutral-400 mb-6 leading-relaxed">
+                  <p className="text-xs text-[#b8b8b8] font-sans mb-6 leading-relaxed tracking-[-0.01em]">
                     If you&apos;re ready to shape the future with us, your journey could start here.
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-white group-hover:text-neutral-300 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-white group-hover:text-[#b8b8b8] transition-colors tracking-[-0.02em]"
                   >
                     <span>Let&apos;s talk</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -282,13 +282,13 @@ export default function StudioPage() {
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-14">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
+              <span className="section-label block mb-3">
                 [Space]
               </span>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
                 Our studio.
               </h2>
-              <p className="text-xl sm:text-2xl text-neutral-400 font-light max-w-3xl">
+              <p className="text-xl sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-3xl tracking-[-0.02em]">
                 We built this studio to be the kind of place we&apos;d want to work.
               </p>
             </div>
@@ -307,12 +307,12 @@ export default function StudioPage() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-mono text-neutral-300">
+                    <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-sans text-[#b8b8b8]">
                       {moment.date}
                     </div>
                   </div>
                   <div className="p-5 flex-1 flex items-center">
-                    <p className="text-xs text-neutral-300 leading-relaxed font-light">
+                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
                       {moment.caption}
                     </p>
                   </div>
@@ -323,18 +323,18 @@ export default function StudioPage() {
             {/* Studio Environment Philosophy Statements */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 sm:p-12 rounded-3xl bg-[#1c1c1c] border border-white/10">
               <div>
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-3">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
                   Environment
                 </span>
-                <p className="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
+                <p className="text-base sm:text-lg text-white leading-relaxed font-sans font-normal tracking-[-0.01em]">
                   Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction.
                 </p>
               </div>
               <div>
-                <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest block mb-3">
+                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
                   Deliberate Scale
                 </span>
-                <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+                <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
                   We keep our team small on purpose. It means everyone has ownership, every voice matters, and every project gets our full attention. We hire slowly and thoughtfully, looking for people who are talented, yes, but more importantly, who share our belief that design should solve real problems for real businesses.
                 </p>
               </div>
@@ -346,13 +346,13 @@ export default function StudioPage() {
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-14">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
+              <span className="section-label block mb-3">
                 [People]
               </span>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
                 Disciplines &amp; Leadership.
               </h2>
-              <p className="text-lg sm:text-2xl text-neutral-400 font-light max-w-4xl leading-relaxed">
+              <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-4xl leading-relaxed tracking-[-0.02em]">
                 A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters.
               </p>
             </div>
@@ -374,13 +374,13 @@ export default function StudioPage() {
                       />
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-1">
+                    <h3 className="text-xl font-display font-semibold text-white mb-1 tracking-[-0.03em]">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-mono text-neutral-400 mb-4">
+                    <p className="text-xs font-sans text-[#b8b8b8] mb-4 tracking-[-0.01em]">
                       {member.role}
                     </p>
-                    <p className="text-xs text-neutral-400 leading-relaxed font-light mb-6">
+                    <p className="text-xs text-[#848484] leading-relaxed font-sans font-normal mb-6 tracking-[-0.01em]">
                       {member.bio}
                     </p>
                   </div>
@@ -388,7 +388,7 @@ export default function StudioPage() {
                   <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                     <button
                       onClick={() => handleCopyEmail(member.email)}
-                      className="text-xs font-mono text-neutral-400 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
+                      className="text-xs font-display font-medium text-[#b8b8b8] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer tracking-[-0.02em]"
                     >
                       <span>
                         {copiedEmail === member.email ? "copied!" : member.email}
@@ -396,7 +396,7 @@ export default function StudioPage() {
                     </button>
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-neutral-400 hover:text-white transition-colors"
+                      className="text-[#848484] hover:text-white transition-colors"
                       aria-label={`Email ${member.name}`}
                     >
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -412,10 +412,10 @@ export default function StudioPage() {
         <section className="py-20 sm:py-24 border-t border-white/10 bg-[#141414]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-12">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-2">
+              <span className="section-label block mb-2">
                 [Trust]
               </span>
-              <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+              <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white">
                 Our favorite clients.
               </h2>
             </div>
@@ -444,18 +444,18 @@ export default function StudioPage() {
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="max-w-3xl mb-16">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
+              <span className="section-label block mb-3">
                 [Philosophy]
               </span>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
                 Our approach.
               </h2>
-              <div className="flex items-center gap-3 text-xs font-mono text-neutral-400 mb-4">
+              <div className="flex items-center gap-3 text-xs font-display font-medium text-[#848484] mb-4 tracking-[-0.02em]">
                 <span>Core Framework</span>
                 <span>•</span>
                 <span>4 Strategic Pillars</span>
               </div>
-              <p className="text-base sm:text-xl text-neutral-400 font-light">
+              <p className="text-base sm:text-xl text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
                 We&apos;ve helped over 100 clients achieve their goals and increase revenue.
               </p>
             </div>
@@ -467,15 +467,15 @@ export default function StudioPage() {
                   className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all group"
                 >
                   <div>
-                    <div className="flex items-center justify-between text-xs font-mono text-neutral-500 mb-8">
-                      <span className="text-neutral-500">/{item.num}</span>
-                      <span className="text-white font-medium">TRIFECTA TRENDS®</span>
+                    <div className="flex items-center justify-between text-xs font-display font-medium text-[#848484] mb-8 tracking-[-0.02em]">
+                      <span>/{item.num}</span>
+                      <span className="text-white">TRIFECTA TRENDS®</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-4">
+                    <h3 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-xs text-neutral-400 leading-relaxed font-light pt-6 border-t border-white/10 mt-6">
+                  <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal pt-6 border-t border-white/10 mt-6 tracking-[-0.01em]">
                     {item.description}
                   </p>
                 </div>
@@ -489,16 +489,16 @@ export default function StudioPage() {
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
+                <span className="section-label block mb-3">
                   [Articles]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
                   Strategies &amp; insights from the team.
                 </h2>
               </div>
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.02em]"
               >
                 <span>All Articles</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -520,34 +520,34 @@ export default function StudioPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
-                      <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-mono text-neutral-300">
+                      <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636]">
                         {article.category}
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between text-[11px] font-mono text-neutral-500 mb-3">
+                    <div className="flex items-center justify-between text-[11px] font-sans text-[#848484] mb-3">
                       <span>{article.date}</span>
                       <span>{article.readTime}</span>
                     </div>
 
-                    <h3 className="text-base font-bold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-snug">
+                    <h3 className="text-base font-display font-semibold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-snug tracking-[-0.03em]">
                       {article.title}
                     </h3>
-                    <p className="text-xs text-neutral-400 leading-relaxed font-light line-clamp-3 mb-6">
+                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-3 mb-6 tracking-[-0.01em]">
                       {article.summary}
                     </p>
                   </div>
 
                   <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                     <div>
-                      <span className="text-xs font-medium text-white block">
+                      <span className="text-xs font-display font-semibold text-white block tracking-[-0.02em]">
                         {article.author}
                       </span>
-                      <span className="text-[10px] font-mono text-neutral-500 block">
+                      <span className="text-[10px] font-sans text-[#848484] block">
                         {article.role}
                       </span>
                     </div>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#848484] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </div>
                 </Link>
               ))}

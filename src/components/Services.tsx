@@ -135,14 +135,14 @@ export function Services() {
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
           <div className="mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            <span className="section-label">
               [03] Services
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
             Services
           </h2>
-          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light max-w-3xl">
+          <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] max-w-3xl">
             Full-spectrum design capabilities under one roof. Whether you need a
             complete brand overhaul or ongoing creative support, we have the
             expertise to deliver. No outsourcing, no excuses, just exceptional
@@ -157,10 +157,10 @@ export function Services() {
               <button
                 key={service.id}
                 onClick={() => scrollToService(idx)}
-                className={`px-4 py-2 rounded-full text-xs font-mono transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-display transition-all ${
                   activeTab === idx
                     ? "bg-white text-black font-semibold shadow-md"
-                    : "bg-[#1c1c1c] text-neutral-400 border border-white/10 hover:text-white"
+                    : "bg-[#1c1c1c] text-[#b8b8b8] border border-white/10 hover:text-white font-medium"
                 }`}
               >
                 {service.title}
@@ -176,7 +176,7 @@ export function Services() {
         >
           {/* Left Sticky Menu (matching desktop MUGEN frame exactly) */}
           <div className="lg:col-span-4 sticky top-32 hidden lg:block">
-            <nav className="flex flex-col space-y-6 text-2xl sm:text-3xl font-medium tracking-tight">
+            <nav className="flex flex-col space-y-6 text-2xl sm:text-3xl font-display font-medium tracking-[-0.04em]">
               {services.map((service, idx) => (
                 <button
                   key={service.id}
@@ -184,7 +184,7 @@ export function Services() {
                   className={`text-left transition-all duration-300 cursor-pointer flex items-center gap-3 ${
                     activeTab === idx
                       ? "text-white font-semibold translate-x-1"
-                      : "text-neutral-500 hover:text-neutral-300"
+                      : "text-[#545454] hover:text-[#b8b8b8]"
                   }`}
                 >
                   <span
@@ -220,24 +220,25 @@ export function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
                   {/* Left Column: Title & Description */}
                   <div className="md:col-span-6">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
-                      {service.num} {service.title}
+                    <h3 className="text-xl sm:text-2xl font-display font-semibold text-white tracking-[-0.04em] mb-3">
+                      <span className="text-[#b8b8b8] mr-2 font-medium">{service.num}</span>
+                      {service.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Right Column: Categories */}
                   <div className="md:col-span-6">
-                    <span className="text-xs text-neutral-400 block mb-3 font-normal">
+                    <span className="font-display text-xs text-[#b8b8b8] block mb-3 font-medium tracking-[-0.02em]">
                       Categories
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {service.categories.map((cat, cIdx) => (
                         <span
                           key={cIdx}
-                          className="text-xs px-3 py-1.5 rounded-lg bg-[#1c1c1c] border border-white/10 text-neutral-300 hover:border-white/20 hover:text-white transition-colors select-none font-light"
+                          className="font-display text-xs sm:text-[13px] font-semibold tracking-[-0.03em] px-3 py-1.5 rounded-lg bg-[#181818] border border-[#363636] text-white hover:border-white/30 transition-colors select-none"
                         >
                           {cat}
                         </span>

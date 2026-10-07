@@ -71,14 +71,14 @@ export function WhyChooseUs() {
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
           <div className="mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+            <span className="section-label">
               [02] Why choose us
             </span>
           </div>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+          <h2 className="text-heading-1 text-white mb-6 font-display">
             We deliver more than design. We deliver momentum.
           </h2>
-          <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light max-w-3xl">
+          <p className="text-base text-[#b8b8b8] leading-[1.55] font-sans font-normal max-w-3xl tracking-[-0.02em]">
             Great design accelerates everything. It shortens sales cycles, increases
             conversions, and builds trust before you say a word. We&apos;re not
             just making things pretty — we&apos;re creating competitive advantages
@@ -97,14 +97,14 @@ export function WhyChooseUs() {
               <div>
                 <div className="flex items-center justify-between mb-8">
                   {/* Milestones Timeline */}
-                  <div className="flex items-center gap-3 text-[11px] font-mono text-neutral-400">
-                    <span className="text-neutral-500">Audit</span>
-                    <span className="text-neutral-500">→</span>
-                    <span className="text-neutral-500">Design</span>
-                    <span className="text-neutral-500">→</span>
-                    <span className="text-white font-medium">Launch</span>
+                  <div className="flex items-center gap-3 text-[11px] font-display font-medium text-[#848484] tracking-[-0.02em]">
+                    <span className="text-[#848484]">Audit</span>
+                    <span className="text-[#545454]">→</span>
+                    <span className="text-[#848484]">Design</span>
+                    <span className="text-[#545454]">→</span>
+                    <span className="text-white font-semibold">Launch</span>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:bg-white/10 transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#b8b8b8] group-hover:text-white group-hover:bg-white/10 transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -122,10 +122,10 @@ export function WhyChooseUs() {
               </div>
 
               <div>
-                <div className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-2">
+                <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
                   50M +
                 </div>
-                <p className="text-xs text-neutral-400 font-light">
+                <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                   Revenue generated for our clients across 200+ engagements.
                 </p>
               </div>
@@ -138,7 +138,7 @@ export function WhyChooseUs() {
             <div className="bento-card flex-1">
               <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 shadow-xl relative overflow-hidden">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     Velocity
                   </span>
                   <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
@@ -147,10 +147,10 @@ export function WhyChooseUs() {
                 </div>
 
                 <div className="mt-6">
-                  <div className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-2">
+                  <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
                     3x
                   </div>
-                  <p className="text-xs text-neutral-400 font-light">
+                  <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                     Faster time-to-market compared to traditional agencies.
                   </p>
                 </div>
@@ -168,16 +168,16 @@ export function WhyChooseUs() {
                 </div>
 
                 <div className="flex items-center justify-between z-10">
-                  <span className="text-xs font-mono text-neutral-500 uppercase tracking-widest">
+                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     Track Record
                   </span>
                 </div>
 
                 <div className="z-10 mt-6">
-                  <div className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-2">
+                  <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
                     200 +
                   </div>
-                  <p className="text-xs text-neutral-400 font-light">
+                  <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                     Projects shipped worldwide, helping our clients achieve their goals.
                   </p>
                 </div>
@@ -190,7 +190,7 @@ export function WhyChooseUs() {
             <div className="h-full rounded-3xl bg-[#1c1c1c] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
               {/* Top row: Brand & Rating */}
               <div className="flex items-center justify-between mb-4 z-10">
-                <span className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+                <span className="text-xs font-semibold text-[#848484] font-display tracking-[-0.02em]">
                   TRIFECTA TRENDS®
                 </span>
                 <div className="flex items-center gap-1.5 text-xs text-white">
@@ -199,7 +199,7 @@ export function WhyChooseUs() {
                       <Star key={i} className="w-3 h-3 fill-white text-white" />
                     ))}
                   </div>
-                  <span className="font-semibold text-neutral-300">4.9 / 5</span>
+                  <span className="font-semibold text-white font-display text-sm tracking-[-0.02em]">4.9 / 5</span>
                 </div>
               </div>
 
@@ -215,10 +215,10 @@ export function WhyChooseUs() {
 
               {/* Bottom Stat: 100+ Happy Clients */}
               <div className="z-10">
-                <div className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-1">
+                <div className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.03em] mb-1 font-display leading-none">
                   100 +
                 </div>
-                <p className="text-xs text-neutral-400 font-light">
+                <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
                   Happy clients and counting
                 </p>
               </div>
@@ -232,7 +232,7 @@ export function WhyChooseUs() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10"
         >
           <div className="feature-col">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-[-0.04em] font-display leading-[1.2]">
               Fast to launch. <br />
               Easy to scale.
             </h3>
@@ -241,9 +241,9 @@ export function WhyChooseUs() {
           <div className="feature-col space-y-3">
             <div className="flex items-center gap-2 text-white font-medium text-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
-              <h4>Speed without sacrifice</h4>
+              <h4 className="font-display font-semibold text-sm text-white tracking-[-0.02em]">Speed without sacrifice</h4>
             </div>
-            <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-[#b8b8b8] leading-[1.55] font-sans font-normal tracking-[-0.02em]">
               Our streamlined process cuts through the typical agency theater
               while maintaining the craft and attention to detail your brand
               deserves.
@@ -253,9 +253,9 @@ export function WhyChooseUs() {
           <div className="feature-col space-y-3">
             <div className="flex items-center gap-2 text-white font-medium text-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
-              <h4>Flexible engagement</h4>
+              <h4 className="font-display font-semibold text-sm text-white tracking-[-0.02em]">Flexible engagement</h4>
             </div>
-            <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-[#b8b8b8] leading-[1.55] font-sans font-normal tracking-[-0.02em]">
               Choose monthly retainers for ongoing work or project-based
               engagements for specific needs. Scale up or down as your business
               evolves.

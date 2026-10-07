@@ -90,14 +90,14 @@ export function Articles() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div className="max-w-2xl">
             <div className="mb-4">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
+              <span className="section-label">
                 [08] Articles
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
               Strategies &amp; insights from the team.
             </h2>
-            <p className="text-base sm:text-lg text-neutral-400 leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
               We share what we&apos;ve learned building brands that matter. Deep dives into design thinking, creative process, and the intersection of business and aesthetics.
             </p>
           </div>
@@ -105,9 +105,10 @@ export function Articles() {
           <div className="shrink-0">
             <Link
               href="/articles"
-              className="inline-flex items-center gap-2 text-xs font-mono text-neutral-300 hover:text-white px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] transition-all cursor-pointer group"
+              className="inline-flex items-center gap-2 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] hover:text-white px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.04] hover:bg-white/[0.1] transition-all cursor-pointer group"
             >
-              <span>[10] All Articles</span>
+              <span className="text-[#848484]">[10]</span>
+              <span>All Articles</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
@@ -131,7 +132,7 @@ export function Articles() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white border border-white/10">
+                    <span className="text-[11px] font-display font-semibold tracking-[-0.02em] px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white border border-[#363636]">
                       {art.tag}
                     </span>
                   </div>
@@ -139,15 +140,15 @@ export function Articles() {
 
                 {/* Text Info */}
                 <div className="p-6 sm:p-7">
-                  <div className="flex items-center gap-2 text-[11px] font-mono text-neutral-500 mb-3">
+                  <div className="flex items-center gap-2 text-[11px] font-sans text-[#848484] mb-3">
                     <span>{art.date}</span>
                     <span>•</span>
                     <span>{art.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-neutral-300 transition-colors mb-3 leading-snug">
+                  <h3 className="text-xl font-display font-semibold text-white group-hover:text-neutral-300 transition-colors mb-3 leading-snug tracking-[-0.03em]">
                     {art.title}
                   </h3>
-                  <p className="text-xs text-neutral-400 font-light leading-relaxed line-clamp-3">
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] font-sans font-normal leading-relaxed line-clamp-3 tracking-[-0.01em]">
                     {art.excerpt}
                   </p>
                 </div>
@@ -155,14 +156,14 @@ export function Articles() {
 
               <div className="p-6 pt-0 border-t border-white/5 flex items-center justify-between mt-4">
                 <div>
-                  <span className="text-xs font-semibold text-white block">
+                  <span className="text-xs font-display font-semibold text-white tracking-[-0.02em] block">
                     {art.author}
                   </span>
-                  <span className="text-[10px] font-mono text-neutral-500 block">
+                  <span className="text-[10px] font-sans text-[#848484] block">
                     {art.role}
                   </span>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                <ArrowUpRight className="w-4 h-4 text-[#848484] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </div>
             </Link>
           ))}

@@ -62,18 +62,18 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-6">
             <Link
               href="/"
-              className="inline-flex items-start gap-0.5 text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase hover:opacity-80 transition-opacity"
+              className="inline-flex items-start gap-0.5 text-2xl sm:text-3xl font-display font-bold tracking-[-0.03em] text-white uppercase hover:opacity-80 transition-opacity"
             >
               <span>TRIFECTA TRENDS</span>
               <span className="text-xs font-normal">©</span>
             </Link>
-            <p className="text-sm sm:text-[15px] text-neutral-300 max-w-sm leading-relaxed">
+            <p className="text-sm sm:text-[15px] text-[#b8b8b8] max-w-sm leading-relaxed font-sans font-normal tracking-[-0.01em]">
               Your next project deserves world-class design. Stop settling for mediocre and start working with designers who care as much as you do.
             </p>
 
             {/* Newsletter input */}
             <div className="pt-2">
-              <span className="text-xs font-mono text-neutral-300 block mb-2">
+              <span className="text-xs font-display font-semibold tracking-[-0.02em] text-white block mb-2">
                 Subscribe to our newsletter.
               </span>
               <form onSubmit={handleSubmit} className="flex max-w-md gap-2">
@@ -83,11 +83,11 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@company.com"
                   required
-                  className="flex-1 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 font-mono"
+                  className="flex-1 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-sm text-white placeholder-[#848484] focus:outline-none focus:border-white/30 font-sans"
                 />
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs sm:text-sm font-medium transition-all shrink-0 flex items-center gap-1.5 cursor-pointer"
+                  className="px-5 py-2.5 rounded-full bg-white text-black hover:bg-neutral-200 text-xs sm:text-sm font-display font-semibold tracking-[-0.02em] transition-all shrink-0 flex items-center gap-1.5 cursor-pointer"
                 >
                   {subscribed ? (
                     <>
@@ -106,15 +106,15 @@ export function Footer() {
 
             {/* Email direct copy */}
             <div className="pt-2">
-              <span className="text-xs font-mono text-neutral-500 block mb-1">
+              <span className="text-xs font-display font-medium tracking-[-0.02em] text-[#848484] block mb-1">
                 [Mail to]
               </span>
               <button
                 onClick={copyEmail}
-                className="text-white hover:text-neutral-300 font-mono text-sm sm:text-[15px] flex items-center gap-2 cursor-pointer"
+                className="text-white hover:text-neutral-300 font-sans text-sm sm:text-[15px] font-normal flex items-center gap-2 cursor-pointer tracking-[-0.01em]"
               >
                 <span>contact@trifectatrends.com</span>
-                <span className="text-[11px] text-neutral-400 bg-white/[0.08] px-2 py-0.5 rounded">
+                <span className="text-[11px] font-display font-medium text-[#848484] bg-white/[0.08] px-2 py-0.5 rounded">
                   {copied ? "email copied" : "click to copy"}
                 </span>
               </button>
@@ -123,45 +123,45 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
+            <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
               Studio
             </h4>
-            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
               <li>
-                <Link href="/" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/studio" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/studio" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Studio
                 </Link>
               </li>
               <li>
                 <Link
                   href="/projects"
-                  className="text-neutral-300 hover:text-white transition-colors flex items-center justify-between"
+                  className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em]"
                 >
                   <span>Work</span>
-                  <span className="text-xs font-mono text-neutral-500">[12]</span>
+                  <span className="text-xs font-display font-medium text-[#848484]">[12]</span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/articles"
-                  className="text-neutral-300 hover:text-white transition-colors flex items-center justify-between"
+                  className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em]"
                 >
                   <span>Articles</span>
-                  <span className="text-xs font-mono text-neutral-500">[10]</span>
+                  <span className="text-xs font-display font-medium text-[#848484]">[10]</span>
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/pricing" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/contact" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Contact
                 </Link>
               </li>
@@ -170,32 +170,32 @@ export function Footer() {
 
           {/* Capabilities */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
+            <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
               Capabilities
             </h4>
-            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
               <li>
-                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Brand Identity & Systems
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Web Design & Digital Platforms
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Product Design & UI/UX
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Marketing & Growth Creative
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="text-neutral-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
                   Engineering & Framer Code
                 </Link>
               </li>
@@ -204,16 +204,16 @@ export function Footer() {
 
           {/* Connect Column */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs sm:text-sm uppercase tracking-wider text-white">
+            <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
               Connect
             </h4>
-            <ul className="space-y-3 font-normal text-sm sm:text-[15px]">
+            <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
               <li>
                 <a
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors"
+                  className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]"
                 >
                   Twitter / X
                 </a>
@@ -223,7 +223,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors"
+                  className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]"
                 >
                   LinkedIn
                 </a>
@@ -233,7 +233,7 @@ export function Footer() {
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors"
+                  className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]"
                 >
                   Dribbble
                 </a>
@@ -243,7 +243,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors"
+                  className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]"
                 >
                   Instagram
                 </a>
@@ -258,7 +258,7 @@ export function Footer() {
           <div className="flex items-center gap-8 sm:gap-10 md:gap-14">
             <Link
               href="/terms"
-              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-medium text-white hover:text-white/80 transition-all duration-300"
+              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-display font-medium text-white hover:text-white/80 transition-all duration-300 tracking-[-0.02em]"
             >
               <span className="underline underline-offset-4 decoration-white/40 group-hover:decoration-white transition-colors">
                 Terms of Service
@@ -268,7 +268,7 @@ export function Footer() {
 
             <Link
               href="/privacy"
-              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-medium text-white hover:text-white/80 transition-all duration-300"
+              className="group inline-flex items-center gap-1 text-sm sm:text-base md:text-lg font-display font-medium text-white hover:text-white/80 transition-all duration-300 tracking-[-0.02em]"
             >
               <span className="underline underline-offset-4 decoration-white/40 group-hover:decoration-white transition-colors">
                 Privacy Policy
@@ -320,18 +320,18 @@ export function Footer() {
 
         {/* Giant Editorial Wordmark: TRIFECTA (White) & TRENDS (Soft Gray) */}
         <div className="pt-8 sm:pt-12 pb-12 sm:pb-16 select-none overflow-hidden">
-          <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-extrabold uppercase text-[13.5vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] max-w-full">
+          <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-display font-bold uppercase text-[13.5vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] max-w-full">
             <span className="text-white block whitespace-nowrap">
               TRIFECTA
             </span>
-            <span className="text-[#c2c2c2] block whitespace-nowrap pl-[6vw] sm:pl-[12vw] md:pl-[18vw] lg:pl-[22vw]">
+            <span className="text-[#b8b8b8] block whitespace-nowrap pl-[6vw] sm:pl-[12vw] md:pl-[18vw] lg:pl-[22vw]">
               TRENDS
             </span>
           </div>
         </div>
 
         {/* Bottom copyright row */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 font-mono text-[11px] sm:text-xs">
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[#848484] font-sans text-[11px] sm:text-xs tracking-[-0.01em]">
           <div>
             <span>Creative Technology Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
           </div>
