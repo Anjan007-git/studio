@@ -121,89 +121,92 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
-              Studio
-            </h4>
-            <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
-              <li>
-                <Link href="/" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/studio" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em]"
-                >
-                  <span>Work</span>
-                  <span className="text-xs font-display font-medium text-[#848484]">[12]</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/articles"
-                  className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em]"
-                >
-                  <span>Articles</span>
-                  <span className="text-xs font-display font-medium text-[#848484]">[10]</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          {/* Mobile: 2-Column Side-by-Side Navigation Grid; Desktop/Tablet: Direct Grid Children via md:contents */}
+          <div className="col-span-1 md:contents grid grid-cols-2 gap-6 sm:gap-8">
+            {/* Studio Column */}
+            <div className="lg:col-span-2 space-y-4">
+              <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
+                Studio
+              </h4>
+              <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
+                <li>
+                  <Link href="/" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/studio" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Studio
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/projects"
+                    className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em] pr-2 sm:pr-0"
+                  >
+                    <span>Work</span>
+                    <span className="text-xs font-display font-medium text-[#848484]">[12]</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/articles"
+                    className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em] pr-2 sm:pr-0"
+                  >
+                    <span>Articles</span>
+                    <span className="text-xs font-display font-medium text-[#848484]">[10]</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Capabilities Column */}
+            <div className="lg:col-span-3 space-y-4">
+              <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
+                Capabilities
+              </h4>
+              <ul className="space-y-3 font-normal text-xs sm:text-sm md:text-[15px] font-sans">
+                <li>
+                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Brand Identity & Systems
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Web Design & Digital Platforms
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Product Design & UI/UX
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Marketing & Growth Creative
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Engineering & Framer Code
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Capabilities */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
-              Capabilities
-            </h4>
-            <ul className="space-y-3 font-normal text-sm sm:text-[15px] font-sans">
-              <li>
-                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Brand Identity & Systems
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Web Design & Digital Platforms
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Product Design & UI/UX
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Marketing & Growth Creative
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                  Engineering & Framer Code
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Connect Column */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Connect Column (Desktop / Tablet only — hidden on mobile) */}
+          <div className="hidden md:block lg:col-span-2 space-y-4">
             <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
               Connect
             </h4>
@@ -318,13 +321,13 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Giant Editorial Wordmark: TRIFECTA (White) & TRENDS (Soft Gray) */}
+        {/* Giant Editorial Wordmark: TRIFECTA (White, Left) & TRENDS (Soft Gray, Right on mobile) */}
         <div className="pt-8 sm:pt-12 pb-12 sm:pb-16 select-none overflow-hidden">
-          <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-display font-bold uppercase text-[13.5vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] max-w-full">
-            <span className="text-white block whitespace-nowrap">
+          <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-display font-bold uppercase text-[13vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] w-full max-w-full">
+            <span className="text-white block whitespace-nowrap text-left">
               TRIFECTA
             </span>
-            <span className="text-[#b8b8b8] block whitespace-nowrap pl-[6vw] sm:pl-[12vw] md:pl-[18vw] lg:pl-[22vw]">
+            <span className="text-[#b8b8b8] block whitespace-nowrap text-right sm:text-left sm:pl-[12vw] md:pl-[18vw] lg:pl-[22vw]">
               TRENDS
             </span>
           </div>

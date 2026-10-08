@@ -227,8 +227,32 @@ export default function SmoothScrollSlider({
   useEffect(() => {
     let raf = 0
     let last = 0
+    let isVisible = false
+
+    const container = containerRef.current
+    let observer: IntersectionObserver | null = null
+    if (typeof IntersectionObserver !== "undefined" && container) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          const wasVisible = isVisible
+          isVisible = entries[0]?.isIntersecting ?? false
+          if (isVisible && !wasVisible) {
+            last = performance.now()
+            cancelAnimationFrame(raf)
+            raf = requestAnimationFrame(tick)
+          }
+        },
+        { rootMargin: "150px 0px" }
+      )
+      observer.observe(container)
+    }
 
     const tick = (now: number) => {
+      if (!isVisible) {
+        last = 0
+        return
+      }
+
       raf = requestAnimationFrame(tick)
       const c = frame.current
       const delta = last ? Math.min((now - last) / 1000, 0.1) : 1 / 60
@@ -283,8 +307,10 @@ export default function SmoothScrollSlider({
       }
     }
 
-    raf = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(raf)
+    return () => {
+      cancelAnimationFrame(raf)
+      observer?.disconnect()
+    }
   }, [])
 
   // ─── Wheel handler (disabled in scroll-driven mode) ───────────────────────

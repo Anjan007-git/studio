@@ -42,16 +42,15 @@ export function Process() {
   const outerRef = useRef<HTMLDivElement>(null);
 
   return (
-    // Outer: tall container that creates the scroll budget
-    <div ref={outerRef} style={{ height: "250vh", position: "relative" }}>
-      {/* Inner: pinned while user scrolls through outer */}
+    // Outer: tall container that creates the scroll budget on desktop, natural height on mobile
+    <div ref={outerRef} className="relative lg:h-[250vh] h-auto">
+      {/* Inner: pinned on desktop, natural flow on mobile */}
       <section
         id="process"
-        className="sticky top-0 py-24 sm:py-32 border-t border-white/10 bg-[var(--page-bg)] overflow-hidden"
-        style={{ height: "100vh", overflowY: "hidden" }}
+        className="relative lg:sticky lg:top-0 py-16 sm:py-24 lg:py-32 border-t border-white/10 bg-[var(--page-bg)] overflow-visible lg:overflow-hidden lg:h-screen"
       >
-      {/* Originkit Smooth Scroll Slider — driven by page scroll, zero re-renders */}
-      <div className="w-full h-[480px] mb-16 sm:mb-20">
+      {/* Originkit Smooth Scroll Slider — driven by page scroll on desktop, touch/scroll on mobile */}
+      <div className="w-full h-[320px] sm:h-[400px] lg:h-[480px] mb-12 sm:mb-16 lg:mb-20">
         <SmoothScrollSlider
           slideWidth={340}
           slideHeight={420}

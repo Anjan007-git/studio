@@ -317,24 +317,29 @@ section.bg-\[\#141414\] {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 60px;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.4) 0%,
     transparent 100%
   );
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
   pointer-events: none;
   z-index: 30;
-  mask-image: linear-gradient(to top, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
 }
 
 @media (min-width: 768px) {
   .bottom-depth {
     height: 80px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      transparent 100%
+    );
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
   }
 }
 

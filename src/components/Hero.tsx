@@ -38,10 +38,18 @@ export function Hero() {
   }, []);
 
   useEffect(() => {
-    // Check if arrival sequence dispatches arrival or safety fallback after 5.5s
+    const isMobile =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 || "ontouchstart" in window || navigator.maxTouchPoints > 0);
+
+    if (isMobile) {
+      setArrived(true);
+      return;
+    }
+
     const onArrival = () => setArrived(true);
     window.addEventListener("trifecta-arrival-start", onArrival);
-    const fallbackTimer = setTimeout(() => setArrived(true), 5500);
+    const fallbackTimer = setTimeout(() => setArrived(true), 800);
 
     return () => {
       window.removeEventListener("trifecta-arrival-start", onArrival);
@@ -154,7 +162,7 @@ export function Hero() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-[center_35%] md:object-[center_40%] pointer-events-none"
         />
         {/* Subtle dark overlay preserving metallic details while guaranteeing high text legibility */}

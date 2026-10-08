@@ -19,23 +19,46 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (prefersReducedMotion) return;
 
-    // Detect touch-only devices to avoid hijacking native touch momentum
+    // Detect touch / mobile devices: native touch momentum is already 120Hz/60Hz hardware accelerated.
+    // Hijacking touch scroll with Lenis causes severe stuttering, lag, and touch fights on mobile.
     const isTouchDevice =
       typeof window !== "undefined" &&
       ("ontouchstart" in window ||
         navigator.maxTouchPoints > 0 ||
         window.innerWidth < 768);
 
-    // Configure Lenis: smooth on desktop wheel, but native touch on mobile devices
+    // Use GSAP recommended lag smoothing to prevent stuttering/jumps on frame drops
+    gsap.ticker.lagSmoothing(500, 33);
+
+    if (prefersReducedMotion || isTouchDevice) {
+      // On mobile / touch devices: keep native touch scroll completely untouched
+      const handleNativeScroll = () => {
+        window.dispatchEvent(
+          new CustomEvent("lenis-scroll", {
+            detail: {
+              scroll: window.scrollY,
+              velocity: 0,
+              direction: 1,
+            },
+          })
+        );
+      };
+
+      window.addEventListener("scroll", handleNativeScroll, { passive: true });
+      return () => {
+        window.removeEventListener("scroll", handleNativeScroll);
+      };
+    }
+
+    // Configure Lenis for desktop wheel scrolling only
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      syncTouch: false, // DO NOT hijack native touch scrolling
+      syncTouch: false,
       touchMultiplier: 1.0,
     });
 
@@ -49,7 +72,6 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     };
 
     gsap.ticker.add(updateLenis);
-    gsap.ticker.lagSmoothing(0);
 
     lenis.on(
       "scroll",

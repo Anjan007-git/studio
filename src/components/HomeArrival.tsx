@@ -28,107 +28,91 @@ export function HomeArrival() {
       return;
     }
 
-    // Temporarily lock page scrolling during arrival sequence
-    const previousBodyOverflow = document.body.style.overflow;
-    const previousHtmlOverflow = document.documentElement.style.overflow;
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
+    // If arrival already played in this session, skip immediately
+    if (typeof window !== "undefined" && sessionStorage.getItem("trifecta_arrival_done")) {
+      setPhase("done");
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
+      return;
+    }
+
+    const isMobile =
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.innerWidth < 768);
+
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // On mobile devices, never lock body scroll to prevent touch hanging or freezing
+    let previousBodyOverflow = "";
+    let previousHtmlOverflow = "";
+    if (!isMobile) {
+      previousBodyOverflow = document.body.style.overflow;
+      previousHtmlOverflow = document.documentElement.style.overflow;
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    }
 
     const unlockScroll = () => {
       document.body.style.overflow = previousBodyOverflow || "";
       document.documentElement.style.overflow = previousHtmlOverflow || "";
     };
 
-    // Check for reduced motion preference
-    const prefersReducedMotion =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finishArrival = () => {
+      try {
+        sessionStorage.setItem("trifecta_arrival_done", "1");
+      } catch {}
+      unlockScroll();
+      setPhase("done");
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
+    };
+
+    // If on mobile or reduced motion: ultra-fast non-blocking entry
+    if (isMobile || prefersReducedMotion) {
+      window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
+      const timer = setTimeout(() => {
+        finishArrival();
+      }, isMobile ? 350 : 200);
+
+      return () => {
+        clearTimeout(timer);
+        unlockScroll();
+      };
+    }
+
+    // Dismiss early if user scrolls (wheel), touches, or presses a key
+    const onUserAction = () => {
+      finishArrival();
+    };
+    window.addEventListener("wheel", onUserAction, { passive: true, once: true });
+    window.addEventListener("touchstart", onUserAction, { passive: true, once: true });
+    window.addEventListener("keydown", onUserAction, { once: true });
 
     const ctx = gsap.context(() => {
-      if (prefersReducedMotion) {
-        // Accessibility fallback: direct brand fade without letter stagger
-        const tlReduced = gsap.timeline({
-          onComplete: () => {
-            unlockScroll();
-            setPhase("done");
-            window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
-          },
-        });
-
-        tlReduced.set(letterRefs.current, {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          filter: "none",
-        });
-        tlReduced.set(
-          [line1Ref.current, line2Ref.current, badgeRef.current, taglineRef.current],
-          {
-            opacity: 1,
-            filter: "none",
-            letterSpacing: "-0.035em",
-          }
-        );
-
-        tlReduced.fromTo(
-          lockupRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.45, ease: "power2.out" },
-          0.2
-        );
-
-        tlReduced.call(
-          () => {
-            window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
-          },
-          undefined,
-          0.8
-        );
-
-        tlReduced.to(
-          lockupRef.current,
-          { opacity: 0, duration: 0.35, ease: "power2.inOut" },
-          1.5
-        );
-        tlReduced.to(
-          containerRef.current,
-          { opacity: 0, duration: 0.4, ease: "power2.out" },
-          1.8
-        );
-
-        return;
-      }
-
-      // =====================================================================
-      // MASTER GSAP TIMELINE — EDITORIAL ARRIVAL FOR TRIFECTA TRENDS
-      // =====================================================================
       const masterTl = gsap.timeline({
         onComplete: () => {
-          unlockScroll();
-          setPhase("done");
-          window.dispatchEvent(new CustomEvent("trifecta-arrival-complete"));
+          finishArrival();
         },
       });
 
-      // Prepare hero underneath while covered by pure black
+      // Prepare hero immediately
       masterTl.call(
         () => {
           window.dispatchEvent(new CustomEvent("trifecta-arrival-start"));
         },
         undefined,
-        0.8
+        0.15
       );
 
-      // PHASE 3 — LETTER-BY-LETTER PROGRESSIVE BUILD
-      // Line 1: TRIFECTA (8 letters)
-      // Line 2: TRENDS (6 letters)
+      // Snappy progressive build
       const TRIFECTA_COUNT = 8;
       const TRENDS_COUNT = 6;
-      const START_TIME = 0.75;
-      const STAGGER_STEP = 0.115; // smooth editorial pacing
+      const START_TIME = 0.2;
+      const STAGGER_STEP = 0.04;
 
-      // Animate each letter of TRIFECTA
       for (let i = 0; i < TRIFECTA_COUNT; i++) {
         const letterEl = letterRefs.current[i];
         if (!letterEl) continue;
@@ -142,17 +126,15 @@ export function HomeArrival() {
             y: 0,
             scale: 1,
             filter: "blur(0px)",
-            duration: 0.38,
+            duration: 0.25,
             ease: "power2.out",
           },
           letterTime
         );
       }
 
-      // Short breath between lines (~0.12s)
-      const LINE2_START = START_TIME + TRIFECTA_COUNT * STAGGER_STEP + 0.12;
+      const LINE2_START = START_TIME + TRIFECTA_COUNT * STAGGER_STEP + 0.05;
 
-      // Animate each letter of TRENDS
       for (let i = 0; i < TRENDS_COUNT; i++) {
         const letterEl = letterRefs.current[TRIFECTA_COUNT + i];
         if (!letterEl) continue;
@@ -166,101 +148,89 @@ export function HomeArrival() {
             y: 0,
             scale: 1,
             filter: "blur(0px)",
-            duration: 0.38,
+            duration: 0.25,
             ease: "power2.out",
           },
           letterTime
         );
       }
 
-      // PHASE 4 — COMPLETE BRAND RESOLVES
-      // Settle typography spacing smoothly into crisp final kerning
-      const RESOLVE_TIME = LINE2_START + TRENDS_COUNT * STAGGER_STEP + 0.05;
+      const RESOLVE_TIME = LINE2_START + TRENDS_COUNT * STAGGER_STEP + 0.02;
 
       masterTl.to(
         [line1Ref.current, line2Ref.current],
         {
           letterSpacing: "-0.04em",
-          duration: 0.45,
+          duration: 0.25,
           ease: "power2.out",
         },
         RESOLVE_TIME
       );
 
-      // Copyright badge appears
       masterTl.to(
         badgeRef.current,
         {
           opacity: 0.85,
           scale: 1,
           y: 0,
-          duration: 0.35,
+          duration: 0.2,
           ease: "power2.out",
         },
-        RESOLVE_TIME + 0.1
+        RESOLVE_TIME + 0.05
       );
 
-      // Tagline reveals smoothly underneath
       masterTl.to(
         taglineRef.current,
         {
           opacity: 1,
           y: 0,
-          duration: 0.5,
+          duration: 0.25,
           ease: "power2.out",
         },
-        RESOLVE_TIME + 0.25
+        RESOLVE_TIME + 0.1
       );
 
-      // PHASE 5, 6, 7 — CENTERED BRAND LOCKUP SHORT HOLD
-      // Holds minimal, luxurious, and quiet against pure black negative space
-      const HOLD_END = RESOLVE_TIME + 1.5;
+      // Brief hold (~0.35s)
+      const HOLD_END = RESOLVE_TIME + 0.45;
 
-      // PHASE 8 — TRANSITION BACK TO BLACK
-      // Centered lockup smoothly recedes into pure black
       masterTl.to(
         lockupRef.current,
         {
           opacity: 0,
           scale: 0.98,
-          duration: 0.32,
+          duration: 0.22,
           ease: "power2.inOut",
         },
         HOLD_END
       );
 
-      // Fade out solid black backing to expose the parting shutters
       masterTl.to(
         solidBlackRef.current,
         {
           opacity: 0,
-          duration: 0.08,
+          duration: 0.06,
         },
-        HOLD_END + 0.28
+        HOLD_END + 0.15
       );
 
-      // Brief pure dark transition hold (~0.18s)
-      const REVEAL_START = HOLD_END + 0.42;
+      const REVEAL_START = HOLD_END + 0.2;
 
-      // Allow pointer events to fall through to website as reveal starts
       masterTl.call(
         () => {
           if (containerRef.current) {
             containerRef.current.style.pointerEvents = "none";
           }
+          unlockScroll();
         },
         undefined,
         REVEAL_START
       );
 
-      // PHASE 9 — CENTER-OUT HOMEPAGE REVEAL
-      // The screen opens outward from the center like a cinematic shutter.
-      // Left shutter slides left (-100%), Right shutter slides right (+100%).
       masterTl.to(
         leftShutterRef.current,
         {
           xPercent: -100,
-          duration: 0.65,
+          duration: 0.45,
           ease: "power4.out",
         },
         REVEAL_START
@@ -270,7 +240,7 @@ export function HomeArrival() {
         rightShutterRef.current,
         {
           xPercent: 100,
-          duration: 0.65,
+          duration: 0.45,
           ease: "power4.out",
         },
         REVEAL_START
@@ -278,6 +248,9 @@ export function HomeArrival() {
     }, containerRef);
 
     return () => {
+      window.removeEventListener("wheel", onUserAction);
+      window.removeEventListener("touchstart", onUserAction);
+      window.removeEventListener("keydown", onUserAction);
       ctx.revert();
       unlockScroll();
     };

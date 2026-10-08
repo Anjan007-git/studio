@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 const MAX_DPR = 2;
 const NAME = "RibbonGlow";
 
-// 84 shader layers stacking folded ribbons of light
-const LAYERS = 84;
+// 40 shader layers stacking folded ribbons of light with smooth 60fps performance
+const LAYERS = 40;
 const TWIST = 1.15; // radians of swirl at full hover
 const DRAG = 0.16; // how far pointer motion drags the plane
 
@@ -374,8 +374,30 @@ export function RibbonGlow({
     let raf = 0;
     let last = -1;
     let clock = 0;
+    let isVisible = false;
+
+    // Cache container dimensions with ResizeObserver to prevent layout thrashing inside RAF
+    let cw = root.clientWidth || 360;
+    let ch = root.clientHeight || 400;
+    const ro = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (entry) {
+        cw = entry.contentRect.width || cw;
+        ch = entry.contentRect.height || ch;
+      }
+    });
+    ro.observe(root);
+
+    const isMobile =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 || "ontouchstart" in window || navigator.maxTouchPoints > 0);
 
     const render = (now: number) => {
+      if (!isVisible) {
+        last = -1;
+        return;
+      }
+
       raf = requestAnimationFrame(render);
       const dt = last < 0 ? 0 : clampN((now - last) / 1000, 0, 0.05);
       last = now;
@@ -383,12 +405,8 @@ export function RibbonGlow({
       clock = (clock + dt * v.speed) % 3600;
 
       // Cap DPR for optimal mobile and desktop 60fps performance
-      const isMobile = (window.innerWidth || 1024) < 768;
-      const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1.5 : MAX_DPR);
+      const dpr = isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, MAX_DPR);
 
-      // Use actual responsive container dimensions without forced fixed constraints
-      const cw = root.clientWidth || canvas.clientWidth || 360;
-      const ch = root.clientHeight || canvas.clientHeight || 400;
       const bw = Math.max(1, Math.round(cw * dpr));
       const bh = Math.max(1, Math.round(ch * dpr));
 
@@ -453,9 +471,25 @@ export function RibbonGlow({
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     };
 
-    raf = requestAnimationFrame(render);
+    // Only run animation when footer is actually visible in the viewport
+    const io = new IntersectionObserver(
+      (entries) => {
+        const wasVisible = isVisible;
+        isVisible = entries[0]?.isIntersecting ?? false;
+        if (isVisible && !wasVisible) {
+          last = -1;
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(render);
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    io.observe(root);
+
     return () => {
       cancelAnimationFrame(raf);
+      io.disconnect();
+      ro.disconnect();
       pointer.dispose();
       target.dispose();
       gl.deleteVertexArray(vao);
