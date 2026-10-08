@@ -33,7 +33,7 @@ export function Pricing() {
         {/* Pricing Tiers 3-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {/* Card 1: Growth */}
-          <div className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300 shadow-xl">
+          <div className="p-7 sm:p-8 rounded-3xl bg-[#0a0a0a] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300 shadow-xl">
             <div>
               <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.04em] mb-2">Growth</h3>
               <p className="text-xs text-[#b8b8b8] mb-6 font-sans font-normal tracking-[-0.01em]">
@@ -126,7 +126,7 @@ export function Pricing() {
           </div>
 
           {/* Card 2: Scale (Popular) */}
-          <div className="p-7 sm:p-8 rounded-3xl bg-[#1e1e1e] border-2 border-white/30 relative flex flex-col justify-between hover:border-white/50 transition-all duration-300 shadow-2xl">
+          <div className="p-7 sm:p-8 rounded-3xl bg-[#0e0e0e] border-2 border-white/30 relative flex flex-col justify-between hover:border-white/50 transition-all duration-300 shadow-2xl">
             <div className="absolute top-7 right-7 px-3 py-1 rounded-full bg-white text-black text-[11px] font-display font-semibold tracking-[-0.02em] shadow-sm">
               Popular
             </div>
@@ -227,7 +227,7 @@ export function Pricing() {
           </div>
 
           {/* Card 3: Custom Project */}
-          <div className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300 shadow-xl">
+          <div className="p-7 sm:p-8 rounded-3xl bg-[#0a0a0a] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300 shadow-xl">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.04em]">Custom Project</h3>

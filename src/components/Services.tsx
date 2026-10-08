@@ -160,7 +160,7 @@ export function Services() {
                 className={`px-4 py-2 rounded-full text-xs font-display transition-all ${
                   activeTab === idx
                     ? "bg-white text-black font-semibold shadow-md"
-                    : "bg-[#1c1c1c] text-[#b8b8b8] border border-white/10 hover:text-white font-medium"
+                    : "bg-[#0a0a0a] text-[#b8b8b8] border border-white/10 hover:text-white font-medium"
                 }`}
               >
                 {service.title}

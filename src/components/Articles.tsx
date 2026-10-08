@@ -120,7 +120,7 @@ export function Articles() {
             <Link
               key={idx}
               href={`/articles/${art.slug}`}
-              className="article-card group flex flex-col rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
+              className="article-card group flex flex-col rounded-3xl bg-[#0a0a0a] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
             >
               <div>
                 {/* Image Thumbnail with zoom */}

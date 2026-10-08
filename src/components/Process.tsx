@@ -123,8 +123,8 @@ export function Process() {
                     onMouseEnter={() => setActiveStep(idx)}
                     className={`cursor-pointer rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden flex flex-col justify-between p-6 sm:p-7 select-none ${
                       isActive
-                        ? "flex-[3.5] bg-[#1a1a1a] border border-white/20 shadow-2xl"
-                        : "flex-1 bg-[#161616] border border-white/5 hover:border-white/10"
+                        ? "flex-[3.5] bg-[#0e0e0e] border border-white/20 shadow-2xl"
+                        : "flex-1 bg-[#080808] border border-white/5 hover:border-white/10"
                     }`}
                   >
                     {/* Top Number */}
@@ -164,7 +164,7 @@ export function Process() {
                   <div
                     key={item.step}
                     onClick={() => setActiveStep(isActive ? -1 : idx)}
-                    className="rounded-2xl bg-[#1a1a1a] border border-white/10 p-5 cursor-pointer transition-all duration-300"
+                    className="rounded-2xl bg-[#0a0a0a] border border-white/10 p-5 cursor-pointer transition-all duration-300"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">

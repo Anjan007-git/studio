@@ -147,17 +147,17 @@
   --page-bg: #000000;
   --page-bg-alt: #050505;
   --surface-1: #0a0a0a;
-  --surface-2: #111111;
-  --surface-3: #161616;
+  --surface-2: #0e0e0e;
+  --surface-3: #121212;
   --text-primary: #ffffff;
   --text-secondary: #b8b8b8;
   --text-muted: #848484;
   --text-dim: #545454;
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.12);
-  --border-strong: rgba(255, 255, 255, 0.20);
-  --border-card: #202020;
-  --rail-color: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-card: rgba(255, 255, 255, 0.10);
+  --rail-color: rgba(255, 255, 255, 0.12);
 
   /* Mugen Studio Font Families */
   --font-display: "Inter Display", var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
@@ -182,37 +182,52 @@
 }
 
 .dark {
-  --background: oklch(0 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #0e0e0e;
+  --secondary-foreground: #b8b8b8;
+  --muted: #0e0e0e;
+  --muted-foreground: #848484;
+  --accent: #0e0e0e;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.10);
+  --ring: rgba(255, 255, 255, 0.20);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #0e0e0e;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: rgba(255, 255, 255, 0.20);
+}
+
+/* Centralized Deep Black Dark Theme Mappings (MUGEN exact depth) */
+.bg-\[\#1c1c1c\],
+.bg-\[\#1c1c1c\]\/90 {
+  background-color: #0a0a0a !important;
+}
+.bg-\[\#181818\] {
+  background-color: #080808 !important;
+}
+.bg-\[\#1e1e1e\] {
+  background-color: #0e0e0e !important;
+}
+.bg-\[\#1a1a1a\] {
+  background-color: #0c0c0c !important;
 }
 
 @layer base {

@@ -61,7 +61,7 @@ export function Faq() {
             </p>
 
             {/* Studio Advisory Support Box */}
-            <div className="p-7 rounded-3xl bg-[#1c1c1c] border border-white/10 shadow-xl">
+            <div className="p-7 rounded-3xl bg-[#0a0a0a] border border-white/10 shadow-xl">
               <div className="flex items-center gap-3.5 mb-3">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
                   <Image
@@ -101,8 +101,8 @@ export function Faq() {
                   key={idx}
                   className={`rounded-2xl border transition-all duration-300 overflow-hidden shadow-lg ${
                     isOpen
-                      ? "bg-[#1c1c1c] border-white/20"
-                      : "bg-[#181818] border-white/10 hover:border-white/20"
+                      ? "bg-[#0e0e0e] border-white/20"
+                      : "bg-[#0a0a0a] border-white/10 hover:border-white/20"
                   }`}
                 >
                   <button

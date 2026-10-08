@@ -149,7 +149,7 @@ export function Testimonials() {
         </div>
 
         {/* MUGEN Signature Spotlight Testimonial Card with Prev/Next Controls */}
-        <div className="mb-14 rounded-3xl bg-[#1c1c1c] border border-white/10 p-6 sm:p-10 md:p-12 shadow-2xl relative">
+        <div className="mb-14 rounded-3xl bg-[#0a0a0a] border border-white/10 p-6 sm:p-10 md:p-12 shadow-2xl relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column: Avatar Photo */}
             <div className="lg:col-span-4 flex justify-center lg:justify-start">
@@ -209,7 +209,7 @@ export function Testimonials() {
 
         {/* 3 Metric Highlights Row matching MUGEN */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 pt-6">
-          <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
+          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               $12M+
             </span>
@@ -218,7 +218,7 @@ export function Testimonials() {
             </span>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
+          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               4.8x
             </span>
@@ -227,7 +227,7 @@ export function Testimonials() {
             </span>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#181818] border border-white/5">
+          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
               94%
             </span>
@@ -242,7 +242,7 @@ export function Testimonials() {
           {reviewCards.map((item, idx) => (
             <div
               key={idx}
-              className="p-7 sm:p-8 rounded-3xl bg-[#1c1c1c] border border-white/10 flex flex-col justify-between hover:border-white/25 transition-all duration-300 shadow-xl group"
+              className="p-7 sm:p-8 rounded-3xl bg-[#0a0a0a] border border-white/10 flex flex-col justify-between hover:border-white/25 transition-all duration-300 shadow-xl group"
             >
               <div>
                 <div className="flex items-center justify-between mb-5">

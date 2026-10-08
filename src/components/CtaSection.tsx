@@ -23,7 +23,7 @@ export function CtaSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-neutral-700/15 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-        <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-gradient-to-b from-[#1c1c1c] to-[#111111] border border-white/15 text-center relative shadow-2xl">
+        <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-gradient-to-b from-[#0e0e0e] to-[#070707] border border-white/10 text-center relative shadow-2xl">
           {/* Top Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] mb-8">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />

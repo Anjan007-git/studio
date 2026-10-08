@@ -348,7 +348,7 @@ export function Hero() {
                 />
               </div>
               {/* "You?" dark circle */}
-              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#1c1c1c] flex items-center justify-center text-[10px] font-semibold text-white tracking-[-0.01em] font-display">
+              <div className="w-9 h-9 rounded-full ring-2 ring-black bg-[#0e0e0e] border border-white/10 flex items-center justify-center text-[10px] font-semibold text-white tracking-[-0.01em] font-display">
                 You?
               </div>
             </div>
