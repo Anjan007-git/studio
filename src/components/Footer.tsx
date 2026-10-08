@@ -220,7 +220,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/company/trifectatrends"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]"
@@ -307,7 +307,7 @@ export function Footer() {
               <DribbbleIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/company/trifectatrends"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
