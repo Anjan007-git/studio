@@ -119,27 +119,51 @@ export function Projects() {
               <Link
                 key={study.title}
                 href={study.href}
-                className="project-card group block select-none"
+                className="project-card group block select-none rounded-none border border-white/10 bg-[#0a0a0a] overflow-hidden hover:border-white/25 transition-all duration-500"
               >
-                {/* Image Frame with Corner Plus and Logo Overlay */}
-                <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 mb-4 group-hover:border-white/20 transition-colors duration-500">
+                {/* Image Frame with Corner Plus, Logo Overlay, and Bottom Blur/Depth */}
+                <div className="relative aspect-square sm:aspect-[4/3] lg:aspect-[4/3] w-full rounded-none overflow-hidden bg-neutral-950">
                   <Image
                     src={study.image}
                     alt={study.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
 
+                  {/* Cinematic Bottom Blur & Depth Layer (Desktop, Tablet, Mobile) */}
+                  {/* Layer 1: Duplicated blurred image layer masked smoothly to the lower portion */}
+                  <div
+                    className="absolute inset-0 pointer-events-none overflow-hidden"
+                    style={{
+                      maskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                      WebkitMaskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                    }}
+                  >
+                    <Image
+                      src={study.image}
+                      alt=""
+                      fill
+                      aria-hidden="true"
+                      className="object-cover blur-xl scale-110"
+                    />
+                  </div>
+
+                  {/* Layer 2: Deep smooth dark transition to black background */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none bg-gradient-to-t from-black via-black/50 to-transparent" />
+
                   {/* Top-Left Number Badge */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/60 px-2.5 py-1 border border-white/15 tracking-[-0.02em]">
                       {study.num}
                     </span>
                   </div>
 
                   {/* Centered Client Logo Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-75 group-hover:opacity-95 transition-opacity duration-300">
-                    <div className="relative w-28 h-10 filter invert brightness-200 drop-shadow-lg">
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="relative w-28 sm:w-32 h-10 filter invert brightness-200 drop-shadow-lg">
                       <Image
                         src={study.logo}
                         alt={`${study.title} logo`}
@@ -150,25 +174,27 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
+                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
                 </div>
 
                 {/* Title & Metadata Below Image */}
-                <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
-                    {study.title}
-                  </h3>
-                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
-                    {study.year}
-                  </span>
+                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#0e0e0e]">
+                  <div className="flex items-baseline justify-between">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white tracking-[-0.03em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
+                      {study.title}
+                    </h3>
+                    <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
+                      {study.year}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
+                    {study.category}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
-                  {study.category}
-                </p>
               </Link>
             ))}
           </div>
@@ -179,23 +205,45 @@ export function Projects() {
             <div className="lg:col-span-5">
               <Link
                 href={bottomProjects[0].href}
-                className="project-card group block select-none"
+                className="project-card group block select-none rounded-none border border-white/10 bg-[#0a0a0a] overflow-hidden hover:border-white/25 transition-all duration-500"
               >
-                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 mb-4 group-hover:border-white/20 transition-colors duration-500">
+                <div className="relative aspect-square sm:aspect-[4/3] w-full rounded-none overflow-hidden bg-neutral-950">
                   <Image
                     src={bottomProjects[0].image}
                     alt={bottomProjects[0].title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   />
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
+
+                  {/* Cinematic Bottom Blur & Depth Layer */}
+                  <div
+                    className="absolute inset-0 pointer-events-none overflow-hidden"
+                    style={{
+                      maskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                      WebkitMaskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                    }}
+                  >
+                    <Image
+                      src={bottomProjects[0].image}
+                      alt=""
+                      fill
+                      aria-hidden="true"
+                      className="object-cover blur-xl scale-110"
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/60 px-2.5 py-1 border border-white/15 tracking-[-0.02em]">
                       {bottomProjects[0].num}
                     </span>
                   </div>
 
                   {/* Centered Client Logo */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-75 group-hover:opacity-95 transition-opacity duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="relative w-32 h-10 filter invert brightness-200 drop-shadow-lg">
                       <Image
                         src={bottomProjects[0].logo}
@@ -207,24 +255,26 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
+                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
-                    {bottomProjects[0].title}
-                  </h3>
-                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
-                    {bottomProjects[0].year}
-                  </span>
+                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#0e0e0e]">
+                  <div className="flex items-baseline justify-between">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white tracking-[-0.03em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
+                      {bottomProjects[0].title}
+                    </h3>
+                    <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
+                      {bottomProjects[0].year}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
+                    {bottomProjects[0].category}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
-                  {bottomProjects[0].category}
-                </p>
               </Link>
             </div>
 
@@ -232,23 +282,45 @@ export function Projects() {
             <div className="lg:col-span-7">
               <Link
                 href={bottomProjects[1].href}
-                className="project-card group block select-none"
+                className="project-card group block select-none rounded-none border border-white/10 bg-[#0a0a0a] overflow-hidden hover:border-white/25 transition-all duration-500"
               >
-                <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 mb-4 group-hover:border-white/20 transition-colors duration-500">
+                <div className="relative aspect-square sm:aspect-[16/10] w-full rounded-none overflow-hidden bg-neutral-950">
                   <Image
                     src={bottomProjects[1].image}
                     alt={bottomProjects[1].title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 60vw"
                   />
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/50 px-2.5 py-1 rounded-full border border-white/10 tracking-[-0.02em]">
+
+                  {/* Cinematic Bottom Blur & Depth Layer */}
+                  <div
+                    className="absolute inset-0 pointer-events-none overflow-hidden"
+                    style={{
+                      maskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                      WebkitMaskImage:
+                        "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                    }}
+                  >
+                    <Image
+                      src={bottomProjects[1].image}
+                      alt=""
+                      fill
+                      aria-hidden="true"
+                      className="object-cover blur-xl scale-110"
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="text-xs font-display font-medium text-white/90 backdrop-blur-md bg-black/60 px-2.5 py-1 border border-white/15 tracking-[-0.02em]">
                       {bottomProjects[1].num}
                     </span>
                   </div>
 
                   {/* Centered Client Logo */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 opacity-75 group-hover:opacity-95 transition-opacity duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="relative w-36 h-10 filter invert brightness-200 drop-shadow-lg">
                       <Image
                         src={bottomProjects[1].logo}
@@ -260,24 +332,26 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
+                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
                       +
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-baseline justify-between pt-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-[-0.04em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
-                    {bottomProjects[1].title}
-                  </h3>
-                  <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
-                    {bottomProjects[1].year}
-                  </span>
+                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#0e0e0e]">
+                  <div className="flex items-baseline justify-between">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white tracking-[-0.03em] group-hover:text-[#b8b8b8] transition-colors font-display leading-[1.2]">
+                      {bottomProjects[1].title}
+                    </h3>
+                    <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
+                      {bottomProjects[1].year}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
+                    {bottomProjects[1].category}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#b8b8b8] font-normal font-sans mt-1 tracking-[-0.02em]">
-                  {bottomProjects[1].category}
-                </p>
               </Link>
             </div>
           </div>

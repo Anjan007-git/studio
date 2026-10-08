@@ -157,7 +157,7 @@ export function Approach() {
       id="approach"
       className="relative bg-[var(--page-bg)] border-t border-white/[0.08] overflow-hidden pt-20 sm:pt-28 md:pt-36 lg:pt-40 pb-24 sm:pb-32 md:pb-40"
     >
-      <div className="w-full max-w-[var(--content-max)] mx-auto px-4 sm:px-8 md:px-14 lg:px-16">
+      <div className="w-full max-w-[var(--content-max)] mx-auto px-6 sm:px-8 md:px-14 lg:px-16">
         {/* ============================================================ */}
         {/* MUGEN EXACT EDITORIAL STATEMENT WITH FLOATED SECTION LABEL   */}
         {/* ============================================================ */}
@@ -192,13 +192,70 @@ export function Approach() {
         </div>
 
         {/* ============================================================ */}
-        {/* STUDIO PHILOSOPHY CARD & DETAILED STORY (COHERENT DEEP THEME) */}
+        {/* ============================================================ */}
+        {/* STUDIO PHILOSOPHY / FOUNDER CARD & DETAILED STORY            */}
         {/* ============================================================ */}
         <div className="mt-28 sm:mt-36 md:mt-44 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Dedicated Studio Philosophy Portrait Card */}
+          {/* Left Column: Dedicated Studio Philosophy / Founder Portrait Card */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
-            <div ref={cardRef} className="w-full max-w-[310px] sm:max-w-[340px] mx-auto lg:mx-0">
-              <div className="w-full rounded-3xl bg-[#0e0e0e] border border-white/[0.08] overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500">
+            <div ref={cardRef} className="w-full max-w-[340px] sm:max-w-[340px] mx-auto lg:mx-0">
+              {/* MOBILE ONLY: Sharp rectangular editorial Founder card (Image 1 reference) */}
+              <div className="block sm:hidden w-full rounded-none bg-[#0a0a0a] border border-white/10 overflow-hidden shadow-2xl">
+                {/* Full-width sharp image frame */}
+                <div className="relative aspect-[3/4] w-full rounded-none overflow-hidden bg-neutral-950">
+                  <Image
+                    src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
+                    alt="Alex West — Founder & Creative Director"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 100vw, 340px"
+                  />
+
+                  {/* Subtle lower depth gradient on image */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+
+                  {/* Interactive expanded profile detail overlay */}
+                  {copied && (
+                    <div className="absolute top-3 left-3 right-3 z-30 py-1.5 px-3 bg-white text-black text-center text-[11px] font-display font-medium shadow-lg animate-in fade-in duration-200">
+                      Email copied: contact@trifectatrends.com
+                    </div>
+                  )}
+
+                  {/* MUGEN Signature Circular Plus Button in Bottom-Right Corner */}
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    aria-label="Copy founder email / connect"
+                    className="absolute bottom-4 right-4 z-20 w-8 h-8 rounded-full bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-black/90 active:scale-90 transition-all duration-200 cursor-pointer"
+                  >
+                    <span className="text-base font-light leading-none select-none font-display">
+                      +
+                    </span>
+                  </button>
+                </div>
+
+                {/* Founder Info Section directly underneath with clean dividing border */}
+                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#0e0e0e] flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white font-display tracking-[-0.03em] leading-tight">
+                      Alex West
+                    </h3>
+                    <p className="text-xs font-display text-[#848484] mt-0.5 tracking-[-0.02em]">
+                      Founder &amp; Creative Director
+                    </p>
+                  </div>
+                  <Link
+                    href="/studio"
+                    className="text-[#848484] hover:text-white transition-colors p-1"
+                    aria-label="View Studio Profile"
+                  >
+                    <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* DESKTOP / TABLET (sm: and above): Retain rich philosophy card */}
+              <div className="hidden sm:flex w-full rounded-3xl bg-[#0e0e0e] border border-white/[0.08] overflow-hidden shadow-2xl p-4 sm:p-5 flex-col justify-between group hover:border-white/20 transition-all duration-500">
                 <div>
                   {/* Email Tag */}
                   <div className="flex items-center justify-between mb-4">
@@ -226,12 +283,16 @@ export function Approach() {
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
 
-                    {/* MUGEN Signature Circular Plus Badge in Bottom-Right Corner */}
-                    <div className="absolute bottom-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/80 group-hover:scale-110 transition-all duration-300">
+                    {/* MUGEN Signature Circular Plus Badge in Bottom-Right Corner linking to /studio */}
+                    <Link
+                      href="/studio"
+                      aria-label="View Studio Profile"
+                      className="absolute bottom-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/80 group-hover:scale-110 transition-all duration-300 cursor-pointer"
+                    >
                       <span className="text-base font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90">
                         +
                       </span>
-                    </div>
+                    </Link>
                   </div>
 
                   {/* Philosophy Statement */}

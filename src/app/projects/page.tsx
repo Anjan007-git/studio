@@ -112,34 +112,53 @@ export default function ProjectsPage() {
                   <Link
                     key={study.slug}
                     href={`/projects/${study.slug}`}
-                    className="group rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 flex flex-col justify-between"
+                    className="group rounded-none bg-[#0a0a0a] border border-white/10 overflow-hidden hover:border-white/25 transition-all duration-500 flex flex-col justify-between"
                   >
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-950 rounded-none">
                       <Image
                         src={study.coverImage}
                         alt={study.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
+
+                      {/* Cinematic Bottom Blur & Depth Layer */}
+                      <div
+                        className="absolute inset-0 pointer-events-none overflow-hidden"
+                        style={{
+                          maskImage:
+                            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                          WebkitMaskImage:
+                            "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0) 42%)",
+                        }}
+                      >
+                        <Image
+                          src={study.coverImage}
+                          alt=""
+                          fill
+                          aria-hidden="true"
+                          className="object-cover blur-xl scale-110"
+                        />
+                      </div>
+                      <div className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none bg-gradient-to-t from-black via-black/50 to-transparent" />
 
                       {/* Top left number pill */}
-                      <div className="absolute top-4 left-4">
-                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
+                      <div className="absolute top-4 left-4 z-20">
+                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 border border-white/15">
                           {study.number}
                         </span>
                       </div>
 
                       {/* Top right year */}
-                      <div className="absolute top-4 right-4">
-                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
+                      <div className="absolute top-4 right-4 z-20">
+                        <span className="text-xs font-display font-medium text-white/90 bg-black/60 backdrop-blur-md px-2.5 py-1 border border-white/15">
                           {study.year}
                         </span>
                       </div>
 
                       {/* Centered Client Logo watermark */}
                       {study.logo && (
-                        <div className="absolute inset-0 flex items-center justify-center opacity-85 group-hover:opacity-100 transition-opacity">
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 opacity-80 group-hover:opacity-100 transition-opacity">
                           <div className="relative w-32 h-10 flex items-center justify-center">
                             <Image
                               src={study.logo}
@@ -152,9 +171,11 @@ export default function ProjectsPage() {
                         </div>
                       )}
 
-                      {/* Hover Arrow in Top Right */}
-                      <div className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-                        <ArrowUpRight className="w-4 h-4" />
+                      {/* Hover Arrow in Bottom Right */}
+                      <div className="absolute bottom-4 right-4 z-20 w-8 h-8 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/90 group-hover:scale-110 transition-all duration-300">
+                        <span className="text-base font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                          +
+                        </span>
                       </div>
                     </div>
 
