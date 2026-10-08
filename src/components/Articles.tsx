@@ -83,7 +83,7 @@ export function Articles() {
     <section
       ref={sectionRef}
       id="articles"
-      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}

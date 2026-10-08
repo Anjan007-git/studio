@@ -54,7 +54,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
   const relatedArticles = allArticles.filter((a) => a.slug !== slug).slice(0, 2);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
 
       <main className="pt-28 sm:pt-36">
@@ -231,7 +231,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
         </section>
 
         {/* More Insights / Related Articles */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="flex items-center justify-between mb-12">
               <div>

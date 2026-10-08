@@ -42,7 +42,7 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+      className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">

@@ -17,7 +17,7 @@ export function CtaSection() {
   return (
     <section
       id="cta"
-      className="py-24 sm:py-32 border-t border-white/10 relative overflow-hidden bg-[#141414]"
+      className="py-24 sm:py-32 border-t border-white/10 relative overflow-hidden bg-[var(--page-bg)]"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-neutral-700/15 rounded-full blur-3xl pointer-events-none -z-10" />

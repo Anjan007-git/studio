@@ -106,7 +106,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="border-t border-white/10 relative bg-[#141414] overflow-hidden"
+      className="border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
       {/* Full-bleed client logo marquee */}
       <div className="py-7 border-b border-white/10 overflow-hidden">

@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const otherProjects = allProjects.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
 
       <main className="pt-28 sm:pt-36">
@@ -296,7 +296,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* By the Numbers (Stats Grid) */}
         {project.stats && project.stats.length > 0 && (
-          <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+          <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
             <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
               <div className="mb-12">
                 <span className="section-label block mb-2">
@@ -333,7 +333,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Testimonial Quote */}
         {project.testimonial && (
-          <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+          <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
             <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
               <div className="p-10 sm:p-16 rounded-3xl bg-[#1c1c1c] border border-white/10 relative overflow-hidden">
                 <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-8">
@@ -422,7 +422,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </section>
 
         {/* Latest Projects Grid */}
-        <section className="py-16 sm:py-24 border-t border-white/10 bg-[#141414]">
+        <section className="py-16 sm:py-24 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-10">
               <span className="section-label block mb-2">

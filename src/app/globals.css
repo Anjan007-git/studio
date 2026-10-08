@@ -306,6 +306,12 @@
 /*  BOTTOM DEPTH / BLUR TREATMENT                                     */
 /* ================================================================== */
 
+/* Centralized MUGEN deep black mapping for legacy/section backgrounds */
+.bg-\[\#141414\],
+section.bg-\[\#141414\] {
+  background-color: var(--page-bg) !important;
+}
+
 .bottom-depth {
   position: fixed;
   bottom: 0;
@@ -314,8 +320,8 @@
   height: 120px;
   background: linear-gradient(
     to top,
-    rgba(10, 10, 10, 0.6) 0%,
-    rgba(10, 10, 10, 0.3) 40%,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
     transparent 100%
   );
   backdrop-filter: blur(1px);

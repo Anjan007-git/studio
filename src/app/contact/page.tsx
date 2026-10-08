@@ -25,7 +25,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
 
       <main className="pt-32 sm:pt-40">

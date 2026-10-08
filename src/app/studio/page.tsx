@@ -165,7 +165,7 @@ export default function StudioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
 
       <main className="pt-28 sm:pt-36">
@@ -185,7 +185,7 @@ export default function StudioPage() {
         </section>
 
         {/* [Who we are] Section with 2 Columns and Bento Stats */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-8">
               <span className="section-label block">
@@ -279,7 +279,7 @@ export default function StudioPage() {
         </section>
 
         {/* Our Studio Section: Studio Spaces & Workplace Photo Grid */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-14">
               <span className="section-label block mb-3">
@@ -343,7 +343,7 @@ export default function StudioPage() {
         </section>
 
         {/* Meet the Team Section */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-14">
               <span className="section-label block mb-3">
@@ -409,7 +409,7 @@ export default function StudioPage() {
         </section>
 
         {/* Favorite Clients Section */}
-        <section className="py-20 sm:py-24 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-24 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="mb-12">
               <span className="section-label block mb-2">
@@ -441,7 +441,7 @@ export default function StudioPage() {
         </section>
 
         {/* Our Approach / Timeline Section (2016 - 2025) */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="max-w-3xl mb-16">
               <span className="section-label block mb-3">
@@ -485,7 +485,7 @@ export default function StudioPage() {
         </section>
 
         {/* Strategies & Insights / Articles Section */}
-        <section className="py-20 sm:py-28 border-t border-white/10 bg-[#141414]">
+        <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
               <div>

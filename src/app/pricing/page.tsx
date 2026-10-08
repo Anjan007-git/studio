@@ -9,7 +9,7 @@ import { CtaSection } from "@/components/CtaSection";
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
       <main className="pt-16 sm:pt-24">
         <Pricing />

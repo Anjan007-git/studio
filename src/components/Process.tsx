@@ -47,7 +47,7 @@ export function Process() {
       {/* Inner: pinned while user scrolls through outer */}
       <section
         id="process"
-        className="sticky top-0 py-24 sm:py-32 border-t border-white/10 bg-[#141414] overflow-hidden"
+        className="sticky top-0 py-24 sm:py-32 border-t border-white/10 bg-[var(--page-bg)] overflow-hidden"
         style={{ height: "100vh", overflowY: "hidden" }}
       >
       {/* Originkit Smooth Scroll Slider — driven by page scroll, zero re-renders */}
@@ -60,7 +60,7 @@ export function Process() {
           dim={7}
           sensitivity={5}
           radius={20}
-          background="#141414"
+          background="var(--page-bg)"
           loop
           scrollSectionRef={outerRef}
         />

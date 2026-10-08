@@ -30,7 +30,7 @@ export default function ArticlesPage() {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white selection:bg-white selection:text-black">
+    <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
 
       <main className="pt-28 sm:pt-36">
