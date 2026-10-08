@@ -7,10 +7,58 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
 
+interface WordToken {
+  text: string;
+  isHighlighted: boolean;
+}
+
+const statementWords: WordToken[] = [
+  // Segment 1 (soft gray)
+  { text: "Traditional", isHighlighted: false },
+  { text: "agencies", isHighlighted: false },
+  { text: "perfected", isHighlighted: false },
+  { text: "the", isHighlighted: false },
+  { text: "art", isHighlighted: false },
+  { text: "of", isHighlighted: false },
+  { text: "the", isHighlighted: false },
+  { text: "pitch.", isHighlighted: false },
+  // Segment 2 (bright white)
+  { text: "We", isHighlighted: true },
+  { text: "perfected", isHighlighted: true },
+  { text: "the", isHighlighted: true },
+  { text: "art", isHighlighted: true },
+  { text: "of", isHighlighted: true },
+  { text: "the", isHighlighted: true },
+  { text: "work.", isHighlighted: true },
+  // Segment 3 (soft gray)
+  { text: "When", isHighlighted: false },
+  { text: "you", isHighlighted: false },
+  { text: "need", isHighlighted: false },
+  // Segment 4 (bright white)
+  { text: "design", isHighlighted: true },
+  { text: "that", isHighlighted: true },
+  { text: "moves", isHighlighted: true },
+  { text: "at", isHighlighted: true },
+  { text: "the", isHighlighted: true },
+  { text: "speed", isHighlighted: true },
+  { text: "of", isHighlighted: true },
+  { text: "your", isHighlighted: true },
+  { text: "ambition,", isHighlighted: true },
+  // Segment 5 (soft gray)
+  { text: "you", isHighlighted: false },
+  { text: "need", isHighlighted: false },
+  { text: "a", isHighlighted: false },
+  { text: "different", isHighlighted: false },
+  { text: "kind", isHighlighted: false },
+  { text: "of", isHighlighted: false },
+  { text: "studio.", isHighlighted: false },
+];
+
 export function Approach() {
   const [copied, setCopied] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
+  const labelRef = useRef<HTMLSpanElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleCopyEmail = () => {
@@ -23,28 +71,62 @@ export function Approach() {
     gsap.registerPlugin(ScrollTrigger);
     const el = sectionRef.current;
     const headline = headlineRef.current;
+    const label = labelRef.current;
     if (!el || !headline) return;
 
-    const ctx = gsap.context(() => {
-      const revealSpans = headline.querySelectorAll(".reveal-text");
+    // Check reduced motion
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      // Scrubbed dual-tone text brightness reveal on scroll
-      gsap.fromTo(
-        revealSpans,
-        { opacity: 0.25, y: 15 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.15,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: headline,
-            start: "top 80%",
-            end: "bottom 55%",
-            scrub: 0.6,
+    const ctx = gsap.context(() => {
+      const words = headline.querySelectorAll<HTMLElement>(".approach-word");
+
+      if (prefersReducedMotion) {
+        gsap.set(words, { opacity: 1, y: 0 });
+        if (label) gsap.set(label, { opacity: 1, y: 0 });
+        return;
+      }
+
+      // Master scroll-driven illumination & text reveal timeline
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 0.6,
+        },
+      });
+
+      if (label) {
+        tl.fromTo(
+          label,
+          { opacity: 0.25, y: 6 },
+          { opacity: 1, y: 0, duration: 0.3, ease: "power1.out" },
+          0
+        );
+      }
+
+      // Progressive scrubbed activation across all words in reading order
+      words.forEach((word) => {
+        const isHighlight = word.getAttribute("data-highlight") === "true";
+        tl.fromTo(
+          word,
+          {
+            opacity: 0.2,
+            y: 8,
+            color: "#484848",
           },
-        }
-      );
+          {
+            opacity: 1,
+            y: 0,
+            color: isHighlight ? "#ffffff" : "#b8b8b8",
+            duration: 0.35,
+            ease: "power1.out",
+          },
+          "<0.032"
+        );
+      });
 
       // Subtle parallax on philosophy card
       if (cardRef.current) {
@@ -73,53 +155,50 @@ export function Approach() {
     <section
       ref={sectionRef}
       id="approach"
-      className="py-24 sm:py-32 border-t border-white/10 relative bg-[#141414] overflow-hidden"
+      className="relative bg-[var(--page-bg)] border-t border-white/[0.08] overflow-hidden pt-20 sm:pt-28 md:pt-36 lg:pt-40 pb-24 sm:pb-32 md:pb-40"
     >
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-        {/* Section Tag */}
-        <div className="mb-10">
-          <span className="section-label">
-            [Our Approach]
-          </span>
-        </div>
-
-        {/* Massive Two-Tone Manifesto Headline with Continuous Scroll Mask Reveal */}
-        <div className="max-w-6xl mb-16 sm:mb-24">
+      <div className="w-full max-w-[var(--content-max)] mx-auto px-4 sm:px-8 md:px-14 lg:px-16">
+        {/* ============================================================ */}
+        {/* MUGEN EXACT EDITORIAL STATEMENT WITH FLOATED SECTION LABEL   */}
+        {/* ============================================================ */}
+        <div className="w-full max-w-[1440px]">
           <h2
             ref={headlineRef}
-            className="text-heading-1 select-none"
+            className="font-display font-semibold text-[clamp(1.25rem,5vw,1.85rem)] sm:text-[clamp(2.15rem,4.1vw,4.15rem)] leading-[1.14] sm:leading-[1.08] tracking-[-0.03em] sm:tracking-[-0.04em] select-none text-left"
           >
-            <span className="block overflow-hidden py-1">
-              <span className="reveal-text inline-block will-change-transform">
-                <span className="text-[#b8b8b8] font-medium">
-                  Traditional agencies perfected the art of the pitch.{" "}
-                </span>
-                <strong className="text-white font-semibold">
-                  We perfected the art of the work.
-                </strong>
-              </span>
+            {/* Upper-Left Editorial Section Label (Block on mobile, Floated on desktop) */}
+            <span
+              ref={labelRef}
+              className="block sm:float-left mr-0 sm:mr-7 md:mr-8 mb-5 sm:mb-0 text-white font-display text-[13px] sm:text-[14px] md:text-[15px] font-semibold tracking-[-0.02em] select-none pt-0 sm:pt-1.5 md:pt-2"
+            >
+              [Our Approach]
             </span>
 
-            <span className="block overflow-hidden py-1 mt-1 sm:mt-2">
-              <span className="reveal-text inline-block will-change-transform">
-                <span className="text-[#b8b8b8] font-medium">When you need </span>
-                <strong className="text-white font-semibold">
-                  design that moves at the speed of your ambition
-                </strong>
-                <span className="text-[#b8b8b8] font-medium">
-                  , you need a different kind of studio.
+            {/* Continuous Natural Flowing Editorial Words with Scrubbed Dual-Tone Reveal */}
+            {statementWords.map((word, idx) => (
+              <React.Fragment key={idx}>
+                <span
+                  className={`approach-word inline-block will-change-transform ${
+                    word.isHighlighted ? "text-white" : "text-[#b8b8b8]"
+                  }`}
+                  data-highlight={word.isHighlighted ? "true" : "false"}
+                >
+                  {word.text}
                 </span>
-              </span>
-            </span>
+                {idx < statementWords.length - 1 && " "}
+              </React.Fragment>
+            ))}
           </h2>
         </div>
 
-        {/* 2-Column Layout: Studio Philosophy Card & Detailed Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        {/* ============================================================ */}
+        {/* STUDIO PHILOSOPHY CARD & DETAILED STORY (COHERENT DEEP THEME) */}
+        {/* ============================================================ */}
+        <div className="mt-28 sm:mt-36 md:mt-44 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Dedicated Studio Philosophy Portrait Card */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
-            <div ref={cardRef} className="w-full max-w-[340px] mx-auto lg:mx-0">
-              <div className="w-full rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/25 transition-all duration-500">
+            <div ref={cardRef} className="w-full max-w-[310px] sm:max-w-[340px] mx-auto lg:mx-0">
+              <div className="w-full rounded-3xl bg-[#0e0e0e] border border-white/[0.08] overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-500">
                 <div>
                   {/* Email Tag */}
                   <div className="flex items-center justify-between mb-4">
@@ -139,7 +218,7 @@ export function Approach() {
                   </div>
 
                   {/* Image Frame with Mask, Zoom, and Signature Corner Plus Button */}
-                  <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-5 group/img">
+                  <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-950 mb-5 group/img">
                     <Image
                       src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
                       alt="TRIFECTA TRENDS — Studio Philosophy"
@@ -162,14 +241,18 @@ export function Approach() {
                 </div>
 
                 {/* Studio Meta */}
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
                   <div>
-                    <h3 className="text-base font-semibold text-white font-display tracking-[-0.03em]">Studio Philosophy</h3>
+                    <h3 className="text-base font-semibold text-white font-display tracking-[-0.03em]">
+                      Studio Philosophy
+                    </h3>
                     <p className="text-xs font-display text-[#848484] mt-0.5 tracking-[-0.02em]">
                       Craft &amp; Execution
                     </p>
                   </div>
-                  <span className="text-xs font-display text-[#848484] tracking-[-0.02em]">TRIFECTA TRENDS®</span>
+                  <span className="text-xs font-display text-[#848484] tracking-[-0.02em]">
+                    TRIFECTA TRENDS®
+                  </span>
                 </div>
               </div>
             </div>
@@ -191,7 +274,7 @@ export function Approach() {
             </div>
 
             {/* Two Sub-Columns for Philosophy Details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10 text-sm text-[#b8b8b8] leading-[1.55] font-sans font-normal tracking-[-0.02em]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/[0.08] text-sm text-[#b8b8b8] leading-[1.55] font-sans font-normal tracking-[-0.02em]">
               <div>
                 <p>
                   No bureaucratic layers, no junior handoffs, no bloated overhead.

@@ -143,12 +143,12 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* MUGEN Studio Exact Design Tokens */
-  --page-bg: #050505;
-  --page-bg-alt: #0e0e0e;
-  --surface-1: #141414;
-  --surface-2: #181818;
-  --surface-3: #1c1c1c;
+  /* MUGEN Studio Exact Design Tokens — Deep Black System */
+  --page-bg: #000000;
+  --page-bg-alt: #050505;
+  --surface-1: #0a0a0a;
+  --surface-2: #111111;
+  --surface-3: #161616;
   --text-primary: #ffffff;
   --text-secondary: #b8b8b8;
   --text-muted: #848484;
@@ -156,7 +156,7 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.12);
   --border-strong: rgba(255, 255, 255, 0.20);
-  --border-card: #262626;
+  --border-card: #202020;
   --rail-color: rgba(255, 255, 255, 0.06);
 
   /* Mugen Studio Font Families */
@@ -182,11 +182,11 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.12 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.12 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
@@ -393,6 +393,15 @@
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 1.05;
+}
+
+/* Mugen Studio Oversized Editorial Statement (Headings/H2 Medium 3.2rem) */
+.text-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4.2vw, 4.25rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
 }
 
 .text-heading-2 {

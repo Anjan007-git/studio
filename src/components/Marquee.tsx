@@ -27,7 +27,7 @@ export function Marquee({
     const onScroll = () => {
       // Temporarily bump speed on scroll, then decay
       scrollVelocityMultiplier.current = 1.8;
-    };
+      };
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
