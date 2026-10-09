@@ -114,27 +114,32 @@ export function Articles() {
           </div>
         </div>
 
-        {/* 3 Articles Grid */}
+        {/* 3 Articles Grid with Sharp-Edged Images */}
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((art, idx) => (
             <Link
               key={idx}
               href={`/articles/${art.slug}`}
-              className="article-card group flex flex-col rounded-3xl bg-[#0a0a0a] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
+              className="article-card group flex flex-col rounded-none bg-black border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-500 shadow-xl h-full justify-between"
             >
               <div>
-                {/* Image Thumbnail with zoom */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 border-b border-white/5">
+                {/* Image Thumbnail with zoom — Perfectly Sharp Square Corners (0px radius) */}
+                <div className="relative aspect-[16/10] w-full rounded-none overflow-hidden bg-black border-b border-white/10">
                   <Image
                     src={art.image}
                     alt={art.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover rounded-none group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="text-[11px] font-display font-semibold tracking-[-0.02em] px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white border border-[#363636]">
+                    <span className="text-[11px] font-display font-semibold tracking-[-0.02em] px-2.5 py-1 rounded-none bg-black/80 backdrop-blur-md text-white border border-white/15">
                       {art.tag}
                     </span>
+                  </div>
+                  {/* MUGEN Signature + Indicator in Bottom-Right Corner */}
+                  <div className="absolute bottom-3 right-3 z-10 w-6 h-6 rounded-none bg-black/75 backdrop-blur-sm border border-white/15 flex items-center justify-center text-white/90 text-xs font-mono select-none">
+                    +
                   </div>
                 </div>
 

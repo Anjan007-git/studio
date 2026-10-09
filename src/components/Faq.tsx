@@ -61,9 +61,9 @@ export function Faq() {
             </p>
 
             {/* Studio Advisory Support Box */}
-            <div className="p-7 rounded-3xl bg-[#0a0a0a] border border-white/10 shadow-xl">
+            <div className="p-7 rounded-3xl bg-[#050505] border border-white/10 shadow-xl">
               <div className="flex items-center gap-3.5 mb-3">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black shrink-0">
                   <Image
                     src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
                     alt="Creative Direction Advisory"
@@ -101,8 +101,8 @@ export function Faq() {
                   key={idx}
                   className={`rounded-2xl border transition-all duration-300 overflow-hidden shadow-lg ${
                     isOpen
-                      ? "bg-[#0e0e0e] border-white/20"
-                      : "bg-[#0a0a0a] border-white/10 hover:border-white/20"
+                      ? "bg-[#080808] border-white/20"
+                      : "bg-[#050505] border-white/10 hover:border-white/20"
                   }`}
                 >
                   <button

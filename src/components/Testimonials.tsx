@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Star, ArrowUpRight } from "./icons";
+import { ArrowUpRight } from "./icons";
 import { Marquee } from "./Marquee";
 import { CountUp } from "./CountUp";
 
-const spotlightTestimonials = [
+const testimonials = [
   {
     name: "James Ortiz",
     role: "Director of Communications",
@@ -15,8 +15,7 @@ const spotlightTestimonials = [
     avatar: "/images/IxG8JQTe4YCB0OBh5yXZR2y0lk.png",
     quote:
       "From day one, they got what we were trying to do—make solar feel accessible, human, and forward-looking. The rebrand has completely reshaped how we show up in the market and accelerated our Series A round.",
-    metric: "$12M",
-    metricLabel: "Series A funding closed",
+    caseStudyHref: "/projects/warpspeed",
   },
   {
     name: "Renata Moreau",
@@ -24,9 +23,8 @@ const spotlightTestimonials = [
     company: "Clandestine",
     avatar: "/images/ADzzP2ffltBL8xXs0bcwap1FtlM.png",
     quote:
-      "They brought extraordinary nuance to the brand—mystery, elegance, and a rich, responsive visual language. It’s rare to find a team that pairs high artistic taste with ruthless speed of execution.",
-    metric: "+240%",
-    metricLabel: "Social engagement increase",
+      "They brought extraordinary nuance to the brand—mystery, elegance, and a really rich visual language. It's rare to find a team that pairs high artistic taste with ruthless speed of execution.",
+    caseStudyHref: "/projects/warpspeed",
   },
   {
     name: "Naomi Chen",
@@ -35,44 +33,7 @@ const spotlightTestimonials = [
     avatar: "/images/2szvKnNjJBBkPsk6yCETyIDktns.png",
     quote:
       "We wanted a brand that felt connected to nature, yet commanded premium luxury shelf appeal. What we ended up with feels authentic in every detail—our customers constantly praise the digital experience.",
-    metric: "94%",
-    metricLabel: "Customer retention rate",
-  },
-];
-
-const reviewCards = [
-  {
-    company: "Boltshift",
-    author: "Julian Singh",
-    role: "COO",
-    avatar: "/images/siKQvG204y5XTlJmEnImPRJ2lc.png",
-    quote:
-      "After the redesign, sales calls got remarkably easier, and prospects immediately understood our enterprise positioning.",
-    metric: "$2.3M",
-    metricLabel: "Annual pipeline efficiency",
-    projectHref: "/projects/warpspeed",
-  },
-  {
-    company: "Warpspeed",
-    author: "Marcus Vance",
-    role: "Head of Product",
-    avatar: "/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg",
-    quote:
-      "TRIFECTA TRENDS engineered our design system and front-end architecture with 60fps fluidity. They feel like true in-house partners.",
-    metric: "3.4x",
-    metricLabel: "Conversion velocity",
-    projectHref: "/projects/warpspeed",
-  },
-  {
-    company: "Ephemeral",
-    author: "Elena Rostova",
-    role: "Managing Partner",
-    avatar: "/images/ulbEv91MwUwTk34ixqmyIluLPJY.png",
-    quote:
-      "Disciplined craft, zero fluff. They delivered a world-class digital presence that sets us apart from every legacy competitor.",
-    metric: "99.8%",
-    metricLabel: "Client satisfaction score",
-    projectHref: "/projects/ephemeral",
+    caseStudyHref: "/projects/ephemeral",
   },
 ];
 
@@ -88,21 +49,21 @@ const clientLogos = [
 ];
 
 export function Testimonials() {
-  const [activeSpotlight, setActiveSpotlight] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const prevSpotlight = () => {
-    setActiveSpotlight((prev) =>
-      prev === 0 ? spotlightTestimonials.length - 1 : prev - 1
+  const prev = () => {
+    setActiveIndex((prevIdx) =>
+      prevIdx === 0 ? testimonials.length - 1 : prevIdx - 1
     );
   };
 
-  const nextSpotlight = () => {
-    setActiveSpotlight((prev) =>
-      prev === spotlightTestimonials.length - 1 ? 0 : prev + 1
+  const next = () => {
+    setActiveIndex((prevIdx) =>
+      prevIdx === testimonials.length - 1 ? 0 : prevIdx + 1
     );
   };
 
-  const current = spotlightTestimonials[activeSpotlight];
+  const current = testimonials[activeIndex];
 
   return (
     <section
@@ -131,7 +92,7 @@ export function Testimonials() {
         </Marquee>
       </div>
 
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 py-24 sm:py-32">
+      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 py-20 sm:py-28 lg:py-32">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-3">
@@ -144,167 +105,142 @@ export function Testimonials() {
               Trusted by the most innovative teams.
             </h2>
             <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
-              Results speak louder than promises. Hear directly from founders, leaders, and product executives who rely on TRIFECTA TRENDS.
+              Results speak louder than promises.
             </p>
           </div>
         </div>
 
-        {/* MUGEN Signature Spotlight Testimonial Card with Prev/Next Controls */}
-        <div className="mb-14 rounded-3xl bg-[#0a0a0a] border border-white/10 p-6 sm:p-10 md:p-12 shadow-2xl relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left Column: Avatar Photo */}
-            <div className="lg:col-span-4 flex justify-center lg:justify-start">
-              <div className="relative aspect-[3/4] w-full max-w-[280px] rounded-2xl overflow-hidden bg-neutral-900 border border-white/10">
-                <Image
-                  src={current.avatar}
-                  alt={current.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+        {/* MUGEN Signature Testimonial Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          {/* Left Column: Author Photo & Bio */}
+          <div className="lg:col-span-4 flex flex-col">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] rounded-none overflow-hidden bg-black border border-white/10">
+              <Image
+                src={current.avatar}
+                alt={current.name}
+                fill
+                sizes="(max-width: 640px) 100vw, 320px"
+                className="object-cover transition-opacity duration-300"
+                priority
+              />
             </div>
 
-            {/* Right Column: Stars, Quote, Metadata & Controls */}
-            <div className="lg:col-span-8 flex flex-col justify-between h-full space-y-6">
-              <div>
-                <div className="flex items-center gap-1 text-white mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-white text-white" />
-                  ))}
-                </div>
+            <div className="mt-4">
+              <h4 className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.02em]">
+                {current.name}
+              </h4>
+              <p className="text-xs sm:text-sm font-sans text-[#b8b8b8] mt-1 tracking-[-0.01em]">
+                {current.role} <span className="text-[#545454]">•</span> {current.company}
+              </p>
+              <Link
+                href={current.caseStudyHref}
+                className="inline-flex items-center gap-1.5 text-xs text-[#848484] hover:text-white transition-colors mt-3 group"
+                aria-label={`Read ${current.company} case study`}
+              >
+                <span>Read case study</span>
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
 
-                <blockquote className="text-xl sm:text-2xl md:text-3xl text-white font-sans font-normal leading-snug tracking-[-0.03em] mb-8">
-                  &ldquo;{current.quote}&rdquo;
-                </blockquote>
+          {/* Right Column: Large Editorial Quote & Navigation */}
+          <div className="lg:col-span-8 flex flex-col justify-between min-h-[260px] sm:min-h-[300px]">
+            <div>
+              {/* Double quote glyph */}
+              <div className="text-4xl sm:text-5xl text-white/70 font-serif leading-none mb-6 select-none" aria-hidden="true">
+                “
               </div>
 
-              <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div>
-                  <h4 className="text-lg font-display font-semibold text-white tracking-[-0.03em]">{current.name}</h4>
-                  <p className="text-xs font-sans text-[#b8b8b8] mt-0.5 tracking-[-0.01em]">
-                    {current.role} • {current.company}
-                  </p>
-                </div>
+              <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-display font-medium text-white leading-[1.25] tracking-[-0.03em] mb-8">
+                &ldquo;{current.quote}&rdquo;
+              </blockquote>
+            </div>
 
-                {/* Slider Navigation Arrows */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={prevSpotlight}
-                    aria-label="Previous testimonial"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer font-display"
-                  >
-                    ←
-                  </button>
-                  <button
-                    onClick={nextSpotlight}
-                    aria-label="Next testimonial"
-                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white text-white hover:text-black border border-white/10 flex items-center justify-center transition-all cursor-pointer font-display"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
+            {/* Navigation Arrow Buttons */}
+            <div className="flex items-center gap-2 pt-2">
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous testimonial"
+                className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
+              >
+                ←
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next testimonial"
+                className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
+              >
+                →
+              </button>
             </div>
           </div>
         </div>
 
-        {/* 3 Metric Highlights Row matching MUGEN */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 pt-6">
-          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
-              <CountUp end={12} start={0} prefix="$" suffix="M+" triggerSelector="#testimonials" />
+        {/* Interactive Client Tabs matching MUGEN */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border-t border-white/10 mt-12 sm:mt-16">
+          {testimonials.map((item, idx) => {
+            const isActive = activeIndex === idx;
+            return (
+              <button
+                key={item.company}
+                type="button"
+                onClick={() => setActiveIndex(idx)}
+                className="text-left py-5 sm:py-6 px-3 sm:px-4 -mt-[1px] relative cursor-pointer group transition-all focus:outline-none"
+              >
+                {/* Active Indicator Top Line */}
+                <div
+                  className={`absolute top-0 left-0 right-0 transition-all duration-300 ${
+                    isActive
+                      ? "h-[2px] bg-white"
+                      : "h-[1px] bg-white/10 group-hover:bg-white/30"
+                  }`}
+                />
+
+                <span
+                  className={`text-sm sm:text-base font-display font-medium tracking-[-0.02em] transition-colors block ${
+                    isActive ? "text-white font-semibold" : "text-[#848484] group-hover:text-white"
+                  }`}
+                >
+                  {item.company}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* 1px Hairline Divider */}
+        <div className="border-t border-white/10 my-10 sm:my-14" />
+
+        {/* 3 Metric Highlights Row with CountUp */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+          <div>
+            <span className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold text-white tracking-[-0.04em] block mb-2 leading-none">
+              <CountUp end={12} start={0} prefix="$" suffix="M" triggerSelector="#testimonials" />
             </span>
-            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
-              Series A funding closed by featured clients
+            <span className="text-xs sm:text-sm font-sans text-[#848484] tracking-[-0.01em]">
+              Series A funding closed
             </span>
           </div>
 
-          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
+          <div>
+            <span className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold text-white tracking-[-0.04em] block mb-2 leading-none">
               <CountUp end={4.8} start={0.0} decimals={1} suffix="x" triggerSelector="#testimonials" />
             </span>
-            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
-              Average engagement boost after brand overhaul
+            <span className="text-xs sm:text-sm font-sans text-[#848484] tracking-[-0.01em]">
+              Social media engagement boost
             </span>
           </div>
 
-          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
-            <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
+          <div>
+            <span className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold text-white tracking-[-0.04em] block mb-2 leading-none">
               <CountUp end={94} start={0} suffix="%" triggerSelector="#testimonials" />
             </span>
-            <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
-              Client retention and ongoing retainer extension
+            <span className="text-xs sm:text-sm font-sans text-[#848484] tracking-[-0.01em]">
+              Customer retention rate
             </span>
           </div>
-        </div>
-
-        {/* 3 Review Cards Grid below with Case Study Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {reviewCards.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-7 sm:p-8 rounded-3xl bg-[#0a0a0a] border border-white/10 flex flex-col justify-between hover:border-white/25 transition-all duration-300 shadow-xl group"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8]">
-                    {item.company}
-                  </span>
-                  <div className="flex items-center gap-1 text-white">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 fill-white text-white" />
-                    ))}
-                  </div>
-                </div>
-
-                <p className="text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em] mb-6">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-              </div>
-
-              <div>
-                {/* Metric */}
-                <div className="pt-4 pb-4 border-t border-white/5 mb-4 flex items-baseline justify-between">
-                  <span className="text-2xl font-display font-semibold text-white tracking-[-0.04em]">
-                    {item.metric}
-                  </span>
-                  <span className="text-[11px] font-sans text-[#848484]">
-                    {item.metricLabel}
-                  </span>
-                </div>
-
-                {/* Author Info + Case Study Link */}
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/10 bg-neutral-900 shrink-0">
-                      <Image
-                        src={item.avatar}
-                        alt={item.author}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-display font-semibold text-white tracking-[-0.02em]">
-                        {item.author}
-                      </h4>
-                      <p className="text-[10px] font-sans text-[#848484]">
-                        {item.role}
-                      </p>
-                    </div>
-                  </div>
-
-                  <Link
-                    href={item.projectHref}
-                    className="text-[#848484] hover:text-white transition-colors group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                    aria-label={`View ${item.company} case study`}
-                  >
-                    <ArrowUpRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

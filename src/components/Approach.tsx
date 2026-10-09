@@ -200,7 +200,7 @@ export function Approach() {
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
             <div ref={cardRef} className="w-full max-w-[340px] sm:max-w-[340px] mx-auto lg:mx-0">
               {/* MOBILE ONLY: Sharp rectangular editorial Founder card (Image 1 reference) */}
-              <div className="block sm:hidden w-full rounded-none bg-[#0a0a0a] border border-white/10 overflow-hidden shadow-2xl">
+              <div className="block sm:hidden w-full rounded-none bg-[#050505] border border-white/10 overflow-hidden shadow-2xl">
                 {/* Full-width sharp image frame */}
                 <div className="relative aspect-[3/4] w-full rounded-none overflow-hidden bg-neutral-950">
                   <Image
@@ -235,7 +235,7 @@ export function Approach() {
                 </div>
 
                 {/* Founder Info Section directly underneath with clean dividing border */}
-                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#0e0e0e] flex items-center justify-between">
+                <div className="p-4 sm:p-5 border-t border-white/10 bg-[#080808] flex items-center justify-between">
                   <div>
                     <h3 className="text-lg font-semibold text-white font-display tracking-[-0.03em] leading-tight">
                       Alex West

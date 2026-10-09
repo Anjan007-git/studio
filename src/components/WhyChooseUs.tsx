@@ -94,7 +94,7 @@ export function WhyChooseUs() {
         >
           {/* Card 1: 50M+ Revenue with Timeline & Chart Visual */}
           <div className="lg:col-span-4 bento-card">
-            <div className="h-full rounded-none bg-[#0a0a0a] border border-white/10 p-8 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
+            <div className="h-full rounded-none bg-[#050505] border border-white/10 p-8 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
               <div>
                 <div className="flex items-center justify-between mb-8">
                   {/* Milestones Timeline */}
@@ -137,7 +137,7 @@ export function WhyChooseUs() {
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Card 2: 3x Faster */}
             <div className="bento-card flex-1">
-              <div className="rounded-none bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 shadow-xl relative overflow-hidden">
+              <div className="rounded-none bg-[#050505] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 shadow-xl relative overflow-hidden">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     Velocity
@@ -160,7 +160,7 @@ export function WhyChooseUs() {
 
             {/* Card 3: 200+ Projects */}
             <div className="bento-card flex-1">
-              <div className="rounded-none bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 relative overflow-hidden shadow-xl">
+              <div className="rounded-none bg-[#050505] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 relative overflow-hidden shadow-xl">
                 {/* Wireframe globe graphic watermark */}
                 <div className="absolute -right-4 -bottom-4 w-36 h-36 rounded-full border border-white/[0.06] pointer-events-none opacity-40 flex items-center justify-center">
                   <div className="w-24 h-24 rounded-full border border-white/[0.08] flex items-center justify-center">
@@ -188,7 +188,7 @@ export function WhyChooseUs() {
 
           {/* Card 4: Dedicated Creative Partner Card */}
           <div className="lg:col-span-4 bento-card">
-            <div className="h-full rounded-none bg-[#0a0a0a] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
+            <div className="h-full rounded-none bg-[#050505] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
               {/* Top row: Brand & Rating */}
               <div className="flex items-center justify-between mb-4 z-10">
                 <span className="text-xs font-semibold text-[#848484] font-display tracking-[-0.02em]">
@@ -207,7 +207,7 @@ export function WhyChooseUs() {
               </div>
 
               {/* Team Partner Photo with Zoom */}
-              <div className="relative w-full aspect-[4/3] rounded-none overflow-hidden my-4 bg-neutral-900 border border-white/5">
+              <div className="relative w-full aspect-[4/3] rounded-none overflow-hidden my-4 bg-black border border-white/5">
                 <Image
                   src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
                   alt="TRIFECTA TRENDS — Design Partner"
