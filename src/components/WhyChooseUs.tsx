@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Zap, ArrowUpRight, Star } from "./icons";
+import { CountUp } from "./CountUp";
 
 export function WhyChooseUs() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -93,7 +94,7 @@ export function WhyChooseUs() {
         >
           {/* Card 1: 50M+ Revenue with Timeline & Chart Visual */}
           <div className="lg:col-span-4 bento-card">
-            <div className="h-full rounded-3xl bg-[#0a0a0a] border border-white/10 p-8 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
+            <div className="h-full rounded-none bg-[#0a0a0a] border border-white/10 p-8 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
               <div>
                 <div className="flex items-center justify-between mb-8">
                   {/* Milestones Timeline */}
@@ -104,7 +105,7 @@ export function WhyChooseUs() {
                     <span className="text-[#545454]">→</span>
                     <span className="text-white font-semibold">Launch</span>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#b8b8b8] group-hover:text-white group-hover:bg-white/10 transition-colors">
+                  <div className="w-8 h-8 rounded-none bg-white/5 border border-white/10 flex items-center justify-center text-[#b8b8b8] group-hover:text-white group-hover:bg-white/10 transition-colors">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -114,7 +115,7 @@ export function WhyChooseUs() {
                   {[28, 42, 36, 58, 70, 64, 88, 100].map((height, i) => (
                     <div
                       key={i}
-                      className="flex-1 bg-white/10 group-hover:bg-white/20 rounded-t transition-all duration-500"
+                      className="flex-1 bg-white/10 group-hover:bg-white/20 rounded-none transition-all duration-500"
                       style={{ height: `${height}%` }}
                     />
                   ))}
@@ -123,7 +124,7 @@ export function WhyChooseUs() {
 
               <div>
                 <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
-                  50M +
+                  <CountUp end={50} start={0} suffix="M +" triggerSelector="#why-choose-us" />
                 </div>
                 <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                   Revenue generated for our clients across 200+ engagements.
@@ -136,19 +137,19 @@ export function WhyChooseUs() {
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Card 2: 3x Faster */}
             <div className="bento-card flex-1">
-              <div className="rounded-3xl bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 shadow-xl relative overflow-hidden">
+              <div className="rounded-none bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 shadow-xl relative overflow-hidden">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-display font-medium text-[#848484] tracking-[-0.02em]">
                     Velocity
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 rounded-none bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                     <Zap className="w-4 h-4 text-white" />
                   </div>
                 </div>
 
                 <div className="mt-6">
                   <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
-                    3x
+                    <CountUp end={3} start={0} suffix="x" triggerSelector="#why-choose-us" />
                   </div>
                   <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                     Faster time-to-market compared to traditional agencies.
@@ -159,7 +160,7 @@ export function WhyChooseUs() {
 
             {/* Card 3: 200+ Projects */}
             <div className="bento-card flex-1">
-              <div className="rounded-3xl bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 relative overflow-hidden shadow-xl">
+              <div className="rounded-none bg-[#0a0a0a] border border-white/10 p-7 h-full flex flex-col justify-between group hover:border-white/25 transition-all duration-500 relative overflow-hidden shadow-xl">
                 {/* Wireframe globe graphic watermark */}
                 <div className="absolute -right-4 -bottom-4 w-36 h-36 rounded-full border border-white/[0.06] pointer-events-none opacity-40 flex items-center justify-center">
                   <div className="w-24 h-24 rounded-full border border-white/[0.08] flex items-center justify-center">
@@ -175,7 +176,7 @@ export function WhyChooseUs() {
 
                 <div className="z-10 mt-6">
                   <div className="text-4xl sm:text-5xl font-semibold text-white tracking-[-0.03em] mb-2 font-display leading-none">
-                    200 +
+                    <CountUp end={200} start={0} suffix=" +" triggerSelector="#why-choose-us" />
                   </div>
                   <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em] leading-relaxed">
                     Projects shipped worldwide, helping our clients achieve their goals.
@@ -187,7 +188,7 @@ export function WhyChooseUs() {
 
           {/* Card 4: Dedicated Creative Partner Card */}
           <div className="lg:col-span-4 bento-card">
-            <div className="h-full rounded-3xl bg-[#0a0a0a] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
+            <div className="h-full rounded-none bg-[#0a0a0a] border border-white/10 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-white/25 transition-all duration-500 shadow-xl">
               {/* Top row: Brand & Rating */}
               <div className="flex items-center justify-between mb-4 z-10">
                 <span className="text-xs font-semibold text-[#848484] font-display tracking-[-0.02em]">
@@ -199,12 +200,14 @@ export function WhyChooseUs() {
                       <Star key={i} className="w-3 h-3 fill-white text-white" />
                     ))}
                   </div>
-                  <span className="font-semibold text-white font-display text-sm tracking-[-0.02em]">4.9 / 5</span>
+                  <span className="font-semibold text-white font-display text-sm tracking-[-0.02em]">
+                    <CountUp end={4.9} start={0.0} decimals={1} suffix=" / 5" triggerSelector="#why-choose-us" />
+                  </span>
                 </div>
               </div>
 
               {/* Team Partner Photo with Zoom */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden my-4 bg-neutral-900 border border-white/5">
+              <div className="relative w-full aspect-[4/3] rounded-none overflow-hidden my-4 bg-neutral-900 border border-white/5">
                 <Image
                   src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
                   alt="TRIFECTA TRENDS — Design Partner"
@@ -216,7 +219,7 @@ export function WhyChooseUs() {
               {/* Bottom Stat: 100+ Happy Clients */}
               <div className="z-10">
                 <div className="text-3xl sm:text-4xl font-semibold text-white tracking-[-0.03em] mb-1 font-display leading-none">
-                  100 +
+                  <CountUp end={100} start={0} suffix=" +" triggerSelector="#why-choose-us" />
                 </div>
                 <p className="text-xs text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
                   Happy clients and counting

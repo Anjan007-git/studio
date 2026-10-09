@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, ArrowUpRight } from "./icons";
 import { Marquee } from "./Marquee";
+import { CountUp } from "./CountUp";
 
 const spotlightTestimonials = [
   {
@@ -209,27 +210,27 @@ export function Testimonials() {
 
         {/* 3 Metric Highlights Row matching MUGEN */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 pt-6">
-          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
-              $12M+
+              <CountUp end={12} start={0} prefix="$" suffix="M+" triggerSelector="#testimonials" />
             </span>
             <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Series A funding closed by featured clients
             </span>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
-              4.8x
+              <CountUp end={4.8} start={0.0} decimals={1} suffix="x" triggerSelector="#testimonials" />
             </span>
             <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Average engagement boost after brand overhaul
             </span>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#0a0a0a] border border-white/5">
+          <div className="p-6 rounded-none bg-[#0a0a0a] border border-white/5">
             <span className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] block mb-1">
-              94%
+              <CountUp end={94} start={0} suffix="%" triggerSelector="#testimonials" />
             </span>
             <span className="text-xs font-sans text-[#848484] tracking-[-0.01em]">
               Client retention and ongoing retainer extension
