@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { BottomBlur } from "@/components/BottomBlur";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
@@ -59,8 +60,8 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
-        {/* Subtle bottom depth treatment — MUGEN-style scroll depth indicator */}
-        <div className="bottom-depth" aria-hidden="true" />
+        {/* MUGEN-style cinematic progressive bottom blur & depth overlay */}
+        <BottomBlur />
       </body>
     </html>
   );
