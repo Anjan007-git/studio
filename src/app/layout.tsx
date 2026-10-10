@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { PageTransition } from "@/components/PageTransition";
 import { BottomBlur } from "@/components/BottomBlur";
 
 export const viewport: Viewport = {
@@ -58,7 +59,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[var(--page-bg)] text-[var(--text-primary)] font-sans selection:bg-white selection:text-black">
         <SmoothScroll>
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </SmoothScroll>
         {/* MUGEN-style cinematic progressive bottom blur & depth overlay */}
         <BottomBlur />

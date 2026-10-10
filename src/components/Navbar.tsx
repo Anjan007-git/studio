@@ -131,12 +131,19 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    const handleTransitionStart = () => {
+      if (menuOpen) {
+        closeMenu();
+      }
+    };
+    window.addEventListener("trifecta-transition-start", handleTransitionStart);
     return () => {
+      window.removeEventListener("trifecta-transition-start", handleTransitionStart);
       document.body.style.overflow = "unset";
       window.__lenis?.start();
       tlRef.current?.kill();
     };
-  }, []);
+  }, [closeMenu, menuOpen]);
 
   const handleToggle = () => {
     if (menuOpen) {
