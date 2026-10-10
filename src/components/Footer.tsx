@@ -34,7 +34,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#070709] border-t border-white/10 pt-20 pb-16 text-neutral-400">
+    <footer className="relative overflow-hidden bg-[#070709] border-t border-white/10 pt-20 pb-8 sm:pb-10 text-neutral-400">
       {/* Layer 0: Ribbon Glow WebGL Background (Preserved Exactly) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <RibbonGlow
@@ -322,7 +322,7 @@ export function Footer() {
         </div>
 
         {/* Giant Editorial Wordmark: TRIFECTA (White, Left) & TRENDS (Soft Gray, Right on mobile) */}
-        <div className="pt-8 sm:pt-12 pb-12 sm:pb-16 select-none overflow-hidden">
+        <div className="pt-8 sm:pt-12 pb-8 sm:pb-10 select-none overflow-hidden">
           <div className="flex flex-col leading-[0.82] tracking-[-0.04em] font-display font-bold uppercase text-[13vw] sm:text-[14.5vw] md:text-[15.5vw] xl:text-[16.5vw] w-full max-w-full">
             <span className="text-white block whitespace-nowrap text-left">
               TRIFECTA
@@ -334,13 +334,9 @@ export function Footer() {
         </div>
 
         {/* Bottom copyright row */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[#848484] font-sans text-[11px] sm:text-xs tracking-[-0.01em]">
+        <div className="pt-6 border-t border-white/10 text-[#848484] font-sans text-[11px] sm:text-xs tracking-[-0.01em]">
           <div>
             <span>Creative Technology Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Available for Q2/Q3 2026 Partnerships</span>
           </div>
         </div>
       </div>
