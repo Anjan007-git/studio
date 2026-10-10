@@ -69,6 +69,7 @@ export function Navbar() {
         stagger: 0.06,
         duration: 0.5,
         ease: "power3.out",
+        clearProps: "opacity,transform",
       },
       "-=0.2"
     );
@@ -78,7 +79,7 @@ export function Navbar() {
       tl.fromTo(
         menuMetaRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out", clearProps: "opacity,transform" },
         "-=0.3"
       );
     }
@@ -88,7 +89,7 @@ export function Navbar() {
       tl.fromTo(
         menuFooterRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out", clearProps: "opacity,transform" },
         "-=0.2"
       );
     }
@@ -105,6 +106,9 @@ export function Navbar() {
         setMenuOpen(false);
         document.body.style.overflow = "unset";
         window.__lenis?.start();
+        gsap.set(menuItemsRef.current.filter(Boolean), { clearProps: "all" });
+        if (menuMetaRef.current) gsap.set(menuMetaRef.current, { clearProps: "all" });
+        if (menuFooterRef.current) gsap.set(menuFooterRef.current, { clearProps: "all" });
       },
     });
     tlRef.current = tl;
@@ -130,20 +134,30 @@ export function Navbar() {
     );
   }, []);
 
+  const menuOpenRef = useRef(menuOpen);
+  useEffect(() => {
+    menuOpenRef.current = menuOpen;
+  }, [menuOpen]);
+
   useEffect(() => {
     const handleTransitionStart = () => {
-      if (menuOpen) {
+      if (menuOpenRef.current) {
         closeMenu();
       }
     };
     window.addEventListener("trifecta-transition-start", handleTransitionStart);
     return () => {
       window.removeEventListener("trifecta-transition-start", handleTransitionStart);
+    };
+  }, [closeMenu]);
+
+  useEffect(() => {
+    return () => {
       document.body.style.overflow = "unset";
       window.__lenis?.start();
       tlRef.current?.kill();
     };
-  }, [closeMenu, menuOpen]);
+  }, []);
 
   const handleToggle = () => {
     if (menuOpen) {
