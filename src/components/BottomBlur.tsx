@@ -17,43 +17,43 @@ interface BlurSlice {
 
 const BLUR_SLICES: BlurSlice[] = [
   {
-    blur: "1px",
+    blur: "0.5px",
     mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%)",
     zIndex: 1,
   },
   {
-    blur: "2.5px",
+    blur: "1px",
     mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%)",
     zIndex: 2,
   },
   {
-    blur: "5px",
+    blur: "2px",
     mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%)",
     zIndex: 3,
   },
   {
-    blur: "10px",
+    blur: "3.5px",
     mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%)",
     zIndex: 4,
   },
   {
-    blur: "18px",
+    blur: "6px",
     mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%)",
     zIndex: 5,
   },
   {
-    blur: "30px",
-    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%)",
+    blur: "10px",
+    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 1) 75%, rgba(0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%)",
     zIndex: 6,
   },
   {
-    blur: "46px",
-    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%)",
+    blur: "15px",
+    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 1) 87.5%, rgba(0, 0, 1) 100%)",
     zIndex: 7,
   },
   {
-    blur: "64px",
-    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%)",
+    blur: "20px",
+    mask: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 1) 100%)",
     zIndex: 8,
   },
 ];

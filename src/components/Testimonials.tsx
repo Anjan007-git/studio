@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback, useEffect, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "./icons";
@@ -48,22 +48,150 @@ const clientLogos = [
   { name: "ommLabs", src: "/images/4SXU5NecY5nX7I0EIxv06SjxME.svg" },
 ];
 
+function subscribeReducedMotion(callback: () => void) {
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mediaQuery.addEventListener("change", callback);
+  return () => mediaQuery.removeEventListener("change", callback);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
+
 export function Testimonials() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const slides = [testimonials[testimonials.length - 1], ...testimonials, testimonials[0]];
 
-  const prev = () => {
-    setActiveIndex((prevIdx) =>
-      prevIdx === 0 ? testimonials.length - 1 : prevIdx - 1
-    );
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot
+  );
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const isTransitioningRef = useRef(false);
+  const touchStartXRef = useRef<number | null>(null);
+  const touchStartYRef = useRef<number | null>(null);
+
+  // Compute active tab index from slide index
+  const getActiveTabIndex = (idx: number) => {
+    if (idx === 0) return testimonials.length - 1;
+    if (idx === slides.length - 1) return 0;
+    return idx - 1;
   };
 
-  const next = () => {
-    setActiveIndex((prevIdx) =>
-      prevIdx === testimonials.length - 1 ? 0 : prevIdx + 1
-    );
+  const activeTab = getActiveTabIndex(currentIndex);
+
+  // Pause on visibility change
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const handleVisibilityChange = () => {
+      setIsPaused(document.visibilityState === "hidden");
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  // Slide navigation
+  const next = useCallback(() => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setIsAnimating(true);
+    setCurrentIndex((prev) => prev + 1);
+  }, []);
+
+  const prev = useCallback(() => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setIsAnimating(true);
+    setCurrentIndex((prev) => prev - 1);
+  }, []);
+
+  const goToSlide = useCallback((tabIndex: number) => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setIsAnimating(true);
+    setCurrentIndex(tabIndex + 1);
+  }, []);
+
+  // Automatic slide timer (every 4 seconds)
+  useEffect(() => {
+    if (prefersReducedMotion || isPaused) return;
+
+    const timer = setInterval(() => {
+      next();
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [isPaused, prefersReducedMotion, next, currentIndex]);
+
+  // Handle transition end for seamless infinite loop
+  const handleTransitionEnd = useCallback(() => {
+    if (currentIndex === slides.length - 1) {
+      setIsAnimating(false);
+      setCurrentIndex(1);
+    } else if (currentIndex === 0) {
+      setIsAnimating(false);
+      setCurrentIndex(testimonials.length);
+    }
+    isTransitioningRef.current = false;
+  }, [currentIndex, slides.length]);
+
+  // Re-enable animation after instant wrap snap
+  useEffect(() => {
+    if (!isAnimating) {
+      const raf = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsAnimating(true);
+          isTransitioningRef.current = false;
+        });
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [isAnimating]);
+
+  // Safety fallback timeout in case browser drops transitionEnd
+  useEffect(() => {
+    if (isTransitioningRef.current) {
+      const fallback = setTimeout(() => {
+        if (isTransitioningRef.current) {
+          handleTransitionEnd();
+        }
+      }, 800);
+      return () => clearTimeout(fallback);
+    }
+  }, [currentIndex, handleTransitionEnd]);
+
+  // Touch swiping handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsPaused(true);
+    touchStartXRef.current = e.touches[0].clientX;
+    touchStartYRef.current = e.touches[0].clientY;
   };
 
-  const current = testimonials[activeIndex];
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current !== null && touchStartYRef.current !== null) {
+      const deltaX = e.changedTouches[0].clientX - touchStartXRef.current;
+      const deltaY = e.changedTouches[0].clientY - touchStartYRef.current;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 40) {
+        if (deltaX < 0) {
+          next();
+        } else {
+          prev();
+        }
+      }
+    }
+    touchStartXRef.current = null;
+    touchStartYRef.current = null;
+    setIsPaused(false);
+  };
 
   return (
     <section
@@ -110,83 +238,123 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* MUGEN Signature Testimonial Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          {/* Left Column: Author Photo & Bio */}
-          <div className="lg:col-span-4 flex flex-col">
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] rounded-none overflow-hidden bg-black border border-white/10">
-              <Image
-                src={current.avatar}
-                alt={current.name}
-                fill
-                sizes="(max-width: 640px) 100vw, 320px"
-                className="object-cover transition-opacity duration-300"
-                priority
-              />
-            </div>
+        {/* MUGEN Signature Testimonial Showcase Slider */}
+        <div
+          className="relative w-full overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Client Testimonials"
+        >
+          <div
+            className="flex w-full"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              transition:
+                isAnimating && !prefersReducedMotion
+                  ? "transform 700ms cubic-bezier(0.16, 1, 0.3, 1)"
+                  : "none",
+            }}
+            onTransitionEnd={handleTransitionEnd}
+          >
+            {slides.map((item, idx) => {
+              const slideTabIndex = getActiveTabIndex(idx);
+              const isCurrent = activeTab === slideTabIndex;
 
-            <div className="mt-4">
-              <h4 className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.02em]">
-                {current.name}
-              </h4>
-              <p className="text-xs sm:text-sm font-sans text-[#b8b8b8] mt-1 tracking-[-0.01em]">
-                {current.role} <span className="text-[#545454]">•</span> {current.company}
-              </p>
-              <Link
-                href={current.caseStudyHref}
-                className="inline-flex items-center gap-1.5 text-xs text-[#848484] hover:text-white transition-colors mt-3 group"
-                aria-label={`Read ${current.company} case study`}
-              >
-                <span>Read case study</span>
-                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
-          </div>
+              return (
+                <div
+                  key={`${item.company}-${idx}`}
+                  className="w-full shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start"
+                  aria-hidden={!isCurrent}
+                >
+                  {/* Left Column: Author Photo & Bio */}
+                  <div className="lg:col-span-4 flex flex-col items-center sm:items-start">
+                    {/* Centered on mobile only, left on desktop & tablet */}
+                    <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[4/5] rounded-none overflow-hidden bg-black border border-white/10 mx-auto sm:mx-0">
+                      <Image
+                        src={item.avatar}
+                        alt={item.name}
+                        fill
+                        sizes="(max-width: 640px) 280px, 320px"
+                        className="object-cover"
+                        priority={idx === 1}
+                      />
+                    </div>
 
-          {/* Right Column: Large Editorial Quote & Navigation */}
-          <div className="lg:col-span-8 flex flex-col justify-between min-h-[260px] sm:min-h-[300px]">
-            <div>
-              {/* Double quote glyph */}
-              <div className="text-4xl sm:text-5xl text-white/70 font-serif leading-none mb-6 select-none" aria-hidden="true">
-                “
-              </div>
+                    <div className="mt-4 w-full max-w-[280px] sm:max-w-[320px] text-left mx-auto sm:mx-0">
+                      <h4 className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.02em]">
+                        {item.name}
+                      </h4>
+                      <p className="text-xs sm:text-sm font-sans text-[#b8b8b8] mt-1 tracking-[-0.01em]">
+                        {item.role} <span className="text-[#545454]">•</span> {item.company}
+                      </p>
+                      <Link
+                        href={item.caseStudyHref}
+                        className="inline-flex items-center gap-1.5 text-xs text-[#848484] hover:text-white transition-colors mt-3 group"
+                        aria-label={`Read ${item.company} case study`}
+                      >
+                        <span>Read case study</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Link>
+                    </div>
+                  </div>
 
-              <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-display font-medium text-white leading-[1.25] tracking-[-0.03em] mb-8">
-                &ldquo;{current.quote}&rdquo;
-              </blockquote>
-            </div>
+                  {/* Right Column: Large Editorial Quote & Navigation */}
+                  <div className="lg:col-span-8 flex flex-col justify-between min-h-[260px] sm:min-h-[300px]">
+                    <div>
+                      {/* Double quote glyph */}
+                      <div
+                        className="text-4xl sm:text-5xl text-white/70 font-serif leading-none mb-6 select-none"
+                        aria-hidden="true"
+                      >
+                        “
+                      </div>
 
-            {/* Navigation Arrow Buttons */}
-            <div className="flex items-center gap-2 pt-2">
-              <button
-                type="button"
-                onClick={prev}
-                aria-label="Previous testimonial"
-                className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                onClick={next}
-                aria-label="Next testimonial"
-                className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
-              >
-                →
-              </button>
-            </div>
+                      <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-display font-medium text-white leading-[1.25] tracking-[-0.03em] mb-8">
+                        &ldquo;{item.quote}&rdquo;
+                      </blockquote>
+                    </div>
+
+                    {/* Navigation Arrow Buttons */}
+                    <div className="flex items-center gap-2 pt-2">
+                      <button
+                        type="button"
+                        onClick={prev}
+                        aria-label="Previous testimonial"
+                        className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
+                      >
+                        ←
+                      </button>
+                      <button
+                        type="button"
+                        onClick={next}
+                        aria-label="Next testimonial"
+                        className="w-10 h-10 rounded-none border border-white/10 bg-white/[0.03] hover:bg-white text-white hover:text-black transition-all flex items-center justify-center cursor-pointer font-display text-base"
+                      >
+                        →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Interactive Client Tabs matching MUGEN */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border-t border-white/10 mt-12 sm:mt-16">
           {testimonials.map((item, idx) => {
-            const isActive = activeIndex === idx;
+            const isActive = activeTab === idx;
             return (
               <button
                 key={item.company}
                 type="button"
-                onClick={() => setActiveIndex(idx)}
+                onClick={() => goToSlide(idx)}
                 className="text-left py-5 sm:py-6 px-3 sm:px-4 -mt-[1px] relative cursor-pointer group transition-all focus:outline-none"
               >
                 {/* Active Indicator Top Line */}
