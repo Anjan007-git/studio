@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
+import { MotionReveal } from "@/components/MotionReveal";
+import { CountUp } from "@/components/CountUp";
 import { ArrowUpRight, Star } from "@/components/icons";
 
 const team = [
@@ -167,113 +169,129 @@ export default function StudioPage() {
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-white selection:bg-white selection:text-black">
       <Navbar />
-
       <main className="pt-28 sm:pt-36">
         {/* Header Hero Section */}
         <section className="pb-20 sm:pb-28">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="mb-8">
-              <span className="section-label">
-                [The Studio]
-              </span>
-            </div>
+            <MotionReveal delay={50}>
+              <div className="mb-8">
+                <span className="section-label">
+                  [The Studio]
+                </span>
+              </div>
+            </MotionReveal>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.05] mb-12">
-              TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms.
-            </h1>
+            <MotionReveal delay={140} yOffset={28}>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.05] mb-12">
+                TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms.
+              </h1>
+            </MotionReveal>
           </div>
         </section>
 
         {/* [Who we are] Section with 2 Columns and Bento Stats */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="mb-8">
-              <span className="section-label block">
-                [Who we are]
-              </span>
-            </div>
+            <MotionReveal delay={50}>
+              <div className="mb-8">
+                <span className="section-label block">
+                  [Who we are]
+                </span>
+              </div>
+            </MotionReveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
-              <p className="text-lg sm:text-2xl text-white font-sans font-normal leading-relaxed tracking-[-0.02em]">
-                Built deliberately from day one, we&apos;ve grown carefully and intentionally. We&apos;ve avoided the hire-fast agency mentality and said no to engagements that didn&apos;t align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft.
-              </p>
-              <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed tracking-[-0.02em]">
-                We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership.
-              </p>
+              <MotionReveal delay={100}>
+                <p className="text-lg sm:text-2xl text-white font-sans font-normal leading-relaxed tracking-[-0.02em]">
+                  Built deliberately from day one, we&apos;ve grown carefully and intentionally. We&apos;ve avoided the hire-fast agency mentality and said no to engagements that didn&apos;t align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft.
+                </p>
+              </MotionReveal>
+              <MotionReveal delay={180}>
+                <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed tracking-[-0.02em]">
+                  We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership.
+                </p>
+              </MotionReveal>
             </div>
 
             {/* Stat Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
-                  Presence
-                </span>
-                <div className="mt-8">
-                  <p className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]">
-                    Global Studio
-                  </p>
-                  <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
-                    Hubs in New York, San Francisco &amp; Global Remote.
-                  </p>
-                </div>
-              </div>
-
-              <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
-                  Experience
-                </span>
-                <div className="mt-8">
-                  <p className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
-                    10+
-                  </p>
-                  <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
-                    Years combined expertise
-                  </p>
-                </div>
-              </div>
-
-              <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between">
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
-                  Reputation
-                </span>
-                <div className="mt-8">
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <span className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
-                      4.9
-                    </span>
-                    <span className="text-xl text-[#848484] font-display font-medium">/ 5</span>
+              <MotionReveal delay={60}>
+                <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all duration-300 h-full">
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
+                    Presence
+                  </span>
+                  <div className="mt-8">
+                    <p className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]">
+                      Global Studio
+                    </p>
+                    <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
+                      Hubs in New York, San Francisco &amp; Global Remote.
+                    </p>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-xs text-[#b8b8b8] font-sans tracking-[-0.01em]">
-                    Average client rating
-                  </p>
                 </div>
-              </div>
+              </MotionReveal>
 
-              <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between group hover:border-white/30 transition-all">
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
-                  Careers
-                </span>
-                <div className="mt-8">
-                  <h4 className="text-xl font-display font-semibold text-white mb-2 tracking-[-0.03em]">
-                    Join the team
-                  </h4>
-                  <p className="text-xs text-[#b8b8b8] font-sans mb-6 leading-relaxed tracking-[-0.01em]">
-                    If you&apos;re ready to shape the future with us, your journey could start here.
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-white group-hover:text-[#b8b8b8] transition-colors tracking-[-0.02em]"
-                  >
-                    <span>Let&apos;s talk</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Link>
+              <MotionReveal delay={120}>
+                <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all duration-300 h-full">
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
+                    Experience
+                  </span>
+                  <div className="mt-8">
+                    <p className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
+                      <CountUp end={10} start={0} suffix="+" duration={1.6} />
+                    </p>
+                    <p className="text-xs text-[#b8b8b8] font-sans mt-2 tracking-[-0.01em]">
+                      Years combined expertise
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </MotionReveal>
+
+              <MotionReveal delay={180}>
+                <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all duration-300 h-full">
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
+                    Reputation
+                  </span>
+                  <div className="mt-8">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <span className="text-4xl sm:text-5xl font-display font-semibold text-white tracking-[-0.04em]">
+                        <CountUp end={4.9} start={0.0} decimals={1} suffix=" / 5" duration={1.8} />
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1 text-amber-400 mb-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-xs text-[#b8b8b8] font-sans tracking-[-0.01em]">
+                      Average client rating
+                    </p>
+                  </div>
+                </div>
+              </MotionReveal>
+
+              <MotionReveal delay={240}>
+                <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between group hover:border-white/30 transition-all duration-300 h-full">
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em]">
+                    Careers
+                  </span>
+                  <div className="mt-8">
+                    <h4 className="text-xl font-display font-semibold text-white mb-2 tracking-[-0.03em]">
+                      Join the team
+                    </h4>
+                    <p className="text-xs text-[#b8b8b8] font-sans mb-6 leading-relaxed tracking-[-0.01em]">
+                      If you&apos;re ready to shape the future with us, your journey could start here.
+                    </p>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-white group-hover:text-[#b8b8b8] transition-colors tracking-[-0.02em]"
+                    >
+                      <span>Let&apos;s talk</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </MotionReveal>
             </div>
           </div>
         </section>
@@ -281,128 +299,132 @@ export default function StudioPage() {
         {/* Our Studio Section: Studio Spaces & Workplace Photo Grid */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="mb-14">
-              <span className="section-label block mb-3">
-                [Space]
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                Our studio.
-              </h2>
-              <p className="text-xl sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-3xl tracking-[-0.02em]">
-                We built this studio to be the kind of place we&apos;d want to work.
-              </p>
-            </div>
+            <MotionReveal delay={50}>
+              <div className="mb-14">
+                <span className="section-label block mb-3">
+                  [Space]
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
+                  Our studio.
+                </h2>
+                <p className="text-xl sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-3xl tracking-[-0.02em]">
+                  We built this studio to be the kind of place we&apos;d want to work.
+                </p>
+              </div>
+            </MotionReveal>
 
             {/* 4 Workspace Photo Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {studioMoments.map((moment, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden flex flex-col group hover:border-white/20 transition-all"
-                >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
-                    <Image
-                      src={moment.image}
-                      alt="Studio workspace"
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-sans text-[#b8b8b8]">
-                      {moment.date}
+                <MotionReveal key={idx} delay={idx * 80}>
+                  <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-300 h-full">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+                      <Image
+                        src={moment.image}
+                        alt="Studio workspace"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-sans text-[#b8b8b8]">
+                        {moment.date}
+                      </div>
+                    </div>
+                    <div className="p-5 flex-1 flex items-center">
+                      <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
+                        {moment.caption}
+                      </p>
                     </div>
                   </div>
-                  <div className="p-5 flex-1 flex items-center">
-                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
-                      {moment.caption}
-                    </p>
-                  </div>
-                </div>
+                </MotionReveal>
               ))}
             </div>
 
             {/* Studio Environment Philosophy Statements */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 sm:p-12 rounded-3xl bg-[#1c1c1c] border border-white/10">
-              <div>
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
-                  Environment
-                </span>
-                <p className="text-base sm:text-lg text-white leading-relaxed font-sans font-normal tracking-[-0.01em]">
-                  Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction.
-                </p>
+            <MotionReveal delay={120}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 sm:p-12 rounded-3xl bg-[#1c1c1c] border border-white/10">
+                <div>
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
+                    Environment
+                  </span>
+                  <p className="text-base sm:text-lg text-white leading-relaxed font-sans font-normal tracking-[-0.01em]">
+                    Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction.
+                  </p>
+                </div>
+                <div>
+                  <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
+                    Deliberate Scale
+                  </span>
+                  <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
+                    We keep our team small on purpose. It means everyone has ownership, every voice matters, and every project gets our full attention. We hire slowly and thoughtfully, looking for people who are talented, yes, but more importantly, who share our belief that design should solve real problems for real businesses.
+                  </p>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
-                  Deliberate Scale
-                </span>
-                <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
-                  We keep our team small on purpose. It means everyone has ownership, every voice matters, and every project gets our full attention. We hire slowly and thoughtfully, looking for people who are talented, yes, but more importantly, who share our belief that design should solve real problems for real businesses.
-                </p>
-              </div>
-            </div>
+            </MotionReveal>
           </div>
         </section>
 
         {/* Meet the Team Section */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="mb-14">
-              <span className="section-label block mb-3">
-                [People]
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                Disciplines &amp; Leadership.
-              </h2>
-              <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-4xl leading-relaxed tracking-[-0.02em]">
-                A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters.
-              </p>
-            </div>
+            <MotionReveal delay={50}>
+              <div className="mb-14">
+                <span className="section-label block mb-3">
+                  [People]
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
+                  Disciplines &amp; Leadership.
+                </h2>
+                <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-4xl leading-relaxed tracking-[-0.02em]">
+                  A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters.
+                </p>
+              </div>
+            </MotionReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {team.map((member) => (
-                <div
-                  key={member.name}
-                  className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-300"
-                >
-                  <div>
-                    {/* Portrait Photo with Smooth Masking & Zoom */}
-                    <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      />
+              {team.map((member, idx) => (
+                <MotionReveal key={member.name} delay={idx * 80}>
+                  <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-300 h-full">
+                    <div>
+                      {/* Portrait Photo with Smooth Masking & Zoom */}
+                      <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                      </div>
+
+                      <h3 className="text-xl font-display font-semibold text-white mb-1 tracking-[-0.03em]">
+                        {member.name}
+                      </h3>
+                      <p className="text-xs font-sans text-[#b8b8b8] mb-4 tracking-[-0.01em]">
+                        {member.role}
+                      </p>
+                      <p className="text-xs text-[#848484] leading-relaxed font-sans font-normal mb-6 tracking-[-0.01em]">
+                        {member.bio}
+                      </p>
                     </div>
 
-                    <h3 className="text-xl font-display font-semibold text-white mb-1 tracking-[-0.03em]">
-                      {member.name}
-                    </h3>
-                    <p className="text-xs font-sans text-[#b8b8b8] mb-4 tracking-[-0.01em]">
-                      {member.role}
-                    </p>
-                    <p className="text-xs text-[#848484] leading-relaxed font-sans font-normal mb-6 tracking-[-0.01em]">
-                      {member.bio}
-                    </p>
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                      <button
+                        onClick={() => handleCopyEmail(member.email)}
+                        className="text-xs font-display font-medium text-[#b8b8b8] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer tracking-[-0.02em]"
+                      >
+                        <span>
+                          {copiedEmail === member.email ? "copied!" : member.email}
+                        </span>
+                      </button>
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="text-[#848484] hover:text-white transition-colors"
+                        aria-label={`Email ${member.name}`}
+                      >
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
                   </div>
-
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                    <button
-                      onClick={() => handleCopyEmail(member.email)}
-                      className="text-xs font-display font-medium text-[#b8b8b8] hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer tracking-[-0.02em]"
-                    >
-                      <span>
-                        {copiedEmail === member.email ? "copied!" : member.email}
-                      </span>
-                    </button>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="text-[#848484] hover:text-white transition-colors"
-                      aria-label={`Email ${member.name}`}
-                    >
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </div>
+                </MotionReveal>
               ))}
             </div>
           </div>
@@ -411,30 +433,31 @@ export default function StudioPage() {
         {/* Favorite Clients Section */}
         <section className="py-20 sm:py-24 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="mb-12">
-              <span className="section-label block mb-2">
-                [Trust]
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white">
-                Our favorite clients.
-              </h2>
-            </div>
+            <MotionReveal delay={50}>
+              <div className="mb-12">
+                <span className="section-label block mb-2">
+                  [Trust]
+                </span>
+                <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white">
+                  Our favorite clients.
+                </h2>
+              </div>
+            </MotionReveal>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6">
-              {clientLogos.map((client) => (
-                <div
-                  key={client.name}
-                  className="rounded-2xl bg-[#1c1c1c] border border-white/10 h-24 flex items-center justify-center p-4 hover:border-white/30 transition-all group"
-                >
-                  <div className="relative w-full h-8 opacity-60 group-hover:opacity-100 transition-opacity">
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      fill
-                      className="object-contain filter invert"
-                    />
+              {clientLogos.map((client, idx) => (
+                <MotionReveal key={client.name} delay={(idx % 4) * 60}>
+                  <div className="rounded-2xl bg-[#1c1c1c] border border-white/10 h-24 flex items-center justify-center p-4 hover:border-white/30 transition-all duration-300 group">
+                    <div className="relative w-full h-8 opacity-60 group-hover:opacity-100 transition-opacity">
+                      <Image
+                        src={client.logo}
+                        alt={client.name}
+                        fill
+                        className="object-contain filter invert"
+                      />
+                    </div>
                   </div>
-                </div>
+                </MotionReveal>
               ))}
             </div>
           </div>
@@ -443,42 +466,43 @@ export default function StudioPage() {
         {/* Our Approach / Timeline Section (2016 - 2025) */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="max-w-3xl mb-16">
-              <span className="section-label block mb-3">
-                [Philosophy]
-              </span>
-              <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                Our approach.
-              </h2>
-              <div className="flex items-center gap-3 text-xs font-display font-medium text-[#848484] mb-4 tracking-[-0.02em]">
-                <span>Core Framework</span>
-                <span>•</span>
-                <span>4 Strategic Pillars</span>
+            <MotionReveal delay={50}>
+              <div className="max-w-3xl mb-16">
+                <span className="section-label block mb-3">
+                  [Philosophy]
+                </span>
+                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
+                  Our approach.
+                </h2>
+                <div className="flex items-center gap-3 text-xs font-display font-medium text-[#848484] mb-4 tracking-[-0.02em]">
+                  <span>Core Framework</span>
+                  <span>•</span>
+                  <span>4 Strategic Pillars</span>
+                </div>
+                <p className="text-base sm:text-xl text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
+                  We&apos;ve helped over 100 clients achieve their goals and increase revenue.
+                </p>
               </div>
-              <p className="text-base sm:text-xl text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
-                We&apos;ve helped over 100 clients achieve their goals and increase revenue.
-              </p>
-            </div>
+            </MotionReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {pillars.map((item) => (
-                <div
-                  key={item.num}
-                  className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-display font-medium text-[#848484] mb-8 tracking-[-0.02em]">
-                      <span>/{item.num}</span>
-                      <span className="text-white">TRIFECTA TRENDS®</span>
+              {pillars.map((item, idx) => (
+                <MotionReveal key={item.num} delay={idx * 80}>
+                  <div className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-7 flex flex-col justify-between hover:border-white/20 transition-all duration-300 group h-full">
+                    <div>
+                      <div className="flex items-center justify-between text-xs font-display font-medium text-[#848484] mb-8 tracking-[-0.02em]">
+                        <span>/{item.num}</span>
+                        <span className="text-white">TRIFECTA TRENDS®</span>
+                      </div>
+                      <h3 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">
+                        {item.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">
-                      {item.title}
-                    </h3>
+                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal pt-6 border-t border-white/10 mt-6 tracking-[-0.01em]">
+                      {item.description}
+                    </p>
                   </div>
-                  <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal pt-6 border-t border-white/10 mt-6 tracking-[-0.01em]">
-                    {item.description}
-                  </p>
-                </div>
+                </MotionReveal>
               ))}
             </div>
           </div>
@@ -487,69 +511,72 @@ export default function StudioPage() {
         {/* Strategies & Insights / Articles Section */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
-              <div>
-                <span className="section-label block mb-3">
-                  [Articles]
-                </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
-                  Strategies &amp; insights from the team.
-                </h2>
+            <MotionReveal delay={50}>
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+                <div>
+                  <span className="section-label block mb-3">
+                    [Articles]
+                  </span>
+                  <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
+                    Strategies &amp; insights from the team.
+                  </h2>
+                </div>
+                <Link
+                  href="/articles"
+                  className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.02em]"
+                >
+                  <span>All Articles</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
-              <Link
-                href="/articles"
-                className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.02em]"
-              >
-                <span>All Articles</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
+            </MotionReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {studioArticles.map((article, idx) => (
-                <Link
-                  key={idx}
-                  href={`/articles/${article.slug}`}
-                  className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 flex flex-col justify-between group hover:border-white/20 transition-all"
-                >
-                  <div>
-                    <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      />
-                      <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636]">
-                        {article.category}
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between text-[11px] font-sans text-[#848484] mb-3">
-                      <span>{article.date}</span>
-                      <span>{article.readTime}</span>
-                    </div>
-
-                    <h3 className="text-base font-display font-semibold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-snug tracking-[-0.03em]">
-                      {article.title}
-                    </h3>
-                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-3 mb-6 tracking-[-0.01em]">
-                      {article.summary}
-                    </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                <MotionReveal key={idx} delay={idx * 80}>
+                  <Link
+                    href={`/articles/${article.slug}`}
+                    className="rounded-3xl bg-[#1c1c1c] border border-white/10 p-5 flex flex-col justify-between group hover:border-white/20 transition-all duration-300 h-full"
+                  >
                     <div>
-                      <span className="text-xs font-display font-semibold text-white block tracking-[-0.02em]">
-                        {article.author}
-                      </span>
-                      <span className="text-[10px] font-sans text-[#848484] block">
-                        {article.role}
-                      </span>
+                      <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                        <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636]">
+                          {article.category}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between text-[11px] font-sans text-[#848484] mb-3">
+                        <span>{article.date}</span>
+                        <span>{article.readTime}</span>
+                      </div>
+
+                      <h3 className="text-base font-display font-semibold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-snug tracking-[-0.03em]">
+                        {article.title}
+                      </h3>
+                      <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-3 mb-6 tracking-[-0.01em]">
+                        {article.summary}
+                      </p>
                     </div>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#848484] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                  </div>
-                </Link>
+
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                      <div>
+                        <span className="text-xs font-display font-semibold text-white block tracking-[-0.02em]">
+                          {article.author}
+                        </span>
+                        <span className="text-[10px] font-sans text-[#848484] block">
+                          {article.role}
+                        </span>
+                      </div>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#848484] group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    </div>
+                  </Link>
+                </MotionReveal>
               ))}
             </div>
           </div>

@@ -39,6 +39,7 @@ export function PageTransition({ children }: PageTransitionProps) {
 
   const curtainRef = useRef<HTMLDivElement>(null);
   const brandMarkRef = useRef<HTMLDivElement>(null);
+  const progressBeamRef = useRef<HTMLDivElement>(null);
   const contentWrapperRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
@@ -88,6 +89,9 @@ export function PageTransition({ children }: PageTransitionProps) {
     if (brandMarkRef.current) {
       gsap.set(brandMarkRef.current, { opacity: 0 });
     }
+    if (progressBeamRef.current) {
+      gsap.set(progressBeamRef.current, { scaleX: 0, opacity: 0 });
+    }
 
     // Dispatch global event for components that need to sync with page transition completion
     window.dispatchEvent(new CustomEvent("trifecta-transition-complete"));
@@ -97,6 +101,7 @@ export function PageTransition({ children }: PageTransitionProps) {
   const playEntranceAnimation = useCallback(() => {
     const curtain = curtainRef.current;
     const brandMark = brandMarkRef.current;
+    const progressBeam = progressBeamRef.current;
     const reducedMotion = prefersReducedMotion();
 
     // Kill any existing timeline
@@ -123,13 +128,27 @@ export function PageTransition({ children }: PageTransitionProps) {
     });
     timelineRef.current = tl;
 
+    // Progress beam fades out
+    if (progressBeam) {
+      tl.to(
+        progressBeam,
+        {
+          opacity: 0,
+          duration: 0.18,
+          ease: "power2.in",
+        },
+        0
+      );
+    }
+
     // Brand mark fades out smoothly
     if (brandMark) {
       tl.to(
         brandMark,
         {
           opacity: 0,
-          duration: 0.18,
+          scale: 0.98,
+          duration: 0.2,
           ease: "power2.in",
         },
         0
@@ -141,10 +160,10 @@ export function PageTransition({ children }: PageTransitionProps) {
       curtain,
       {
         yPercent: -100,
-        duration: 0.42,
+        duration: 0.44,
         ease: "power3.inOut",
       },
-      0.05
+      0.04
     );
   }, [finishTransition, prefersReducedMotion, resetScroll]);
 
@@ -218,6 +237,21 @@ export function PageTransition({ children }: PageTransitionProps) {
             ease: "power3.inOut",
           },
           0
+        );
+      }
+
+      // Luminous progress hairline sweeps across top edge
+      if (progressBeamRef.current) {
+        tl.fromTo(
+          progressBeamRef.current,
+          { scaleX: 0, opacity: 0.2 },
+          {
+            scaleX: 1,
+            opacity: 0.9,
+            duration: 0.36,
+            ease: "power2.out",
+          },
+          0.05
         );
       }
 
@@ -402,6 +436,13 @@ export function PageTransition({ children }: PageTransitionProps) {
       >
         {/* Top edge sheen / razor hairline accent */}
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
+        {/* Dynamic luminous progress hairline */}
+        <div
+          ref={progressBeamRef}
+          className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none origin-left"
+          style={{ transform: "scaleX(0)", opacity: 0 }}
+        />
 
         {/* Ambient radial depth glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.035)_0%,transparent_70%)] pointer-events-none" />
