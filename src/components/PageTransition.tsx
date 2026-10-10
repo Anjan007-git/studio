@@ -56,6 +56,7 @@ export function PageTransition({ children }: PageTransitionProps) {
     }
     // Safety: ensure no stray overflow lock freezes the page
     document.body.style.overflow = "unset";
+    document.documentElement.style.overflow = "unset";
   }, []);
 
   // Cleanup helper
@@ -65,31 +66,27 @@ export function PageTransition({ children }: PageTransitionProps) {
       safetyTimeoutRef.current = null;
     }
 
+    timelineRef.current?.kill();
     isTransitioningRef.current = false;
     pendingHrefRef.current = null;
     setIsTransitioning(false);
 
-    // Ensure scroll lock is released and Lenis is active
+    // Ensure scroll locks are released and Lenis is active
     document.body.style.overflow = "unset";
+    document.documentElement.style.overflow = "unset";
     window.__lenis?.start();
 
-    // Reset curtain position instantly below viewport for next transition
+    // Reset curtain DOM state so it never interferes when idle
     if (curtainRef.current) {
+      curtainRef.current.style.display = "none";
+      curtainRef.current.style.pointerEvents = "none";
       gsap.set(curtainRef.current, {
         yPercent: 100,
-        pointerEvents: "none",
+        clearProps: "transform",
       });
     }
     if (brandMarkRef.current) {
       gsap.set(brandMarkRef.current, { opacity: 0 });
-    }
-    if (contentWrapperRef.current) {
-      gsap.set(contentWrapperRef.current, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        clearProps: "transform,opacity",
-      });
     }
 
     // Dispatch global event for components that need to sync with page transition completion
@@ -100,7 +97,6 @@ export function PageTransition({ children }: PageTransitionProps) {
   const playEntranceAnimation = useCallback(() => {
     const curtain = curtainRef.current;
     const brandMark = brandMarkRef.current;
-    const content = contentWrapperRef.current;
     const reducedMotion = prefersReducedMotion();
 
     // Kill any existing timeline
@@ -109,23 +105,18 @@ export function PageTransition({ children }: PageTransitionProps) {
     resetScroll();
 
     if (reducedMotion) {
-      if (curtain) gsap.set(curtain, { yPercent: 100, pointerEvents: "none" });
-      if (content) {
-        gsap.fromTo(
-          content,
-          { opacity: 0.3 },
-          {
-            opacity: 1,
-            duration: 0.18,
-            ease: "power2.out",
-            onComplete: finishTransition,
-          }
-        );
-      } else {
-        finishTransition();
-      }
+      finishTransition();
       return;
     }
+
+    if (!curtain) {
+      finishTransition();
+      return;
+    }
+
+    // Ensure curtain is visible and positioned at 0 before sweeping away
+    curtain.style.display = "flex";
+    gsap.set(curtain, { yPercent: 0, pointerEvents: "auto" });
 
     const tl = gsap.timeline({
       onComplete: finishTransition,
@@ -134,45 +125,27 @@ export function PageTransition({ children }: PageTransitionProps) {
 
     // Brand mark fades out smoothly
     if (brandMark) {
-      tl.to(brandMark, {
-        opacity: 0,
-        duration: 0.18,
-        ease: "power2.in",
-      }, 0);
+      tl.to(
+        brandMark,
+        {
+          opacity: 0,
+          duration: 0.18,
+          ease: "power2.in",
+        },
+        0
+      );
     }
 
     // Curtain wipes off toward the top: yPercent: 0 -> -100
-    if (curtain) {
-      tl.to(
-        curtain,
-        {
-          yPercent: -100,
-          duration: 0.42,
-          ease: "power3.inOut",
-        },
-        0.05
-      );
-    }
-
-    // Destination page content gently glides in
-    if (content) {
-      tl.fromTo(
-        content,
-        {
-          y: 24,
-          opacity: 0.8,
-          scale: 0.995,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.45,
-          ease: "power3.out",
-        },
-        0.1
-      );
-    }
+    tl.to(
+      curtain,
+      {
+        yPercent: -100,
+        duration: 0.42,
+        ease: "power3.inOut",
+      },
+      0.05
+    );
   }, [finishTransition, prefersReducedMotion, resetScroll]);
 
   // Step 1: Exit transition (sweeping dark curtain over outgoing page)
@@ -181,10 +154,33 @@ export function PageTransition({ children }: PageTransitionProps) {
       // Prevent double transitions
       if (isTransitioningRef.current) return;
 
+      // Ignore if targeting identical current pathname and no search/hash
+      if (targetHref === window.location.pathname) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.__lenis?.scrollTo(0);
+        return;
+      }
+
       const reducedMotion = prefersReducedMotion();
+      if (reducedMotion) {
+        resetScroll();
+        router.push(targetHref);
+        return;
+      }
+
       isTransitioningRef.current = true;
       pendingHrefRef.current = targetHref;
       setIsTransitioning(true);
+
+      const curtain = curtainRef.current;
+      const brandMark = brandMarkRef.current;
+
+      // Synchronously ensure curtain is visible in DOM before animating
+      if (curtain) {
+        curtain.style.display = "flex";
+        curtain.style.pointerEvents = "auto";
+        gsap.set(curtain, { yPercent: 100 });
+      }
 
       // Dispatch global event for components (e.g., closing drawers)
       window.dispatchEvent(
@@ -197,35 +193,10 @@ export function PageTransition({ children }: PageTransitionProps) {
       if (safetyTimeoutRef.current) clearTimeout(safetyTimeoutRef.current);
       safetyTimeoutRef.current = setTimeout(() => {
         finishTransition();
-      }, 1500);
-
-      const curtain = curtainRef.current;
-      const brandMark = brandMarkRef.current;
-      const content = contentWrapperRef.current;
+      }, 2000);
 
       // Kill any running animations
       timelineRef.current?.kill();
-
-      if (reducedMotion) {
-        if (content) {
-          gsap.to(content, {
-            opacity: 0.3,
-            duration: 0.15,
-            ease: "power2.in",
-            onComplete: () => {
-              router.push(targetHref);
-            },
-          });
-        } else {
-          router.push(targetHref);
-        }
-        return;
-      }
-
-      // Ensure curtain is interactive during transit to prevent rapid spam clicking
-      if (curtain) {
-        gsap.set(curtain, { pointerEvents: "auto" });
-      }
 
       const tl = gsap.timeline({
         onComplete: () => {
@@ -245,21 +216,6 @@ export function PageTransition({ children }: PageTransitionProps) {
             yPercent: 0,
             duration: 0.38,
             ease: "power3.inOut",
-          },
-          0
-        );
-      }
-
-      // Outgoing page content subtly dips and scales
-      if (content) {
-        tl.to(
-          content,
-          {
-            y: -18,
-            opacity: 0.5,
-            scale: 0.99,
-            duration: 0.36,
-            ease: "power2.inOut",
           },
           0
         );
@@ -289,9 +245,11 @@ export function PageTransition({ children }: PageTransitionProps) {
     // If pathname changed while we were waiting for it
     if (isTransitioningRef.current) {
       currentPathnameRef.current = pathname;
-      // Route has mounted — trigger the entrance reveal!
+      // Route has mounted — trigger the entrance reveal after frame paint
       requestAnimationFrame(() => {
-        playEntranceAnimation();
+        requestAnimationFrame(() => {
+          playEntranceAnimation();
+        });
       });
     } else {
       currentPathnameRef.current = pathname;
@@ -301,23 +259,8 @@ export function PageTransition({ children }: PageTransitionProps) {
   // Handle browser Back / Forward (popstate)
   useEffect(() => {
     const handlePopState = () => {
-      // If we weren't already in a custom transition, play a smooth reveal for Back/Forward
-      if (!isTransitioningRef.current) {
-        resetScroll();
-        const content = contentWrapperRef.current;
-        if (content && !prefersReducedMotion()) {
-          gsap.fromTo(
-            content,
-            { opacity: 0.7, y: 16 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.36,
-              ease: "power2.out",
-              clearProps: "transform,opacity",
-            }
-          );
-        }
+      if (isTransitioningRef.current) {
+        finishTransition();
       }
     };
 
@@ -325,7 +268,7 @@ export function PageTransition({ children }: PageTransitionProps) {
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [prefersReducedMotion, resetScroll]);
+  }, [finishTransition]);
 
   // Global Link interceptor: intercepts all internal links across header, footer, cards, articles, mobile drawer
   useEffect(() => {
@@ -427,33 +370,35 @@ export function PageTransition({ children }: PageTransitionProps) {
       if (safetyTimeoutRef.current) clearTimeout(safetyTimeoutRef.current);
       timelineRef.current?.kill();
       document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "unset";
       window.__lenis?.start();
     };
   }, []);
 
   return (
     <PageTransitionContext.Provider value={{ navigate, isTransitioning }}>
-      {/* Dynamic Page Content Wrapper */}
+      {/* Clean Page Content Wrapper — free of will-change-transform and containing-block constraints */}
       <div
         ref={contentWrapperRef}
         id="page-transition-content"
-        className="w-full flex-1 flex flex-col will-change-transform"
+        className="w-full flex-1 flex flex-col"
       >
         {children}
       </div>
 
-      {/* MUGEN-Inspired Dark Obsidian Transition Curtain */}
+      {/* MUGEN-Inspired Dark Obsidian Transition Curtain — conditionally displayed during active transitions only */}
       <div
         ref={curtainRef}
         id="page-transition-curtain"
-        className="fixed inset-0 z-[9999] pointer-events-none flex items-center justify-center bg-[#050505] overflow-hidden select-none"
+        className="fixed inset-0 select-none overflow-hidden items-center justify-center bg-[#050505]"
         style={{
+          display: isTransitioning ? "flex" : "none",
           height: "100dvh",
           width: "100vw",
-          transform: "translateY(100%)",
-          willChange: "transform",
+          zIndex: 99999,
+          pointerEvents: isTransitioning ? "auto" : "none",
         }}
-        aria-hidden="true"
+        aria-hidden={!isTransitioning}
       >
         {/* Top edge sheen / razor hairline accent */}
         <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
@@ -487,3 +432,4 @@ export function PageTransition({ children }: PageTransitionProps) {
 }
 
 export default PageTransition;
+
