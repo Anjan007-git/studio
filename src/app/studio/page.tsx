@@ -7,6 +7,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 import { CountUp } from "@/components/CountUp";
 import { ArrowUpRight, Star } from "@/components/icons";
 
@@ -182,9 +183,15 @@ export default function StudioPage() {
             </MotionReveal>
 
             <MotionReveal delay={140} yOffset={28}>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.05] mb-12">
-                TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms.
-              </h1>
+              <ScrollLinkedText
+                as="h1"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[76px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.05] mb-12"
+                text="TRIFECTA TRENDS is a creative technology and product design studio. We partner with ambitious companies to craft distinctive digital experiences, brand architecture, and high-converting platforms."
+                highlightWords={["TRIFECTA", "TRENDS", "creative", "technology", "product", "design", "distinctive", "digital", "experiences", "platforms"]}
+                start="top 95%"
+                end="top 30%"
+                scrub={0.6}
+              />
             </MotionReveal>
           </div>
         </section>
@@ -201,16 +208,24 @@ export default function StudioPage() {
             </MotionReveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
-              <MotionReveal delay={100}>
-                <p className="text-lg sm:text-2xl text-white font-sans font-normal leading-relaxed tracking-[-0.02em]">
-                  Built deliberately from day one, we&apos;ve grown carefully and intentionally. We&apos;ve avoided the hire-fast agency mentality and said no to engagements that didn&apos;t align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft.
-                </p>
-              </MotionReveal>
-              <MotionReveal delay={180}>
-                <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed tracking-[-0.02em]">
-                  We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership.
-                </p>
-              </MotionReveal>
+              <ScrollLinkedText
+                as="p"
+                className="text-lg sm:text-2xl text-white font-sans font-normal leading-relaxed tracking-[-0.02em]"
+                text="Built deliberately from day one, we've grown carefully and intentionally. We've avoided the hire-fast agency mentality and said no to engagements that didn't align with our standards. This focused approach allows us to forge lasting partnerships with teams who value world-class craft."
+                highlightWords={["deliberately", "carefully", "intentionally", "standards", "world-class", "craft"]}
+                start="top 85%"
+                end="top 35%"
+                scrub={0.6}
+              />
+              <ScrollLinkedText
+                as="p"
+                className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed tracking-[-0.02em]"
+                text="We operate as senior practitioners working without intermediaries. Creative direction, strategy, systems architecture, and engineering work in close lockstep. No egos, no drama—just a shared commitment to building work that commands market leadership."
+                highlightWords={["senior", "practitioners", "Creative", "direction", "strategy", "architecture", "engineering", "leadership"]}
+                start="top 82%"
+                end="top 32%"
+                scrub={0.6}
+              />
             </div>
 
             {/* Stat Cards Grid */}
@@ -346,17 +361,29 @@ export default function StudioPage() {
                   <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
                     Environment
                   </span>
-                  <p className="text-base sm:text-lg text-white leading-relaxed font-sans font-normal tracking-[-0.01em]">
-                    Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction.
-                  </p>
+                  <ScrollLinkedText
+                    as="p"
+                    className="text-base sm:text-lg text-white leading-relaxed font-sans font-normal tracking-[-0.01em]"
+                    text="Good work happens in good environments. Our studio spaces and remote workstations are designed for focus, not impressions. Curated physical spaces, natural light, deep asynchronous focus blocks, and high-performance hardware. An environment where great design happens without distraction."
+                    highlightWords={["good", "environments", "focus", "natural", "light", "high-performance", "without", "distraction"]}
+                    start="top 85%"
+                    end="top 40%"
+                    scrub={0.6}
+                  />
                 </div>
                 <div>
                   <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-3">
                     Deliberate Scale
                   </span>
-                  <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]">
-                    We keep our team small on purpose. It means everyone has ownership, every voice matters, and every project gets our full attention. We hire slowly and thoughtfully, looking for people who are talented, yes, but more importantly, who share our belief that design should solve real problems for real businesses.
-                  </p>
+                  <ScrollLinkedText
+                    as="p"
+                    className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-sans font-normal tracking-[-0.01em]"
+                    text="We keep our team small on purpose. It means everyone has ownership, every voice matters, and every project gets our full attention. We hire slowly and thoughtfully, looking for people who are talented, yes, but more importantly, who share our belief that design should solve real problems for real businesses."
+                    highlightWords={["small", "purpose", "ownership", "full", "attention", "solve", "real", "problems"]}
+                    start="top 85%"
+                    end="top 40%"
+                    scrub={0.6}
+                  />
                 </div>
               </div>
             </MotionReveal>
@@ -374,9 +401,15 @@ export default function StudioPage() {
                 <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
                   Disciplines &amp; Leadership.
                 </h2>
-                <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-4xl leading-relaxed tracking-[-0.02em]">
-                  A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters.
-                </p>
+                <ScrollLinkedText
+                  as="p"
+                  className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-4xl leading-relaxed tracking-[-0.02em]"
+                  text="A disciplined studio of senior practitioners spanning creative direction, digital product systems, and interactive engineering. No politics. No junior handoffs. Direct collaboration on work that matters."
+                  highlightWords={["disciplined", "senior", "practitioners", "creative", "direction", "digital", "product", "systems", "interactive", "engineering", "Direct", "collaboration"]}
+                  start="top 85%"
+                  end="top 40%"
+                  scrub={0.6}
+                />
               </div>
             </MotionReveal>
 
@@ -479,9 +512,15 @@ export default function StudioPage() {
                   <span>•</span>
                   <span>4 Strategic Pillars</span>
                 </div>
-                <p className="text-base sm:text-xl text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]">
-                  We&apos;ve helped over 100 clients achieve their goals and increase revenue.
-                </p>
+                <ScrollLinkedText
+                  as="p"
+                  className="text-base sm:text-xl text-[#b8b8b8] font-sans font-normal tracking-[-0.02em]"
+                  text="We've helped over 100 clients achieve their goals and increase revenue."
+                  highlightWords={["helped", "100", "clients", "goals", "increase", "revenue"]}
+                  start="top 90%"
+                  end="top 50%"
+                  scrub={0.6}
+                />
               </div>
             </MotionReveal>
 
@@ -498,9 +537,14 @@ export default function StudioPage() {
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal pt-6 border-t border-white/10 mt-6 tracking-[-0.01em]">
-                      {item.description}
-                    </p>
+                    <ScrollLinkedText
+                      as="p"
+                      className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal pt-6 border-t border-white/10 mt-6 tracking-[-0.01em]"
+                      text={item.description}
+                      start="top 90%"
+                      end="top 50%"
+                      scrub={0.6}
+                    />
                   </div>
                 </MotionReveal>
               ))}

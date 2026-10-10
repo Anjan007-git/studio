@@ -9,6 +9,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { allArticles, getArticleBySlug, getNextArticle } from "@/lib/articles-data";
 import { ArrowLeft, ArrowRight } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
@@ -95,9 +96,14 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
               </h1>
 
               {/* Lead Description */}
-              <p className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed mb-10 tracking-[-0.02em]">
-                {article.description}
-              </p>
+              <ScrollLinkedText
+                as="p"
+                className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed mb-10 tracking-[-0.02em]"
+                text={article.description}
+                start="top 90%"
+                end="top 45%"
+                scrub={0.6}
+              />
 
               {/* Author Profile */}
               <div className="flex items-center gap-4 pt-6 border-t border-white/10">
@@ -162,9 +168,14 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   return (
                     <MotionReveal key={idx} delay={40} variant="fade-up">
                       <div className="my-10 p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border-l-4 border-white border border-white/10">
-                        <blockquote className="text-xl sm:text-2xl font-sans font-normal text-white italic leading-relaxed mb-4">
-                          {sec.text}
-                        </blockquote>
+                        <ScrollLinkedText
+                          as="blockquote"
+                          className="text-xl sm:text-2xl font-sans font-normal text-white italic leading-relaxed mb-4"
+                          text={`\u201C${sec.text}\u201D`}
+                          start="top 85%"
+                          end="top 35%"
+                          scrub={0.6}
+                        />
                         {sec.author && (
                           <p className="text-xs font-sans text-[#848484] uppercase tracking-wider">
                             {sec.author}

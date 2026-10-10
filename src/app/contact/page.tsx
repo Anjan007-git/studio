@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Faq } from "@/components/Faq";
 import { ArrowUpRight, Check } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
@@ -43,11 +44,15 @@ export default function ContactPage() {
                 <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white mb-6 leading-[1.05] max-w-5xl">
                   Let&apos;s build incredible work together.
                 </h1>
-                <p className="text-base sm:text-xl text-[#b8b8b8] max-w-3xl leading-relaxed font-sans font-normal tracking-[-0.02em]">
-                  We&apos;re always open to new collaborations and would love to
-                  hear about your projects. Please reach out through any of the
-                  channels below.
-                </p>
+                <ScrollLinkedText
+                  as="p"
+                  className="text-base sm:text-xl text-[#b8b8b8] max-w-3xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
+                  text="We're always open to new collaborations and would love to hear about your projects. Please reach out through any of the channels below."
+                  highlightWords={["open", "collaborations", "projects", "reach", "out"]}
+                  start="top 90%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
               </MotionReveal>
             </div>
 

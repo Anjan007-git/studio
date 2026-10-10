@@ -9,6 +9,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { allProjects, getProjectBySlug, getNextProject } from "@/lib/projects-data";
 import { ArrowLeft, ArrowRight, ExternalLink } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 import { CountUp } from "@/components/CountUp";
 
 interface ProjectPageProps {
@@ -212,10 +213,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </h2>
                   </div>
 
-                  <div className="lg:col-span-8 space-y-6 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
-                    {project.challenge.paragraphs.map((p, idx) => (
-                      <p key={idx}>{p}</p>
-                    ))}
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                    <ScrollLinkedText
+                      paragraphs={project.challenge.paragraphs}
+                      start="top 85%"
+                      end="top 35%"
+                      scrub={0.6}
+                    />
                   </div>
                 </div>
               </MotionReveal>
@@ -260,10 +264,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </h2>
                   </div>
 
-                  <div className="lg:col-span-8 space-y-6 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
-                    {project.solution.paragraphs.map((p, idx) => (
-                      <p key={idx}>{p}</p>
-                    ))}
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                    <ScrollLinkedText
+                      paragraphs={project.solution.paragraphs}
+                      start="top 85%"
+                      end="top 35%"
+                      scrub={0.6}
+                    />
                   </div>
                 </div>
               </MotionReveal>
@@ -304,10 +311,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </h2>
                   </div>
 
-                  <div className="lg:col-span-8 space-y-6 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
-                    {project.process.paragraphs.map((p, idx) => (
-                      <p key={idx}>{p}</p>
-                    ))}
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                    <ScrollLinkedText
+                      paragraphs={project.process.paragraphs}
+                      start="top 85%"
+                      end="top 35%"
+                      scrub={0.6}
+                    />
                   </div>
                 </div>
               </MotionReveal>
@@ -375,9 +385,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     Client Perspective
                   </span>
 
-                  <blockquote className="text-2xl sm:text-4xl md:text-5xl font-sans font-normal tracking-[-0.03em] text-white leading-tight mb-12 max-w-5xl">
-                    &ldquo;{project.testimonial.quote}&rdquo;
-                  </blockquote>
+                  <ScrollLinkedText
+                    as="blockquote"
+                    className="text-2xl sm:text-4xl md:text-5xl font-sans font-normal tracking-[-0.03em] text-white leading-tight mb-12 max-w-5xl"
+                    text={`\u201C${project.testimonial.quote}\u201D`}
+                    start="top 85%"
+                    end="top 35%"
+                    scrub={0.6}
+                  />
 
                   <div className="flex items-center justify-between pt-8 border-t border-white/10">
                     <div>

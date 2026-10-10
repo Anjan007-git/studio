@@ -9,6 +9,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { allArticles } from "@/lib/articles-data";
 import { ArrowUpRight, Search } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 
 const categories = ["All", "Strategy", "Trends", "Psychology", "Process"];
 
@@ -53,9 +54,15 @@ export default function ArticlesPage() {
                   <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white mb-4">
                     Strategies &amp; insights.
                   </h1>
-                  <p className="text-base sm:text-xl text-[#b8b8b8] max-w-2xl font-sans font-normal leading-relaxed tracking-[-0.02em]">
-                    We share what we&apos;ve learned building brands that scale. Deep dives into design thinking, creative process, and the intersection of business and aesthetics.
-                  </p>
+                  <ScrollLinkedText
+                    as="p"
+                    className="text-base sm:text-xl text-[#b8b8b8] max-w-2xl font-sans font-normal leading-relaxed tracking-[-0.02em]"
+                    text="We share what we've learned building brands that scale. Deep dives into design thinking, creative process, and the intersection of business and aesthetics."
+                    highlightWords={["brands", "scale", "design", "thinking", "creative", "process", "business", "aesthetics"]}
+                    start="top 90%"
+                    end="top 45%"
+                    scrub={0.6}
+                  />
                 </div>
               </MotionReveal>
 

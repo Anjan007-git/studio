@@ -52,3 +52,12 @@ src/app/hero.mp4
 video_*.mp4
 MUGEN-FULL-SITE.mp4
 Screenrecording_*.mp4
+121795.mp4
+Recording*.mp4
+docs/research/video_frames/
+docs/research/*.png
+scratch/
+scripts/check-visibility.mjs
+scripts/inspect-vercel.mjs
+scripts/scan-all-visibility.mjs
+scripts/test-vercel-studio.mjs

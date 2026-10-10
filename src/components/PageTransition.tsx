@@ -10,6 +10,7 @@ import React, {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface PageTransitionContextValue {
   navigate: (href: string) => void;
@@ -95,6 +96,7 @@ export function PageTransition({ children }: PageTransitionProps) {
 
     // Dispatch global event for components that need to sync with page transition completion
     window.dispatchEvent(new CustomEvent("trifecta-transition-complete"));
+    ScrollTrigger.refresh();
   }, []);
 
   // Step 2: Entrance / Reveal animation (uncovering destination page)
