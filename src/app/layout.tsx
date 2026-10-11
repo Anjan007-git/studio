@@ -4,6 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { PageTransition } from "@/components/PageTransition";
 import { BottomBlur } from "@/components/BottomBlur";
+import { PageRails } from "@/components/PageRails";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
@@ -63,6 +64,8 @@ export default function RootLayout({
             {children}
           </PageTransition>
         </SmoothScroll>
+        {/* MUGEN-style architectural vertical editorial rails */}
+        <PageRails />
         {/* MUGEN-style cinematic progressive bottom blur & depth overlay */}
         <BottomBlur />
       </body>
