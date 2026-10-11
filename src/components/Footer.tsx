@@ -68,7 +68,7 @@ export function Footer() {
               <span className="text-xs font-normal">©</span>
             </Link>
             <p className="text-sm sm:text-[15px] text-[#b8b8b8] max-w-sm leading-relaxed font-sans font-normal tracking-[-0.01em]">
-              Your next project deserves world-class design. Stop settling for mediocre and start working with designers who care as much as you do.
+              Software development and digital growth united. We engineer high-performance software and scale ambitious businesses through measurable performance marketing.
             </p>
 
             {/* Newsletter input */}
@@ -123,7 +123,7 @@ export function Footer() {
 
           {/* Mobile: 2-Column Side-by-Side Navigation Grid; Desktop/Tablet: Direct Grid Children via md:contents */}
           <div className="col-span-1 md:contents grid grid-cols-2 gap-6 sm:gap-8">
-            {/* Studio Column */}
+            {/* Studio / Navigation Column */}
             <div className="lg:col-span-2 space-y-4">
               <h4 className="font-display text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white">
                 Studio
@@ -135,17 +135,32 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/studio" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                    Studio
-                  </Link>
-                </li>
-                <li>
                   <Link
                     href="/projects"
                     className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em] pr-2 sm:pr-0"
                   >
-                    <span>Work</span>
+                    <span>Projects</span>
                     <span className="text-xs font-display font-medium text-[#848484]">[12]</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/growth" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Growth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/studio" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
+                    Studio
                   </Link>
                 </li>
                 <li>
@@ -153,13 +168,8 @@ export function Footer() {
                     href="/articles"
                     className="text-[#b8b8b8] hover:text-white transition-colors flex items-center justify-between tracking-[-0.01em] pr-2 sm:pr-0"
                   >
-                    <span>Articles</span>
+                    <span>Insights</span>
                     <span className="text-xs font-display font-medium text-[#848484]">[10]</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em]">
-                    Pricing
                   </Link>
                 </li>
                 <li>
@@ -177,28 +187,28 @@ export function Footer() {
               </h4>
               <ul className="space-y-3 font-normal text-xs sm:text-sm md:text-[15px] font-sans">
                 <li>
-                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
-                    Brand Identity & Systems
+                  <Link href="/services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Custom Software & Web Platforms
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
-                    Web Design & Digital Platforms
+                  <Link href="/services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Full-Stack Systems & Cloud
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
-                    Product Design & UI/UX
+                  <Link href="/services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    AI Integration & Smart Tools
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
-                    Marketing & Growth Creative
+                  <Link href="/growth" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Google Ads & Meta Ads Scaling
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
-                    Engineering & Framer Code
+                  <Link href="/growth" className="text-[#b8b8b8] hover:text-white transition-colors tracking-[-0.01em] leading-snug block">
+                    Performance Marketing & Lead Gen
                   </Link>
                 </li>
               </ul>
@@ -336,7 +346,7 @@ export function Footer() {
         {/* Bottom copyright row */}
         <div className="pt-6 border-t border-white/10 text-[#848484] font-sans text-[11px] sm:text-xs tracking-[-0.01em]">
           <div>
-            <span>Creative Technology Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
+            <span>Software Development & Digital Growth Studio. © 2026 TRIFECTA TRENDS® All rights reserved.</span>
           </div>
         </div>
       </div>

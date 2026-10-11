@@ -179,10 +179,11 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/studio", label: "Studio" },
-    { href: "/projects", label: "Work", count: "[12]" },
-    { href: "/articles", label: "Articles", count: "[10]" },
+    { href: "/projects", label: "Projects", count: "[12]" },
+    { href: "/services", label: "Services" },
+    { href: "/growth", label: "Growth" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/studio", label: "Studio" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -215,13 +216,13 @@ export function Navbar() {
             </span>
           </div>
 
-          {/* Right: Our Work link (tablet/desktop) & Minimal Hamburger */}
+          {/* Right: Projects link (tablet/desktop) & Minimal Hamburger */}
           <div className="flex items-center gap-4 sm:gap-8">
             <Link
               href="/projects"
               className="hidden sm:inline-flex items-baseline gap-1 text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white hover:opacity-75 transition-opacity font-display"
             >
-              <span>Our Work</span>
+              <span>Projects</span>
               <span className="text-[12px] text-[#b8b8b8] font-medium tracking-[-0.03em]">[12]</span>
             </Link>
 
