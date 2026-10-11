@@ -9,6 +9,7 @@ import { CtaSection } from "@/components/CtaSection";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 import { ArrowUpRight } from "@/components/icons";
+import ParallaxUnfurlingGallery from "@/components/ui/3d-parallax-unfurling-gallery";
 
 interface SynergyPillar {
   id: string;
@@ -423,6 +424,9 @@ export default function StudioPage() {
             </div>
           </div>
         </section>
+
+        {/* 3D Parallax Unfurling Gallery (from 21st.dev) */}
+        <ParallaxUnfurlingGallery />
 
         {/* Insights & Articles Section (Preserved) */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#060608]">
