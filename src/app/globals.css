@@ -258,7 +258,7 @@
 /*  PAGE FRAME — MUGEN-STYLE ARCHITECTURAL EDITORIAL RAILS             */
 /* ================================================================== */
 
-/* Vertical side rails — thin architectural lines framing content on tablet & desktop only */
+/* Vertical side rails — thin architectural lines framing content across all breakpoints */
 .page-frame {
   position: relative;
 }
@@ -273,7 +273,17 @@
   background: #363636;
   z-index: 40;
   pointer-events: none;
-  display: none; /* Never show on mobile (< 768px) */
+  display: block;
+}
+
+/* Mobile view (< 768px): 12px editorial side rails (exact MUGEN mobile spacing) */
+.page-frame::before {
+  left: 12px;
+  right: auto;
+}
+.page-frame::after {
+  right: 12px;
+  left: auto;
 }
 
 /* Tablet view (768px - 1199px): 24px editorial side rails */
@@ -301,6 +311,32 @@
   .page-frame::after {
     right: 48px;
     left: auto;
+  }
+}
+
+/* PageRails Component exact responsive positions */
+.page-rail-left {
+  left: 12px;
+}
+.page-rail-right {
+  right: 12px;
+}
+
+@media (min-width: 768px) {
+  .page-rail-left {
+    left: 24px;
+  }
+  .page-rail-right {
+    right: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-rail-left {
+    left: 48px;
+  }
+  .page-rail-right {
+    right: 48px;
   }
 }
 
