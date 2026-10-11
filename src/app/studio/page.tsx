@@ -316,7 +316,7 @@ export default function StudioPage() {
                         {pillar.category}
                       </span>
                       {activePillarIndex === idx && (
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-white/90 animate-pulse" />
                       )}
                     </div>
                     <h3 className="text-lg sm:text-xl font-display font-semibold text-white mb-1.5 tracking-[-0.03em]">
@@ -333,7 +333,7 @@ export default function StudioPage() {
               <div className="lg:col-span-7 p-8 sm:p-12 rounded-3xl bg-[#0f0f12] border border-white/15 shadow-2xl">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-white/10 mb-6">
                   <div>
-                    <span className="text-xs font-mono text-emerald-400 block mb-1">
+                    <span className="text-xs font-mono text-neutral-400 block mb-1">
                       Active Discipline: {activePillar.category}
                     </span>
                     <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em]">
@@ -360,7 +360,7 @@ export default function StudioPage() {
                         key={i}
                         className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs text-[#b8b8b8] font-sans"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 mt-1.5 shrink-0" />
                         <span>{output}</span>
                       </div>
                     ))}
@@ -369,7 +369,7 @@ export default function StudioPage() {
 
                 {/* Synergy Connection to the Rest of the Engine */}
                 <div className="p-5 rounded-2xl bg-black/60 border border-white/10">
-                  <span className="text-[11px] font-mono text-emerald-400 block mb-1">
+                  <span className="text-[11px] font-mono text-neutral-400 block mb-1">
                     [How This Connects to the Rest of the Flywheel]
                   </span>
                   <p className="text-xs sm:text-sm text-[#b8b8b8] font-sans leading-relaxed">

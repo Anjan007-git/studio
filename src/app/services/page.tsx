@@ -252,7 +252,7 @@ export default function ServicesPage() {
                         {layer.label}
                       </span>
                       {activeLayer === idx && (
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-white/90 animate-pulse" />
                       )}
                     </div>
                     <p className="text-xs font-mono text-[#848484] line-clamp-1">
@@ -273,7 +273,7 @@ export default function ServicesPage() {
                       {architectureLayers[activeLayer].label.split(" ")[1]} {architectureLayers[activeLayer].label.split(" ")[2] || ""}
                     </h3>
                   </div>
-                  <div className="px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-mono text-emerald-400 shrink-0">
+                  <div className="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-[#b8b8b8] shrink-0">
                     {architectureLayers[activeLayer].tech.split("•")[0].trim()}
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function ServicesPage() {
                         key={i}
                         className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5"
                       >
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span className="text-xs text-[#b8b8b8] font-sans leading-relaxed">
                           {cap}
                         </span>

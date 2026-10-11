@@ -46,7 +46,7 @@ export default function PricingPage() {
               <div className="p-8 sm:p-12 rounded-3xl bg-[#0c0c0e] border border-white/15 relative overflow-hidden shadow-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                   <div className="lg:col-span-7 space-y-6">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-neutral-300 text-xs font-mono">
                       <span>✓ Tailored Media &amp; Campaign Engagements</span>
                     </div>
 
@@ -60,27 +60,27 @@ export default function PricingPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Google Search &amp; PMax Campaign Management</span>
                       </div>
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Meta (Instagram/FB) Creative Testing Sprints</span>
                       </div>
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Server-Side Conversions API (CAPI) Integration</span>
                       </div>
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Next.js High-Speed Landing Page CRO</span>
                       </div>
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Multi-Touch Attribution &amp; Live Reporting Dashboards</span>
                       </div>
                       <div className="flex items-start gap-2.5 text-xs text-[#b8b8b8] font-sans">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
                         <span>Zero Lock-In: Transparent Monthly Retainer Terms</span>
                       </div>
                     </div>

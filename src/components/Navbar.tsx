@@ -209,7 +209,7 @@ export function Navbar() {
 
           {/* Center: Live Studio Time */}
           <div className="hidden md:flex items-center gap-2 text-xs font-medium tracking-[-0.02em] text-[#b8b8b8] select-none font-sans">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
             <span>New York (EST)</span>
             <span className="tabular-nums font-mono font-semibold text-white">
               {studioTime || "03:39 PM"}
@@ -319,7 +319,7 @@ export function Navbar() {
           </div>
 
           <div className="text-xs sm:text-sm text-[#b8b8b8] font-medium font-sans flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse shrink-0" />
             <span>New York (EST)</span>
             <span className="tabular-nums font-mono font-semibold text-white">{studioTime || "03:39 PM"}</span>
           </div>

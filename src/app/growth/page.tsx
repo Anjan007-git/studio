@@ -280,7 +280,7 @@ export default function GrowthPage() {
 
               {/* Channel Subtitle */}
               <div className="mb-8">
-                <span className="text-xs font-mono text-emerald-400 block mb-1">
+                <span className="text-xs font-mono text-neutral-400 block mb-1">
                   {activePreset.channel}
                 </span>
                 <p className="text-xs sm:text-sm text-[#b8b8b8] font-sans max-w-3xl">
@@ -311,7 +311,7 @@ export default function GrowthPage() {
                   <p className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em]">
                     {illustrativeClicks.toLocaleString()}
                   </p>
-                  <p className="text-[11px] font-mono text-emerald-400 mt-2">
+                  <p className="text-[11px] font-mono text-neutral-400 mt-2">
                     ~{(activePreset.ctrMultiplier * 100).toFixed(1)}% simulated CTR
                   </p>
                 </div>
@@ -324,7 +324,7 @@ export default function GrowthPage() {
                   <p className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em]">
                     {illustrativeConversions.toLocaleString()}
                   </p>
-                  <p className="text-[11px] font-mono text-emerald-400 mt-2">
+                  <p className="text-[11px] font-mono text-neutral-400 mt-2">
                     ~{(activePreset.cvrMultiplier * 100).toFixed(1)}% landing page CVR
                   </p>
                 </div>
@@ -386,7 +386,7 @@ export default function GrowthPage() {
                   </div>
 
                   <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                    <span className="text-[11px] font-mono text-emerald-400 block mb-1">
+                    <span className="text-[11px] font-mono text-neutral-400 block mb-1">
                       [04] Compounding
                     </span>
                     <h4 className="text-sm font-display font-semibold text-white mb-1">
@@ -400,8 +400,8 @@ export default function GrowthPage() {
               </div>
 
               {/* Explicit Mandatory Illustrative Notice */}
-              <div className="mt-8 p-4 rounded-xl bg-black/60 border border-amber-500/20 text-neutral-400 text-xs font-sans leading-relaxed">
-                <span className="text-amber-400 font-semibold font-mono mr-1.5">[Illustrative Notice]</span>
+              <div className="mt-8 p-4 rounded-xl bg-white/[0.02] border border-white/10 text-neutral-400 text-xs font-sans leading-relaxed">
+                <span className="text-white font-semibold font-mono mr-1.5">[Illustrative Notice]</span>
                 All metrics, figures, conversion rates, and acquisition costs presented in this simulator are purely sample illustrative data for demonstration and architectural understanding. They do not represent real historical performance, specific client case results, or guaranteed commercial outcomes. Actual campaign performance varies by market, product offer, unit economics, and competitive dynamics.
               </div>
             </div>
@@ -429,7 +429,7 @@ export default function GrowthPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono text-emerald-400 block mb-2">[01] Quality Score &amp; Load Speed</span>
+                  <span className="text-xs font-mono text-neutral-400 block mb-2">[01] Quality Score &amp; Load Speed</span>
                   <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
                     Faster pages reduce ad costs.
                   </h3>
@@ -444,7 +444,7 @@ export default function GrowthPage() {
 
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono text-emerald-400 block mb-2">[02] Server-Side Tracking &amp; CAPI</span>
+                  <span className="text-xs font-mono text-neutral-400 block mb-2">[02] Server-Side Tracking &amp; CAPI</span>
                   <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
                     First-party data bypasses ad blockers.
                   </h3>
@@ -459,7 +459,7 @@ export default function GrowthPage() {
 
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono text-emerald-400 block mb-2">[03] Programmatic Landing Pages</span>
+                  <span className="text-xs font-mono text-neutral-400 block mb-2">[03] Programmatic Landing Pages</span>
                   <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
                     Hyper-personalized conversion journeys.
                   </h3>
@@ -474,7 +474,7 @@ export default function GrowthPage() {
 
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono text-emerald-400 block mb-2">[04] Rapid Technical A/B Sprints</span>
+                  <span className="text-xs font-mono text-neutral-400 block mb-2">[04] Rapid Technical A/B Sprints</span>
                   <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
                     Continuous hypothesis experimentation.
                   </h3>
@@ -515,7 +515,7 @@ export default function GrowthPage() {
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-xs font-mono text-[#848484]">{cap.num}</span>
-                        <span className="text-xs font-mono text-emerald-400 font-medium">TRIFECTA</span>
+                        <span className="text-xs font-mono text-neutral-400 font-medium">TRIFECTA</span>
                       </div>
                       <h3 className="text-xl sm:text-2xl font-display font-semibold text-white tracking-[-0.03em] mb-1">
                         {cap.title}

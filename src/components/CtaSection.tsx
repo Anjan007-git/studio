@@ -25,9 +25,9 @@ export function CtaSection() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-[#050505] border border-white/10 text-center relative shadow-2xl">
           {/* Top Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] mb-8">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>2 slots open for March&apos;26</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse" />
+            <span>Now accepting project enquiries</span>
           </div>
 
           {/* Heading */}
@@ -48,8 +48,8 @@ export function CtaSection() {
             >
               {copied ? (
                 <>
-                  <CheckCheck className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400 font-display">Copied!</span>
+                  <CheckCheck className="w-4 h-4 text-white" />
+                  <span className="text-white font-display">Copied!</span>
                 </>
               ) : (
                 <>
