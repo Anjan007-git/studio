@@ -117,11 +117,12 @@ export default function SmoothScrollSlider({
   const nodes = useRef<(HTMLDivElement | null)[]>([])
   const target = useRef(0)
   const current = useRef(0)
+  const userSwipeOffset = useRef(0)
   const [width, setWidth] = useState(0)
 
   // ─── Scroll-driven mode ───────────────────────────────────────────────────
-  // When scrollSectionRef is provided, drive target.current directly from
-  // page scroll progress with zero React re-renders.
+  // Drives target.current directly from page scroll progress with zero React re-renders.
+  // On desktop (lg:), uses outer sticky container. On mobile, tracks viewport scroll.
   useEffect(() => {
     if (!scrollSectionRef) return
 
@@ -130,25 +131,49 @@ export default function SmoothScrollSlider({
 
     const update = () => {
       const outer = scrollSectionRef.current
-      if (!outer) return
-      const rect = outer.getBoundingClientRect()
-      const scrollable = outer.offsetHeight - window.innerHeight
-      if (scrollable <= 0) return
-      const scrolled = -rect.top
-      const progress = Math.max(0, Math.min(1, scrolled / scrollable))
-      // Write directly to the ref — no setState, no re-render
-      target.current = progress * MAX_OFFSET
+      const container = containerRef.current
+      if (!container) return
+
+      let baseScrollOffset = 0
+      const isDesktopSticky =
+        outer && window.innerWidth >= 1024 && outer.offsetHeight - window.innerHeight > 50
+
+      if (isDesktopSticky && outer) {
+        const rect = outer.getBoundingClientRect()
+        const scrollable = outer.offsetHeight - window.innerHeight
+        if (scrollable > 0) {
+          const scrolled = -rect.top
+          const progress = Math.max(0, Math.min(1, scrolled / scrollable))
+          baseScrollOffset = progress * MAX_OFFSET
+        }
+      } else {
+        // Mobile / natural flow: calculate progress as the slider moves through the viewport
+        const cRect = container.getBoundingClientRect()
+        const vh = window.innerHeight || 800
+        const totalDistance = vh + cRect.height
+        const distanceScrolled = vh - cRect.top
+        const progress = Math.max(0, Math.min(1, distanceScrolled / totalDistance))
+        const MOBILE_MAX_OFFSET = SLIDE_STEP * 4.5
+        baseScrollOffset = progress * MOBILE_MAX_OFFSET
+      }
+
+      target.current = baseScrollOffset + userSwipeOffset.current
     }
+
+    update()
 
     // Prefer Lenis custom event so it stays in sync with the smooth scroll timeline
     const onLenis = () => update()
     const onScroll = () => update()
+    const onResize = () => update()
 
     window.addEventListener("lenis-scroll", onLenis, { passive: true })
     window.addEventListener("scroll", onScroll, { passive: true })
+    window.addEventListener("resize", onResize, { passive: true })
     return () => {
       window.removeEventListener("lenis-scroll", onLenis)
       window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("resize", onResize)
     }
   }, [scrollSectionRef, slideWidth, spacing])
 
@@ -266,6 +291,7 @@ export default function SmoothScrollSlider({
           const shift = Math.trunc(current.current / span) * span
           current.current -= shift
           target.current -= shift
+          userSwipeOffset.current -= shift
         }
       } else {
         target.current = clamp(target.current, 0, (c.count - 1) * c.step)
@@ -331,44 +357,95 @@ export default function SmoothScrollSlider({
     return () => node.removeEventListener("wheel", onWheel)
   }, [scrollSectionRef])
 
-  // ─── Pointer / drag (disabled in scroll-driven mode) ─────────────────────
+  // ─── Pointer / touch drag handler (active on mobile and desktop) ───────
   useEffect(() => {
-    if (scrollSectionRef) return
-
     const node = containerRef.current
     if (!node) return
-    let pointer: number | null = null
+
+    let activePointerId: number | null = null
+    let startX = 0
+    let startY = 0
     let lastX = 0
+    let isDragging = false
+    let isIntentional = false
 
     const onDown = (event: PointerEvent) => {
-      if (pointer !== null) return
-      pointer = event.pointerId
+      if (event.button !== 0 && event.pointerType === "mouse") return
+      if (activePointerId !== null) return
+
+      activePointerId = event.pointerId
+      startX = event.clientX
+      startY = event.clientY
       lastX = event.clientX
-      node.setPointerCapture(event.pointerId)
-    }
-    const onMove = (event: PointerEvent) => {
-      if (pointer !== event.pointerId) return
-      const dx = event.clientX - lastX
-      lastX = event.clientX
-      target.current += (input.current.flip ? dx : -dx) * input.current.dragMultiplier
-    }
-    const onUp = (event: PointerEvent) => {
-      if (pointer !== event.pointerId) return
-      pointer = null
-      if (node.hasPointerCapture(event.pointerId)) node.releasePointerCapture(event.pointerId)
+      isDragging = false
+      isIntentional = false
     }
 
-    node.addEventListener("pointerdown", onDown)
-    node.addEventListener("pointermove", onMove)
-    node.addEventListener("pointerup", onUp)
-    node.addEventListener("pointercancel", onUp)
+    const onMove = (event: PointerEvent) => {
+      if (activePointerId !== event.pointerId) return
+
+      const totalDx = event.clientX - startX
+      const totalDy = event.clientY - startY
+
+      if (!isIntentional) {
+        const absX = Math.abs(totalDx)
+        const absY = Math.abs(totalDy)
+
+        if (absX > 6 || absY > 6) {
+          isIntentional = true
+          if (absX > absY) {
+            // Horizontal swipe: claim drag and capture pointer
+            isDragging = true
+            try {
+              node.setPointerCapture(event.pointerId)
+            } catch {
+              // Ignore if pointer capture fails
+            }
+          } else {
+            // Vertical scroll: do not intercept, release pointer tracking
+            activePointerId = null
+            return
+          }
+        } else {
+          return
+        }
+      }
+
+      if (!isDragging) return
+
+      const dx = event.clientX - lastX
+      lastX = event.clientX
+      const deltaDrag = (input.current.flip ? dx : -dx) * input.current.dragMultiplier
+      target.current += deltaDrag
+      userSwipeOffset.current += deltaDrag
+    }
+
+    const onUp = (event: PointerEvent) => {
+      if (activePointerId !== event.pointerId) return
+      activePointerId = null
+      isDragging = false
+      isIntentional = false
+      if (node.hasPointerCapture(event.pointerId)) {
+        try {
+          node.releasePointerCapture(event.pointerId)
+        } catch {
+          // Ignore
+        }
+      }
+    }
+
+    node.addEventListener("pointerdown", onDown, { passive: true })
+    node.addEventListener("pointermove", onMove, { passive: true })
+    node.addEventListener("pointerup", onUp, { passive: true })
+    node.addEventListener("pointercancel", onUp, { passive: true })
+
     return () => {
       node.removeEventListener("pointerdown", onDown)
       node.removeEventListener("pointermove", onMove)
       node.removeEventListener("pointerup", onUp)
       node.removeEventListener("pointercancel", onUp)
     }
-  }, [scrollSectionRef])
+  }, [])
   return (
     <div
       ref={containerRef}
