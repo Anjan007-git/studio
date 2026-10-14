@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
             <MotionReveal delay={60} variant="fade-up">
               <ScrollLinkedText
                 as="h1"
-                className="text-4xl sm:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                className="text-4xl sm:text-6xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.0] mb-4"
                 text="Privacy policy."
                 start="top 90%"
                 end="top 35%"
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
           {/* Overview */}
           <MotionReveal delay={80} variant="fade-up">
             <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14 hover:border-white/20 transition-colors duration-300">
-              <h2 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">Introduction</h2>
+              <h2 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.035em] leading-[1.3]">Introduction</h2>
               <ScrollLinkedText
                 as="p"
                 className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal mb-6"
@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
             {privacySections.map((sec, idx) => (
               <MotionReveal key={idx} delay={Math.min((idx % 6) * 35, 150)} variant="fade-up">
                 <section className="pb-10 border-b border-white/10 space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white tracking-[-0.03em]">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white tracking-[-0.04em] leading-[1.25]">
                     {sec.title}
                   </h3>
                   <p className="text-sm sm:text-base text-[#b8b8b8] leading-relaxed font-sans font-normal">

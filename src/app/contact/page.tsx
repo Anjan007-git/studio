@@ -65,7 +65,7 @@ export default function ContactPage() {
               <MotionReveal delay={70} variant="fade-up">
                 <ScrollLinkedText
                   as="h1"
-                  className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white mb-6 leading-[1.05] max-w-5xl"
+                  className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white mb-6 leading-[1.0] max-w-5xl"
                   text="Let's build and scale together."
                   start="top 90%"
                   end="top 35%"

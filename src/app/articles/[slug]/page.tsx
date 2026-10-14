@@ -94,7 +94,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
               {/* Title */}
               <ScrollLinkedText
                 as="h1"
-                className="text-3xl sm:text-5xl md:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-8 leading-[1.12]"
+                className="text-3xl sm:text-5xl md:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-8 leading-[1.05]"
                 text={article.title}
                 start="top 90%"
                 end="top 35%"
@@ -104,7 +104,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
               {/* Lead Description */}
               <ScrollLinkedText
                 as="p"
-                className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-relaxed mb-10 tracking-[-0.02em]"
+                className="text-lg sm:text-2xl text-[#b8b8b8] font-sans font-normal leading-[1.4] mb-10 tracking-[-0.02em]"
                 text={article.description}
                 start="top 90%"
                 end="top 45%"
@@ -157,7 +157,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                 if (sec.type === "h2") {
                   return (
                     <MotionReveal key={idx} delay={30} variant="fade-up">
-                      <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white pt-8 pb-2">
+                      <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.15] pt-8 pb-2">
                         {sec.text}
                       </h2>
                     </MotionReveal>
@@ -165,7 +165,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                 } else if (sec.type === "h3") {
                   return (
                     <MotionReveal key={idx} delay={30} variant="fade-up">
-                      <h3 className="text-xl sm:text-2xl font-display font-semibold tracking-[-0.03em] text-white pt-6 pb-1">
+                      <h3 className="text-xl sm:text-2xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.25] pt-6 pb-1">
                         {sec.text}
                       </h3>
                     </MotionReveal>
@@ -176,7 +176,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                       <div className="my-10 p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border-l-4 border-white border border-white/10">
                         <ScrollLinkedText
                           as="blockquote"
-                          className="text-xl sm:text-2xl font-sans font-normal text-white italic leading-relaxed mb-4"
+                          className="text-xl sm:text-2xl font-sans font-normal text-white italic leading-[1.3] mb-4 tracking-[-0.02em]"
                           text={`\u201C${sec.text}\u201D`}
                           start="top 85%"
                           end="top 35%"
@@ -207,7 +207,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                 <span className="section-label block mb-2">
                   [Stay Connected]
                 </span>
-                <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-2 tracking-[-0.03em]">
+                <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-2 tracking-[-0.04em] leading-[1.2]">
                   Subscribe to our newsletter.
                 </h3>
                 <p className="text-xs text-[#b8b8b8] font-sans font-normal leading-relaxed mb-6">
@@ -247,7 +247,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                         Read next <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors leading-snug tracking-[-0.03em]">
+                    <h3 className="text-xl sm:text-2xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors leading-[1.2] tracking-[-0.04em]">
                       {nextArticle.title}
                     </h3>
                   </Link>
@@ -268,7 +268,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   </span>
                   <ScrollLinkedText
                     as="h2"
-                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white"
+                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                     text="More insights."
                     start="top 85%"
                     end="top 45%"
@@ -309,7 +309,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                         <span>{rel.readTime}</span>
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors leading-snug mb-3 tracking-[-0.03em]">
+                      <h3 className="text-xl sm:text-2xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors leading-[1.2] mb-3 tracking-[-0.04em]">
                         {rel.title}
                       </h3>
                       <p className="text-xs text-[#b8b8b8] font-sans font-normal line-clamp-3 leading-relaxed mb-6 tracking-[-0.01em]">

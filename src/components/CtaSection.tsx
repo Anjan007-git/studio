@@ -35,7 +35,7 @@ export function CtaSection() {
           {/* Heading */}
           <ScrollLinkedText
             as="h2"
-            className="text-heading-1 sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-6 max-w-4xl mx-auto leading-tight"
+            className="text-heading-1 sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-6 max-w-4xl mx-auto leading-[1.05]"
             text="Your next project deserves world-class design."
             highlightWords={["next", "project", "world-class", "design"]}
             start="top 88%"

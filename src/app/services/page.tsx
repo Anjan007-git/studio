@@ -199,7 +199,7 @@ export default function ServicesPage() {
             <MotionReveal delay={60} variant="fade-up">
               <ScrollLinkedText
                 as="h1"
-                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]"
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.0]"
                 text="Engineering software built to scale real businesses."
                 highlightWords={["Engineering", "software", "scale", "businesses"]}
                 start="top 95%"
@@ -211,7 +211,7 @@ export default function ServicesPage() {
             <MotionReveal delay={110} variant="fade-up">
               <ScrollLinkedText
                 as="p"
-                className="text-lg sm:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
+                className="text-base sm:text-xl md:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
                 text="From custom full-stack web applications and AI integrations to resilient cloud infrastructure, TRIFECTA TRENDS provides end-to-end technical engineering. We build software that operates reliably, loads instantly, and serves concrete commercial objectives."
                 highlightWords={["custom", "full-stack", "AI", "integrations", "cloud", "infrastructure", "reliably", "commercial", "objectives"]}
                 start="top 90%"
@@ -232,13 +232,13 @@ export default function ServicesPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white"
+                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                   text="Our full-stack engineering stack."
                   start="top 85%"
                   end="top 45%"
                   scrub={0.6}
                 />
-                <p className="text-sm font-sans text-[#b8b8b8] mt-2">
+                <p className="text-sm font-sans text-[#b8b8b8] mt-2 tracking-[-0.015em] leading-relaxed">
                   Explore how our software systems are layered for stability, security, and performance.
                 </p>
               </div>
@@ -326,13 +326,13 @@ export default function ServicesPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4 leading-[1.1]"
                   text="Everything your software requires."
                   start="top 85%"
                   end="top 45%"
                   scrub={0.6}
                 />
-                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
+                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans tracking-[-0.015em] leading-relaxed">
                   From early architectural decisions to multi-region cloud scaling, we deliver full-lifecycle engineering services without unnecessary layers.
                 </p>
               </div>
@@ -363,13 +363,13 @@ export default function ServicesPage() {
                         </div>
                       </div>
 
-                      <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em] mb-2">
+                      <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.04em] mb-2 leading-[1.2]">
                         {service.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#848484] font-sans font-medium mb-4">
+                      <p className="text-xs sm:text-sm text-[#848484] font-sans font-medium mb-4 tracking-[-0.015em]">
                         {service.subtitle}
                       </p>
-                      <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-8">
+                      <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-8 tracking-[-0.015em]">
                         {service.description}
                       </p>
 
@@ -426,14 +426,14 @@ export default function ServicesPage() {
                 </span>
                 <ScrollLinkedText
                   as="h3"
-                  className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em] mb-4"
+                  className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] mb-4 leading-[1.15]"
                   text="Great software needs the right audience."
                   highlightWords={["Great", "software", "audience"]}
                   start="top 90%"
                   end="top 48%"
                   scrub={0.5}
                 />
-                <p className="text-sm sm:text-base text-[#b8b8b8] font-sans leading-relaxed">
+                <p className="text-sm sm:text-base text-[#b8b8b8] font-sans leading-relaxed tracking-[-0.015em]">
                   We don&apos;t just build your product—we also help you scale customer acquisition through Google Ads, Meta Ads, and full-funnel performance marketing. Explore our dedicated growth services to see how code and campaigns work together.
                 </p>
               </div>

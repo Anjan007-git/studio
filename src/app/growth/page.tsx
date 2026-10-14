@@ -193,7 +193,7 @@ export default function GrowthPage() {
             <MotionReveal delay={60} variant="fade-up">
               <ScrollLinkedText
                 as="h1"
-                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]"
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.0]"
                 text="Measurable customer acquisition through performance marketing."
                 highlightWords={["Measurable", "customer", "acquisition", "performance", "marketing"]}
                 start="top 95%"
@@ -205,7 +205,7 @@ export default function GrowthPage() {
             <MotionReveal delay={110} variant="fade-up">
               <ScrollLinkedText
                 as="p"
-                className="text-lg sm:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
+                className="text-base sm:text-xl md:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
                 text="TRIFECTA TRENDS scales businesses by connecting paid media to engineering execution. We manage Google Ads, Meta Ads, and full-funnel customer acquisition campaigns backed by sub-second landing pages and server-side tracking."
                 highlightWords={["scales", "businesses", "paid", "media", "Google", "Ads", "Meta", "customer", "acquisition", "sub-second", "server-side"]}
                 start="top 90%"
@@ -226,13 +226,13 @@ export default function GrowthPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.03em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4 leading-[1.1]"
                   text="Interactive performance visualization."
                   start="top 85%"
                   end="top 45%"
                   scrub={0.6}
                 />
-                <p className="text-sm sm:text-base font-sans text-[#b8b8b8]">
+                <p className="text-sm sm:text-base font-sans text-[#b8b8b8] tracking-[-0.015em] leading-relaxed">
                   Select an acquisition channel and monthly media budget to examine an illustrative campaign funnel with simulated impressions, clicks, conversions, and target acquisition costs.
                 </p>
               </div>
@@ -429,13 +429,13 @@ export default function GrowthPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4 leading-[1.1]"
                   text="Why software development and marketing belong together."
                   start="top 85%"
                   end="top 45%"
                   scrub={0.6}
                 />
-                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
+                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans tracking-[-0.015em] leading-relaxed">
                   Traditional agencies separate developers from media buyers. TRIFECTA TRENDS combines them under one roof so your technology and ad campaigns amplify each other.
                 </p>
               </div>
@@ -446,10 +446,10 @@ export default function GrowthPage() {
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono text-neutral-400 block mb-2">[01] Quality Score &amp; Load Speed</span>
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3 tracking-[-0.035em] leading-[1.2]">
                     Faster pages reduce ad costs.
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4">
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4 tracking-[-0.015em]">
                     Both Google Ads and Meta reward landing pages that load instantly with higher Quality Scores and lower Cost-Per-Click (CPC). When we build your pages on Next.js with sub-second TTFB, ad platforms favor your bids and direct more impression share your way for less spend.
                   </p>
                 </div>
@@ -461,10 +461,10 @@ export default function GrowthPage() {
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono text-neutral-400 block mb-2">[02] Server-Side Tracking &amp; CAPI</span>
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3 tracking-[-0.035em] leading-[1.2]">
                     First-party data bypasses ad blockers.
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4">
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4 tracking-[-0.015em]">
                     Browser pixel tracking loses up to 35% of conversion events due to privacy extensions and cookie restrictions. As software engineers, we integrate direct server-to-server Conversions API (CAPI) pipelines that deliver 100% clean data back to Google and Meta.
                   </p>
                 </div>
@@ -476,10 +476,10 @@ export default function GrowthPage() {
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono text-neutral-400 block mb-2">[03] Programmatic Landing Pages</span>
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3 tracking-[-0.035em] leading-[1.2]">
                     Hyper-personalized conversion journeys.
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4">
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4 tracking-[-0.015em]">
                     Instead of sending all traffic to one generic homepage, we build dynamic landing page templates that tailor headlines, value points, and social proof to specific search terms or ad creative angles. Visitors see exactly what they clicked for.
                   </p>
                 </div>
@@ -491,10 +491,10 @@ export default function GrowthPage() {
               <div className="p-8 sm:p-10 rounded-3xl bg-[#0d0d0f] border border-white/10 flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-mono text-neutral-400 block mb-2">[04] Rapid Technical A/B Sprints</span>
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3">
+                  <h3 className="text-xl sm:text-2xl font-display font-semibold text-white mb-3 tracking-[-0.035em] leading-[1.2]">
                     Continuous hypothesis experimentation.
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4">
+                  <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans mb-4 tracking-[-0.015em]">
                     Marketing insights mean nothing if developers take weeks to update a form or headline. Our engineering team tests variations in high velocity sprints—testing button layouts, questionnaire friction, and checkout pathways to turn clicks into pipeline.
                   </p>
                 </div>
@@ -516,13 +516,13 @@ export default function GrowthPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4 leading-[1.1]"
                   text="Full-spectrum digital marketing services."
                   start="top 85%"
                   end="top 45%"
                   scrub={0.6}
                 />
-                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
+                <p className="text-base sm:text-lg text-[#b8b8b8] font-sans tracking-[-0.015em] leading-relaxed">
                   From paid search campaigns to multi-step B2B qualification funnels, our capabilities are built to scale predictable acquisition.
                 </p>
               </div>

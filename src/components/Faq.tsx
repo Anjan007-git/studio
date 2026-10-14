@@ -126,7 +126,7 @@ export function Faq() {
                     className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.03em]">
+                    <span className="text-base sm:text-lg font-display font-semibold text-white tracking-[-0.035em] leading-[1.35]">
                       {faq.q}
                     </span>
                     <span

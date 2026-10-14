@@ -54,7 +54,7 @@ export default function ArticlesPage() {
                 <div>
                   <ScrollLinkedText
                     as="h1"
-                    className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                    className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white leading-[1.0] mb-4"
                     text="Strategies & insights."
                     highlightWords={["Strategies", "insights"]}
                     start="top 95%"
@@ -155,7 +155,7 @@ export default function ArticlesPage() {
 
                       {/* Middle: Title & Excerpt */}
                       <div className="lg:col-span-6 space-y-3">
-                        <h2 className="text-2xl sm:text-3xl font-display font-semibold tracking-[-0.03em] text-white group-hover:text-neutral-200 transition-colors leading-snug">
+                        <h2 className="text-2xl sm:text-3xl font-display font-semibold tracking-[-0.04em] text-white group-hover:text-neutral-200 transition-colors leading-[1.15]">
                           {art.title}
                         </h2>
                         <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-2 max-w-xl tracking-[-0.01em]">

@@ -94,7 +94,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <MotionReveal delay={60} variant="fade-up">
                 <ScrollLinkedText
                   as="h1"
-                  className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white leading-[1.05] max-w-5xl"
+                  className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white leading-[1.0] max-w-5xl"
                   text={project.fullTitle}
                   start="top 95%"
                   end="top 40%"
@@ -218,7 +218,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </span>
                     <ScrollLinkedText
                       as="h2"
-                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                       text={project.challenge.subtitle}
                       start="top 90%"
                       end="top 45%"
@@ -226,7 +226,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     />
                   </div>
 
-                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-[1.5] tracking-[-0.015em]">
                     <ScrollLinkedText
                       paragraphs={project.challenge.paragraphs}
                       start="top 85%"
@@ -277,7 +277,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </span>
                     <ScrollLinkedText
                       as="h2"
-                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                       text={project.solution.subtitle}
                       start="top 90%"
                       end="top 45%"
@@ -285,7 +285,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     />
                   </div>
 
-                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-[1.5] tracking-[-0.015em]">
                     <ScrollLinkedText
                       paragraphs={project.solution.paragraphs}
                       start="top 85%"
@@ -332,7 +332,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </span>
                     <ScrollLinkedText
                       as="h2"
-                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                       text={project.process.subtitle}
                       start="top 90%"
                       end="top 45%"
@@ -340,7 +340,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     />
                   </div>
 
-                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
+                  <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-[1.5] tracking-[-0.015em]">
                     <ScrollLinkedText
                       paragraphs={project.process.paragraphs}
                       start="top 85%"
@@ -363,7 +363,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   <span className="section-label block mb-2">
                     [Impact]
                   </span>
-                  <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
+                  <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]">
                     By the numbers.
                   </h2>
                 </div>
@@ -416,7 +416,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
                   <ScrollLinkedText
                     as="blockquote"
-                    className="text-2xl sm:text-4xl md:text-5xl font-sans font-normal tracking-[-0.03em] text-white leading-tight mb-12 max-w-5xl"
+                    className="text-2xl sm:text-4xl md:text-5xl font-sans font-normal tracking-[-0.035em] text-white leading-[1.15] mb-12 max-w-5xl"
                     text={`\u201C${project.testimonial.quote}\u201D`}
                     start="top 90%"
                     end="top 40%"
@@ -486,7 +486,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <span className="text-xs font-display font-medium text-[#848484] block mb-1 tracking-[-0.02em]">
                       {nextProject.number} • {nextProject.year}
                     </span>
-                    <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors tracking-[-0.03em]">
+                    <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors tracking-[-0.04em] leading-[1.2]">
                       {nextProject.title}
                     </h3>
                     <p className="text-xs text-[#b8b8b8] font-sans font-normal mt-1">
@@ -516,7 +516,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white"
+                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                   text="More selected work."
                   start="top 90%"
                   end="top 45%"
@@ -548,7 +548,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         <span>{p.number}</span>
                         <span>{p.year}</span>
                       </div>
-                      <h3 className="text-xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors tracking-[-0.03em]">
+                      <h3 className="text-xl font-display font-semibold text-white group-hover:text-neutral-200 transition-colors tracking-[-0.04em] leading-[1.25]">
                         {p.title}
                       </h3>
                       <p className="text-xs text-[#b8b8b8] font-sans font-normal mt-1">

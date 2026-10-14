@@ -200,7 +200,7 @@ export default function StudioPage() {
             <MotionReveal delay={120}>
               <ScrollLinkedText
                 as="h1"
-                className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-display font-bold tracking-[-0.04em] text-white max-w-6xl leading-[1.08] mb-10"
+                className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-display font-semibold tracking-[-0.04em] text-white max-w-6xl leading-[1.02] mb-10"
                 text="TRIFECTA TRENDS brings software development and digital growth together. We build digital products and experiences, then help businesses reach the right audiences through thoughtful marketing, measurable campaigns, and continuous improvement."
                 highlightWords={[
                   "TRIFECTA",
@@ -267,7 +267,7 @@ export default function StudioPage() {
                         <span>/{principle.num}</span>
                         <span className="text-white">TRIFECTA</span>
                       </div>
-                      <h3 className="text-xl font-display font-semibold text-white mb-3 tracking-[-0.03em]">
+                      <h3 className="text-xl font-display font-semibold text-white mb-3 tracking-[-0.04em] leading-[1.25]">
                         {principle.title}
                       </h3>
                     </div>
@@ -291,7 +291,7 @@ export default function StudioPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1] mb-4"
                   text="The relationship between product, technology, marketing, and growth."
                   start="top 85%"
                   end="top 45%"
@@ -342,7 +342,7 @@ export default function StudioPage() {
                     <span className="text-xs font-mono text-neutral-400 block mb-1">
                       Active Discipline: {activePillar.category}
                     </span>
-                    <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em]">
+                    <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.04em] leading-[1.15]">
                       {activePillar.name}
                     </h3>
                   </div>
@@ -397,7 +397,7 @@ export default function StudioPage() {
                 </span>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1] mb-4"
                   text="Where craft and strategy meet."
                   start="top 85%"
                   end="top 45%"
@@ -448,7 +448,7 @@ export default function StudioPage() {
                   </span>
                   <ScrollLinkedText
                     as="h2"
-                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white"
+                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1]"
                     text="Technical thinking and campaign strategy."
                     start="top 85%"
                     end="top 45%"
@@ -490,7 +490,7 @@ export default function StudioPage() {
                         <span>{article.readTime}</span>
                       </div>
 
-                      <h3 className="text-base font-display font-semibold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-snug tracking-[-0.03em]">
+                      <h3 className="text-base font-display font-semibold text-white mb-3 group-hover:text-neutral-300 transition-colors leading-[1.3] tracking-[-0.035em]">
                         {article.title}
                       </h3>
                       <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans line-clamp-3 mb-6">

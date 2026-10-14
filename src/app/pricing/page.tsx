@@ -35,7 +35,7 @@ export default function PricingPage() {
                 </div>
                 <ScrollLinkedText
                   as="h2"
-                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.1] mb-4"
                   text="Performance Marketing & Ad Management"
                   highlightWords={["Performance", "Marketing", "Ad", "Management"]}
                   start="top 90%"
@@ -65,7 +65,7 @@ export default function PricingPage() {
 
                     <ScrollLinkedText
                       as="h3"
-                      className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]"
+                      className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.04em] leading-[1.2]"
                       text="Custom Growth Retainers & Channel Management"
                       highlightWords={["Custom", "Growth", "Retainers", "Channel", "Management"]}
                       start="top 90%"
@@ -110,7 +110,7 @@ export default function PricingPage() {
                       <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-2">
                         Engagement Process
                       </span>
-                      <h4 className="text-lg font-display font-semibold text-white mb-2">
+                      <h4 className="text-lg font-display font-semibold text-white tracking-[-0.035em] leading-[1.3] mb-2">
                         Account &amp; Media Plan Audit
                       </h4>
                       <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans">

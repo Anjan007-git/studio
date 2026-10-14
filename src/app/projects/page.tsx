@@ -113,7 +113,7 @@ export default function ProjectsPage() {
                   <div className="flex items-baseline gap-3 mb-3">
                     <ScrollLinkedText
                       as="h1"
-                      className="text-4xl sm:text-6xl md:text-7xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.05]"
+                      className="text-4xl sm:text-6xl md:text-7xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.0]"
                       text="Engineering & Digital Portfolio"
                       highlightWords={["Engineering", "Digital", "Portfolio"]}
                       start="top 95%"
@@ -126,7 +126,7 @@ export default function ProjectsPage() {
                   </div>
                   <ScrollLinkedText
                     as="p"
-                    className="text-sm font-sans text-[#b8b8b8] tracking-[-0.01em]"
+                    className="text-sm sm:text-base font-sans text-[#b8b8b8] tracking-[-0.015em] leading-relaxed"
                     text="Software products, web applications, AI tools, and technical architectures • 2024 — 2026"
                     highlightWords={["Software", "products", "applications", "AI", "tools", "architectures"]}
                     start="top 90%"
@@ -276,7 +276,7 @@ export default function ProjectsPage() {
                         <div className="p-6 flex flex-col justify-between flex-1">
                           <div>
                             <div className="flex items-start justify-between gap-4 mb-2">
-                              <h3 className="text-2xl font-display font-semibold text-white tracking-[-0.03em] group-hover:text-neutral-200 transition-colors">
+                              <h3 className="text-2xl font-display font-semibold text-white tracking-[-0.04em] leading-[1.2] group-hover:text-neutral-200 transition-colors">
                                 {study.title}
                               </h3>
                               <span className="text-[11px] font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] bg-[#181818] px-2.5 py-1 rounded-full border border-[#363636] shrink-0 group-hover:border-white/30 transition-colors">
@@ -285,7 +285,7 @@ export default function ProjectsPage() {
                             </div>
 
                             {/* Concise Description */}
-                            <p className="text-xs text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-2 tracking-[-0.01em] mb-4">
+                            <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal line-clamp-2 tracking-[-0.015em] mb-4">
                               {study.description || study.fullTitle}
                             </p>
                           </div>
