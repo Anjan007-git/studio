@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — TRIFECTA TRENDS",
@@ -71,9 +72,14 @@ export default function PrivacyPolicyPage() {
               </span>
             </MotionReveal>
             <MotionReveal delay={60} variant="fade-up">
-              <h1 className="text-4xl sm:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                Privacy policy.
-              </h1>
+              <ScrollLinkedText
+                as="h1"
+                className="text-4xl sm:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                text="Privacy policy."
+                start="top 90%"
+                end="top 35%"
+                scrub={0.5}
+              />
               <p className="text-xs font-sans text-[#848484]">
                 Last updated: February 17, 2026
               </p>
@@ -84,9 +90,14 @@ export default function PrivacyPolicyPage() {
           <MotionReveal delay={80} variant="fade-up">
             <div className="p-8 sm:p-10 rounded-3xl bg-[#1c1c1c] border border-white/10 mb-14 hover:border-white/20 transition-colors duration-300">
               <h2 className="text-xl font-display font-semibold text-white mb-4 tracking-[-0.03em]">Introduction</h2>
-              <p className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal mb-6">
-                This Privacy Policy explains how TRIFECTA TRENDS collects, uses, processes, and safeguards personal information and project data across our design services and digital platforms. We are committed to transparency and honoring your privacy rights under global regulations.
-              </p>
+              <ScrollLinkedText
+                as="p"
+                className="text-xs sm:text-sm text-[#b8b8b8] leading-relaxed font-sans font-normal mb-6"
+                text="This Privacy Policy explains how TRIFECTA TRENDS collects, uses, processes, and safeguards personal information and project data across our design services and digital platforms. We are committed to transparency and honoring your privacy rights under global regulations."
+                start="top 90%"
+                end="top 45%"
+                scrub={0.5}
+              />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-[#b8b8b8]">
                 <div>• GDPR & CCPA Compliance</div>
                 <div>• TLS & AES-256 Encryption</div>

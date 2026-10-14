@@ -190,13 +190,19 @@ export default function GrowthPage() {
               </div>
             </MotionReveal>
 
-            <MotionReveal delay={70} variant="fade-up">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]">
-                Measurable customer acquisition through performance marketing.
-              </h1>
+            <MotionReveal delay={60} variant="fade-up">
+              <ScrollLinkedText
+                as="h1"
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]"
+                text="Measurable customer acquisition through performance marketing."
+                highlightWords={["Measurable", "customer", "acquisition", "performance", "marketing"]}
+                start="top 95%"
+                end="top 40%"
+                scrub={0.5}
+              />
             </MotionReveal>
 
-            <MotionReveal delay={120} variant="fade-up">
+            <MotionReveal delay={110} variant="fade-up">
               <ScrollLinkedText
                 as="p"
                 className="text-lg sm:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
@@ -204,7 +210,7 @@ export default function GrowthPage() {
                 highlightWords={["scales", "businesses", "paid", "media", "Google", "Ads", "Meta", "customer", "acquisition", "sub-second", "server-side"]}
                 start="top 90%"
                 end="top 45%"
-                scrub={0.6}
+                scrub={0.5}
               />
             </MotionReveal>
           </div>
@@ -566,9 +572,15 @@ export default function GrowthPage() {
                 <span className="section-label block mb-2">
                   [Schedule Consultation]
                 </span>
-                <h3 className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em] mb-4">
-                  Ready to scale your customer acquisition?
-                </h3>
+                <ScrollLinkedText
+                  as="h3"
+                  className="text-3xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em] mb-4"
+                  text="Ready to scale your customer acquisition?"
+                  highlightWords={["Ready", "scale", "customer", "acquisition"]}
+                  start="top 90%"
+                  end="top 48%"
+                  scrub={0.5}
+                />
                 <p className="text-sm sm:text-base text-[#b8b8b8] font-sans leading-relaxed">
                   We audit your existing ad accounts, unit economics, and landing page conversion bottlenecks. Let&apos;s map out a measurable growth strategy tailored to your business goals.
                 </p>

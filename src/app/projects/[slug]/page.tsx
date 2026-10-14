@@ -10,6 +10,7 @@ import { allProjects, getProjectBySlug, getNextProject } from "@/lib/projects-da
 import { ArrowLeft, ArrowRight, ExternalLink } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { CountUp } from "@/components/CountUp";
 
 interface ProjectPageProps {
@@ -90,10 +91,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </MotionReveal>
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-              <MotionReveal delay={80} variant="fade-up">
-                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white leading-[1.05] max-w-5xl">
-                  {project.fullTitle}
-                </h1>
+              <MotionReveal delay={60} variant="fade-up">
+                <ScrollLinkedText
+                  as="h1"
+                  className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white leading-[1.05] max-w-5xl"
+                  text={project.fullTitle}
+                  start="top 95%"
+                  end="top 40%"
+                  scrub={0.5}
+                />
               </MotionReveal>
 
               {project.liveUrl && (
@@ -175,15 +181,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
             <MotionReveal delay={60} variant="scale">
               <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
-                <Image
+                <ParallaxImage
                   src={project.coverImage}
                   alt={project.title}
                   fill
                   priority
-                  className="object-cover group-hover:scale-102 transition-transform duration-1000 ease-out"
+                  speed={0.1}
+                  containerClassName="w-full h-full"
+                  imageClassName="object-cover group-hover:scale-102 transition-transform duration-1000 ease-out"
                 />
                 {project.logo && (
-                  <div className="absolute top-6 right-6 p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 group-hover:border-white/25 transition-colors duration-300">
+                  <div className="absolute top-6 right-6 p-4 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 group-hover:border-white/25 transition-colors duration-300 z-10">
                     <Image
                       src={project.logo}
                       alt={project.title}
@@ -208,9 +216,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <span className="section-label block mb-3">
                       [01 — The Challenge]
                     </span>
-                    <h2 className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight">
-                      {project.challenge.subtitle}
-                    </h2>
+                    <ScrollLinkedText
+                      as="h2"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      text={project.challenge.subtitle}
+                      start="top 90%"
+                      end="top 45%"
+                      scrub={0.5}
+                    />
                   </div>
 
                   <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
@@ -218,7 +231,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       paragraphs={project.challenge.paragraphs}
                       start="top 85%"
                       end="top 35%"
-                      scrub={0.6}
+                      scrub={0.5}
                     />
                   </div>
                 </div>
@@ -235,11 +248,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 {project.galleryImages.slice(0, 2).map((img, idx) => (
                   <MotionReveal key={idx} delay={idx * 100} variant="scale">
                     <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
-                      <Image
+                      <ParallaxImage
                         src={img}
                         alt={`${project.title} showcase ${idx + 1}`}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        speed={0.08}
+                        containerClassName="w-full h-full"
+                        imageClassName="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
                     </div>
                   </MotionReveal>
@@ -259,9 +275,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <span className="section-label block mb-3">
                       [02 — The Solution]
                     </span>
-                    <h2 className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight">
-                      {project.solution.subtitle}
-                    </h2>
+                    <ScrollLinkedText
+                      as="h2"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      text={project.solution.subtitle}
+                      start="top 90%"
+                      end="top 45%"
+                      scrub={0.5}
+                    />
                   </div>
 
                   <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
@@ -269,7 +290,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       paragraphs={project.solution.paragraphs}
                       start="top 85%"
                       end="top 35%"
-                      scrub={0.6}
+                      scrub={0.5}
                     />
                   </div>
                 </div>
@@ -284,11 +305,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
               <MotionReveal delay={40} variant="scale">
                 <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
-                  <Image
+                  <ParallaxImage
                     src={project.galleryImages[2]}
                     alt={`${project.title} full showcase`}
                     fill
-                    className="object-cover group-hover:scale-102 transition-transform duration-1000 ease-out"
+                    sizes="100vw"
+                    speed={0.08}
+                    containerClassName="w-full h-full"
+                    imageClassName="object-cover group-hover:scale-102 transition-transform duration-1000 ease-out"
                   />
                 </div>
               </MotionReveal>
@@ -306,9 +330,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <span className="section-label block mb-3">
                       [03 — The Process]
                     </span>
-                    <h2 className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight">
-                      {project.process.subtitle}
-                    </h2>
+                    <ScrollLinkedText
+                      as="h2"
+                      className="text-3xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white leading-tight"
+                      text={project.process.subtitle}
+                      start="top 90%"
+                      end="top 45%"
+                      scrub={0.5}
+                    />
                   </div>
 
                   <div className="lg:col-span-8 text-base sm:text-xl text-[#b8b8b8] font-sans font-normal leading-relaxed">
@@ -316,7 +345,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       paragraphs={project.process.paragraphs}
                       start="top 85%"
                       end="top 35%"
-                      scrub={0.6}
+                      scrub={0.5}
                     />
                   </div>
                 </div>
@@ -389,9 +418,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     as="blockquote"
                     className="text-2xl sm:text-4xl md:text-5xl font-sans font-normal tracking-[-0.03em] text-white leading-tight mb-12 max-w-5xl"
                     text={`\u201C${project.testimonial.quote}\u201D`}
-                    start="top 85%"
-                    end="top 35%"
-                    scrub={0.6}
+                    start="top 90%"
+                    end="top 40%"
+                    scrub={0.5}
                   />
 
                   <div className="flex items-center justify-between pt-8 border-t border-white/10">
@@ -443,11 +472,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               >
                 <div className="flex items-center gap-6">
                   <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-neutral-900 shrink-0">
-                    <Image
+                    <ParallaxImage
                       src={nextProject.coverImage}
                       alt={nextProject.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="128px"
+                      speed={0.06}
+                      containerClassName="w-full h-full"
+                      imageClassName="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div>
@@ -482,9 +514,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 <span className="section-label block mb-2">
                   [Archive]
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white">
-                  More selected work.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.04em] text-white"
+                  text="More selected work."
+                  start="top 90%"
+                  end="top 45%"
+                  scrub={0.5}
+                />
               </div>
             </MotionReveal>
 
@@ -496,11 +533,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     className="group rounded-3xl bg-[#1c1c1c] border border-white/10 overflow-hidden hover:border-white/30 hover:bg-[#222222] transition-all duration-500 p-5 flex flex-col justify-between h-full"
                   >
                     <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-4">
-                      <Image
+                      <ParallaxImage
                         src={p.coverImage}
                         alt={p.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        speed={0.08}
+                        containerClassName="w-full h-full"
+                        imageClassName="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div>

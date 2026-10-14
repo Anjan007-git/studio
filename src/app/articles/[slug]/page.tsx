@@ -10,6 +10,7 @@ import { allArticles, getArticleBySlug, getNextArticle } from "@/lib/articles-da
 import { ArrowLeft, ArrowRight } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
@@ -91,9 +92,14 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-8 leading-[1.12]">
-                {article.title}
-              </h1>
+              <ScrollLinkedText
+                as="h1"
+                className="text-3xl sm:text-5xl md:text-6xl font-display font-semibold tracking-[-0.04em] text-white mb-8 leading-[1.12]"
+                text={article.title}
+                start="top 90%"
+                end="top 35%"
+                scrub={0.5}
+              />
 
               {/* Lead Description */}
               <ScrollLinkedText
@@ -102,7 +108,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                 text={article.description}
                 start="top 90%"
                 end="top 45%"
-                scrub={0.6}
+                scrub={0.5}
               />
 
               {/* Author Profile */}
@@ -131,12 +137,12 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
             <MotionReveal delay={60} variant="scale">
               <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
-                <Image
+                <ParallaxImage
                   src={article.coverImage}
                   alt={article.title}
-                  fill
                   priority
-                  className="object-cover group-hover:scale-102 transition-transform duration-1000 ease-out"
+                  speed={0.1}
+                  className="w-full h-full"
                 />
               </div>
             </MotionReveal>
@@ -260,9 +266,14 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   <span className="section-label block mb-2">
                     [Read Next]
                   </span>
-                  <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
-                    More insights.
-                  </h2>
+                  <ScrollLinkedText
+                    as="h2"
+                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white"
+                    text="More insights."
+                    start="top 85%"
+                    end="top 45%"
+                    scrub={0.5}
+                  />
                 </div>
                 <Link
                   href="/articles"
@@ -282,13 +293,13 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   >
                     <div>
                       <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
-                        <Image
+                        <ParallaxImage
                           src={rel.coverImage}
                           alt={rel.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          speed={0.08}
+                          className="w-full h-full"
                         />
-                        <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636]">
+                        <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636] z-10 pointer-events-none">
                           {rel.category}
                         </div>
                       </div>

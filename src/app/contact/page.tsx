@@ -63,9 +63,14 @@ export default function ContactPage() {
                 </span>
               </MotionReveal>
               <MotionReveal delay={70} variant="fade-up">
-                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white mb-6 leading-[1.05] max-w-5xl">
-                  Let&apos;s build and scale together.
-                </h1>
+                <ScrollLinkedText
+                  as="h1"
+                  className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white mb-6 leading-[1.05] max-w-5xl"
+                  text="Let's build and scale together."
+                  start="top 90%"
+                  end="top 35%"
+                  scrub={0.5}
+                />
                 <ScrollLinkedText
                   as="p"
                   className="text-base sm:text-xl text-[#b8b8b8] max-w-3xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
@@ -73,7 +78,7 @@ export default function ContactPage() {
                   highlightWords={["partner", "custom", "software", "development", "digital", "marketing", "campaigns", "integrated", "growth"]}
                   start="top 90%"
                   end="top 45%"
-                  scrub={0.6}
+                  scrub={0.5}
                 />
               </MotionReveal>
             </div>

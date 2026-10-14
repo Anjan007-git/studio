@@ -3,23 +3,31 @@
 import React, { useEffect, useRef } from "react";
 import Image, { ImageProps } from "next/image";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 interface ParallaxImageProps extends Omit<ImageProps, "className"> {
+  className?: string;
   containerClassName?: string;
   imageClassName?: string;
   speed?: number; // 0.1 to 0.5
 }
 
 export function ParallaxImage({
+  className = "",
   containerClassName = "",
   imageClassName = "",
-  speed = 0.12,
+  speed = 0.14,
   alt,
   ...props
 }: ParallaxImageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
+  const combinedContainerClass = `${containerClassName} ${className}`.trim();
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const el = containerRef.current;
     const inner = innerRef.current;
     if (!el || !inner) return;
@@ -27,45 +35,47 @@ export function ParallaxImage({
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (prefersReducedMotion) return;
 
-    let rafId: number;
+    if (prefersReducedMotion) {
+      gsap.set(inner, { y: 0, scale: 1 });
+      return;
+    }
 
-    const updateParallax = () => {
-      if (!el || !inner) return;
-      const rect = el.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+    const yMovement = Math.round(50 * speed);
 
-      // Only calculate if visible on screen
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const center = rect.top + rect.height / 2;
-        const screenCenter = windowHeight / 2;
-        const diff = (center - screenCenter) * speed;
-        inner.style.transform = `translate3d(0, ${diff.toFixed(2)}px, 0)`;
-      }
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        inner,
+        {
+          y: -yMovement,
+        },
+        {
+          y: yMovement,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.6,
+            invalidateOnRefresh: true,
+          },
+        }
+      );
+    }, el);
+
+    return () => {
+      ctx.revert();
     };
-
-    const loop = () => {
-      updateParallax();
-      rafId = requestAnimationFrame(loop);
-    };
-
-    rafId = requestAnimationFrame(loop);
-
-    return () => cancelAnimationFrame(rafId);
   }, [speed]);
 
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden ${containerClassName}`}
+      className={`relative overflow-hidden ${combinedContainerClass}`}
     >
       <div
         ref={innerRef}
         className="w-full h-full will-change-transform scale-[1.12]"
-        style={{
-          transition: "transform 0.1s cubic-bezier(0.16, 1, 0.3, 1)",
-        }}
       >
         <Image
           alt={alt}

@@ -9,6 +9,8 @@ import { CtaSection } from "@/components/CtaSection";
 import { allProjects } from "@/lib/projects-data";
 import { ArrowUpRight, Search } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 const projectTechStack: Record<string, { tags: string[]; categoryGroup: string }> = {
   quantum: {
@@ -106,17 +108,31 @@ export default function ProjectsPage() {
 
             {/* Page Title & Controls */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-              <MotionReveal delay={70} variant="fade-up">
+              <MotionReveal delay={60} variant="fade-up">
                 <div>
-                  <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-3">
-                    Engineering &amp; Digital Portfolio{" "}
-                    <span className="font-display font-medium text-[#848484] text-3xl sm:text-5xl">
+                  <div className="flex items-baseline gap-3 mb-3">
+                    <ScrollLinkedText
+                      as="h1"
+                      className="text-4xl sm:text-6xl md:text-7xl font-display font-semibold tracking-[-0.04em] text-white leading-[1.05]"
+                      text="Engineering & Digital Portfolio"
+                      highlightWords={["Engineering", "Digital", "Portfolio"]}
+                      start="top 95%"
+                      end="top 40%"
+                      scrub={0.5}
+                    />
+                    <span className="font-display font-medium text-[#848484] text-2xl sm:text-4xl shrink-0">
                       [{allProjects.length}]
                     </span>
-                  </h1>
-                  <p className="text-sm font-sans text-[#b8b8b8] tracking-[-0.01em]">
-                    Software products, web applications, AI tools, and technical architectures • 2024 — 2026
-                  </p>
+                  </div>
+                  <ScrollLinkedText
+                    as="p"
+                    className="text-sm font-sans text-[#b8b8b8] tracking-[-0.01em]"
+                    text="Software products, web applications, AI tools, and technical architectures • 2024 — 2026"
+                    highlightWords={["Software", "products", "applications", "AI", "tools", "architectures"]}
+                    start="top 90%"
+                    end="top 45%"
+                    scrub={0.5}
+                  />
                 </div>
               </MotionReveal>
 
@@ -191,12 +207,14 @@ export default function ProjectsPage() {
                       >
                         {/* Large Image Preview with Interactive Reveal */}
                         <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-950 rounded-none">
-                          <Image
+                          <ParallaxImage
                             src={study.coverImage}
                             alt={study.title}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                            speed={0.08}
+                            containerClassName="w-full h-full"
+                            imageClassName="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                           />
 
                           {/* Cinematic Depth Gradient Mask */}

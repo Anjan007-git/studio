@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { ArrowUpRight, Check } from "@/components/icons";
 
 interface TechnicalService {
@@ -196,13 +196,19 @@ export default function ServicesPage() {
               </div>
             </MotionReveal>
 
-            <MotionReveal delay={70} variant="fade-up">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]">
-                Engineering software built to scale real businesses.
-              </h1>
+            <MotionReveal delay={60} variant="fade-up">
+              <ScrollLinkedText
+                as="h1"
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold tracking-[-0.04em] text-white max-w-5xl mb-8 leading-[1.05]"
+                text="Engineering software built to scale real businesses."
+                highlightWords={["Engineering", "software", "scale", "businesses"]}
+                start="top 95%"
+                end="top 40%"
+                scrub={0.5}
+              />
             </MotionReveal>
 
-            <MotionReveal delay={120} variant="fade-up">
+            <MotionReveal delay={110} variant="fade-up">
               <ScrollLinkedText
                 as="p"
                 className="text-lg sm:text-2xl text-[#b8b8b8] max-w-4xl leading-relaxed font-sans font-normal tracking-[-0.02em]"
@@ -210,7 +216,7 @@ export default function ServicesPage() {
                 highlightWords={["custom", "full-stack", "AI", "integrations", "cloud", "infrastructure", "reliably", "commercial", "objectives"]}
                 start="top 90%"
                 end="top 45%"
-                scrub={0.6}
+                scrub={0.5}
               />
             </MotionReveal>
           </div>
@@ -340,15 +346,17 @@ export default function ServicesPage() {
                     <div>
                       {/* Service Header with Visual Preview */}
                       <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 mb-8">
-                        <Image
+                        <ParallaxImage
                           src={service.image}
                           alt={service.title}
                           fill
                           sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                          speed={0.1}
+                          containerClassName="w-full h-full"
+                          imageClassName="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                        <div className="absolute top-4 left-4">
+                        <div className="absolute top-4 left-4 z-10">
                           <span className="text-xs font-display font-semibold text-white bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
                             {service.num}
                           </span>
@@ -416,9 +424,15 @@ export default function ServicesPage() {
                 <span className="section-label block mb-2">
                   [Integrated Growth Engine]
                 </span>
-                <h3 className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em] mb-4">
-                  Great software needs the right audience.
-                </h3>
+                <ScrollLinkedText
+                  as="h3"
+                  className="text-2xl sm:text-4xl font-display font-semibold text-white tracking-[-0.03em] mb-4"
+                  text="Great software needs the right audience."
+                  highlightWords={["Great", "software", "audience"]}
+                  start="top 90%"
+                  end="top 48%"
+                  scrub={0.5}
+                />
                 <p className="text-sm sm:text-base text-[#b8b8b8] font-sans leading-relaxed">
                   We don&apos;t just build your product—we also help you scale customer acquisition through Google Ads, Meta Ads, and full-funnel performance marketing. Explore our dedicated growth services to see how code and campaigns work together.
                 </p>

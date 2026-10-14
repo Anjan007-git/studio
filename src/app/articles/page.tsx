@@ -10,6 +10,7 @@ import { allArticles } from "@/lib/articles-data";
 import { ArrowUpRight, Search } from "@/components/icons";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 const categories = ["All", "Strategy", "Trends", "Psychology", "Process"];
 
@@ -49,11 +50,17 @@ export default function ArticlesPage() {
 
             {/* Header & Controls */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
-              <MotionReveal delay={70} variant="fade-up">
+              <MotionReveal delay={60} variant="fade-up">
                 <div>
-                  <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                    Strategies &amp; insights.
-                  </h1>
+                  <ScrollLinkedText
+                    as="h1"
+                    className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                    text="Strategies & insights."
+                    highlightWords={["Strategies", "insights"]}
+                    start="top 95%"
+                    end="top 40%"
+                    scrub={0.5}
+                  />
                   <ScrollLinkedText
                     as="p"
                     className="text-base sm:text-xl text-[#b8b8b8] max-w-2xl font-sans font-normal leading-relaxed tracking-[-0.02em]"
@@ -61,7 +68,7 @@ export default function ArticlesPage() {
                     highlightWords={["brands", "scale", "design", "thinking", "creative", "process", "business", "aesthetics"]}
                     start="top 90%"
                     end="top 45%"
-                    scrub={0.6}
+                    scrub={0.5}
                   />
                 </div>
               </MotionReveal>
@@ -172,11 +179,14 @@ export default function ArticlesPage() {
                       {/* Thumbnail & Arrow */}
                       <div className="lg:col-span-3 flex items-center justify-between lg:justify-end gap-6">
                         <div className="relative w-28 sm:w-36 aspect-[16/10] rounded-xl overflow-hidden bg-neutral-900 border border-white/10 shrink-0">
-                          <Image
+                          <ParallaxImage
                             src={art.coverImage}
                             alt={art.title}
                             fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 640px) 112px, 144px"
+                            speed={0.06}
+                            containerClassName="w-full h-full"
+                            imageClassName="object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                         </div>
                         <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[#848484] group-hover:bg-white group-hover:text-black group-hover:border-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0 shadow-sm">

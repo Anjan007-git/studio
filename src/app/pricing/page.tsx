@@ -37,13 +37,20 @@ export default function PricingPage() {
                   as="h2"
                   className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
                   text="Performance Marketing & Ad Management"
-                  start="top 85%"
+                  highlightWords={["Performance", "Marketing", "Ad", "Management"]}
+                  start="top 90%"
                   end="top 45%"
-                  scrub={0.6}
+                  scrub={0.5}
                 />
-                <p className="text-base text-[#b8b8b8] leading-relaxed font-sans">
-                  Unlike software development sprints with fixed design and engineering hours, our performance marketing and growth services are custom-scoped around your monthly ad spend volume, target acquisition velocity, and required channel mix.
-                </p>
+                <ScrollLinkedText
+                  as="p"
+                  className="text-base text-[#b8b8b8] leading-relaxed font-sans"
+                  text="Unlike software development sprints with fixed design and engineering hours, our performance marketing and growth services are custom-scoped around your monthly ad spend volume, target acquisition velocity, and required channel mix."
+                  highlightWords={["custom-scoped", "monthly", "ad", "spend", "acquisition", "velocity"]}
+                  start="top 90%"
+                  end="top 50%"
+                  scrub={0.5}
+                />
               </div>
             </MotionReveal>
 
@@ -56,9 +63,15 @@ export default function PricingPage() {
                       <span>✓ Tailored Media &amp; Campaign Engagements</span>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]">
-                      Custom Growth Retainers &amp; Channel Management
-                    </h3>
+                    <ScrollLinkedText
+                      as="h3"
+                      className="text-2xl sm:text-3xl font-display font-semibold text-white tracking-[-0.03em]"
+                      text="Custom Growth Retainers & Channel Management"
+                      highlightWords={["Custom", "Growth", "Retainers", "Channel", "Management"]}
+                      start="top 90%"
+                      end="top 50%"
+                      scrub={0.5}
+                    />
 
                     <p className="text-sm text-[#b8b8b8] leading-relaxed font-sans">
                       Whether you are launching initial Google Ads search campaigns, scaling Meta Ads creative velocity, or optimizing full-funnel customer acquisition, we structure our growth advisory to align directly with your commercial milestones.

@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
 import { MotionReveal } from "@/components/MotionReveal";
 import { ScrollLinkedText } from "@/components/ScrollLinkedText";
+import { ParallaxImage } from "@/components/ParallaxImage";
 import { ArrowUpRight } from "@/components/icons";
 import ParallaxUnfurlingGallery from "@/components/ui/3d-parallax-unfurling-gallery";
 
@@ -415,12 +415,11 @@ export default function StudioPage() {
                 <MotionReveal key={idx} delay={idx * 70}>
                   <div className="rounded-3xl bg-[#0c0c0e] border border-white/10 overflow-hidden flex flex-col group hover:border-white/20 transition-all duration-300 h-full">
                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
-                      <Image
+                      <ParallaxImage
                         src={space.image}
                         alt="Studio workspace"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        speed={0.08}
+                        className="w-full h-full"
                       />
                     </div>
                     <div className="p-5 flex-1 flex items-center">
@@ -453,7 +452,7 @@ export default function StudioPage() {
                     text="Technical thinking and campaign strategy."
                     start="top 85%"
                     end="top 45%"
-                    scrub={0.6}
+                    scrub={0.5}
                   />
                 </div>
                 <Link
@@ -475,14 +474,13 @@ export default function StudioPage() {
                   >
                     <div>
                       <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-neutral-900 mb-6">
-                        <Image
+                        <ParallaxImage
                           src={article.image}
                           alt={article.title}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                          speed={0.08}
+                          className="w-full h-full"
                         />
-                        <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636]">
+                        <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md text-[10px] font-display font-semibold text-white border border-[#363636] z-10 pointer-events-none">
                           {article.category}
                         </div>
                       </div>

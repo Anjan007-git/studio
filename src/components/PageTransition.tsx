@@ -289,6 +289,11 @@ export function PageTransition({ children }: PageTransitionProps) {
       });
     } else {
       currentPathnameRef.current = pathname;
+      // On direct load or instant navigation, calibrate scroll triggers
+      requestAnimationFrame(() => {
+        window.dispatchEvent(new CustomEvent("trifecta-transition-complete"));
+        ScrollTrigger.refresh();
+      });
     }
   }, [pathname, playEntranceAnimation]);
 
@@ -298,13 +303,18 @@ export function PageTransition({ children }: PageTransitionProps) {
       if (isTransitioningRef.current) {
         finishTransition();
       }
+      resetScroll();
+      requestAnimationFrame(() => {
+        window.dispatchEvent(new CustomEvent("trifecta-transition-complete"));
+        ScrollTrigger.refresh();
+      });
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
-  }, [finishTransition]);
+  }, [finishTransition, resetScroll]);
 
   // Global Link interceptor: intercepts all internal links across header, footer, cards, articles, mobile drawer
   useEffect(() => {

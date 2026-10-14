@@ -50,17 +50,17 @@ export function ScrollLinkedText({
   children,
   as: Component = "div",
   className = "",
-  scrub = 0.6,
+  scrub = 0.5,
   start,
   end,
-  stagger = 0.024,
+  stagger,
   highlightWords,
   dimColor = "#484848",
   activeColor = "#ffffff",
   highlightColor = "#ffffff",
   dimOpacity = 0.22,
   activeOpacity = 1.0,
-  yOffset = 6,
+  yOffset = 4,
   mode = "scrub",
 }: ScrollLinkedTextProps) {
   const containerRef = useRef<HTMLElement>(null);
@@ -119,17 +119,22 @@ export function ScrollLinkedText({
             trigger: el,
             start: computedStart,
             end: computedEnd,
-            scrub: typeof scrub === "number" ? scrub : scrub ? 0.6 : false,
+            scrub: typeof scrub === "number" ? scrub : scrub ? 0.5 : false,
             invalidateOnRefresh: true,
           },
         });
+
+        const effectiveStagger =
+          stagger !== undefined
+            ? stagger
+            : Math.max(0.014, Math.min(0.038, 1.0 / Math.max(words.length, 1)));
 
         words.forEach((word) => {
           const isHighlight = word.getAttribute("data-highlight") === "true";
           const targetColor = isHighlight
             ? highlightColor
             : highlightWords && highlightWords.length > 0
-            ? "#b8b8b8"
+            ? "#d4d4d4"
             : activeColor;
 
           tl.fromTo(
@@ -138,17 +143,15 @@ export function ScrollLinkedText({
               opacity: dimOpacity,
               y: yOffset,
               color: dimColor,
-              filter: "blur(0.5px)",
             },
             {
               opacity: activeOpacity,
               y: 0,
               color: targetColor,
-              filter: "blur(0px)",
-              duration: 0.4,
+              duration: 0.35,
               ease: "power2.out",
             },
-            `<${stagger}`
+            `<${effectiveStagger}`
           );
         });
       } else {
@@ -159,7 +162,6 @@ export function ScrollLinkedText({
             opacity: dimOpacity,
             y: yOffset,
             color: dimColor,
-            filter: "blur(0.5px)",
           },
           {
             opacity: activeOpacity,
@@ -168,9 +170,8 @@ export function ScrollLinkedText({
               const isHighlight = target.getAttribute("data-highlight") === "true";
               return isHighlight ? highlightColor : activeColor;
             },
-            filter: "blur(0px)",
-            stagger,
-            duration: 0.65,
+            stagger: stagger || 0.02,
+            duration: 0.55,
             ease: "power2.out",
             scrollTrigger: {
               trigger: el,
@@ -189,6 +190,11 @@ export function ScrollLinkedText({
     };
 
     window.addEventListener("trifecta-transition-complete", handleRefresh);
+
+    // Refresh triggers once fonts or layout finish settling
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(handleRefresh);
+    }
 
     return () => {
       ctx.revert();
