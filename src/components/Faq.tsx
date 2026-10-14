@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "./icons";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 const faqs = [
   {
@@ -48,17 +50,31 @@ export function Faq() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading & Advisory box */}
           <div className="lg:col-span-5 sticky top-32">
-            <div className="mb-4">
-              <span className="section-label">
-                [07] Answers
-              </span>
-            </div>
-            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
-              Everything else you&apos;re wondering.
-            </h2>
-            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] mb-8">
-              We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective partners.
-            </p>
+            <MotionReveal variant="fade-up" delay={0}>
+              <div className="mb-4">
+                <span className="section-label">
+                  [07] Answers
+                </span>
+              </div>
+            </MotionReveal>
+            <ScrollLinkedText
+              as="h2"
+              className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6"
+              text="Everything else you're wondering."
+              highlightWords={["Everything", "wondering"]}
+              start="top 88%"
+              end="top 58%"
+              scrub={0.6}
+            />
+            <ScrollLinkedText
+              as="p"
+              className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] mb-8"
+              text="We believe in radical clarity from day one. Here are the answers to the questions we hear most often from prospective partners."
+              highlightWords={["radical", "clarity", "answers"]}
+              start="top 85%"
+              end="top 50%"
+              scrub={0.6}
+            />
 
             {/* Studio Advisory Support Box */}
             <div className="p-7 rounded-3xl bg-[#050505] border border-white/10 shadow-xl">

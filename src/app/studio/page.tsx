@@ -289,9 +289,14 @@ export default function StudioPage() {
                 <span className="section-label block mb-3">
                   [Interactive System Synergy]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  The relationship between product, technology, marketing, and growth.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="The relationship between product, technology, marketing, and growth."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
                   Select each discipline below to see how our integrated model turns software development and customer acquisition into a compounding flywheel.
                 </p>
@@ -390,9 +395,14 @@ export default function StudioPage() {
                 <span className="section-label block mb-3">
                   [Work Environment]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  Where craft and strategy meet.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="Where craft and strategy meet."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-xl sm:text-2xl text-[#b8b8b8] font-sans font-normal max-w-3xl tracking-[-0.02em]">
                   Designed for quiet focus, deliberate engineering, and honest collaboration.
                 </p>
@@ -437,9 +447,14 @@ export default function StudioPage() {
                   <span className="section-label block mb-3">
                     [Insights]
                   </span>
-                  <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white">
-                    Technical thinking and campaign strategy.
-                  </h2>
+                  <ScrollLinkedText
+                    as="h2"
+                    className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white"
+                    text="Technical thinking and campaign strategy."
+                    start="top 85%"
+                    end="top 45%"
+                    scrub={0.6}
+                  />
                 </div>
                 <Link
                   href="/articles"

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowUpRight } from "./icons";
 import { Marquee } from "./Marquee";
 import { CountUp } from "./CountUp";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 const testimonials = [
   {
@@ -224,17 +226,27 @@ export function Testimonials() {
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-3">
-            <span className="section-label">
-              [06] Testimonials
-            </span>
+            <MotionReveal variant="fade-up" delay={0}>
+              <span className="section-label">
+                [06] Testimonials
+              </span>
+            </MotionReveal>
           </div>
           <div className="lg:col-span-9 max-w-4xl">
-            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-4">
-              Trusted by the most innovative teams.
-            </h2>
-            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
-              Results speak louder than promises.
-            </p>
+            <ScrollLinkedText
+              as="h2"
+              className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-4"
+              text="Trusted by the most innovative teams."
+              highlightWords={["Trusted", "innovative"]}
+              start="top 88%"
+              end="top 58%"
+              scrub={0.6}
+            />
+            <MotionReveal variant="fade-up" delay={100}>
+              <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
+                Results speak louder than promises.
+              </p>
+            </MotionReveal>
           </div>
         </div>
 

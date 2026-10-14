@@ -6,6 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
+import { ScrollLinkedText } from "./ScrollLinkedText";
 
 const topProjects = [
   {
@@ -104,9 +105,14 @@ export function Projects() {
               [01] Projects
             </span>
           </div>
-          <h2 className="text-heading-1 text-white mb-2 font-display">
-            Case studies
-          </h2>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 text-white mb-2 font-display"
+            text="Case studies"
+            start="top 90%"
+            end="top 60%"
+            scrub={0.6}
+          />
           <p className="text-xs font-sans text-[#848484] tracking-[-0.02em]">
             Selected Client Work • 2024 — 2026
           </p>

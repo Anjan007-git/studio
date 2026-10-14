@@ -218,9 +218,14 @@ export default function GrowthPage() {
                 <span className="section-label block mb-3">
                   [Campaign Model Simulator]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.03em] text-white mb-4">
-                  Interactive performance visualization.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.03em] text-white mb-4"
+                  text="Interactive performance visualization."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-sm sm:text-base font-sans text-[#b8b8b8]">
                   Select an acquisition channel and monthly media budget to examine an illustrative campaign funnel with simulated impressions, clicks, conversions, and target acquisition costs.
                 </p>
@@ -416,9 +421,14 @@ export default function GrowthPage() {
                 <span className="section-label block mb-3">
                   [The Growth Advantage]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  Why software development and marketing belong together.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="Why software development and marketing belong together."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
                   Traditional agencies separate developers from media buyers. TRIFECTA TRENDS combines them under one roof so your technology and ad campaigns amplify each other.
                 </p>
@@ -498,9 +508,14 @@ export default function GrowthPage() {
                 <span className="section-label block mb-3">
                   [Capabilities]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  Full-spectrum digital marketing services.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="Full-spectrum digital marketing services."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
                   From paid search campaigns to multi-step B2B qualification funnels, our capabilities are built to scale predictable acquisition.
                 </p>

@@ -6,6 +6,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Zap, ArrowUpRight, Star } from "./icons";
 import { CountUp } from "./CountUp";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 export function WhyChooseUs() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -71,20 +73,31 @@ export function WhyChooseUs() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
-          <div className="mb-4">
-            <span className="section-label">
-              [02] Why choose us
-            </span>
-          </div>
-          <h2 className="text-heading-1 text-white mb-6 font-display">
-            We deliver more than design. We deliver momentum.
-          </h2>
-          <p className="text-base text-[#b8b8b8] leading-[1.55] font-sans font-normal max-w-3xl tracking-[-0.02em]">
-            Great design accelerates everything. It shortens sales cycles, increases
-            conversions, and builds trust before you say a word. We&apos;re not
-            just making things pretty — we&apos;re creating competitive advantages
-            that compound over time.
-          </p>
+          <MotionReveal variant="fade-up" delay={0}>
+            <div className="mb-4">
+              <span className="section-label">
+                [02] Why choose us
+              </span>
+            </div>
+          </MotionReveal>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 text-white mb-6 font-display"
+            text="We deliver more than design. We deliver momentum."
+            highlightWords={["deliver", "momentum"]}
+            start="top 88%"
+            end="top 55%"
+            scrub={0.6}
+          />
+          <ScrollLinkedText
+            as="p"
+            className="text-base text-[#b8b8b8] leading-[1.55] font-sans font-normal max-w-3xl tracking-[-0.02em]"
+            text="Great design accelerates everything. It shortens sales cycles, increases conversions, and builds trust before you say a word. We're not just making things pretty — we're creating competitive advantages that compound over time."
+            highlightWords={["accelerates", "conversions", "trust", "competitive", "advantages"]}
+            start="top 85%"
+            end="top 50%"
+            scrub={0.6}
+          />
         </div>
 
         {/* 4-Card Bento Grid */}
@@ -235,13 +248,17 @@ export function WhyChooseUs() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/10"
         >
           <div className="feature-col">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-[-0.04em] font-display leading-[1.2]">
-              Fast to launch. <br />
-              Easy to scale.
-            </h3>
+            <ScrollLinkedText
+              as="h3"
+              className="text-2xl sm:text-3xl font-semibold text-white tracking-[-0.04em] font-display leading-[1.2]"
+              lines={["Fast to launch.", "Easy to scale."]}
+              start="top 88%"
+              end="top 60%"
+              scrub={0.5}
+            />
           </div>
 
-          <div className="feature-col space-y-3">
+          <MotionReveal variant="fade-up" delay={100} as="div" className="feature-col space-y-3">
             <div className="flex items-center gap-2 text-white font-medium text-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
               <h4 className="font-display font-semibold text-sm text-white tracking-[-0.02em]">Speed without sacrifice</h4>
@@ -251,9 +268,9 @@ export function WhyChooseUs() {
               while maintaining the craft and attention to detail your brand
               deserves.
             </p>
-          </div>
+          </MotionReveal>
 
-          <div className="feature-col space-y-3">
+          <MotionReveal variant="fade-up" delay={200} as="div" className="feature-col space-y-3">
             <div className="flex items-center gap-2 text-white font-medium text-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-white" />
               <h4 className="font-display font-semibold text-sm text-white tracking-[-0.02em]">Flexible engagement</h4>
@@ -263,7 +280,7 @@ export function WhyChooseUs() {
               engagements for specific needs. Scale up or down as your business
               evolves.
             </p>
-          </div>
+          </MotionReveal>
         </div>
       </div>
     </section>

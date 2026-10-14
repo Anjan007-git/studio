@@ -8,6 +8,7 @@ import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
 import { CtaSection } from "@/components/CtaSection";
 import { MotionReveal } from "@/components/MotionReveal";
+import { ScrollLinkedText } from "@/components/ScrollLinkedText";
 import { ArrowUpRight, Check } from "@/components/icons";
 
 export default function PricingPage() {
@@ -32,9 +33,14 @@ export default function PricingPage() {
                     [Growth &amp; Marketing Engagements]
                   </span>
                 </div>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  Performance Marketing &amp; Ad Management
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="Performance Marketing & Ad Management"
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-base text-[#b8b8b8] leading-relaxed font-sans">
                   Unlike software development sprints with fixed design and engineering hours, our performance marketing and growth services are custom-scoped around your monthly ad spend volume, target acquisition velocity, and required channel mix.
                 </p>

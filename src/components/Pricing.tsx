@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "./icons";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 export function Pricing() {
   const [growthCycle, setGrowthCycle] = useState<"monthly" | "quarterly">("monthly");
@@ -17,17 +19,30 @@ export function Pricing() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}
         <div className="max-w-2xl mb-16 sm:mb-20">
-          <div className="mb-4">
-            <span className="section-label">
-              [05] Pricing
-            </span>
-          </div>
-          <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
-            Built to scale
-          </h2>
-          <p className="text-base text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
-            Choose the engagement model that works for your business. Start small and grow with confidence, or jump straight into transformative projects. Transparent terms with zero surprises.
-          </p>
+          <MotionReveal variant="fade-up" delay={0}>
+            <div className="mb-4">
+              <span className="section-label">
+                [05] Pricing
+              </span>
+            </div>
+          </MotionReveal>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6"
+            text="Built to scale"
+            start="top 90%"
+            end="top 65%"
+            scrub={0.5}
+          />
+          <ScrollLinkedText
+            as="p"
+            className="text-base text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]"
+            text="Choose the engagement model that works for your business. Start small and grow with confidence, or jump straight into transformative projects. Transparent terms with zero surprises."
+            highlightWords={["engagement", "confidence", "transformative", "Transparent"]}
+            start="top 85%"
+            end="top 50%"
+            scrub={0.6}
+          />
         </div>
 
         {/* Pricing Tiers 3-Column Grid */}

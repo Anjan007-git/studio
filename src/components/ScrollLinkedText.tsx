@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -64,6 +64,15 @@ export function ScrollLinkedText({
   mode = "scrub",
 }: ScrollLinkedTextProps) {
   const containerRef = useRef<HTMLElement>(null);
+  const ctxRef = useRef<gsap.Context | null>(null);
+
+  // Memoize reduced-motion check to avoid repeated queries
+  const checkReducedMotion = useCallback(() => {
+    return (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    );
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -72,27 +81,37 @@ export function ScrollLinkedText({
     if (!el) return;
 
     // Respect reduced motion preference instantly
-    const prefersReducedMotion =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const words = el.querySelectorAll<HTMLElement>(".scroll-word");
-    if (!words.length) return;
-
-    if (prefersReducedMotion) {
+    if (checkReducedMotion()) {
+      const words = el.querySelectorAll<HTMLElement>(".scroll-word");
       gsap.set(words, {
         opacity: 1,
         y: 0,
         color: "inherit",
+        filter: "none",
       });
       return;
     }
 
+    const words = el.querySelectorAll<HTMLElement>(".scroll-word");
+    if (!words.length) return;
+
+    // Clean up previous GSAP context if re-running
+    if (ctxRef.current) {
+      ctxRef.current.revert();
+    }
+
     const ctx = gsap.context(() => {
       // Responsive trigger boundaries: start earlier on mobile viewports for fluid touch tracking
-      const isMobile = window.innerWidth < 768;
-      const computedStart = start || (isMobile ? "top 88%" : "top 82%");
-      const computedEnd = end || (isMobile ? "top 42%" : "top 28%");
+      const vw = window.innerWidth;
+      const isMobile = vw < 768;
+      const isTablet = vw >= 768 && vw < 1024;
+
+      const computedStart =
+        start ||
+        (isMobile ? "top 90%" : isTablet ? "top 85%" : "top 82%");
+      const computedEnd =
+        end ||
+        (isMobile ? "top 40%" : isTablet ? "top 32%" : "top 28%");
 
       if (mode === "scrub") {
         const tl = gsap.timeline({
@@ -119,13 +138,15 @@ export function ScrollLinkedText({
               opacity: dimOpacity,
               y: yOffset,
               color: dimColor,
+              filter: "blur(0.5px)",
             },
             {
               opacity: activeOpacity,
               y: 0,
               color: targetColor,
-              duration: 0.35,
-              ease: "power1.out",
+              filter: "blur(0px)",
+              duration: 0.4,
+              ease: "power2.out",
             },
             `<${stagger}`
           );
@@ -138,14 +159,16 @@ export function ScrollLinkedText({
             opacity: dimOpacity,
             y: yOffset,
             color: dimColor,
+            filter: "blur(0.5px)",
           },
           {
             opacity: activeOpacity,
             y: 0,
-            color: (idx, target) => {
+            color: (_idx: number, target: HTMLElement) => {
               const isHighlight = target.getAttribute("data-highlight") === "true";
               return isHighlight ? highlightColor : activeColor;
             },
+            filter: "blur(0px)",
             stagger,
             duration: 0.65,
             ease: "power2.out",
@@ -159,6 +182,8 @@ export function ScrollLinkedText({
       }
     }, el);
 
+    ctxRef.current = ctx;
+
     const handleRefresh = () => {
       ScrollTrigger.refresh();
     };
@@ -167,6 +192,7 @@ export function ScrollLinkedText({
 
     return () => {
       ctx.revert();
+      ctxRef.current = null;
       window.removeEventListener("trifecta-transition-complete", handleRefresh);
     };
   }, [
@@ -186,6 +212,7 @@ export function ScrollLinkedText({
     activeOpacity,
     yOffset,
     mode,
+    checkReducedMotion,
   ]);
 
   // Helper to test if a word matches highlight keywords
@@ -209,7 +236,7 @@ export function ScrollLinkedText({
               {pWords.map((word, wIdx) => (
                 <span
                   key={wIdx}
-                  className="scroll-word inline-block mr-[0.28em] will-change-transform transform-gpu select-none"
+                  className="scroll-word inline-block mr-[0.28em] transform-gpu select-none"
                   data-highlight={isWordHighlighted(word) ? "true" : "false"}
                 >
                   {word}
@@ -234,7 +261,7 @@ export function ScrollLinkedText({
               {lineWords.map((word, wIdx) => (
                 <span
                   key={wIdx}
-                  className="scroll-word inline-block mr-[0.28em] will-change-transform transform-gpu select-none"
+                  className="scroll-word inline-block mr-[0.28em] transform-gpu select-none"
                   data-highlight={isWordHighlighted(word) ? "true" : "false"}
                 >
                   {word}
@@ -257,7 +284,7 @@ export function ScrollLinkedText({
         {words.map((word, idx) => (
           <span
             key={idx}
-            className="scroll-word inline-block mr-[0.28em] will-change-transform transform-gpu select-none"
+            className="scroll-word inline-block mr-[0.28em] transform-gpu select-none"
             data-highlight={isWordHighlighted(word) ? "true" : "false"}
           >
             {word}

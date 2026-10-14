@@ -224,9 +224,14 @@ export default function ServicesPage() {
                 <span className="section-label block mb-2">
                   [System Architecture]
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white">
-                  Our full-stack engineering stack.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-2xl sm:text-4xl font-display font-semibold tracking-[-0.03em] text-white"
+                  text="Our full-stack engineering stack."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-sm font-sans text-[#b8b8b8] mt-2">
                   Explore how our software systems are layered for stability, security, and performance.
                 </p>
@@ -313,9 +318,14 @@ export default function ServicesPage() {
                 <span className="section-label block mb-3">
                   [Core Engineering Services]
                 </span>
-                <h2 className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4">
-                  Everything your software requires.
-                </h2>
+                <ScrollLinkedText
+                  as="h2"
+                  className="text-3xl sm:text-5xl font-display font-semibold tracking-[-0.04em] text-white mb-4"
+                  text="Everything your software requires."
+                  start="top 85%"
+                  end="top 45%"
+                  scrub={0.6}
+                />
                 <p className="text-base sm:text-lg text-[#b8b8b8] font-sans">
                   From early architectural decisions to multi-region cloud scaling, we deliver full-lifecycle engineering services without unnecessary layers.
                 </p>

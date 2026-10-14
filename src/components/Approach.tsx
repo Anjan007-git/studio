@@ -254,66 +254,49 @@ export function Approach() {
                 </div>
               </div>
 
-              {/* DESKTOP / TABLET (sm: and above): Retain rich philosophy card */}
-              <div className="hidden sm:flex w-full rounded-3xl bg-[#0e0e0e] border border-white/[0.08] overflow-hidden shadow-2xl p-4 sm:p-5 flex-col justify-between group hover:border-white/20 transition-all duration-500">
-                <div>
-                  {/* Email Tag */}
-                  <div className="flex items-center justify-between mb-4">
-                    <button
-                      onClick={handleCopyEmail}
-                      className="text-xs font-display font-medium text-[#b8b8b8] hover:text-white transition-colors cursor-pointer tracking-[-0.02em]"
-                    >
-                      {copied ? "email copied" : "contact@trifectatrends.com"}
-                    </button>
-                    <a
-                      href="mailto:contact@trifectatrends.com"
-                      aria-label="Email TRIFECTA TRENDS"
-                      className="text-[#b8b8b8] hover:text-white transition-colors"
-                    >
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
+              {/* DESKTOP / TABLET (sm: and above): MUGEN Premium Sharp-Edged Founder Card */}
+              <div className="hidden sm:block w-full rounded-none bg-[#050505] border border-white/10 overflow-hidden shadow-2xl group hover:border-white/25 transition-all duration-500">
+                {/* Full-width sharp image frame */}
+                <div className="relative aspect-[3/4] w-full rounded-none overflow-hidden bg-neutral-950">
+                  <Image
+                    src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
+                    alt="Anjan Prajapati — Founder"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 640px) 100vw, 340px"
+                  />
 
-                  {/* Image Frame with Mask, Zoom, and Signature Corner Plus Button */}
-                  <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-neutral-950 mb-5 group/img">
-                    <Image
-                      src="/images/LKkmBjisPGqJzq2hMbVoUchYaQ.jpg"
-                      alt="TRIFECTA TRENDS — Studio Philosophy"
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
+                  {/* Subtle lower depth gradient on image */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
-                    {/* MUGEN Signature Circular Plus Badge in Bottom-Right Corner linking to /studio */}
-                    <Link
-                      href="/studio"
-                      aria-label="View Studio Profile"
-                      className="absolute bottom-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/80 group-hover:text-white group-hover:bg-black/80 group-hover:scale-110 transition-all duration-300 cursor-pointer"
-                    >
-                      <span className="text-base font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90">
-                        +
-                      </span>
-                    </Link>
-                  </div>
+                  {/* Interactive expanded profile detail overlay */}
+                  {copied && (
+                    <div className="absolute top-3 left-3 right-3 z-30 py-1.5 px-3 bg-white text-black text-center text-[11px] font-display font-medium shadow-lg animate-in fade-in duration-200">
+                      Email copied: contact@trifectatrends.com
+                    </div>
+                  )}
 
-                  {/* Philosophy Statement */}
-                  <p className="text-xs text-[#b8b8b8] leading-[1.55] font-sans font-normal mb-5 tracking-[-0.02em]">
-                    We believe high-impact digital experiences come from focused craftsmanship, rigorous design systems, and direct collaboration. No pitch theater. No layers of account management.
-                  </p>
+                  {/* MUGEN Signature Circular Plus Button in Bottom-Right Corner */}
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    aria-label="Copy founder email / connect"
+                    className="absolute bottom-4 right-4 z-20 w-8 h-8 rounded-full bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-black/90 active:scale-90 transition-all duration-200 cursor-pointer"
+                  >
+                    <span className="text-base font-light leading-none select-none font-display">
+                      +
+                    </span>
+                  </button>
                 </div>
 
-                {/* Studio Meta */}
-                <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
-                  <div>
-                    <h3 className="text-base font-semibold text-white font-display tracking-[-0.03em]">
-                      Studio Philosophy
-                    </h3>
-                    <p className="text-xs font-display text-[#848484] mt-0.5 tracking-[-0.02em]">
-                      Craft &amp; Execution
-                    </p>
-                  </div>
-                  <span className="text-xs font-display text-[#848484] tracking-[-0.02em]">
-                    TRIFECTA TRENDS®
-                  </span>
+                {/* Founder Info Section directly underneath with clean dividing border */}
+                <div className="p-5 sm:p-6 border-t border-white/10 bg-[#080808]">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white font-display tracking-[-0.03em] leading-tight">
+                    Anjan Prajapati
+                  </h3>
+                  <p className="text-xs sm:text-sm font-display text-[#848484] mt-1 tracking-[-0.02em]">
+                    Founder
+                  </p>
                 </div>
               </div>
             </div>

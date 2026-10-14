@@ -3,6 +3,8 @@
 import React, { useState, useRef } from "react";
 import { Clock, Calendar } from "./icons";
 import SmoothScrollSlider from "./SmoothScrollSlider";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 const steps = [
   {
@@ -68,17 +70,31 @@ export function Process() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="mb-4">
-            <span className="section-label">
-              [04] Process
-            </span>
-          </div>
-          <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
-            A proven process that delivers results, not surprises.
-          </h2>
-          <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
-            We&apos;ve refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you&apos;ll know exactly where we are and where we&apos;re going.
-          </p>
+          <MotionReveal variant="fade-up" delay={0}>
+            <div className="mb-4">
+              <span className="section-label">
+                [04] Process
+              </span>
+            </div>
+          </MotionReveal>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6"
+            text="A proven process that delivers results, not surprises."
+            highlightWords={["proven", "delivers", "results"]}
+            start="top 88%"
+            end="top 55%"
+            scrub={0.6}
+          />
+          <ScrollLinkedText
+            as="p"
+            className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]"
+            text="We've refined our approach over hundreds of projects. Every step is designed to minimize friction and maximize impact. From first call to final delivery, you'll know exactly where we are and where we're going."
+            highlightWords={["refined", "minimize", "friction", "maximize", "impact"]}
+            start="top 85%"
+            end="top 48%"
+            scrub={0.6}
+          />
         </div>
 
         {/* 2-Column: Left Stats + Right Horizontal Expanding Accordion */}

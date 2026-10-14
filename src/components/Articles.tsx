@@ -6,6 +6,8 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 const articles = [
   {
@@ -89,17 +91,31 @@ export function Articles() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div className="max-w-2xl">
-            <div className="mb-4">
-              <span className="section-label">
-                [08] Articles
-              </span>
-            </div>
-            <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
-              Strategies &amp; insights from the team.
-            </h2>
-            <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]">
-              We share what we&apos;ve learned building brands that matter. Deep dives into design thinking, creative process, and the intersection of business and aesthetics.
-            </p>
+            <MotionReveal variant="fade-up" delay={0}>
+              <div className="mb-4">
+                <span className="section-label">
+                  [08] Articles
+                </span>
+              </div>
+            </MotionReveal>
+            <ScrollLinkedText
+              as="h2"
+              className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6"
+              text="Strategies & insights from the team."
+              highlightWords={["Strategies", "insights"]}
+              start="top 88%"
+              end="top 58%"
+              scrub={0.6}
+            />
+            <ScrollLinkedText
+              as="p"
+              className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em]"
+              text="We share what we've learned building brands that matter. Deep dives into design thinking, creative process, and the intersection of business and aesthetics."
+              highlightWords={["brands", "design", "thinking", "creative", "business"]}
+              start="top 85%"
+              end="top 50%"
+              scrub={0.6}
+            />
           </div>
 
           <div className="shrink-0">

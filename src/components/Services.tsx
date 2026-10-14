@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 const services = [
   {
@@ -134,20 +136,30 @@ export function Services() {
       <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
-          <div className="mb-4">
-            <span className="section-label">
-              [03] Services
-            </span>
-          </div>
-          <h2 className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6">
-            Services
-          </h2>
-          <p className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] max-w-3xl">
-            Full-spectrum design capabilities under one roof. Whether you need a
-            complete brand overhaul or ongoing creative support, we have the
-            expertise to deliver. No outsourcing, no excuses, just exceptional
-            work from our senior team.
-          </p>
+          <MotionReveal variant="fade-up" delay={0}>
+            <div className="mb-4">
+              <span className="section-label">
+                [03] Services
+              </span>
+            </div>
+          </MotionReveal>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 font-display font-semibold tracking-[-0.04em] text-white mb-6"
+            text="Services"
+            start="top 90%"
+            end="top 65%"
+            scrub={0.5}
+          />
+          <ScrollLinkedText
+            as="p"
+            className="text-base sm:text-lg text-[#b8b8b8] leading-relaxed font-normal tracking-[-0.02em] max-w-3xl"
+            text="Full-spectrum design capabilities under one roof. Whether you need a complete brand overhaul or ongoing creative support, we have the expertise to deliver. No outsourcing, no excuses, just exceptional work from our senior team."
+            highlightWords={["Full-spectrum", "expertise", "exceptional", "senior"]}
+            start="top 85%"
+            end="top 50%"
+            scrub={0.6}
+          />
         </div>
 
         {/* Mobile Horizontal Category Bar */}

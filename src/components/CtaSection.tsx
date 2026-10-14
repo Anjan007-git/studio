@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Copy, CheckCheck, ArrowUpRight, Calendar } from "./icons";
+import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MotionReveal } from "./MotionReveal";
 
 export function CtaSection() {
   const [copied, setCopied] = useState(false);
@@ -31,13 +33,21 @@ export function CtaSection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-heading-1 sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-6 max-w-4xl mx-auto leading-tight">
-            Your next project deserves world-class design.
-          </h2>
+          <ScrollLinkedText
+            as="h2"
+            className="text-heading-1 sm:text-5xl md:text-6xl lg:text-7xl font-display font-semibold tracking-[-0.04em] text-white mb-6 max-w-4xl mx-auto leading-tight"
+            text="Your next project deserves world-class design."
+            highlightWords={["next", "project", "world-class", "design"]}
+            start="top 88%"
+            end="top 55%"
+            scrub={0.6}
+          />
 
-          <p className="text-base sm:text-lg text-[#b8b8b8] max-w-2xl mx-auto mb-12 leading-relaxed font-sans font-normal tracking-[-0.02em]">
-            Stop settling for mediocre and start working with senior designers who care as much about your product as you do.
-          </p>
+          <MotionReveal variant="fade-up" delay={100}>
+            <p className="text-base sm:text-lg text-[#b8b8b8] max-w-2xl mx-auto mb-12 leading-relaxed font-sans font-normal tracking-[-0.02em]">
+              Stop settling for mediocre and start working with senior designers who care as much about your product as you do.
+            </p>
+          </MotionReveal>
 
           {/* Interactive CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-md mx-auto">
