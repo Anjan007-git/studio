@@ -2,10 +2,9 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight, Calendar, Star } from "./icons";
+import { Star } from "./icons";
 import { Marquee } from "./Marquee";
 
 const clientLogos = [
@@ -23,7 +22,6 @@ export function Hero() {
   const [arrived, setArrived] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const manifestoRef = useRef<HTMLDivElement>(null);
   const socialProofRef = useRef<HTMLDivElement>(null);
@@ -79,19 +77,6 @@ export function Hero() {
         });
       }
 
-      // Card parallax — moves at a different rate
-      if (cardRef.current) {
-        gsap.to(cardRef.current, {
-          y: -60,
-          ease: "none",
-          scrollTrigger: {
-            trigger: el,
-            start: "top top",
-            end: "bottom top",
-            scrub: 0.5,
-          },
-        });
-      }
 
       // Manifesto parallax
       if (manifestoRef.current) {
@@ -218,98 +203,12 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Central Content Area with Floating Card, Rating & Editorial Manifesto */}
+        {/* Central Content Area with Rating & Editorial Manifesto */}
         <div className="relative mt-6 sm:mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-          {/* Order 1 on mobile, Order 2 on desktop: Floating Meeting Card (Studio Advisory) */}
-          <div
-            ref={cardRef}
-            className={`lg:col-span-4 order-1 lg:order-2 flex justify-center mt-4 sm:mt-8 lg:-mt-36 z-20 will-change-transform transition-all duration-[1100ms] delay-200 ${
-              arrived ? "opacity-100 scale-100" : "opacity-0 scale-95"
-            }`}
-          >
-            <div className="w-full max-w-[320px] rounded-3xl bg-[var(--page-bg)]/90 border border-white/10 shadow-2xl p-3.5 flex flex-col gap-3.5 backdrop-blur-xl group hover:border-white/20 transition-all duration-500">
-              {/* Photo Container */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900">
-                <Image
-                  src="/images/ulbEv91MwUwTk34ixqmyIluLPJY.png"
-                  alt="TRIFECTA TRENDS — Design Advisory"
-                  fill
-                  priority
-                  className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
-                />
-
-                {/* Availability Badge Overlay */}
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-center gap-2 py-1.5 px-3 rounded-full bg-black/80 backdrop-blur-md border border-white/10 text-[12px] text-white font-display">
-                  <div className="flex items-center gap-0.5">
-                    <span className="w-0.5 h-2.5 bg-white rounded-full" />
-                    <span className="w-0.5 h-2.5 bg-white rounded-full" />
-                    <span className="w-0.5 h-2.5 bg-neutral-600 rounded-full" />
-                    <span className="w-0.5 h-2.5 bg-neutral-600 rounded-full" />
-                    <span className="w-0.5 h-2.5 bg-neutral-600 rounded-full" />
-                  </div>
-                  <span className="font-semibold text-white tracking-[-0.02em]">2 slots open</span>
-                  <span className="text-[#b8b8b8] font-medium text-[11px] tracking-[-0.02em]">
-                    This Month
-                  </span>
-                </div>
-              </div>
-
-              {/* Card Meta & Actions */}
-              <div className="px-1 pt-1 flex flex-col gap-3">
-                <div>
-                  <h3 className="text-[15px] font-semibold text-white font-display tracking-[-0.03em]">
-                    Design Advisory
-                  </h3>
-                  <p className="text-xs text-[#b8b8b8] font-sans tracking-[-0.02em]">Creative Direction &amp; Systems</p>
-                </div>
-
-                <div className="border-t border-white/10 pt-2.5 flex items-center justify-between text-xs">
-                  <span className="text-[#b8b8b8] font-sans tracking-[-0.02em]">
-                    Plans start at <strong className="text-white font-semibold font-display tracking-[-0.03em]">$7,500 / m</strong>
-                  </span>
-                  <Link
-                    href="#pricing"
-                    className="text-[#b8b8b8] hover:text-white transition-colors"
-                  >
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-
-                {/* White CTA Button */}
-                <Link
-                  href="/contact"
-                  className="w-full py-2.5 px-4 rounded-xl bg-white text-black hover:bg-neutral-200 transition-all font-semibold text-xs tracking-[-0.02em] font-display flex items-center justify-between shadow-sm cursor-pointer group"
-                >
-                  <span>Book a 15-Min Call</span>
-                  <Calendar className="w-4 h-4 text-black group-hover:scale-105 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Order 2 on mobile, Order 3 on desktop: Editorial Manifesto */}
-          <div
-            ref={manifestoRef}
-            className={`lg:col-span-4 order-2 lg:order-3 flex justify-start lg:justify-end will-change-transform transition-all duration-[1100ms] delay-[350ms] ${
-              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
-          >
-            <p className="max-w-md text-[15px] sm:text-base leading-[1.5] tracking-[-0.02em] text-left font-sans">
-              <strong className="text-white font-semibold font-display block sm:inline">
-                We&apos;ve reimagined how great design happens.{" "}
-              </strong>
-              <span className="text-[#b8b8b8] font-normal">
-                No pitches. No proposals. No project management theater. Just
-                exceptional work from senior designers who become an extension of
-                your team.
-              </span>
-            </p>
-          </div>
-
-          {/* Order 3 on mobile, Order 1 on desktop: Happy Clients & Rating */}
+          {/* Order 2 on mobile, Order 1 on desktop: Happy Clients & Rating */}
           <div
             ref={socialProofRef}
-            className={`lg:col-span-4 order-3 lg:order-1 flex items-center gap-4 will-change-transform transition-all duration-[1100ms] delay-[400ms] ${
+            className={`lg:col-span-6 order-2 lg:order-1 flex items-center gap-4 will-change-transform transition-all duration-[1100ms] delay-[400ms] ${
               arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -367,6 +266,25 @@ export function Hero() {
                 100+ Happy clients
               </span>
             </div>
+          </div>
+
+          {/* Order 1 on mobile, Order 2 on desktop: Editorial Manifesto */}
+          <div
+            ref={manifestoRef}
+            className={`lg:col-span-6 order-1 lg:order-2 flex justify-start lg:justify-end will-change-transform transition-all duration-[1100ms] delay-[350ms] ${
+              arrived ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
+          >
+            <p className="max-w-md text-[15px] sm:text-base leading-[1.5] tracking-[-0.02em] text-left font-sans">
+              <strong className="text-white font-semibold font-display block sm:inline">
+                We&apos;ve reimagined how great design happens.{" "}
+              </strong>
+              <span className="text-[#b8b8b8] font-normal">
+                No pitches. No proposals. No project management theater. Just
+                exceptional work from senior designers who become an extension of
+                your team.
+              </span>
+            </p>
           </div>
         </div>
 
