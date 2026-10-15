@@ -188,7 +188,7 @@ export default function StudioPage() {
       <main className="pt-28 sm:pt-36">
         {/* Header Hero Section */}
         <section className="pb-20 sm:pb-28">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={50}>
               <div className="mb-8">
                 <span className="section-label">
@@ -227,7 +227,7 @@ export default function StudioPage() {
 
         {/* Company Purpose & Approach Section */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={50}>
               <div className="mb-8">
                 <span className="section-label block">
@@ -283,7 +283,7 @@ export default function StudioPage() {
 
         {/* Interactive Visual: Relationship Between Product, Technology, Marketing & Growth */}
         <section className="py-24 sm:py-32 border-t border-white/10 bg-[#060608]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={40} variant="fade-up">
               <div className="max-w-3xl mb-14">
                 <span className="section-label block mb-3">
@@ -389,7 +389,7 @@ export default function StudioPage() {
 
         {/* Studio Spaces & Working Rhythm */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={50}>
               <div className="mb-14">
                 <span className="section-label block mb-3">
@@ -439,7 +439,7 @@ export default function StudioPage() {
 
         {/* Insights & Articles Section (Preserved) */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#060608]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={50}>
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
                 <div>

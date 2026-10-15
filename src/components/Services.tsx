@@ -133,7 +133,7 @@ export function Services() {
       id="services"
       className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+      <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         {/* Section Header */}
         <div className="max-w-4xl mb-16 sm:mb-20">
           <MotionReveal variant="fade-up" delay={0}>

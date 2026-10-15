@@ -87,7 +87,7 @@ export default function TermsOfServicePage() {
       <Navbar />
 
       <main className="pt-28 sm:pt-36 pb-24 sm:pb-32">
-        <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
+        <div className="w-full max-w-4xl mx-auto px-[var(--section-px)]">
           {/* Header */}
           <div className="mb-14 sm:mb-20">
             <MotionReveal delay={30} variant="fade-up">

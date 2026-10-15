@@ -157,7 +157,7 @@ export function Approach() {
       id="approach"
       className="relative bg-[var(--page-bg)] border-t border-white/[0.08] overflow-hidden pt-20 sm:pt-28 md:pt-36 lg:pt-40 pb-24 sm:pb-32 md:pb-40"
     >
-      <div className="w-full max-w-[var(--content-max)] mx-auto px-6 sm:px-8 md:px-14 lg:px-16">
+      <div className="w-full max-w-[var(--content-max)] mx-auto px-[var(--section-px)]">
         {/* ============================================================ */}
         {/* MUGEN EXACT EDITORIAL STATEMENT WITH FLOATED SECTION LABEL   */}
         {/* ============================================================ */}

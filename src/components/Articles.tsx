@@ -87,7 +87,7 @@ export function Articles() {
       id="articles"
       className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+      <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div className="max-w-2xl">

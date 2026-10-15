@@ -181,7 +181,7 @@ export default function GrowthPage() {
       <main className="pt-28 sm:pt-36">
         {/* Header Hero Section */}
         <section className="pb-20 sm:pb-28">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="mb-4">
                 <span className="section-label">
@@ -218,7 +218,7 @@ export default function GrowthPage() {
 
         {/* Interactive Campaign-Performance Visualizer */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#060608]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={40} variant="fade-up">
               <div className="max-w-3xl mb-12">
                 <span className="section-label block mb-3">
@@ -421,7 +421,7 @@ export default function GrowthPage() {
 
         {/* Development & Marketing Synergy: Code + Conversion */}
         <section className="py-24 sm:py-32 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="max-w-3xl mb-16 sm:mb-20">
                 <span className="section-label block mb-3">
@@ -508,7 +508,7 @@ export default function GrowthPage() {
 
         {/* Structured Growth Capabilities Grid */}
         <section className="py-24 sm:py-32 border-t border-white/10 bg-[#060608]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="max-w-3xl mb-16 sm:mb-20">
                 <span className="section-label block mb-3">
@@ -566,7 +566,7 @@ export default function GrowthPage() {
 
         {/* Growth Call to Action Banner */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <div className="p-8 sm:p-14 rounded-3xl bg-[#0e0e11] border border-white/15 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="section-label block mb-2">

@@ -55,7 +55,7 @@ export function Footer() {
       />
 
       {/* Layer 2: Footer Foreground Content */}
-      <div className="relative z-[2] w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+      <div className="relative z-[2] w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         {/* Upper Information Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-white/10">
           {/* Brand & Newsletter Column */}

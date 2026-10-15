@@ -25,7 +25,7 @@ export default function PricingPage() {
 
         {/* Dedicated Growth & Performance Marketing Pricing & Engagement Section */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[#060608]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={40} variant="fade-up">
               <div className="max-w-3xl mb-12">
                 <div className="mb-4">

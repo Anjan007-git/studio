@@ -96,7 +96,7 @@ export default function ProjectsPage() {
 
       <main className="pt-28 sm:pt-36">
         <section className="pb-20 sm:pb-28">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             {/* Header Tag */}
             <MotionReveal delay={30} variant="fade-up">
               <div className="mb-4">

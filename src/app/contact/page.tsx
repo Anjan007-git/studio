@@ -54,7 +54,7 @@ export default function ContactPage() {
 
       <main className="pt-32 sm:pt-40">
         <section className="pb-24 sm:pb-32">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             {/* Header */}
             <div className="mb-14 sm:mb-20">
               <MotionReveal delay={30} variant="fade-up">

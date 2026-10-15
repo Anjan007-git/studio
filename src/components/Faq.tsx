@@ -46,7 +46,7 @@ export function Faq() {
       id="faq"
       className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+      <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading & Advisory box */}
           <div className="lg:col-span-5 sticky top-32">

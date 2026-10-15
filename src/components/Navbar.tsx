@@ -191,7 +191,7 @@ export function Navbar() {
     <>
       {/* Top Bar — mix-blend-exclusion for text visibility on any bg */}
       <header className="fixed top-0 left-0 right-0 z-50 mix-blend-exclusion text-white pointer-events-auto">
-        <div className="w-full px-5 sm:px-10 md:px-14 py-4 sm:py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between">
+        <div className="w-full max-w-[var(--content-max)] mx-auto px-[var(--section-px)] py-4 sm:py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between">
           {/* Left: Brand Logo */}
           <Link
             href="/"
@@ -262,7 +262,7 @@ export function Navbar() {
         style={{ clipPath: menuOpen ? undefined : "inset(0 0 100% 0)" }}
       >
         {/* Mobile Menu Header */}
-        <div className="w-full px-6 sm:px-10 md:px-14 py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between border-b border-white/[0.08]">
+        <div className="w-full max-w-[var(--content-max)] mx-auto px-[var(--section-px)] py-5 pt-[max(1.25rem,env(safe-area-inset-top))] flex items-center justify-between border-b border-white/[0.08]">
           <span className="text-sm font-medium text-[#b8b8b8] font-display select-none">
             Menu
           </span>
@@ -276,7 +276,7 @@ export function Navbar() {
         </div>
 
         {/* Navigation Section */}
-        <div className="w-full px-6 sm:px-10 md:px-14 py-8 sm:py-12 flex-1 flex flex-col justify-center max-w-4xl">
+        <div className="w-full px-[var(--section-px)] py-8 sm:py-12 flex-1 flex flex-col justify-center max-w-4xl">
           <nav className="flex flex-col space-y-3 sm:space-y-4">
             {navLinks.map((link, i) => (
               <Link
@@ -302,7 +302,7 @@ export function Navbar() {
         {/* Mid Section: Let's Talk + Email + Live Studio Time + Socials */}
         <div
           ref={menuMetaRef}
-          className="w-full px-6 sm:px-10 md:px-14 py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6"
+          className="w-full px-[var(--section-px)] py-8 border-t border-white/[0.08] max-w-4xl flex flex-col gap-6"
         >
           <div>
             <span className="text-xs font-medium text-[#848484] font-display block mb-2">Let&apos;s Talk</span>
@@ -370,7 +370,7 @@ export function Navbar() {
         {/* Bottom Legal Footer */}
         <div
           ref={menuFooterRef}
-          className="w-full px-6 sm:px-10 md:px-14 py-6 border-t border-white/[0.08] pb-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#b8b8b8]"
+          className="w-full px-[var(--section-px)] py-6 border-t border-white/[0.08] pb-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-[#b8b8b8]"
         >
           <div className="flex items-center gap-6">
             <Link

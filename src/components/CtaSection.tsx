@@ -24,7 +24,7 @@ export function CtaSection() {
       {/* Subtle deep background depth */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-white/[0.02] rounded-full blur-3xl pointer-events-none -z-10" />
 
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+      <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         <div className="p-8 sm:p-16 md:p-20 rounded-3xl bg-[#050505] border border-white/10 text-center relative shadow-2xl">
           {/* Top Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] text-[#b8b8b8] mb-8">

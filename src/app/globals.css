@@ -181,10 +181,28 @@
   --text-caption: 0.75rem;
   --text-micro: 0.725rem;
 
-  /* Spacing scale */
+  /* MUGEN Spacing Proportions: Outer Margin / Spacing to Viewport Edges
+   * - Mobile (< 768px): 24px (1.5rem)
+   * - Tablet (768px - 1199px): 48px (3rem)
+   * - Desktop (>= 1200px): 72px (4.5rem)
+   */
+  --section-px: 24px;
   --section-py: clamp(5rem, 10vw, 10rem);
-  --section-px: clamp(1.25rem, 3.5vw, 3.5rem);
   --content-max: 1560px;
+}
+
+@media (min-width: 768px) {
+  :root,
+  .dark {
+    --section-px: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root,
+  .dark {
+    --section-px: 72px;
+  }
 }
 
 .dark {

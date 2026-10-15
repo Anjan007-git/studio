@@ -64,7 +64,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <main className="pt-28 sm:pt-36">
         {/* Back Link & Navigation Bar */}
         <section className="pb-6">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={20} variant="fade-up">
               <Link
                 href="/projects"
@@ -79,7 +79,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Hero Header */}
         <section className="pb-12 sm:pb-16">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={40} variant="fade-up">
               <div className="flex items-center gap-3 text-xs font-display font-medium text-[#848484] mb-6 tracking-[-0.02em]">
                 <span className="text-white font-medium">{project.number}</span>
@@ -178,7 +178,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Main Cover Image */}
         <section className="pb-20 sm:pb-28">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={60} variant="scale">
               <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
                 <ParallaxImage
@@ -209,7 +209,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* The Challenge Section */}
         {project.challenge.subtitle && (
           <section className="py-20 sm:py-28 border-t border-white/10">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="fade-up">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                   <div className="lg:col-span-4">
@@ -243,7 +243,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Visual Gallery 1 (2 Images Side-by-Side) */}
         {project.galleryImages.length >= 2 && (
           <section className="pb-20 sm:pb-28">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {project.galleryImages.slice(0, 2).map((img, idx) => (
                   <MotionReveal key={idx} delay={idx * 100} variant="scale">
@@ -268,7 +268,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* The Solution Section */}
         {project.solution.subtitle && (
           <section className="py-20 sm:py-28 border-t border-white/10">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="fade-up">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                   <div className="lg:col-span-4">
@@ -302,7 +302,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Visual Gallery 2 (Full Width Feature Image) */}
         {project.galleryImages.length >= 3 && (
           <section className="pb-20 sm:pb-28">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="scale">
                 <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
                   <ParallaxImage
@@ -323,7 +323,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* The Process Section */}
         {project.process.subtitle && (
           <section className="py-20 sm:py-28 border-t border-white/10">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="fade-up">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
                   <div className="lg:col-span-4">
@@ -357,7 +357,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* By the Numbers (Stats Grid) */}
         {project.stats && project.stats.length > 0 && (
           <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="fade-up">
                 <div className="mb-12">
                   <span className="section-label block mb-2">
@@ -407,7 +407,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Testimonial Quote */}
         {project.testimonial && (
           <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-            <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+            <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
               <MotionReveal delay={40} variant="fade-up">
                 <div className="p-10 sm:p-16 rounded-3xl bg-[#1c1c1c] border border-white/10 relative overflow-hidden">
                   <span className="text-xs font-display font-medium text-[#848484] uppercase tracking-[-0.02em] block mb-8">
@@ -452,7 +452,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Next Project Card Banner */}
         <section className="py-16 sm:py-24 border-t border-white/10">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="flex items-center justify-between mb-8">
                 <span className="section-label">
@@ -508,7 +508,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Latest Projects Grid */}
         <section className="py-16 sm:py-24 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="mb-10">
                 <span className="section-label block mb-2">

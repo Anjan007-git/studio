@@ -222,7 +222,7 @@ export function Testimonials() {
         </Marquee>
       </div>
 
-      <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14 py-20 sm:py-28 lg:py-32">
+      <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)] py-20 sm:py-28 lg:py-32">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 mb-16 sm:mb-20">
           <div className="lg:col-span-3">

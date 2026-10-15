@@ -63,7 +63,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       <main className="pt-28 sm:pt-36">
         {/* Breadcrumb Back Link */}
         <section className="pb-6">
-          <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
+          <div className="w-full max-w-4xl mx-auto px-[var(--section-px)]">
             <MotionReveal delay={20} variant="fade-up">
               <Link
                 href="/articles"
@@ -78,7 +78,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
         {/* Article Header */}
         <section className="pb-12 sm:pb-16">
-          <div className="w-full max-w-4xl mx-auto px-6 sm:px-10">
+          <div className="w-full max-w-4xl mx-auto px-[var(--section-px)]">
             <MotionReveal delay={40} variant="fade-up">
               {/* Meta Tags */}
               <div className="flex items-center gap-3 text-xs font-sans text-[#848484] mb-6">
@@ -134,7 +134,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
         {/* Hero Cover Image */}
         <section className="pb-16 sm:pb-24">
-          <div className="w-full max-w-5xl mx-auto px-6 sm:px-10">
+          <div className="w-full max-w-5xl mx-auto px-[var(--section-px)]">
             <MotionReveal delay={60} variant="scale">
               <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 group">
                 <ParallaxImage
@@ -151,7 +151,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
         {/* Editorial Body Content */}
         <section className="pb-24 sm:pb-32">
-          <div className="w-full max-w-3xl mx-auto px-6 sm:px-10">
+          <div className="w-full max-w-3xl mx-auto px-[var(--section-px)]">
             <article className="space-y-8 text-[#b8b8b8] font-sans font-normal text-base sm:text-lg leading-[1.8]">
               {article.sections.map((sec, idx) => {
                 if (sec.type === "h2") {
@@ -259,7 +259,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
         {/* More Insights / Related Articles */}
         <section className="py-20 sm:py-28 border-t border-white/10 bg-[var(--page-bg)]">
-          <div className="w-full max-w-[1560px] mx-auto px-6 sm:px-10 md:px-14">
+          <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
             <MotionReveal delay={30} variant="fade-up">
               <div className="flex items-center justify-between mb-12">
                 <div>
