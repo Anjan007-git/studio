@@ -1,4 +1,4 @@
-// Smooth Scroll Slider — Originkit (adapted for Next.js App Router)
+// Smooth Scroll Slider — Originkit (adapted for Next.js App Router with responsive mobile support)
 "use client"
 
 import React, { useEffect, useMemo, useRef, useState } from "react"
@@ -35,8 +35,8 @@ export interface SmoothScrollSliderProps {
 }
 
 const PLACEHOLDER_COUNT = 8
-const MAX_SCALE = 2.5
-const MIN_SCALE = 0.1
+const MAX_SCALE = 2.2
+const MIN_SCALE = 0.15
 
 function wrap(value: number, span: number): number {
   return ((value % span) + span) % span
@@ -83,6 +83,7 @@ interface Frame {
   dim: number
   loop: boolean
   flip: boolean
+  isMobile: boolean
 }
 
 const DEFAULT_IMAGES: ImageInput[] = [
@@ -100,13 +101,13 @@ const DEFAULT_IMAGES: ImageInput[] = [
 
 export default function SmoothScrollSlider({
   images = DEFAULT_IMAGES,
-  slideWidth = 400,
-  slideHeight = 400,
+  slideWidth = 340,
+  slideHeight = 420,
   spacing = 2,
   direction = "right",
-  smoothness = 10,
+  smoothness = 8,
   radius = 16,
-  dim = 10,
+  dim = 7,
   background = "#000000",
   sensitivity = 5,
   loop = true,
@@ -120,13 +121,17 @@ export default function SmoothScrollSlider({
   const userSwipeOffset = useRef(0)
   const [width, setWidth] = useState(0)
 
+  // Responsive slide sizing
+  const isMobile = width > 0 && width < 768
+  const effectiveSlideWidth = isMobile ? Math.min(220, Math.max(170, Math.round(width * 0.58))) : slideWidth
+  const effectiveSlideHeight = isMobile ? Math.min(270, Math.round(effectiveSlideWidth * 1.2)) : slideHeight
+  const effectiveRadius = isMobile ? Math.min(radius, 12) : radius
+
   // ─── Scroll-driven mode ───────────────────────────────────────────────────
-  // Drives target.current directly from page scroll progress with zero React re-renders.
-  // On desktop (lg:), uses outer sticky container. On mobile, tracks viewport scroll.
   useEffect(() => {
     if (!scrollSectionRef) return
 
-    const SLIDE_STEP = slideWidth + clamp(spacing, 0, 10) * 20
+    const SLIDE_STEP = effectiveSlideWidth + clamp(spacing, 0, 10) * (isMobile ? 12 : 20)
     const MAX_OFFSET = SLIDE_STEP * 10
 
     const update = () => {
@@ -147,13 +152,13 @@ export default function SmoothScrollSlider({
           baseScrollOffset = progress * MAX_OFFSET
         }
       } else {
-        // Mobile / natural flow: calculate progress as the slider moves through the viewport
+        // Mobile / natural flow: smoothly link viewport scroll without jarring shifts
         const cRect = container.getBoundingClientRect()
         const vh = window.innerHeight || 800
         const totalDistance = vh + cRect.height
         const distanceScrolled = vh - cRect.top
         const progress = Math.max(0, Math.min(1, distanceScrolled / totalDistance))
-        const MOBILE_MAX_OFFSET = SLIDE_STEP * 4.5
+        const MOBILE_MAX_OFFSET = SLIDE_STEP * 3.5
         baseScrollOffset = progress * MOBILE_MAX_OFFSET
       }
 
@@ -162,7 +167,6 @@ export default function SmoothScrollSlider({
 
     update()
 
-    // Prefer Lenis custom event so it stays in sync with the smooth scroll timeline
     const onLenis = () => update()
     const onScroll = () => update()
     const onResize = () => update()
@@ -175,7 +179,7 @@ export default function SmoothScrollSlider({
       window.removeEventListener("scroll", onScroll)
       window.removeEventListener("resize", onResize)
     }
-  }, [scrollSectionRef, slideWidth, spacing])
+  }, [scrollSectionRef, effectiveSlideWidth, spacing, isMobile])
 
   const source = useMemo<Slide[]>(() => {
     const resolved: Slide[] = []
@@ -188,8 +192,8 @@ export default function SmoothScrollSlider({
       : Array.from({ length: PLACEHOLDER_COUNT }, () => ({ src: null, offsetY: 0 }))
   }, [images])
 
-  const step = slideWidth + clamp(spacing, 0, 10) * 20
-  const ease = 0.15 - (clamp(smoothness, 0, 10) / 10) * 0.13
+  const step = effectiveSlideWidth + clamp(spacing, 0, 10) * (isMobile ? 12 : 20)
+  const ease = isMobile ? 0.08 : (0.15 - (clamp(smoothness, 0, 10) / 10) * 0.13)
   const dimAmount = (clamp(dim, 0, 10) / 10) * 0.85
   const wheelMultiplier = 0.4 + (clamp(sensitivity, 0, 10) / 10) * 1.2
   const dragMultiplier = 0.6 + (clamp(sensitivity, 0, 10) / 10) * 1.8
@@ -217,22 +221,29 @@ export default function SmoothScrollSlider({
     dim: 0,
     loop: true,
     flip: false,
+    isMobile: false,
   })
-  frame.current = {
-    count: slides.length,
-    step,
-    slideWidth,
-    width,
-    ease,
-    maxScale: MAX_SCALE,
-    minScale: MIN_SCALE,
-    dim: dimAmount,
-    loop,
-    flip,
-  }
+
+  useEffect(() => {
+    frame.current = {
+      count: slides.length,
+      step,
+      slideWidth: effectiveSlideWidth,
+      width,
+      ease,
+      maxScale: isMobile ? 1.12 : MAX_SCALE,
+      minScale: isMobile ? 0.88 : MIN_SCALE,
+      dim: isMobile ? dimAmount * 0.5 : dimAmount,
+      loop,
+      flip,
+      isMobile,
+    }
+  }, [slides.length, step, effectiveSlideWidth, width, ease, isMobile, dimAmount, loop, flip])
 
   const input = useRef({ wheelMultiplier, dragMultiplier, flip })
-  input.current = { wheelMultiplier, dragMultiplier, flip }
+  useEffect(() => {
+    input.current = { wheelMultiplier, dragMultiplier, flip }
+  }, [wheelMultiplier, dragMultiplier, flip])
 
   useEffect(() => {
     const node = containerRef.current
@@ -284,6 +295,11 @@ export default function SmoothScrollSlider({
       last = now
       if (!c.count || c.step <= 0 || c.width <= 0) return
 
+      // Gentle ambient drift on mobile so it always feels live and smooth
+      if (c.isMobile) {
+        target.current += delta * 12
+      }
+
       const span = c.count * c.step
 
       if (c.loop) {
@@ -313,12 +329,20 @@ export default function SmoothScrollSlider({
 
         let scale: number
         let push: number
-        if (distance > 0) {
-          scale = Math.min(c.maxScale, 1 + distance / c.width)
-          push = (scale - 1) * c.slideWidth * 0.75
-        } else {
-          scale = Math.max(c.minScale, 1 + distance / c.width)
+        if (c.isMobile) {
+          // Mobile: subtle, graceful scale without massive overflow
+          const distRatio = Math.abs(distance) / (c.width * 0.6)
+          scale = clamp(1.08 - distRatio * 0.18, c.minScale, c.maxScale)
           push = 0
+        } else {
+          // Desktop: original wide-range perspective zoom
+          if (distance > 0) {
+            scale = Math.min(c.maxScale, 1 + distance / c.width)
+            push = (scale - 1) * c.slideWidth * 0.75
+          } else {
+            scale = Math.max(c.minScale, 1 + distance / c.width)
+            push = 0
+          }
         }
 
         const left = c.flip ? c.width - c.slideWidth - (x + push) : x + push
@@ -341,8 +365,6 @@ export default function SmoothScrollSlider({
 
   // ─── Wheel handler (disabled in scroll-driven mode) ───────────────────────
   useEffect(() => {
-    // In scroll-driven mode the page scroll already drives the slider.
-    // Don't add a passive:false wheel listener — it would fight Lenis.
     if (scrollSectionRef) return
 
     const node = containerRef.current
@@ -357,7 +379,7 @@ export default function SmoothScrollSlider({
     return () => node.removeEventListener("wheel", onWheel)
   }, [scrollSectionRef])
 
-  // ─── Pointer / touch drag handler (active on mobile and desktop) ───────
+  // ─── Pointer / touch drag handler (safe on mobile, never locks page scroll) ───────
   useEffect(() => {
     const node = containerRef.current
     if (!node) return
@@ -386,23 +408,25 @@ export default function SmoothScrollSlider({
 
       const totalDx = event.clientX - startX
       const totalDy = event.clientY - startY
+      const absX = Math.abs(totalDx)
+      const absY = Math.abs(totalDy)
 
       if (!isIntentional) {
-        const absX = Math.abs(totalDx)
-        const absY = Math.abs(totalDy)
+        const threshold = event.pointerType === "touch" ? 14 : 6
+        const minRatio = event.pointerType === "touch" ? 1.8 : 1.0
 
-        if (absX > 6 || absY > 6) {
+        if (absX > threshold || absY > threshold) {
           isIntentional = true
-          if (absX > absY) {
-            // Horizontal swipe: claim drag and capture pointer
+          // Only claim drag if motion is clearly horizontal
+          if (absX > absY * minRatio) {
             isDragging = true
             try {
               node.setPointerCapture(event.pointerId)
             } catch {
-              // Ignore if pointer capture fails
+              // Ignore
             }
           } else {
-            // Vertical scroll: do not intercept, release pointer tracking
+            // Predominantly vertical or diagonal touch: NEVER hijack or freeze vertical scroll!
             activePointerId = null
             return
           }
@@ -446,6 +470,7 @@ export default function SmoothScrollSlider({
       node.removeEventListener("pointercancel", onUp)
     }
   }, [])
+
   return (
     <div
       ref={containerRef}
@@ -472,9 +497,9 @@ export default function SmoothScrollSlider({
             position: "absolute",
             top: "50%",
             left: 0,
-            width: slideWidth,
-            height: slideHeight,
-            borderRadius: radius,
+            width: effectiveSlideWidth,
+            height: effectiveSlideHeight,
+            borderRadius: effectiveRadius,
             overflow: "hidden",
             background: slide.src ? "#111" : placeholderFill(i),
             willChange: "transform, filter",
