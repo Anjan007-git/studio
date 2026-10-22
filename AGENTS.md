@@ -68,5 +68,5 @@ scripts/            # Asset download scripts
 ```
 
 ## Agent Workflow
-- Edit `.agents/skills/clone-website/` for cloning-workflow changes. It is canonical skill used by Codex, Cursor, and OpenCode.
+- Edit `.agents/skills/clone-website/` for cloning-workflow changes. It is canonical skill used by Codex, Cursor, & OpenCode.
 - Keep `.claude/commands/clone-website.md` as a thin Claude Code bridge to the canonical skill; do not duplicate the workflow there.
