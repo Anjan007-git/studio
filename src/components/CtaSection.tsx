@@ -81,7 +81,7 @@ export function CtaSection() {
           </div>
 
           <p className="text-[11px] font-sans text-[#848484] mt-8">
-            Avg. response time: &lt; 2 hours during EST business hours
+            Avg. response time: &lt; 2 hours during IST business hours
           </p>
         </div>
       </div>

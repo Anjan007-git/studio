@@ -115,7 +115,7 @@ export default function ContactPage() {
                         Studio Hubs
                       </span>
                       <p className="text-sm text-[#b8b8b8] font-sans">
-                        New York • San Francisco • Global Remote
+                        Mumbai • San Francisco • Global Remote
                       </p>
                     </div>
 
@@ -124,7 +124,7 @@ export default function ContactPage() {
                         Office hours
                       </span>
                       <p className="text-sm text-[#b8b8b8] font-sans">
-                        Monday to Friday: 9:00 AM – 6:00 PM EST
+                        Monday to Friday: 9:00 AM – 6:00 PM IST
                       </p>
                     </div>
                   </div>
