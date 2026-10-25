@@ -373,6 +373,14 @@ interface DrawItem {
   alpha: number;
 }
 
+const checkIsMobile = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  return (
+    window.innerWidth < 768 ||
+    (Boolean(window.matchMedia?.('(pointer: coarse)')?.matches) && window.innerWidth < 1024)
+  );
+};
+
 export const FlexCarousel: React.FC<FlexCarouselProps> = ({
   items = DEFAULT_ITEMS,
   preset = 'liquid',
@@ -682,16 +690,19 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
     };
 
     const metrics = (s: Settings): Metrics => {
-      const cardH = Math.max(24, s.cardHeight * height);
+      const isMobileDevice = width < 768;
+      const effectiveCardHeight = isMobileDevice ? Math.max(s.cardHeight, 0.54) : s.cardHeight;
+      const effectiveGap = isMobileDevice ? Math.min(s.gap, 10) : s.gap;
+      const cardH = Math.max(24, effectiveCardHeight * height);
       const fixed = FIT_ASPECT[s.fit];
       const widths = slots.map(slot => (fixed || slot.aspect) * cardH);
       const centers: number[] = [];
       let cursor = 0;
       for (let i = 0; i < widths.length; i++) {
         centers.push(cursor + widths[i] / 2);
-        cursor += widths[i] + s.gap;
+        cursor += widths[i] + effectiveGap;
       }
-      return { cardH, widths, centers, gap: s.gap, loop: Math.max(cursor, 1) };
+      return { cardH, widths, centers, gap: effectiveGap, loop: Math.max(cursor, 1) };
     };
 
     const nearest = (m: Metrics, at: number): number => {
@@ -839,6 +850,7 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
     };
 
     const resize = () => {
+      isMobile = checkIsMobile();
       width = Math.max(1, container.clientWidth);
       height = Math.max(1, container.clientHeight);
       renderer.dpr = Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(PIXEL_BUDGET / (width * height)));
@@ -1155,7 +1167,7 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
       pointer.dragging = false;
       pointer.samples = [{ x, t: performance.now() }];
       interactedAt = performance.now();
-      if (Math.abs(vel) > 40) {
+      if (Math.abs(vel) > 40 && !pointer.touch) {
         goal = pos;
         vel = 0;
       }
@@ -1328,6 +1340,36 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
       if (!document.hidden) start();
     };
 
+    let isMobile = checkIsMobile();
+    let lastWindowScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+
+    const onWindowScroll = () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastWindowScrollY;
+      lastWindowScrollY = currentScrollY;
+
+      if (!alive || !visible || !isMobile) return;
+      if (pointer.dragging) return;
+      if (Math.abs(delta) < 0.25) return;
+
+      const clampedDelta = Math.max(-80, Math.min(80, delta));
+
+      if (focus.target > 0) {
+        closeFocus();
+      }
+
+      skipIntro();
+      interactedAt = performance.now();
+
+      // Scrolling down advances carousel forward
+      goal += clampedDelta * 0.95;
+      mode = 'wheel';
+      wheelAt = performance.now();
+      dirty = true;
+      start();
+    };
+
+    window.addEventListener('scroll', onWindowScroll, { passive: true });
     container.addEventListener('pointerdown', onPointerDown);
     container.addEventListener('pointermove', onPointerMove);
     container.addEventListener('pointerup', onPointerUp);
@@ -1341,10 +1383,13 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
-    const intersectionObserver = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      start();
-    });
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        start();
+      },
+      { rootMargin: '120px 0px' }
+    );
     intersectionObserver.observe(container);
 
     engineRef.current = {
@@ -1365,6 +1410,7 @@ export const FlexCarousel: React.FC<FlexCarouselProps> = ({
       cancelAnimationFrame(raf);
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
+      window.removeEventListener('scroll', onWindowScroll);
       container.removeEventListener('pointerdown', onPointerDown);
       container.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('pointerup', onPointerUp);

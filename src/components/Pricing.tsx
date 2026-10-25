@@ -70,8 +70,8 @@ export function Pricing() {
     >
       <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
         {/* React Bits FlexCarousel component above Built to scale */}
-        <div className="w-full mb-16 sm:mb-24">
-          <div style={{ width: "100%", height: "560px", position: "relative" }}>
+        <div className="w-full mb-12 sm:mb-16 md:mb-24">
+          <div className="w-full h-[360px] xs:h-[400px] sm:h-[460px] md:h-[560px] relative">
             <FlexCarousel
               items={carouselItems}
               preset="liquid"
