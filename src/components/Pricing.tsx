@@ -6,6 +6,58 @@ import Link from "next/link";
 import { ArrowUpRight } from "./icons";
 import { ScrollLinkedText } from "./ScrollLinkedText";
 import { MotionReveal } from "./MotionReveal";
+import { FlexCarousel, type FlexCarouselItem } from "./FlexCarousel";
+
+const carouselItems: FlexCarouselItem[] = [
+  {
+    src: "/images/1K1GhaYYAWsk6blrw0x1GrQp18.jpg",
+    alt: "Quantum — Brand Strategy & Product Design",
+    title: "Quantum",
+    subtitle: "Brand & Product Design",
+  },
+  {
+    src: "/images/6RfCJSn8TD3btNcHJPZjWjNVOo.jpeg",
+    alt: "Cubekit — Brand Identity & Architecture",
+    title: "Cubekit",
+    subtitle: "Brand Identity",
+  },
+  {
+    src: "/images/WESeNdvPCpvuLT7oqkMfp8VbxXU.jpeg",
+    alt: "Ephemeral — Design System & Platform",
+    title: "Ephemeral",
+    subtitle: "Product Architecture",
+  },
+  {
+    src: "/images/Rkl08UGfkYj0XdxZZ8h4d04KowA.jpeg",
+    alt: "Warpspeed — Developer Platform Experience",
+    title: "Warpspeed",
+    subtitle: "Enterprise UI",
+  },
+  {
+    src: "/images/uDKj6X3ze5cVzKwJIBrayncA6M.jpeg",
+    alt: "Magnolia — Digital Flagship & Strategy",
+    title: "Magnolia",
+    subtitle: "Digital Flagship",
+  },
+  {
+    src: "/images/75i8Q2ywq53c5fxbFh3dQpM.jpeg",
+    alt: "Kinetic Form — Spatial Design & 3D Systems",
+    title: "Kinetic Form",
+    subtitle: "Spatial Experience",
+  },
+  {
+    src: "/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg",
+    alt: "Nexus — Interactive Media & Identity",
+    title: "Nexus",
+    subtitle: "Interactive Identity",
+  },
+  {
+    src: "/images/S5IiZibMt7hx3ox8oukcsSJINEc.jpeg",
+    alt: "Aether — Visual Language & System",
+    title: "Aether",
+    subtitle: "Visual Language",
+  },
+];
 
 export function Pricing() {
   const [growthCycle, setGrowthCycle] = useState<"monthly" | "quarterly">("monthly");
@@ -17,6 +69,22 @@ export function Pricing() {
       className="py-24 sm:py-32 border-t border-white/10 relative bg-[var(--page-bg)] overflow-hidden"
     >
       <div className="w-full max-w-[1560px] mx-auto px-[var(--section-px)]">
+        {/* React Bits FlexCarousel component above Built to scale */}
+        <div className="w-full mb-16 sm:mb-24">
+          <div style={{ width: "100%", height: "560px", position: "relative" }}>
+            <FlexCarousel
+              items={carouselItems}
+              preset="liquid"
+              intro="rise"
+              cardHeight={0.5}
+              gap={12}
+              squeeze={0.2}
+              focusOnClick
+              captions
+            />
+          </div>
+        </div>
+
         {/* Header */}
         <div className="max-w-2xl mb-16 sm:mb-20">
           <MotionReveal variant="fade-up" delay={0}>
