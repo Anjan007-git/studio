@@ -130,7 +130,7 @@ export function Faq() {
                       {faq.q}
                     </span>
                     <span
-                      className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-[#b8b8b8] shrink-0 transform transition-all duration-300 text-lg font-display select-none ${
+                      className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-[#b8b8b8] shrink-0 transform transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] text-lg font-display select-none ${
                         isOpen
                           ? "rotate-45 text-white bg-white/10 border-white/20"
                           : "bg-white/5"
@@ -141,7 +141,7 @@ export function Faq() {
                   </button>
 
                   <div
-                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                    className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                       isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                     }`}
                   >

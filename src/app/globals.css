@@ -735,3 +735,43 @@ section.bg-\[\#141414\] {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
 }
+
+/* ================================================================== */
+/*  LENIS BUTTERY SMOOTH SCROLL SYSTEM                                */
+/* ================================================================== */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Mugen Studio signature easing curves */
+:root {
+  --ease-mugen: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-mugen-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-mugen-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.ease-mugen {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ease-mugen-spring {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}

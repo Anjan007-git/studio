@@ -38,9 +38,8 @@ export function HomeArrival() {
 
     const isMobile =
       typeof window !== "undefined" &&
-      ("ontouchstart" in window ||
-        navigator.maxTouchPoints > 0 ||
-        window.innerWidth < 768);
+      window.innerWidth < 768 &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 1);
 
     const prefersReducedMotion =
       typeof window !== "undefined" &&
@@ -230,8 +229,8 @@ export function HomeArrival() {
         leftShutterRef.current,
         {
           xPercent: -100,
-          duration: 0.45,
-          ease: "power4.out",
+          duration: 0.55,
+          ease: "power3.inOut",
         },
         REVEAL_START
       );
@@ -240,8 +239,8 @@ export function HomeArrival() {
         rightShutterRef.current,
         {
           xPercent: 100,
-          duration: 0.45,
-          ease: "power4.out",
+          duration: 0.55,
+          ease: "power3.inOut",
         },
         REVEAL_START
       );

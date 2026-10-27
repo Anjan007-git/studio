@@ -162,8 +162,8 @@ export function PageTransition({ children }: PageTransitionProps) {
       curtain,
       {
         yPercent: -100,
-        duration: 0.44,
-        ease: "power3.inOut",
+        duration: 0.48,
+        ease: "power4.inOut",
       },
       0.04
     );
@@ -235,8 +235,8 @@ export function PageTransition({ children }: PageTransitionProps) {
           { yPercent: 100 },
           {
             yPercent: 0,
-            duration: 0.38,
-            ease: "power3.inOut",
+            duration: 0.44,
+            ease: "power4.inOut",
           },
           0
         );

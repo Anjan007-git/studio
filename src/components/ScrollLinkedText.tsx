@@ -60,7 +60,7 @@ export function ScrollLinkedText({
   highlightColor = "#ffffff",
   dimOpacity = 0.22,
   activeOpacity = 1.0,
-  yOffset = 4,
+  yOffset = 0,
   mode = "scrub",
 }: ScrollLinkedTextProps) {
   const containerRef = useRef<HTMLElement>(null);
@@ -119,17 +119,15 @@ export function ScrollLinkedText({
             trigger: el,
             start: computedStart,
             end: computedEnd,
-            scrub: typeof scrub === "number" ? scrub : scrub ? 0.5 : false,
+            scrub: typeof scrub === "number" ? scrub : scrub ? 0.8 : false,
             invalidateOnRefresh: true,
           },
         });
 
-        const effectiveStagger =
-          stagger !== undefined
-            ? stagger
-            : Math.max(0.014, Math.min(0.038, 1.0 / Math.max(words.length, 1)));
+        const totalWords = Math.max(words.length, 1);
+        const step = 0.8 / totalWords;
 
-        words.forEach((word) => {
+        words.forEach((word, idx) => {
           const isHighlight = word.getAttribute("data-highlight") === "true";
           const targetColor = isHighlight
             ? highlightColor
@@ -148,10 +146,10 @@ export function ScrollLinkedText({
               opacity: activeOpacity,
               y: 0,
               color: targetColor,
-              duration: 0.35,
-              ease: "power2.out",
+              duration: Math.max(step * 1.8, 0.1),
+              ease: "power1.out",
             },
-            `<${effectiveStagger}`
+            idx * step
           );
         });
       } else {

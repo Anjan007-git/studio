@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
 import { ScrollLinkedText } from "./ScrollLinkedText";
+import { MagneticButton } from "./MagneticButton";
 
 const topProjects = [
   {
@@ -180,10 +181,14 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
-                      +
-                    </span>
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <MagneticButton strength={0.3}>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-300">
+                        <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                          +
+                        </span>
+                      </div>
+                    </MagneticButton>
                   </div>
                 </div>
 
@@ -261,10 +266,14 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
-                      +
-                    </span>
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <MagneticButton strength={0.3}>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-300">
+                        <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                          +
+                        </span>
+                      </div>
+                    </MagneticButton>
                   </div>
                 </div>
 
@@ -338,10 +347,14 @@ export function Projects() {
                   </div>
 
                   {/* Bottom-Right Corner MUGEN Plus Button */}
-                  <div className="absolute bottom-4 right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-black/95 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
-                      +
-                    </span>
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <MagneticButton strength={0.3}>
+                      <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 group-hover:text-white group-hover:bg-white group-hover:text-black group-hover:scale-110 transition-all duration-300">
+                        <span className="text-base sm:text-lg font-light leading-none select-none transition-transform duration-300 group-hover:rotate-90 font-display">
+                          +
+                        </span>
+                      </div>
+                    </MagneticButton>
                   </div>
                 </div>
 
@@ -365,13 +378,15 @@ export function Projects() {
 
         {/* Right-aligned All Case Studies CTA */}
         <div className="flex justify-end">
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white text-white hover:text-black border border-white/10 font-display text-xs font-semibold tracking-[-0.02em] transition-all duration-300 cursor-pointer group"
-          >
-            <span>[12] All Case Studies</span>
-            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
+          <MagneticButton strength={0.2}>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white text-white hover:text-black border border-white/10 font-display text-xs font-semibold tracking-[-0.02em] transition-all duration-300 cursor-pointer group"
+            >
+              <span>[12] All Case Studies</span>
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+          </MagneticButton>
         </div>
       </div>
     </section>

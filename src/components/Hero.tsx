@@ -62,33 +62,47 @@ export function Hero() {
     if (!el) return;
 
     const ctx = gsap.context(() => {
-      // Headline parallax — moves up and fades as user scrolls
+      // Headline parallax — moves up and gently fades with buttery scrub
       if (headlineRef.current) {
         gsap.to(headlineRef.current, {
-          y: 150,
-          opacity: 0,
+          y: 90,
+          opacity: 0.15,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "top top",
-            end: "bottom top",
-            scrub: 0.3,
+            end: "bottom 35%",
+            scrub: 0.8,
           },
         });
       }
 
-
-      // Manifesto parallax
-      if (manifestoRef.current) {
-        gsap.to(manifestoRef.current, {
+      // Background video subtle depth scale and drift
+      if (videoRef.current) {
+        gsap.to(videoRef.current, {
+          scale: 1.06,
           y: 50,
-          opacity: 0.3,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "top top",
             end: "bottom top",
-            scrub: 0.4,
+            scrub: 0.8,
+          },
+        });
+      }
+
+      // Manifesto parallax
+      if (manifestoRef.current) {
+        gsap.to(manifestoRef.current, {
+          y: 40,
+          opacity: 0.35,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom 40%",
+            scrub: 0.8,
           },
         });
       }
@@ -97,13 +111,13 @@ export function Hero() {
       if (socialProofRef.current) {
         gsap.to(socialProofRef.current, {
           y: 30,
-          opacity: 0.2,
+          opacity: 0.35,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "top top",
-            end: "bottom top",
-            scrub: 0.4,
+            end: "bottom 40%",
+            scrub: 0.8,
           },
         });
       }
@@ -111,14 +125,14 @@ export function Hero() {
       // Marquee scale and fade
       if (marqueeRef.current) {
         gsap.to(marqueeRef.current, {
-          y: 40,
-          opacity: 0.1,
+          y: 30,
+          opacity: 0.2,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             start: "60% top",
             end: "bottom top",
-            scrub: 0.3,
+            scrub: 0.8,
           },
         });
       }

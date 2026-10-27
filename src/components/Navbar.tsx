@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { XIcon, InstagramIcon, DribbbleIcon, LinkedInIcon, X } from "./icons";
+import { MagneticButton } from "./MagneticButton";
 
 export function Navbar() {
   const [studioTime, setStudioTime] = useState("");
@@ -218,35 +219,39 @@ export function Navbar() {
 
           {/* Right: Projects link (tablet/desktop) & Minimal Hamburger */}
           <div className="flex items-center gap-4 sm:gap-8">
-            <Link
-              href="/projects"
-              className="hidden sm:inline-flex items-baseline gap-1 text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white hover:opacity-75 transition-opacity font-display"
-            >
-              <span>Projects</span>
-              <span className="text-[12px] text-[#b8b8b8] font-medium tracking-[-0.03em]">[12]</span>
-            </Link>
+            <MagneticButton strength={0.2}>
+              <Link
+                href="/projects"
+                className="hidden sm:inline-flex items-baseline gap-1 text-xs sm:text-sm font-semibold tracking-[-0.02em] text-white hover:opacity-75 transition-opacity font-display py-1 px-2"
+              >
+                <span>Projects</span>
+                <span className="text-[12px] text-[#b8b8b8] font-medium tracking-[-0.03em]">[12]</span>
+              </Link>
+            </MagneticButton>
 
             {/* Hamburger Button (animated 2 bars) */}
-            <button
-              onClick={handleToggle}
-              className="relative w-8 h-8 flex flex-col justify-center items-end gap-1.5 focus:outline-none group cursor-pointer"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-            >
-              <span
-                className={`h-[1.5px] bg-white transition-all duration-300 ${
-                  menuOpen
-                    ? "w-6 rotate-45 translate-y-[4.5px]"
-                    : "w-6 group-hover:w-5"
-                }`}
-              />
-              <span
-                className={`h-[1.5px] bg-white transition-all duration-300 ${
-                  menuOpen
-                    ? "w-6 -rotate-45 -translate-y-[3px]"
-                    : "w-6 group-hover:w-4"
-                }`}
-              />
-            </button>
+            <MagneticButton strength={0.3}>
+              <button
+                onClick={handleToggle}
+                className="relative w-8 h-8 flex flex-col justify-center items-end gap-1.5 focus:outline-none group cursor-pointer p-1"
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+              >
+                <span
+                  className={`h-[1.5px] bg-white transition-all duration-300 ${
+                    menuOpen
+                      ? "w-6 rotate-45 translate-y-[4.5px]"
+                      : "w-6 group-hover:w-5"
+                  }`}
+                />
+                <span
+                  className={`h-[1.5px] bg-white transition-all duration-300 ${
+                    menuOpen
+                      ? "w-6 -rotate-45 -translate-y-[3px]"
+                      : "w-6 group-hover:w-4"
+                  }`}
+                />
+              </button>
+            </MagneticButton>
           </div>
         </div>
       </header>

@@ -16,23 +16,23 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     gsap.registerPlugin(ScrollTrigger);
 
     // Respect reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    // Detect touch / mobile devices: native touch momentum is already 120Hz/60Hz hardware accelerated.
-    // Hijacking touch scroll with Lenis causes severe stuttering, lag, and touch fights on mobile.
-    const isTouchDevice =
+    const prefersReducedMotion =
       typeof window !== "undefined" &&
-      ("ontouchstart" in window ||
-        navigator.maxTouchPoints > 0 ||
-        window.innerWidth < 768);
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Use GSAP recommended lag smoothing to prevent stuttering/jumps on frame drops
-    gsap.ticker.lagSmoothing(500, 33);
+    if (prefersReducedMotion) {
+      return;
+    }
 
-    if (prefersReducedMotion || isTouchDevice) {
-      // On mobile / touch devices: keep native touch scroll completely untouched
+    // Detect small-screen mobile touch devices (< 768px with touch)
+    // On desktop / laptops with touchscreen monitors or digitizers, we KEEP Lenis enabled
+    // because wheel/trackpad scrolling on desktop should always be buttery smooth.
+    const isMobileTouch =
+      typeof window !== "undefined" &&
+      window.innerWidth < 768 &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 1);
+
+    if (isMobileTouch) {
       const handleNativeScroll = () => {
         window.dispatchEvent(
           new CustomEvent("lenis-scroll", {
@@ -51,15 +51,19 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       };
     }
 
-    // Configure Lenis for desktop wheel scrolling only
+    // Official Lenis + GSAP integration:
+    // lagSmoothing(0) is essential so GSAP never skips or clamps frames when driving Lenis
+    gsap.ticker.lagSmoothing(0);
+
     const lenis = new Lenis({
-      duration: 1.0,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.2,
       syncTouch: false,
-      touchMultiplier: 1.0,
     });
 
     window.__lenis = lenis;
@@ -88,7 +92,28 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       }
     );
 
+    // Smooth anchor link click interceptor for lenis
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (href && href.startsWith("#") && href.length > 1) {
+        const el = document.querySelector(href);
+        if (el) {
+          e.preventDefault();
+          lenis.scrollTo(el as HTMLElement, {
+            offset: -80,
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          });
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick, { capture: true });
+
     return () => {
+      document.removeEventListener("click", handleAnchorClick, { capture: true });
       gsap.ticker.remove(updateLenis);
       lenis.destroy();
       delete window.__lenis;

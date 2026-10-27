@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Copy, CheckCheck, ArrowUpRight, Calendar } from "./icons";
 import { ScrollLinkedText } from "./ScrollLinkedText";
 import { MotionReveal } from "./MotionReveal";
+import { MagneticButton } from "./MagneticButton";
 
 export function CtaSection() {
   const [copied, setCopied] = useState(false);
@@ -52,32 +53,36 @@ export function CtaSection() {
           {/* Interactive CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 max-w-md mx-auto">
             {/* Copy Email Button */}
-            <button
-              onClick={handleCopy}
-              className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2.5 transition-all shadow-sm cursor-pointer"
-            >
-              {copied ? (
-                <>
-                  <CheckCheck className="w-4 h-4 text-white" />
-                  <span className="text-white font-display">Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4 text-[#848484]" />
-                  <span>{email}</span>
-                </>
-              )}
-            </button>
+            <MagneticButton strength={0.25}>
+              <button
+                onClick={handleCopy}
+                className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2.5 transition-all shadow-sm cursor-pointer"
+              >
+                {copied ? (
+                  <>
+                    <CheckCheck className="w-4 h-4 text-white" />
+                    <span className="text-white font-display">Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-[#848484]" />
+                    <span>{email}</span>
+                  </>
+                )}
+              </button>
+            </MagneticButton>
 
             {/* Book Call Button */}
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer group"
-            >
-              <Calendar className="w-4 h-4" />
-              <span>Book a 15-Min Call</span>
-              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Link>
+            <MagneticButton strength={0.25}>
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto px-7 py-4 rounded-full bg-white text-black hover:bg-neutral-200 text-xs font-display font-semibold tracking-[-0.02em] flex items-center justify-center gap-2 transition-all shadow-xl cursor-pointer group"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book a 15-Min Call</span>
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </MagneticButton>
           </div>
 
           <p className="text-[11px] font-sans text-[#848484] mt-8">

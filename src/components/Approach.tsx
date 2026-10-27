@@ -6,6 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "./icons";
+import { MagneticButton } from "./MagneticButton";
 
 interface WordToken {
   text: string;
@@ -93,38 +94,37 @@ export function Approach() {
         scrollTrigger: {
           trigger: el,
           start: "top 80%",
-          end: "top 20%",
-          scrub: 0.6,
+          end: "top 25%",
+          scrub: 0.8,
         },
       });
 
       if (label) {
         tl.fromTo(
           label,
-          { opacity: 0.25, y: 6 },
-          { opacity: 1, y: 0, duration: 0.3, ease: "power1.out" },
+          { opacity: 0.3 },
+          { opacity: 1, duration: 0.25, ease: "power1.out" },
           0
         );
       }
 
       // Progressive scrubbed activation across all words in reading order
-      words.forEach((word) => {
+      const step = 0.75 / Math.max(words.length, 1);
+      words.forEach((word, idx) => {
         const isHighlight = word.getAttribute("data-highlight") === "true";
         tl.fromTo(
           word,
           {
-            opacity: 0.2,
-            y: 8,
-            color: "#484848",
+            opacity: 0.22,
+            color: "#3a3a3a",
           },
           {
             opacity: 1,
-            y: 0,
             color: isHighlight ? "#ffffff" : "#b8b8b8",
-            duration: 0.35,
+            duration: Math.max(step * 1.6, 0.08),
             ease: "power1.out",
           },
-          "<0.032"
+          idx * step
         );
       });
 
@@ -132,7 +132,7 @@ export function Approach() {
       if (cardRef.current) {
         gsap.fromTo(
           cardRef.current,
-          { y: 30, opacity: 0.8 },
+          { y: 25, opacity: 0.85 },
           {
             y: 0,
             opacity: 1,
@@ -140,8 +140,8 @@ export function Approach() {
             scrollTrigger: {
               trigger: cardRef.current,
               start: "top 85%",
-              end: "top 40%",
-              scrub: true,
+              end: "top 45%",
+              scrub: 0.8,
             },
           }
         );
@@ -277,16 +277,20 @@ export function Approach() {
                   )}
 
                   {/* MUGEN Signature Circular Plus Button in Bottom-Right Corner */}
-                  <button
-                    type="button"
-                    onClick={handleCopyEmail}
-                    aria-label="Copy founder email / connect"
-                    className="absolute bottom-4 right-4 z-20 w-8 h-8 rounded-full bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-black/90 active:scale-90 transition-all duration-200 cursor-pointer"
-                  >
-                    <span className="text-base font-light leading-none select-none font-display">
-                      +
-                    </span>
-                  </button>
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <MagneticButton strength={0.35}>
+                      <button
+                        type="button"
+                        onClick={handleCopyEmail}
+                        aria-label="Copy founder email / connect"
+                        className="w-8 h-8 rounded-full bg-black/65 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-black/90 active:scale-90 transition-all duration-300 cursor-pointer group/btn"
+                      >
+                        <span className="text-base font-light leading-none select-none font-display transition-transform duration-300 group-hover/btn:rotate-90">
+                          +
+                        </span>
+                      </button>
+                    </MagneticButton>
+                  </div>
                 </div>
 
                 {/* Founder Info Section directly underneath with clean dividing border */}

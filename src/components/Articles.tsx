@@ -154,7 +154,7 @@ export function Articles() {
                     </span>
                   </div>
                   {/* MUGEN Signature + Indicator in Bottom-Right Corner */}
-                  <div className="absolute bottom-3 right-3 z-10 w-6 h-6 rounded-none bg-black/75 backdrop-blur-sm border border-white/15 flex items-center justify-center text-white/90 text-xs font-mono select-none">
+                  <div className="absolute bottom-3 right-3 z-10 w-7 h-7 rounded-full bg-black/75 backdrop-blur-sm border border-white/15 flex items-center justify-center text-white/90 text-sm font-display select-none group-hover:rotate-90 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300">
                     +
                   </div>
                 </div>
