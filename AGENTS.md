@@ -31,7 +31,7 @@ A reusable template for reverse-engineering any website into a clean, modern Nex
 - TypeScript strict mode, no `any`
 - Named exports, PascalCase components, camelCase utils
 - Tailwind utility classes, no inline styles
-- 2-space indentation
+- 2-space 
 - Responsive: mobile-first
 
 ## Design Principles
